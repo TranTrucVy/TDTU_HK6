@@ -1,0 +1,2399 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.10.9 on win32)" generated="2024-05-18T16:09:07.120879" rpa="false" schemaversion="5">
+<suite id="s1" name="Test Addmultipleproducts" source="D:\HK6\AutoTest\AutomationTestStore\tests\cart\test_addmultipleproducts.robot">
+<test id="s1-t1" name="Add two valid item" line="10">
+<kw name="Opening my browser" owner="common" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:09:07.532711" level="INFO">Opening browser 'Chrome' to base url 'https://automationteststore.com/'.</msg>
+<arg>${URL_HOME}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-05-18T16:09:07.532711" elapsed="21.043732"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:09:28.583867" level="INFO">Current location is 'https://automationteststore.com/'.</msg>
+<arg>${URL_HOME}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-05-18T16:09:28.576443" elapsed="0.007424"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-05-18T16:09:28.583867" elapsed="0.025452"/>
+</kw>
+<status status="PASS" start="2024-05-18T16:09:07.532711" elapsed="21.076608"/>
+</kw>
+<kw name="Add two valid item" owner="addmultipro">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:09:28.611534" level="INFO">Clicking element 'xpath=//*[@id="categorymenu"]/nav/ul/li[3]/a'.</msg>
+<arg>xpath=//*[@id="categorymenu"]/nav/ul/li[3]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:09:28.610317" elapsed="4.308879"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:09:32.949962" level="INFO">${quantity} = 0</msg>
+<var>${quantity}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[1]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:09:32.919196" elapsed="0.030766"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:09:32.973528" level="INFO">${price} = $0.00</msg>
+<var>${price}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[2]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:09:32.951606" elapsed="0.021922"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-18T16:09:32.974540" level="INFO">${price} = 0.00</msg>
+<var>${price}</var>
+<arg>${price}[1:]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-18T16:09:32.974540" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:09:32.975537" level="INFO">Clicking element '//*[@id="maincontainer"]/div/div/div/div/div[3]/div[2]/div[2]/a/img'.</msg>
+<arg>//*[@id="maincontainer"]/div/div/div/div/div[3]/div[2]/div[2]/a/img</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:09:32.975537" elapsed="5.017938"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:09:37.993475" level="INFO">Clicking element '//*[@id="product"]/fieldset/div[1]/div'.</msg>
+<arg>//*[@id="product"]/fieldset/div[1]/div</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:09:37.993475" elapsed="0.073135"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:09:38.067609" level="INFO">Selecting options from selection list '//*[@id="option318"]' by value 652.</msg>
+<arg>//*[@id="option318"]</arg>
+<arg>652</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2024-05-18T16:09:38.066610" elapsed="0.089637"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:09:38.156247" level="INFO">Typing text '5' into text field 'xpath=//*[@id="product_quantity"]'.</msg>
+<arg>xpath=//*[@id="product_quantity"]</arg>
+<arg>5</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:09:38.156247" elapsed="0.115671"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-18T16:09:40.283276" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-18T16:09:38.271918" elapsed="2.011358"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:09:40.321511" level="INFO">${item_price} = $192.50</msg>
+<var>${item_price}</var>
+<arg>xpath=//*[@id="product"]/fieldset/div[3]/label/span</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:09:40.283276" elapsed="0.038235"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-18T16:09:40.321511" level="INFO">${item_price} = 192.50</msg>
+<var>${item_price}</var>
+<arg>${item_price}[1:]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-18T16:09:40.321511" elapsed="0.000000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-18T16:09:40.331664" level="INFO">${item_price} = 192.5</msg>
+<var>${item_price}</var>
+<arg>float(${item_price})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-18T16:09:40.331528" elapsed="0.000136"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:09:40.331664" level="INFO">Clicking element 'xpath=//*[@id="product"]/fieldset/div[5]/ul/li/a'.</msg>
+<arg>xpath=//*[@id="product"]/fieldset/div[5]/ul/li/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:09:40.331664" elapsed="1.745847"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:09:42.114027" level="INFO">${update_quantity} = 5</msg>
+<var>${update_quantity}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[1]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:09:42.077511" elapsed="0.037518"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:09:42.148228" level="INFO">${update_price} = $192.50</msg>
+<var>${update_price}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[2]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:09:42.115029" elapsed="0.033199"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-18T16:09:42.149776" level="INFO">${update_price} = 192.50</msg>
+<var>${update_price}</var>
+<arg>${update_price}[1:]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-18T16:09:42.149243" elapsed="0.000533"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-18T16:09:42.151296" level="INFO">${distance_quantity} = 5</msg>
+<var>${distance_quantity}</var>
+<arg>int(${update_quantity}) - int(${quantity})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-18T16:09:42.149776" elapsed="0.001690"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-18T16:09:42.151466" level="INFO">${distance_price} = 192.5</msg>
+<var>${distance_price}</var>
+<arg>float(${update_price}) - float(${price})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-18T16:09:42.151466" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<msg time="2024-05-18T16:09:42.151466" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${distance_quantity}</arg>
+<arg>5</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-05-18T16:09:42.151466" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<arg>${distance_price}</arg>
+<arg>${item_price}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-05-18T16:09:42.151466" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:09:42.151466" level="INFO">Clicking element 'xpath=//*[@id="categorymenu"]/nav/ul/li[2]/a'.</msg>
+<arg>xpath=//*[@id="categorymenu"]/nav/ul/li[2]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:09:42.151466" elapsed="2.751039"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>//*[@id="maincontainer"]/div/div/div/h1/span[1][contains(text(),'Apparel &amp; accessories')]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-05-18T16:09:44.903066" elapsed="0.013699"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:09:44.941311" level="INFO">${quantity} = 5</msg>
+<var>${quantity}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[1]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:09:44.916765" elapsed="0.024546"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:09:44.970078" level="INFO">${price} = $192.50</msg>
+<var>${price}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[2]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:09:44.941311" elapsed="0.029751"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-18T16:09:44.971616" level="INFO">${price} = 192.50</msg>
+<var>${price}</var>
+<arg>${price}[1:]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-18T16:09:44.971616" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:09:44.972678" level="INFO">Clicking element '//*[@id="maincontainer"]/div/div/div/div/div[2]/div[6]/div[2]/a/img'.</msg>
+<arg>//*[@id="maincontainer"]/div/div/div/div/div[2]/div[6]/div[2]/a/img</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:09:44.972678" elapsed="1.753740"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:09:46.726418" level="INFO">Typing text '5' into text field 'xpath=//*[@id="product_quantity"]'.</msg>
+<arg>xpath=//*[@id="product_quantity"]</arg>
+<arg>5</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:09:46.726418" elapsed="0.114896"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-18T16:09:48.851907" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-18T16:09:46.841314" elapsed="2.010593"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:09:48.891467" level="INFO">${item_price} = $160.00</msg>
+<var>${item_price}</var>
+<arg>xpath=//*[@id="product"]/fieldset/div[4]/label/span</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:09:48.851907" elapsed="0.039560"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-18T16:09:48.891467" level="INFO">${item_price} = 160.00</msg>
+<var>${item_price}</var>
+<arg>${item_price}[1:]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-18T16:09:48.891467" elapsed="0.000000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-18T16:09:48.899100" level="INFO">${item_price} = 160.0</msg>
+<var>${item_price}</var>
+<arg>float(${item_price})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-18T16:09:48.891467" elapsed="0.007633"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:09:48.899100" level="INFO">Clicking element 'xpath=//*[@id="product"]/fieldset/div[6]/ul/li/a'.</msg>
+<arg>xpath=//*[@id="product"]/fieldset/div[6]/ul/li/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:09:48.899100" elapsed="3.267326"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>//*[@id="maincontainer"]/div/div[1]/div/h1/span[1][contains(text(),' Shopping Cart')]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-05-18T16:09:52.166426" elapsed="0.015228"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:09:52.210388" level="INFO">${update_quantity} = 10</msg>
+<var>${update_quantity}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[1]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:09:52.182673" elapsed="0.027715"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:09:52.241750" level="INFO">${update_price} = $352.50</msg>
+<var>${update_price}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[2]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:09:52.211394" elapsed="0.030356"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-18T16:09:52.241750" level="INFO">${update_price} = 352.50</msg>
+<var>${update_price}</var>
+<arg>${update_price}[1:]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-18T16:09:52.241750" elapsed="0.000000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-18T16:09:52.241750" level="INFO">${distance_quantity} = 5</msg>
+<var>${distance_quantity}</var>
+<arg>int(${update_quantity}) - int(${quantity})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-18T16:09:52.241750" elapsed="0.000000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-18T16:09:52.241750" level="INFO">${distance_price} = 160.0</msg>
+<var>${distance_price}</var>
+<arg>float(${update_price}) - float(${price})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-18T16:09:52.241750" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<msg time="2024-05-18T16:09:52.246300" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${distance_quantity}</arg>
+<arg>5</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-05-18T16:09:52.241750" elapsed="0.004550"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<arg>${distance_price}</arg>
+<arg>${item_price}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-05-18T16:09:52.246300" elapsed="0.001365"/>
+</kw>
+<status status="PASS" start="2024-05-18T16:09:28.610317" elapsed="23.637348"/>
+</kw>
+<kw name="Closing my browser" owner="common" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-18T16:09:52.248983" elapsed="2.140431"/>
+</kw>
+<status status="PASS" start="2024-05-18T16:09:52.248719" elapsed="2.140695"/>
+</kw>
+<status status="PASS" start="2024-05-18T16:09:07.530976" elapsed="46.858438"/>
+</test>
+<test id="s1-t2" name="Add first item valid and second item invalid" line="13">
+<kw name="Opening my browser" owner="common" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:09:54.391494" level="INFO">Opening browser 'Chrome' to base url 'https://automationteststore.com/'.</msg>
+<arg>${URL_HOME}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-05-18T16:09:54.391494" elapsed="21.892302"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:10:16.290563" level="INFO">Current location is 'https://automationteststore.com/'.</msg>
+<arg>${URL_HOME}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-05-18T16:10:16.284773" elapsed="0.005790"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-05-18T16:10:16.291634" elapsed="0.031239"/>
+</kw>
+<status status="PASS" start="2024-05-18T16:09:54.391494" elapsed="21.931976"/>
+</kw>
+<kw name="Add first item valid and second item invalid" owner="addmultipro">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:10:16.324393" level="INFO">Clicking element 'xpath=//*[@id="categorymenu"]/nav/ul/li[3]/a'.</msg>
+<arg>xpath=//*[@id="categorymenu"]/nav/ul/li[3]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:10:16.324393" elapsed="1.591495"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:10:17.945921" level="INFO">${quantity} = 0</msg>
+<var>${quantity}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[1]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:10:17.915888" elapsed="0.030033"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:10:17.969777" level="INFO">${price} = $0.00</msg>
+<var>${price}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[2]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:10:17.946754" elapsed="0.023023"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-18T16:10:17.969777" level="INFO">${price} = 0.00</msg>
+<var>${price}</var>
+<arg>${price}[1:]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-18T16:10:17.969777" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:10:17.971381" level="INFO">Clicking element '//*[@id="maincontainer"]/div/div/div/div/div[3]/div[2]/div[2]/a/img'.</msg>
+<arg>//*[@id="maincontainer"]/div/div/div/div/div[3]/div[2]/div[2]/a/img</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:10:17.969777" elapsed="4.122150"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:10:22.091927" level="INFO">Clicking element '//*[@id="product"]/fieldset/div[1]/div'.</msg>
+<arg>//*[@id="product"]/fieldset/div[1]/div</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:10:22.091927" elapsed="0.047883"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:10:22.141418" level="INFO">Selecting options from selection list '//*[@id="option318"]' by value 652.</msg>
+<arg>//*[@id="option318"]</arg>
+<arg>652</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2024-05-18T16:10:22.139810" elapsed="0.075536"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:10:22.215346" level="INFO">Typing text '5' into text field 'xpath=//*[@id="product_quantity"]'.</msg>
+<arg>xpath=//*[@id="product_quantity"]</arg>
+<arg>5</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:10:22.215346" elapsed="0.099480"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-18T16:10:24.315138" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-18T16:10:22.314826" elapsed="2.000312"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:10:24.352121" level="INFO">${item_price} = $192.50</msg>
+<var>${item_price}</var>
+<arg>xpath=//*[@id="product"]/fieldset/div[3]/label/span</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:10:24.315138" elapsed="0.036983"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-18T16:10:24.352121" level="INFO">${item_price} = 192.50</msg>
+<var>${item_price}</var>
+<arg>${item_price}[1:]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-18T16:10:24.352121" elapsed="0.000000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-18T16:10:24.356680" level="INFO">${item_price} = 192.5</msg>
+<var>${item_price}</var>
+<arg>float(${item_price})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-18T16:10:24.352121" elapsed="0.004559"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:10:24.356680" level="INFO">Clicking element 'xpath=//*[@id="product"]/fieldset/div[5]/ul/li/a'.</msg>
+<arg>xpath=//*[@id="product"]/fieldset/div[5]/ul/li/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:10:24.356680" elapsed="2.231788"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:10:26.614706" level="INFO">${update_quantity} = 5</msg>
+<var>${update_quantity}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[1]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:10:26.588468" elapsed="0.026238"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:10:26.636370" level="INFO">${update_price} = $192.50</msg>
+<var>${update_price}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[2]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:10:26.615700" elapsed="0.020670"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-18T16:10:26.638366" level="INFO">${update_price} = 192.50</msg>
+<var>${update_price}</var>
+<arg>${update_price}[1:]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-18T16:10:26.637366" elapsed="0.001000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-18T16:10:26.639366" level="INFO">${distance_quantity} = 5</msg>
+<var>${distance_quantity}</var>
+<arg>int(${update_quantity}) - int(${quantity})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-18T16:10:26.638366" elapsed="0.001000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-18T16:10:26.640907" level="INFO">${distance_price} = 192.5</msg>
+<var>${distance_price}</var>
+<arg>float(${update_price}) - float(${price})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-18T16:10:26.640366" elapsed="0.000541"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<msg time="2024-05-18T16:10:26.642451" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${distance_quantity}</arg>
+<arg>5</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-05-18T16:10:26.641511" elapsed="0.000940"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<arg>${distance_price}</arg>
+<arg>${item_price}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-05-18T16:10:26.642451" elapsed="0.001022"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:10:26.644467" level="INFO">Clicking element 'xpath=//*[@id="categorymenu"]/nav/ul/li[3]/a'.</msg>
+<arg>xpath=//*[@id="categorymenu"]/nav/ul/li[3]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:10:26.643473" elapsed="0.902415"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:10:27.579206" level="INFO">${quantity} = 5</msg>
+<var>${quantity}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[1]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:10:27.546907" elapsed="0.032299"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:10:27.601371" level="INFO">${price} = $192.50</msg>
+<var>${price}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[2]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:10:27.580224" elapsed="0.021147"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-18T16:10:27.601371" level="INFO">${price} = 192.50</msg>
+<var>${price}</var>
+<arg>${price}[1:]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-18T16:10:27.601371" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:10:27.611804" level="INFO">Clicking element '//*[@id="maincontainer"]/div/div/div/div/div[3]/div[6]/div[2]/a/img'.</msg>
+<arg>//*[@id="maincontainer"]/div/div/div/div/div[3]/div[6]/div[2]/a/img</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:10:27.611804" elapsed="2.179776"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:10:29.791580" level="INFO">Clicking element '//*[@id="product"]/fieldset/div[1]/div'.</msg>
+<arg>//*[@id="product"]/fieldset/div[1]/div</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:10:29.791580" elapsed="0.076482"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:10:29.869112" level="INFO">Clicking element '//*[@id="option319"]/option[1]'.</msg>
+<arg>//*[@id="option319"]/option[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:10:29.868062" elapsed="0.046033"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:10:29.915227" level="INFO">Typing text '0' into text field 'xpath=//*[@id="product_quantity"]'.</msg>
+<arg>xpath=//*[@id="product_quantity"]</arg>
+<arg>0</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:10:29.914639" elapsed="0.119230"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:10:30.056625" level="INFO">${item_price} = </msg>
+<var>${item_price}</var>
+<arg>xpath=//*[@id="product"]/fieldset/div[3]/label/span</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:10:30.033869" elapsed="0.027879"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-18T16:10:30.063063" level="INFO">${item_price} = </msg>
+<var>${item_price}</var>
+<arg>${item_price}[1:]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-18T16:10:30.062457" elapsed="0.000606"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-18T16:10:30.064433" level="INFO">${item_price} = 0.0</msg>
+<var>${item_price}</var>
+<arg>float(${item_price})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-18T16:10:30.063767" elapsed="0.000666"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:10:30.064433" level="INFO">Clicking element 'xpath=//*[@id="product"]/fieldset/div[5]/ul/li/a'.</msg>
+<arg>xpath=//*[@id="product"]/fieldset/div[5]/ul/li/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:10:30.064433" elapsed="1.603682"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:10:31.701310" level="INFO">${update_quantity} = 5</msg>
+<var>${update_quantity}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[1]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:10:31.668115" elapsed="0.033195"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:10:31.726943" level="INFO">${update_price} = $192.50</msg>
+<var>${update_price}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[2]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:10:31.701830" elapsed="0.025113"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-18T16:10:31.727944" level="INFO">${update_price} = 192.50</msg>
+<var>${update_price}</var>
+<arg>${update_price}[1:]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-18T16:10:31.727944" elapsed="0.000999"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-18T16:10:31.730644" level="INFO">${distance_quantity} = 0</msg>
+<var>${distance_quantity}</var>
+<arg>int(${update_quantity}) - int(${quantity})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-18T16:10:31.729319" elapsed="0.001325"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-18T16:10:31.731835" level="INFO">${distance_price} = 0.0</msg>
+<var>${distance_price}</var>
+<arg>float(${update_price}) - float(${price})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-18T16:10:31.731321" elapsed="0.000514"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<msg time="2024-05-18T16:10:31.731835" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${distance_quantity}</arg>
+<arg>0</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-05-18T16:10:31.731835" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<msg time="2024-05-18T16:10:31.731835" level="INFO">Argument types are:
+&lt;class 'float'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${distance_price}</arg>
+<arg>0</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-05-18T16:10:31.731835" elapsed="0.000000"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:10:31.756664" level="INFO">Current page contains element '//*[@id="cart"]/div/div[1]'.</msg>
+<arg>//*[@id="cart"]/div/div[1]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-05-18T16:10:31.731835" elapsed="0.025855"/>
+</kw>
+<status status="PASS" start="2024-05-18T16:10:16.323470" elapsed="15.434220"/>
+</kw>
+<kw name="Closing my browser" owner="common" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-18T16:10:31.759689" elapsed="2.122105"/>
+</kw>
+<status status="PASS" start="2024-05-18T16:10:31.758685" elapsed="2.123109"/>
+</kw>
+<status status="PASS" start="2024-05-18T16:09:54.391427" elapsed="39.490367"/>
+</test>
+<test id="s1-t3" name="Add first item invalid and second item valid" line="16">
+<kw name="Opening my browser" owner="common" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:10:33.886944" level="INFO">Opening browser 'Chrome' to base url 'https://automationteststore.com/'.</msg>
+<arg>${URL_HOME}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-05-18T16:10:33.881794" elapsed="18.143598"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:10:52.034862" level="INFO">Current location is 'https://automationteststore.com/'.</msg>
+<arg>${URL_HOME}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-05-18T16:10:52.026154" elapsed="0.009716"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-05-18T16:10:52.036231" elapsed="0.023762"/>
+</kw>
+<status status="PASS" start="2024-05-18T16:10:33.881794" elapsed="18.178199"/>
+</kw>
+<kw name="Add first item invalid and second item valid" owner="addmultipro">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:10:52.061830" level="INFO">Clicking element 'xpath=//*[@id="categorymenu"]/nav/ul/li[4]/a'.</msg>
+<arg>xpath=//*[@id="categorymenu"]/nav/ul/li[4]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:10:52.061830" elapsed="2.356035"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:10:54.447913" level="INFO">${quantity} = 0</msg>
+<var>${quantity}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[1]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:10:54.417865" elapsed="0.030048"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:10:54.471531" level="INFO">${price} = $0.00</msg>
+<var>${price}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[2]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:10:54.447913" elapsed="0.023618"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-18T16:10:54.472613" level="INFO">${price} = 0.00</msg>
+<var>${price}</var>
+<arg>${price}[1:]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-18T16:10:54.471531" elapsed="0.001082"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:10:54.472613" level="INFO">Clicking element '//*[@id="maincontainer"]/div/div/div/div/div[3]/div[2]/div[2]/a/img'.</msg>
+<arg>//*[@id="maincontainer"]/div/div/div/div/div[3]/div[2]/div[2]/a/img</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:10:54.472613" elapsed="4.660153"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:10:59.132766" level="INFO">Typing text '0' into text field 'xpath=//*[@id="product_quantity"]'.</msg>
+<arg>xpath=//*[@id="product_quantity"]</arg>
+<arg>0</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:10:59.132766" elapsed="0.096638"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-18T16:11:01.244074" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-18T16:10:59.229404" elapsed="2.014670"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:11:01.286198" level="INFO">${item_price} = $89.00</msg>
+<var>${item_price}</var>
+<arg>xpath=//*[@id="product"]/fieldset/div[2]/label/span</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:11:01.244074" elapsed="0.042124"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-18T16:11:01.287199" level="INFO">${item_price} = 89.00</msg>
+<var>${item_price}</var>
+<arg>${item_price}[1:]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-18T16:11:01.286198" elapsed="0.001001"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-18T16:11:01.287199" level="INFO">${item_price} = 89.0</msg>
+<var>${item_price}</var>
+<arg>float(${item_price})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-18T16:11:01.287199" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:11:01.288198" level="INFO">Clicking element 'xpath=//*[@id="product"]/fieldset/div[4]/ul/li/a'.</msg>
+<arg>xpath=//*[@id="product"]/fieldset/div[4]/ul/li/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:11:01.288198" elapsed="1.997426"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:11:03.324441" level="INFO">${update_quantity} = 0</msg>
+<var>${update_quantity}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[1]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:11:03.286679" elapsed="0.037762"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:11:03.344949" level="INFO">${update_price} = $0.00</msg>
+<var>${update_price}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[2]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:11:03.324441" elapsed="0.020508"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-18T16:11:03.352174" level="INFO">${update_price} = 0.00</msg>
+<var>${update_price}</var>
+<arg>${update_price}[1:]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-18T16:11:03.344949" elapsed="0.007225"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-18T16:11:03.352174" level="INFO">${distance_quantity} = 0</msg>
+<var>${distance_quantity}</var>
+<arg>int(${update_quantity}) - int(${quantity})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-18T16:11:03.352174" elapsed="0.000000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-18T16:11:03.352174" level="INFO">${distance_price} = 0.0</msg>
+<var>${distance_price}</var>
+<arg>float(${update_price}) - float(${price})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-18T16:11:03.352174" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<msg time="2024-05-18T16:11:03.352174" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${distance_quantity}</arg>
+<arg>0</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-05-18T16:11:03.352174" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<msg time="2024-05-18T16:11:03.356738" level="INFO">Argument types are:
+&lt;class 'float'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${distance_price}</arg>
+<arg>0</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-05-18T16:11:03.356738" elapsed="0.001084"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:11:03.375686" level="INFO">Current page contains element 'xpath=/html/body/div/div[2]/div/div/div/div'.</msg>
+<arg>xpath=/html/body/div/div[2]/div/div/div/div</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-05-18T16:11:03.357822" elapsed="0.017864"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:11:03.376657" level="INFO">Clicking element 'xpath=//*[@id="categorymenu"]/nav/ul/li[3]/a'.</msg>
+<arg>xpath=//*[@id="categorymenu"]/nav/ul/li[3]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:11:03.376657" elapsed="2.810703"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:11:06.211578" level="INFO">${quantity} = 0</msg>
+<var>${quantity}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[1]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:11:06.187360" elapsed="0.024218"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:11:06.240013" level="INFO">${price} = $0.00</msg>
+<var>${price}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[2]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:11:06.211578" elapsed="0.028435"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-18T16:11:06.241694" level="INFO">${price} = 0.00</msg>
+<var>${price}</var>
+<arg>${price}[1:]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-18T16:11:06.240013" elapsed="0.001681"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:11:06.242542" level="INFO">Clicking element '//*[@id="maincontainer"]/div/div/div/div/div[3]/div[2]/div[2]/a/img'.</msg>
+<arg>//*[@id="maincontainer"]/div/div/div/div/div[3]/div[2]/div[2]/a/img</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:11:06.242542" elapsed="2.091982"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:11:08.335325" level="INFO">Clicking element '//*[@id="product"]/fieldset/div[1]/div'.</msg>
+<arg>//*[@id="product"]/fieldset/div[1]/div</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:11:08.335325" elapsed="0.084229"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:11:08.420557" level="INFO">Selecting options from selection list '//*[@id="option318"]' by value 652.</msg>
+<arg>//*[@id="option318"]</arg>
+<arg>652</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2024-05-18T16:11:08.419554" elapsed="0.122242"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:11:08.541903" level="INFO">Typing text '5' into text field 'xpath=//*[@id="product_quantity"]'.</msg>
+<arg>xpath=//*[@id="product_quantity"]</arg>
+<arg>5</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:11:08.541903" elapsed="0.129808"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-18T16:11:10.678300" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-18T16:11:08.671711" elapsed="2.006589"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:11:10.725466" level="INFO">${item_price} = $192.50</msg>
+<var>${item_price}</var>
+<arg>xpath=//*[@id="product"]/fieldset/div[3]/label/span</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:11:10.678300" elapsed="0.047166"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-18T16:11:10.726444" level="INFO">${item_price} = 192.50</msg>
+<var>${item_price}</var>
+<arg>${item_price}[1:]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-18T16:11:10.726444" elapsed="0.001004"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-18T16:11:10.728448" level="INFO">${item_price} = 192.5</msg>
+<var>${item_price}</var>
+<arg>float(${item_price})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-18T16:11:10.727448" elapsed="0.001000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:11:10.729443" level="INFO">Clicking element 'xpath=//*[@id="product"]/fieldset/div[5]/ul/li/a'.</msg>
+<arg>xpath=//*[@id="product"]/fieldset/div[5]/ul/li/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:11:10.729443" elapsed="3.606046"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:11:14.370596" level="INFO">${update_quantity} = 5</msg>
+<var>${update_quantity}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[1]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:11:14.335489" elapsed="0.035107"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:11:14.408185" level="INFO">${update_price} = $192.50</msg>
+<var>${update_price}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[2]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:11:14.372255" elapsed="0.035930"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-18T16:11:14.410185" level="INFO">${update_price} = 192.50</msg>
+<var>${update_price}</var>
+<arg>${update_price}[1:]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-18T16:11:14.409199" elapsed="0.000986"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-18T16:11:14.411737" level="INFO">${distance_quantity} = 5</msg>
+<var>${distance_quantity}</var>
+<arg>int(${update_quantity}) - int(${quantity})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-18T16:11:14.410185" elapsed="0.001552"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-18T16:11:14.413069" level="INFO">${distance_price} = 192.5</msg>
+<var>${distance_price}</var>
+<arg>float(${update_price}) - float(${price})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-18T16:11:14.412349" elapsed="0.000720"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<msg time="2024-05-18T16:11:14.413069" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${distance_quantity}</arg>
+<arg>5</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-05-18T16:11:14.413069" elapsed="0.001762"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<arg>${distance_price}</arg>
+<arg>${item_price}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-05-18T16:11:14.414831" elapsed="0.001030"/>
+</kw>
+<status status="PASS" start="2024-05-18T16:10:52.061292" elapsed="22.354569"/>
+</kw>
+<kw name="Closing my browser" owner="common" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-18T16:11:14.417854" elapsed="2.150135"/>
+</kw>
+<status status="PASS" start="2024-05-18T16:11:14.416854" elapsed="2.151135"/>
+</kw>
+<status status="PASS" start="2024-05-18T16:10:33.881794" elapsed="42.686195"/>
+</test>
+<test id="s1-t4" name="Add two item invalid" line="19">
+<kw name="Opening my browser" owner="common" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:11:16.572125" level="INFO">Opening browser 'Chrome' to base url 'https://automationteststore.com/'.</msg>
+<arg>${URL_HOME}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-05-18T16:11:16.572125" elapsed="29.008233"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:11:45.587517" level="INFO">Current location is 'https://automationteststore.com/'.</msg>
+<arg>${URL_HOME}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-05-18T16:11:45.580358" elapsed="0.007159"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-05-18T16:11:45.588526" elapsed="0.036614"/>
+</kw>
+<status status="PASS" start="2024-05-18T16:11:16.572125" elapsed="29.054027"/>
+</kw>
+<kw name="Add two item invalid" owner="addmultipro">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:11:45.628151" level="INFO">Clicking element 'xpath=//*[@id="categorymenu"]/nav/ul/li[5]/a'.</msg>
+<arg>xpath=//*[@id="categorymenu"]/nav/ul/li[5]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:11:45.627149" elapsed="9.592898"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:11:55.243238" level="INFO">${quantity} = 0</msg>
+<var>${quantity}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[1]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:11:55.220047" elapsed="0.023191"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:11:55.272140" level="INFO">${price} = $0.00</msg>
+<var>${price}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[2]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:11:55.243238" elapsed="0.028902"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-18T16:11:55.272140" level="INFO">${price} = 0.00</msg>
+<var>${price}</var>
+<arg>${price}[1:]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-18T16:11:55.272140" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:11:55.272140" level="INFO">Clicking element '//*[@id="maincontainer"]/div/div/div/div/div[3]/div[2]/div[2]/a/img'.</msg>
+<arg>//*[@id="maincontainer"]/div/div/div/div/div[3]/div[2]/div[2]/a/img</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:11:55.272140" elapsed="2.938825"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:11:58.212193" level="INFO">Clicking element '//*[@id="product"]/fieldset/div[1]/div'.</msg>
+<arg>//*[@id="product"]/fieldset/div[1]/div</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:11:58.211672" elapsed="0.068479"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:11:58.280151" level="INFO">Selecting options from selection list '//*[@id="option330"]' by value 691.</msg>
+<arg>//*[@id="option330"]</arg>
+<arg>691</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2024-05-18T16:11:58.280151" elapsed="0.101816"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:11:58.391737" level="INFO">Typing text '0' into text field 'xpath=//*[@id="product_quantity"]'.</msg>
+<arg>xpath=//*[@id="product_quantity"]</arg>
+<arg>0</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:11:58.381967" elapsed="0.150150"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:11:58.560688" level="INFO">${item_price} = </msg>
+<var>${item_price}</var>
+<arg>xpath=//*[@id="product"]/fieldset/div[3]/label/span</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:11:58.532117" elapsed="0.028571"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-18T16:11:58.562301" level="INFO">${item_price} = </msg>
+<var>${item_price}</var>
+<arg>${item_price}[1:]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-18T16:11:58.562301" elapsed="0.000000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-18T16:11:58.564367" level="INFO">${item_price} = 0.0</msg>
+<var>${item_price}</var>
+<arg>float(${item_price})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-18T16:11:58.563209" elapsed="0.001158"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:11:58.564367" level="INFO">Clicking element 'xpath=//*[@id="product"]/fieldset/div[5]/ul/li/a'.</msg>
+<arg>xpath=//*[@id="product"]/fieldset/div[5]/ul/li/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:11:58.564367" elapsed="1.538784"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:12:00.132169" level="INFO">${update_quantity} = 0</msg>
+<var>${update_quantity}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[1]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:12:00.103151" elapsed="0.029018"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:12:00.162058" level="INFO">${update_price} = $0.00</msg>
+<var>${update_price}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[2]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:12:00.132169" elapsed="0.029889"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-18T16:12:00.162058" level="INFO">${update_price} = 0.00</msg>
+<var>${update_price}</var>
+<arg>${update_price}[1:]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-18T16:12:00.162058" elapsed="0.000000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-18T16:12:00.162058" level="INFO">${distance_quantity} = 0</msg>
+<var>${distance_quantity}</var>
+<arg>int(${update_quantity}) - int(${quantity})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-18T16:12:00.162058" elapsed="0.005089"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-18T16:12:00.167147" level="INFO">${distance_price} = 0.0</msg>
+<var>${distance_price}</var>
+<arg>float(${update_price}) - float(${price})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-18T16:12:00.167147" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<msg time="2024-05-18T16:12:00.167147" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${distance_quantity}</arg>
+<arg>0</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-05-18T16:12:00.167147" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<msg time="2024-05-18T16:12:00.167147" level="INFO">Argument types are:
+&lt;class 'float'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${distance_price}</arg>
+<arg>0</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-05-18T16:12:00.167147" elapsed="0.000000"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:12:00.194305" level="INFO">Current page contains element 'xpath=/html/body/div/div[2]/div/div/div/div'.</msg>
+<arg>xpath=/html/body/div/div[2]/div/div/div/div</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-05-18T16:12:00.167147" elapsed="0.027158"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:12:00.195295" level="INFO">Clicking element 'xpath=//*[@id="categorymenu"]/nav/ul/li[5]/a'.</msg>
+<arg>xpath=//*[@id="categorymenu"]/nav/ul/li[5]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:12:00.194305" elapsed="1.961606"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:12:02.182395" level="INFO">${quantity} = 0</msg>
+<var>${quantity}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[1]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:12:02.155911" elapsed="0.026484"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:12:02.207311" level="INFO">${price} = $0.00</msg>
+<var>${price}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[2]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:12:02.182395" elapsed="0.024916"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-18T16:12:02.209170" level="INFO">${price} = 0.00</msg>
+<var>${price}</var>
+<arg>${price}[1:]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-18T16:12:02.208156" elapsed="0.001164"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:12:02.209320" level="INFO">Clicking element '//*[@id="maincontainer"]/div/div/div/div/div[3]/div[8]/div[2]/a/img'.</msg>
+<arg>//*[@id="maincontainer"]/div/div/div/div/div[3]/div[8]/div[2]/a/img</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:12:02.209320" elapsed="5.076010"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:12:07.285330" level="INFO">Clicking element '//*[@id="product"]/fieldset/div[1]/div'.</msg>
+<arg>//*[@id="product"]/fieldset/div[1]/div</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:12:07.285330" elapsed="0.061917"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:12:07.348256" level="INFO">Selecting options from selection list '//*[@id="option323"]' by value 670.</msg>
+<arg>//*[@id="option323"]</arg>
+<arg>670</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2024-05-18T16:12:07.348256" elapsed="0.111465"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:12:07.460659" level="INFO">Typing text 'abcde' into text field 'xpath=//*[@id="product_quantity"]'.</msg>
+<arg>xpath=//*[@id="product_quantity"]</arg>
+<arg>abcde</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:12:07.460659" elapsed="0.135800"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:12:07.611972" level="INFO">${item_price} = </msg>
+<var>${item_price}</var>
+<arg>xpath=//*[@id="product"]/fieldset/div[3]/label/span</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:12:07.596812" elapsed="0.015160"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-18T16:12:07.611972" level="INFO">${item_price} = </msg>
+<var>${item_price}</var>
+<arg>${item_price}[1:]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-18T16:12:07.611972" elapsed="0.000000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-18T16:12:07.611972" level="INFO">${item_price} = 0.0</msg>
+<var>${item_price}</var>
+<arg>float(${item_price})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-18T16:12:07.611972" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:12:07.611972" level="INFO">Clicking element 'xpath=//*[@id="product"]/fieldset/div[5]/ul/li/a'.</msg>
+<arg>xpath=//*[@id="product"]/fieldset/div[5]/ul/li/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:12:07.611972" elapsed="2.201165"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:12:09.844416" level="INFO">${update_quantity} = 0</msg>
+<var>${update_quantity}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[1]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:12:09.813137" elapsed="0.031279"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:12:09.875698" level="INFO">${update_price} = $0.00</msg>
+<var>${update_price}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[2]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:12:09.844416" elapsed="0.031282"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-18T16:12:09.875698" level="INFO">${update_price} = 0.00</msg>
+<var>${update_price}</var>
+<arg>${update_price}[1:]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-18T16:12:09.875698" elapsed="0.000000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-18T16:12:09.875698" level="INFO">${distance_quantity} = 0</msg>
+<var>${distance_quantity}</var>
+<arg>int(${update_quantity}) - int(${quantity})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-18T16:12:09.875698" elapsed="0.000000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-18T16:12:09.882300" level="INFO">${distance_price} = 0.0</msg>
+<var>${distance_price}</var>
+<arg>float(${update_price}) - float(${price})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-18T16:12:09.882232" elapsed="0.000068"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<msg time="2024-05-18T16:12:09.882300" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${distance_quantity}</arg>
+<arg>0</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-05-18T16:12:09.882300" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<msg time="2024-05-18T16:12:09.882300" level="INFO">Argument types are:
+&lt;class 'float'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${distance_price}</arg>
+<arg>0</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-05-18T16:12:09.882300" elapsed="0.000000"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:12:09.902947" level="INFO">Current page contains element 'xpath=/html/body/div/div[2]/div/div/div/div'.</msg>
+<arg>xpath=/html/body/div/div[2]/div/div/div/div</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-05-18T16:12:09.882300" elapsed="0.021664"/>
+</kw>
+<status status="PASS" start="2024-05-18T16:11:45.626152" elapsed="24.277812"/>
+</kw>
+<kw name="Closing my browser" owner="common" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-18T16:12:09.906063" elapsed="2.156855"/>
+</kw>
+<status status="PASS" start="2024-05-18T16:12:09.904980" elapsed="2.157938"/>
+</kw>
+<status status="PASS" start="2024-05-18T16:11:16.567989" elapsed="55.494929"/>
+</test>
+<test id="s1-t5" name="Add first item quantity and exceed second item" line="22">
+<kw name="Opening my browser" owner="common" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:12:12.067596" level="INFO">Opening browser 'Chrome' to base url 'https://automationteststore.com/'.</msg>
+<arg>${URL_HOME}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-05-18T16:12:12.067596" elapsed="37.293343"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:12:49.375274" level="INFO">Current location is 'https://automationteststore.com/'.</msg>
+<arg>${URL_HOME}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-05-18T16:12:49.360939" elapsed="0.014335"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-05-18T16:12:49.376274" elapsed="0.050093"/>
+</kw>
+<status status="PASS" start="2024-05-18T16:12:12.062918" elapsed="37.363449"/>
+</kw>
+<kw name="Add first item quantity and exceed second item" owner="addmultipro">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:12:49.429357" level="INFO">Clicking element 'xpath=//*[@id="categorymenu"]/nav/ul/li[6]/a'.</msg>
+<arg>xpath=//*[@id="categorymenu"]/nav/ul/li[6]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:12:49.428361" elapsed="3.248185"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:12:52.736891" level="INFO">${quantity} = 0</msg>
+<var>${quantity}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[1]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:12:52.677546" elapsed="0.059345"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:12:52.778308" level="INFO">${price} = $0.00</msg>
+<var>${price}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[2]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:12:52.737892" elapsed="0.040416"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-18T16:12:52.779284" level="INFO">${price} = 0.00</msg>
+<var>${price}</var>
+<arg>${price[1:].replace(",", "")}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-18T16:12:52.778308" elapsed="0.001994"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:12:52.780302" level="INFO">Clicking element '//*[@id="maincontainer"]/div/div/div/div/div[2]/div[1]/div[2]/a/img'.</msg>
+<arg>//*[@id="maincontainer"]/div/div/div/div/div[2]/div[1]/div[2]/a/img</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:12:52.780302" elapsed="3.164323"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:12:55.945625" level="INFO">Clicking element '//*[@id="product"]/fieldset/div[1]/div'.</msg>
+<arg>//*[@id="product"]/fieldset/div[1]/div</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:12:55.945625" elapsed="0.172122"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:12:56.119746" level="INFO">Selecting options from selection list '//*[@id="option320"]' by value 661.</msg>
+<arg>//*[@id="option320"]</arg>
+<arg>661</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2024-05-18T16:12:56.118748" elapsed="0.151376"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:12:56.271125" level="INFO">Typing text '150' into text field 'xpath=//*[@id="product_quantity"]'.</msg>
+<arg>xpath=//*[@id="product_quantity"]</arg>
+<arg>150</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:12:56.271125" elapsed="0.289597"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-18T16:12:58.574729" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-18T16:12:56.562397" elapsed="2.012332"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:12:58.631269" level="INFO">${item_price} = $6,750.00</msg>
+<var>${item_price}</var>
+<arg>xpath=//*[@id="product"]/fieldset/div[3]/label/span</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:12:58.575727" elapsed="0.055542"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-18T16:12:58.633679" level="INFO">${item_price} = 6750.00</msg>
+<var>${item_price}</var>
+<arg>${item_price[1:].replace(",", "")}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-18T16:12:58.632266" elapsed="0.001413"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-18T16:12:58.635696" level="INFO">${item_price} = 6750.0</msg>
+<var>${item_price}</var>
+<arg>float(${item_price})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-18T16:12:58.634681" elapsed="0.001015"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:12:58.636693" level="INFO">Clicking element 'xpath=//*[@id="product"]/fieldset/div[5]/ul/li/a'.</msg>
+<arg>xpath=//*[@id="product"]/fieldset/div[5]/ul/li/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:12:58.635696" elapsed="4.178959"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:13:02.862673" level="INFO">${update_quantity} = 150</msg>
+<var>${update_quantity}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[1]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:13:02.815742" elapsed="0.047723"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:13:02.900746" level="INFO">${update_price} = $6,750.00</msg>
+<var>${update_price}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[2]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:13:02.863465" elapsed="0.039018"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-18T16:13:02.904419" level="INFO">${update_price} = 6750.00</msg>
+<var>${update_price}</var>
+<arg>${update_price[1:].replace(",", "")}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-18T16:13:02.902483" elapsed="0.001936"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-18T16:13:02.906365" level="INFO">${distance_quantity} = 150</msg>
+<var>${distance_quantity}</var>
+<arg>int(${update_quantity}) - int(${quantity})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-18T16:13:02.905345" elapsed="0.001020"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-18T16:13:02.908401" level="INFO">${distance_price} = 6750.0</msg>
+<var>${distance_price}</var>
+<arg>float(${update_price}) - float(${price})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-18T16:13:02.907366" elapsed="0.001342"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<msg time="2024-05-18T16:13:02.909141" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${distance_quantity}</arg>
+<arg>150</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-05-18T16:13:02.909141" elapsed="0.001063"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:13:02.955797" level="INFO">${error_message} = Products marked with *** are not available in the desired quantity or out of stock!</msg>
+<var>${error_message}</var>
+<arg>//*[@id="maincontainer"]/div/div/div/div/strong</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:13:02.910204" elapsed="0.045593"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${error_message}</arg>
+<arg>Products marked with *** are not available in the desired quantity or out of stock!</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-05-18T16:13:02.956794" elapsed="0.000990"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:13:02.958789" level="INFO">Clicking element 'xpath=//*[@id="categorymenu"]/nav/ul/li[6]/a'.</msg>
+<arg>xpath=//*[@id="categorymenu"]/nav/ul/li[6]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:13:02.957784" elapsed="1.212600"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:13:04.201493" level="INFO">${quantity} = 150</msg>
+<var>${quantity}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[1]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:13:04.170384" elapsed="0.031109"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:13:04.228220" level="INFO">${price} = $6,750.00</msg>
+<var>${price}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[2]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:13:04.203161" elapsed="0.025059"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-18T16:13:04.229218" level="INFO">${price} = 6750.00</msg>
+<var>${price}</var>
+<arg>${price[1:].replace(",", "")}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-18T16:13:04.228220" elapsed="0.000998"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:13:04.230219" level="INFO">Clicking element '//*[@id="maincontainer"]/div/div/div/div/div[2]/div[3]/div[2]/div[3]/a'.</msg>
+<arg>//*[@id="maincontainer"]/div/div/div/div/div[2]/div[3]/div[2]/div[3]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:13:04.230219" elapsed="0.504560"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-18T16:13:06.737789" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-18T16:13:04.735761" elapsed="2.002028"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:13:06.775113" level="INFO">${item_price} = $7.20</msg>
+<var>${item_price}</var>
+<arg>xpath=//*[@id="maincontainer"]/div/div/div/div/div[2]/div[3]/div[2]/div[3]/div[2]/div</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:13:06.738730" elapsed="0.036383"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-18T16:13:06.776103" level="INFO">${item_price} = 7.20</msg>
+<var>${item_price}</var>
+<arg>${item_price[1:].replace(",", "")}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-18T16:13:06.775113" elapsed="0.000990"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-18T16:13:06.777065" level="INFO">${item_price} = 7.2</msg>
+<var>${item_price}</var>
+<arg>float(${item_price})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-18T16:13:06.777065" elapsed="0.000000"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:13:06.817480" level="INFO">${update_quantity} = 151</msg>
+<var>${update_quantity}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[1]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:13:06.778068" elapsed="0.039412"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:13:06.847514" level="INFO">${update_price} = $6,757.20</msg>
+<var>${update_price}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[2]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:13:06.818478" elapsed="0.029036"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-18T16:13:06.849520" level="INFO">${update_price} = 6757.20</msg>
+<var>${update_price}</var>
+<arg>${update_price[1:].replace(",", "")}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-18T16:13:06.848513" elapsed="0.001007"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-18T16:13:06.851518" level="INFO">${distance_quantity} = 1</msg>
+<var>${distance_quantity}</var>
+<arg>int(${update_quantity}) - int(${quantity})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-18T16:13:06.850515" elapsed="0.001003"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-18T16:13:06.852519" level="INFO">${distance_price} = 7.199999999999818</msg>
+<var>${distance_price}</var>
+<arg>float(${update_price}) - float(${price})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-18T16:13:06.851518" elapsed="0.001517"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<msg time="2024-05-18T16:13:06.854049" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${distance_quantity}</arg>
+<arg>1</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-05-18T16:13:06.853035" elapsed="0.001014"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<arg>${distance_price}</arg>
+<arg>${item_price}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-05-18T16:13:06.854049" elapsed="0.001001"/>
+</kw>
+<status status="PASS" start="2024-05-18T16:12:49.427364" elapsed="17.428686"/>
+</kw>
+<kw name="Closing my browser" owner="common" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-18T16:13:06.858052" elapsed="2.119638"/>
+</kw>
+<status status="PASS" start="2024-05-18T16:13:06.856050" elapsed="2.122643"/>
+</kw>
+<status status="PASS" start="2024-05-18T16:12:12.062918" elapsed="56.915775"/>
+</test>
+<test id="s1-t6" name="Add item first item quantity and not enough valid" line="25">
+<kw name="Opening my browser" owner="common" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:13:08.981692" level="INFO">Opening browser 'Chrome' to base url 'https://automationteststore.com/'.</msg>
+<arg>${URL_HOME}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-05-18T16:13:08.980675" elapsed="31.660219"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:13:40.654646" level="INFO">Current location is 'https://automationteststore.com/'.</msg>
+<arg>${URL_HOME}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-05-18T16:13:40.640894" elapsed="0.013752"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-05-18T16:13:40.655655" elapsed="0.051878"/>
+</kw>
+<status status="PASS" start="2024-05-18T16:13:08.980675" elapsed="31.727855"/>
+</kw>
+<kw name="Add item first item quantity and not enough valid" owner="addmultipro">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:13:40.711529" level="INFO">Clicking element 'xpath=//*[@id="categorymenu"]/nav/ul/li[8]/a'.</msg>
+<arg>xpath=//*[@id="categorymenu"]/nav/ul/li[8]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:13:40.710530" elapsed="6.224307"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:13:46.979301" level="INFO">${quantity} = 0</msg>
+<var>${quantity}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[1]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:13:46.935841" elapsed="0.044459"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:13:47.013308" level="INFO">${price} = $0.00</msg>
+<var>${price}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[2]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:13:46.980300" elapsed="0.033008"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-18T16:13:47.015324" level="INFO">${price} = 0.00</msg>
+<var>${price}</var>
+<arg>${price[1:].replace(",", "")}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-18T16:13:47.014323" elapsed="0.001001"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:13:47.016321" level="INFO">Clicking element '//*[@id="maincontainer"]/div/div/div/div/div[3]/div[1]/div[2]/a/img'.</msg>
+<arg>//*[@id="maincontainer"]/div/div/div/div/div[3]/div[1]/div[2]/a/img</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:13:47.016321" elapsed="4.297699"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:13:51.316245" level="INFO">Clicking element '//*[@id="product"]/fieldset/div[1]/div'.</msg>
+<arg>//*[@id="product"]/fieldset/div[1]/div</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:13:51.315044" elapsed="0.083784"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:13:51.399832" level="INFO">Typing text '10' into text field 'xpath=//*[@id="product_quantity"]'.</msg>
+<arg>xpath=//*[@id="product_quantity"]</arg>
+<arg>10</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:13:51.399832" elapsed="0.180183"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-18T16:13:53.590094" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-18T16:13:51.580015" elapsed="2.010079"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:13:53.593990" level="INFO">Clicking element 'xpath=//*[@id="product"]/fieldset/div[4]/ul/li/a'.</msg>
+<arg>xpath=//*[@id="product"]/fieldset/div[4]/ul/li/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:13:53.591042" elapsed="2.975921"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:13:56.598216" level="INFO">${item_price} = $9,990,000.00</msg>
+<var>${item_price}</var>
+<arg>xpath=//*[@id="cart"]/div/div[1]/table/tbody/tr[2]/td[6]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:13:56.566963" elapsed="0.032270"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-18T16:13:56.600232" level="INFO">${item_price} = 9990000.00</msg>
+<var>${item_price}</var>
+<arg>${item_price[1:].replace(",", "")}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-18T16:13:56.599233" elapsed="0.001997"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-18T16:13:56.601230" level="INFO">${item_price} = 9990000.0</msg>
+<var>${item_price}</var>
+<arg>float(${item_price})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-18T16:13:56.601230" elapsed="0.000000"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:13:56.628265" level="INFO">${update_quantity} = 1000000</msg>
+<var>${update_quantity}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[1]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:13:56.602742" elapsed="0.026526"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:13:56.652872" level="INFO">${update_price} = $9,990,000.00</msg>
+<var>${update_price}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[2]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:13:56.629268" elapsed="0.024622"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-18T16:13:56.656893" level="INFO">${update_price} = 9990000.00</msg>
+<var>${update_price}</var>
+<arg>${update_price[1:].replace(",", "")}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-18T16:13:56.654890" elapsed="0.002003"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-18T16:13:56.658892" level="INFO">${distance_quantity} = 1000000</msg>
+<var>${distance_quantity}</var>
+<arg>int(${update_quantity}) - int(${quantity})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-18T16:13:56.657893" elapsed="0.001996"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-18T16:13:56.660885" level="INFO">${distance_price} = 9990000.0</msg>
+<var>${distance_price}</var>
+<arg>float(${update_price}) - float(${price})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-18T16:13:56.659889" elapsed="0.000996"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<msg time="2024-05-18T16:13:56.661886" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${distance_quantity}</arg>
+<arg>1000000</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-05-18T16:13:56.661886" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<arg>${distance_price}</arg>
+<arg>${item_price}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-05-18T16:13:56.662884" elapsed="0.000000"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:13:56.682610" level="INFO">Current page contains element '//*[@id="maincontainer"]/div/div/div/div[2]/strong'.</msg>
+<arg>//*[@id="maincontainer"]/div/div/div/div[2]/strong</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-05-18T16:13:56.663393" elapsed="0.019217"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:13:56.683552" level="INFO">Clicking element 'xpath=//*[@id="categorymenu"]/nav/ul/li[8]/a'.</msg>
+<arg>xpath=//*[@id="categorymenu"]/nav/ul/li[8]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:13:56.683552" elapsed="3.127243"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:13:59.842755" level="INFO">${quantity} = 1000000</msg>
+<var>${quantity}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[1]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:13:59.810795" elapsed="0.031960"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:13:59.867931" level="INFO">${price} = $9,990,000.00</msg>
+<var>${price}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[2]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:13:59.843656" elapsed="0.024275"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-18T16:13:59.869932" level="INFO">${price} = 9990000.00</msg>
+<var>${price}</var>
+<arg>${price[1:].replace(",", "")}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-18T16:13:59.867931" elapsed="0.002001"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:13:59.870897" level="INFO">Clicking element '//*[@id="maincontainer"]/div/div/div/div/div[3]/div[4]/div[2]/div[3]/a/i'.</msg>
+<arg>//*[@id="maincontainer"]/div/div/div/div/div[3]/div[4]/div[2]/div[3]/a/i</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:13:59.869932" elapsed="0.508500"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-18T16:14:02.389806" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-18T16:14:00.378432" elapsed="2.012319"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:14:02.429094" level="INFO">${item_price} = $7.99</msg>
+<var>${item_price}</var>
+<arg>xpath=//*[@id="maincontainer"]/div/div/div/div/div[3]/div[4]/div[2]/div[3]/div[2]/div</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:14:02.390751" elapsed="0.038343"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-18T16:14:02.432092" level="INFO">${item_price} = 7.99</msg>
+<var>${item_price}</var>
+<arg>${item_price[1:].replace(",", "")}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-18T16:14:02.430095" elapsed="0.001997"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-18T16:14:02.433608" level="INFO">${item_price} = 7.99</msg>
+<var>${item_price}</var>
+<arg>float(${item_price})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-18T16:14:02.432092" elapsed="0.001516"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:14:02.463189" level="INFO">${update_quantity} = 1000001</msg>
+<var>${update_quantity}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[1]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:14:02.434633" elapsed="0.028556"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:14:02.495310" level="INFO">${update_price} = $9,990,007.99</msg>
+<var>${update_price}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[2]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:14:02.464209" elapsed="0.032208"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-18T16:14:02.497369" level="INFO">${update_price} = 9990007.99</msg>
+<var>${update_price}</var>
+<arg>${update_price[1:].replace(",", "")}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-18T16:14:02.496417" elapsed="0.002036"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-18T16:14:02.499328" level="INFO">${distance_quantity} = 1</msg>
+<var>${distance_quantity}</var>
+<arg>int(${update_quantity}) - int(${quantity})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-18T16:14:02.498453" elapsed="0.000875"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-18T16:14:02.501050" level="INFO">${distance_price} = 7.990000000223517</msg>
+<var>${distance_price}</var>
+<arg>float(${update_price}) - float(${price})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-18T16:14:02.499328" elapsed="0.001722"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<msg time="2024-05-18T16:14:02.501890" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${distance_quantity}</arg>
+<arg>1</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-05-18T16:14:02.501890" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<arg>${distance_price}</arg>
+<arg>${item_price}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-05-18T16:14:02.502870" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:14:02.504465" level="INFO">Clicking element '//*[@id="main_menu_top"]/li[3]/a'.</msg>
+<arg>//*[@id="main_menu_top"]/li[3]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:14:02.502870" elapsed="1.823668"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:14:04.346030" level="INFO">Current page contains element '//*[@id="cart"]/div/div[1]/table/tbody'.</msg>
+<arg>//*[@id="cart"]/div/div[1]/table/tbody</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-05-18T16:14:04.327538" elapsed="0.018492"/>
+</kw>
+<status status="PASS" start="2024-05-18T16:13:40.709534" elapsed="23.637495"/>
+</kw>
+<kw name="Closing my browser" owner="common" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-18T16:14:04.348029" elapsed="2.118474"/>
+</kw>
+<status status="PASS" start="2024-05-18T16:14:04.347029" elapsed="2.120477"/>
+</kw>
+<status status="PASS" start="2024-05-18T16:13:08.979692" elapsed="57.488845"/>
+</test>
+<test id="s1-t7" name="Add two item valid with another product" line="28">
+<kw name="Opening my browser" owner="common" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:14:06.472579" level="INFO">Opening browser 'Chrome' to base url 'https://automationteststore.com/'.</msg>
+<arg>${URL_HOME}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-05-18T16:14:06.471618" elapsed="51.973443"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:14:58.456441" level="INFO">Current location is 'https://automationteststore.com/'.</msg>
+<arg>${URL_HOME}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-05-18T16:14:58.446059" elapsed="0.011363"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-05-18T16:14:58.457422" elapsed="0.054275"/>
+</kw>
+<status status="PASS" start="2024-05-18T16:14:06.470522" elapsed="52.041175"/>
+</kw>
+<kw name="Add two item valid with another product" owner="addmultipro">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:14:58.516241" level="INFO">Clicking element 'xpath=//*[@id="categorymenu"]/nav/ul/li[7]/a'.</msg>
+<arg>xpath=//*[@id="categorymenu"]/nav/ul/li[7]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:14:58.515265" elapsed="1.664429"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>//*[@id="maincontainer"]/div/div/div/h1/span[1][contains(text(),'Hair Care')]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-05-18T16:15:00.180696" elapsed="0.025294"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:15:00.250224" level="INFO">${quantity} = 0</msg>
+<var>${quantity}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[1]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:15:00.206988" elapsed="0.043236"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:15:00.281475" level="INFO">${price} = $0.00</msg>
+<var>${price}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[2]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:15:00.250224" elapsed="0.031251"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-18T16:15:00.284002" level="INFO">${price} = 0.00</msg>
+<var>${price}</var>
+<arg>${price[1:].replace(",", "")}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-18T16:15:00.281475" elapsed="0.002527"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:15:00.285005" level="INFO">Clicking element '//*[@id="maincontainer"]/div/div/div/div/div[3]/div[2]/div[2]/div[3]/a/i'.</msg>
+<arg>//*[@id="maincontainer"]/div/div/div/div/div[3]/div[2]/div[2]/div[3]/a/i</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:15:00.285005" elapsed="0.443172"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-18T16:15:02.730312" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-18T16:15:00.728177" elapsed="2.002135"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:15:02.757653" level="INFO">${item_price} = $4.00</msg>
+<var>${item_price}</var>
+<arg>xpath=//*[@id="maincontainer"]/div/div/div/div/div[3]/div[2]/div[2]/div[3]/div[2]/div</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:15:02.731557" elapsed="0.026096"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-18T16:15:02.759254" level="INFO">${item_price} = 4.00</msg>
+<var>${item_price}</var>
+<arg>${item_price[1:].replace(",", "")}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-18T16:15:02.759254" elapsed="0.001129"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-18T16:15:02.761394" level="INFO">${item_price} = 4.0</msg>
+<var>${item_price}</var>
+<arg>float(${item_price})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-18T16:15:02.760383" elapsed="0.001011"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:15:02.784426" level="INFO">${update_quantity} = 1</msg>
+<var>${update_quantity}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[1]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:15:02.761394" elapsed="0.023032"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:15:02.806271" level="INFO">${update_price} = $4.00</msg>
+<var>${update_price}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[2]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:15:02.784426" elapsed="0.022846"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-18T16:15:02.808412" level="INFO">${update_price} = 4.00</msg>
+<var>${update_price}</var>
+<arg>${update_price[1:].replace(",", "")}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-18T16:15:02.807272" elapsed="0.001140"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-18T16:15:02.809422" level="INFO">${distance_quantity} = 1</msg>
+<var>${distance_quantity}</var>
+<arg>int(${update_quantity}) - int(${quantity})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-18T16:15:02.808412" elapsed="0.001010"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-18T16:15:02.810426" level="INFO">${distance_price} = 4.0</msg>
+<var>${distance_price}</var>
+<arg>float(${update_price}) - float(${price})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-18T16:15:02.809422" elapsed="0.001004"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<msg time="2024-05-18T16:15:02.811421" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${distance_quantity}</arg>
+<arg>1</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-05-18T16:15:02.810426" elapsed="0.000995"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<arg>${distance_price}</arg>
+<arg>${item_price}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-05-18T16:15:02.811421" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:15:02.812929" level="INFO">Clicking element 'xpath=//*[@id="categorymenu"]/nav/ul/li[7]/a'.</msg>
+<arg>xpath=//*[@id="categorymenu"]/nav/ul/li[7]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:15:02.812929" elapsed="2.080365"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>//*[@id="maincontainer"]/div/div/div/h1/span[1][contains(text(),'Hair Care')]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-05-18T16:15:04.893294" elapsed="0.020270"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:15:04.937900" level="INFO">${quantity} = 1</msg>
+<var>${quantity}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[1]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:15:04.914577" elapsed="0.024320"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:15:04.960813" level="INFO">${price} = $4.00</msg>
+<var>${price}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[2]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:15:04.938897" elapsed="0.021916"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-18T16:15:04.962814" level="INFO">${price} = 4.00</msg>
+<var>${price}</var>
+<arg>${price[1:].replace(",", "")}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-18T16:15:04.961813" elapsed="0.001508"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:15:04.963321" level="INFO">Clicking element '//*[@id="maincontainer"]/div/div/div/div/div[3]/div[3]/div[2]/div[3]/a/i'.</msg>
+<arg>//*[@id="maincontainer"]/div/div/div/div/div[3]/div[3]/div[2]/div[3]/a/i</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:15:04.963321" elapsed="0.512182"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-18T16:15:07.491034" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-18T16:15:05.476470" elapsed="2.014564"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:15:07.531396" level="INFO">${item_price} = $11.45</msg>
+<var>${item_price}</var>
+<arg>xpath=//*[@id="maincontainer"]/div/div/div/div/div[3]/div[3]/div[2]/div[3]/div[2]/div</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:15:07.492038" elapsed="0.039358"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-18T16:15:07.533391" level="INFO">${item_price} = 11.45</msg>
+<var>${item_price}</var>
+<arg>${item_price[1:].replace(",", "")}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-18T16:15:07.532390" elapsed="0.001510"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-18T16:15:07.534917" level="INFO">${item_price} = 11.45</msg>
+<var>${item_price}</var>
+<arg>float(${item_price})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-18T16:15:07.533900" elapsed="0.001017"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:15:07.571520" level="INFO">${update_quantity} = 2</msg>
+<var>${update_quantity}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[1]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:15:07.535936" elapsed="0.037202"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:15:07.604444" level="INFO">${update_price} = $15.45</msg>
+<var>${update_price}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[2]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:15:07.573138" elapsed="0.031306"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-18T16:15:07.606455" level="INFO">${update_price} = 15.45</msg>
+<var>${update_price}</var>
+<arg>${update_price[1:].replace(",", "")}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-18T16:15:07.605455" elapsed="0.001000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-18T16:15:07.608575" level="INFO">${distance_quantity} = 1</msg>
+<var>${distance_quantity}</var>
+<arg>int(${update_quantity}) - int(${quantity})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-18T16:15:07.607453" elapsed="0.001354"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-18T16:15:07.609810" level="INFO">${distance_price} = 11.45</msg>
+<var>${distance_price}</var>
+<arg>float(${update_price}) - float(${price})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-18T16:15:07.608807" elapsed="0.002002"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<msg time="2024-05-18T16:15:07.611814" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${distance_quantity}</arg>
+<arg>1</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-05-18T16:15:07.610809" elapsed="0.001005"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<arg>${distance_price}</arg>
+<arg>${item_price}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-05-18T16:15:07.611814" elapsed="0.001579"/>
+</kw>
+<status status="PASS" start="2024-05-18T16:14:58.514264" elapsed="9.099129"/>
+</kw>
+<kw name="Closing my browser" owner="common" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-18T16:15:07.614343" elapsed="2.145155"/>
+</kw>
+<status status="PASS" start="2024-05-18T16:15:07.614343" elapsed="2.146098"/>
+</kw>
+<status status="PASS" start="2024-05-18T16:14:06.468537" elapsed="63.291904"/>
+</test>
+<test id="s1-t8" name="Add two item valid with another product with select" line="31">
+<kw name="Opening my browser" owner="common" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:15:09.765080" level="INFO">Opening browser 'Chrome' to base url 'https://automationteststore.com/'.</msg>
+<arg>${URL_HOME}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-05-18T16:15:09.764029" elapsed="23.695007"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:15:33.468024" level="INFO">Current location is 'https://automationteststore.com/'.</msg>
+<arg>${URL_HOME}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-05-18T16:15:33.460037" elapsed="0.009014"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-05-18T16:15:33.469051" elapsed="0.049139"/>
+</kw>
+<status status="PASS" start="2024-05-18T16:15:09.763224" elapsed="23.755964"/>
+</kw>
+<kw name="Add two item valid with another product with select" owner="addmultipro">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:15:33.520205" level="INFO">Clicking element 'xpath=//*[@id="categorymenu"]/nav/ul/li[2]/a'.</msg>
+<arg>xpath=//*[@id="categorymenu"]/nav/ul/li[2]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:15:33.520205" elapsed="5.103249"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:15:38.624480" level="INFO">Clicking element 'xpath=//*[@id="maincontainer"]/div/div/div/div/ul/li[1]/a'.</msg>
+<arg>xpath=//*[@id="maincontainer"]/div/div/div/div/ul/li[1]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:15:38.623454" elapsed="1.400197"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:15:40.067794" level="INFO">${quantity} = 0</msg>
+<var>${quantity}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[1]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:15:40.024659" elapsed="0.044244"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:15:40.106156" level="INFO">${price} = $0.00</msg>
+<var>${price}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[2]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:15:40.068903" elapsed="0.037253"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-18T16:15:40.108156" level="INFO">${price} = 0.00</msg>
+<var>${price}</var>
+<arg>${price}[1:]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-18T16:15:40.107156" elapsed="0.001000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:15:40.109157" level="INFO">Clicking element '//*[@id="maincontainer"]/div/div/div/div/div[2]/div[3]/div[2]/a/img'.</msg>
+<arg>//*[@id="maincontainer"]/div/div/div/div/div[2]/div[3]/div[2]/a/img</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:15:40.108156" elapsed="4.895319"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:15:45.004489" level="INFO">Clicking element '//*[@id="product"]/fieldset/div[1]/div'.</msg>
+<arg>//*[@id="product"]/fieldset/div[1]/div</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:15:45.004489" elapsed="0.103252"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:15:45.108744" level="INFO">Selecting options from selection list '//*[@id="option342"]' by value 743.</msg>
+<arg>//*[@id="option342"]</arg>
+<arg>743</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2024-05-18T16:15:45.108744" elapsed="0.087843"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:15:45.198660" level="INFO">Typing text '5' into text field 'xpath=//*[@id="product_quantity"]'.</msg>
+<arg>xpath=//*[@id="product_quantity"]</arg>
+<arg>5</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:15:45.197652" elapsed="0.163534"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-18T16:15:47.363303" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-18T16:15:45.362308" elapsed="2.001532"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:15:47.405839" level="INFO">${item_price} = $550.00</msg>
+<var>${item_price}</var>
+<arg>xpath=//*[@id="product"]/fieldset/div[3]/label/span</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:15:47.364876" elapsed="0.040963"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-18T16:15:47.406839" level="INFO">${item_price} = 550.00</msg>
+<var>${item_price}</var>
+<arg>${item_price}[1:]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-18T16:15:47.406839" elapsed="0.001000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-18T16:15:47.408840" level="INFO">${item_price} = 550.0</msg>
+<var>${item_price}</var>
+<arg>float(${item_price})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-18T16:15:47.407839" elapsed="0.001001"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:15:47.409840" level="INFO">Clicking element '//*[@id="product"]/fieldset/div[5]/ul/li'.</msg>
+<arg>//*[@id="product"]/fieldset/div[5]/ul/li</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:15:47.408840" elapsed="2.526509"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:15:49.975455" level="INFO">${update_quantity} = 5</msg>
+<var>${update_quantity}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[1]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:15:49.936340" elapsed="0.039115"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:15:50.001144" level="INFO">${update_price} = $550.00</msg>
+<var>${update_price}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[2]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:15:49.975455" elapsed="0.025689"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-18T16:15:50.002144" level="INFO">${update_price} = 550.00</msg>
+<var>${update_price}</var>
+<arg>${update_price}[1:]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-18T16:15:50.001144" elapsed="0.001000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-18T16:15:50.003151" level="INFO">${distance_quantity} = 5</msg>
+<var>${distance_quantity}</var>
+<arg>int(${update_quantity}) - int(${quantity})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-18T16:15:50.002144" elapsed="0.001547"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-18T16:15:50.004706" level="INFO">${distance_price} = 550.0</msg>
+<var>${distance_price}</var>
+<arg>float(${update_price}) - float(${price})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-18T16:15:50.003691" elapsed="0.001015"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<msg time="2024-05-18T16:15:50.006246" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${distance_quantity}</arg>
+<arg>5</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-05-18T16:15:50.005706" elapsed="0.000540"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<arg>${distance_price}</arg>
+<arg>${item_price}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-05-18T16:15:50.007260" elapsed="0.001021"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:15:50.009257" level="INFO">Clicking element 'xpath=//*[@id="categorymenu"]/nav/ul/li[2]/a'.</msg>
+<arg>xpath=//*[@id="categorymenu"]/nav/ul/li[2]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:15:50.008281" elapsed="1.321883"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>//*[@id="maincontainer"]/div/div/div/h1/span[1][contains(text(),'Apparel &amp; accessories')]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-05-18T16:15:51.330164" elapsed="0.015032"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:15:51.346197" level="INFO">Clicking element 'xpath=//*[@id="maincontainer"]/div/div/div/div/ul/li[1]/a'.</msg>
+<arg>xpath=//*[@id="maincontainer"]/div/div/div/div/ul/li[1]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:15:51.346197" elapsed="0.925094"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>//*[@id="maincontainer"]/div/div/div/h1/span[1][contains(text(),'Shoes')]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-05-18T16:15:52.272270" elapsed="0.025597"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:15:52.335451" level="INFO">${quantity} = 5</msg>
+<var>${quantity}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[1]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:15:52.298877" elapsed="0.036574"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:15:52.365519" level="INFO">${price} = $550.00</msg>
+<var>${price}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[2]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:15:52.336466" elapsed="0.030059"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-18T16:15:52.368517" level="INFO">${price} = 550.00</msg>
+<var>${price}</var>
+<arg>${price}[1:]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-18T16:15:52.367515" elapsed="0.001002"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:15:52.369514" level="INFO">Clicking element '//*[@id="maincontainer"]/div/div/div/div/div[2]/div[1]/div[2]/a/img'.</msg>
+<arg>//*[@id="maincontainer"]/div/div/div/div/div[2]/div[1]/div[2]/a/img</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:15:52.368517" elapsed="4.893474"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:15:57.263476" level="INFO">Clicking element '//*[@id="option344749"]'.</msg>
+<arg>//*[@id="option344749"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:15:57.263476" elapsed="0.064025"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:15:57.327501" level="INFO">Typing text '5' into text field 'xpath=//*[@id="product_quantity"]'.</msg>
+<arg>xpath=//*[@id="product_quantity"]</arg>
+<arg>5</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:15:57.327501" elapsed="0.106071"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-18T16:15:59.443995" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-18T16:15:57.433572" elapsed="2.010753"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:15:59.475886" level="INFO">${item_price} = $130.00</msg>
+<var>${item_price}</var>
+<arg>xpath=//*[@id="product"]/fieldset/div[4]/label/span</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:15:59.444325" elapsed="0.031561"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-18T16:15:59.475886" level="INFO">${item_price} = 130.00</msg>
+<var>${item_price}</var>
+<arg>${item_price}[1:]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-18T16:15:59.475886" elapsed="0.000000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-18T16:15:59.475886" level="INFO">${item_price} = 130.0</msg>
+<var>${item_price}</var>
+<arg>float(${item_price})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-18T16:15:59.475886" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:15:59.483475" level="INFO">Clicking element 'xpath=//*[@id="product"]/fieldset/div[6]/ul/li/a'.</msg>
+<arg>xpath=//*[@id="product"]/fieldset/div[6]/ul/li/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:15:59.483399" elapsed="3.729721"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:16:03.261694" level="INFO">${update_quantity} = 10</msg>
+<var>${update_quantity}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[1]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:16:03.213859" elapsed="0.047835"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-18T16:16:03.286396" level="INFO">${update_price} = $680.00</msg>
+<var>${update_price}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[2]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-18T16:16:03.261694" elapsed="0.024702"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-18T16:16:03.286396" level="INFO">${update_price} = 680.00</msg>
+<var>${update_price}</var>
+<arg>${update_price}[1:]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-18T16:16:03.286396" elapsed="0.000000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-18T16:16:03.287508" level="INFO">${distance_quantity} = 5</msg>
+<var>${distance_quantity}</var>
+<arg>int(${update_quantity}) - int(${quantity})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-18T16:16:03.287508" elapsed="0.000000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-18T16:16:03.287508" level="INFO">${distance_price} = 130.0</msg>
+<var>${distance_price}</var>
+<arg>float(${update_price}) - float(${price})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-18T16:16:03.287508" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<msg time="2024-05-18T16:16:03.288525" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${distance_quantity}</arg>
+<arg>5</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-05-18T16:16:03.287508" elapsed="0.001017"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<arg>${distance_price}</arg>
+<arg>${item_price}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-05-18T16:16:03.288525" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-05-18T16:15:33.519188" elapsed="29.769337"/>
+</kw>
+<kw name="Closing my browser" owner="common" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-18T16:16:03.288525" elapsed="2.118784"/>
+</kw>
+<status status="PASS" start="2024-05-18T16:16:03.288525" elapsed="2.118784"/>
+</kw>
+<status status="PASS" start="2024-05-18T16:15:09.761456" elapsed="55.645853"/>
+</test>
+<doc>Cart</doc>
+<status status="PASS" start="2024-05-18T16:09:07.143157" elapsed="418.264152"/>
+</suite>
+<statistics>
+<total>
+<stat pass="8" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="8" fail="0" skip="0" id="s1" name="Test Addmultipleproducts">Test Addmultipleproducts</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

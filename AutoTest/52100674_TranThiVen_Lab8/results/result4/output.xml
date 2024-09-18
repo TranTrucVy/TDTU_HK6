@@ -1,0 +1,660 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.10.0 on win32)" generated="20240422 16:54:52.621" rpa="false" schemaversion="4">
+<suite id="s1" name="Ex4" source="D:\CURRENT_SEMESTER\Auto Testing\lab8\tests\Ex4.robot">
+<test id="s1-t1" name="Do a GET request and Verify" line="16">
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${header}</var>
+<arg>user-agent</arg>
+<arg>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20240422 16:54:53.259" level="INFO">${header} = {'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36'}</msg>
+<status status="PASS" starttime="20240422 16:54:53.258" endtime="20240422 16:54:53.259"/>
+</kw>
+<kw name="Create Session" library="RequestsLibrary">
+<arg>mysession</arg>
+<arg>${URL}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20240422 16:54:53.259" level="INFO">Creating Session using : alias=mysession, url=https://dummy.restapiexample.com/, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20240422 16:54:53.259" endtime="20240422 16:54:53.260"/>
+</kw>
+<kw name="GET On Session" library="RequestsLibrary">
+<var>${response}</var>
+<arg>mysession</arg>
+<arg>/api/v1/employees</arg>
+<arg>headers=${header}</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<msg timestamp="20240422 16:54:55.687" level="INFO">GET Request : url=https://dummy.restapiexample.com/api/v1/employees 
+ path_url=/api/v1/employees 
+ headers={'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg timestamp="20240422 16:54:55.688" level="INFO">GET Response : url=https://dummy.restapiexample.com/api/v1/employees 
+ status=200, reason=OK 
+ headers={'Date': 'Mon, 22 Apr 2024 09:54:50 GMT', 'Server': 'nginx/1.21.6', 'Content-Type': 'application/json', 'Content-Length': '636', 'Cache-Control': 'no-cache, private, max-age=86400', 'X-RateLimit-Limit': '60', 'X-RateLimit-Remaining': '58', 'Expires': 'Tue, 23 Apr 2024 09:54:50 GMT', 'Vary': 'Accept-Encoding', 'Content-Encoding': 'gzip', 'X-Endurance-Cache-Level': '2', 'X-nginx-cache': 'WordPress', 'X-Server-Cache': 'true', 'X-Proxy-Cache': 'MISS'} 
+ body={"status":"success","data":[{"id":1,"employee_name":"Tiger Nixon","employee_salary":320800,"employee_age":61,"profile_image":""},{"id":2,"employee_name":"Garrett Winters","employee_salary":170750,"employee_age":63,"profile_image":""},{"id":3,"employee_name":"Ashton Cox","employee_salary":86000,"employee_age":66,"profile_image":""},{"id":4,"employee_name":"Cedric Kelly","employee_salary":433060,"employee_age":22,"profile_image":""},{"id":5,"employee_name":"Airi Satou","employee_salary":162700,"employee_age":33,"profile_image":""},{"id":6,"employee_name":"Brielle Williamson","employee_salary":372000,"employee_age":61,"profile_image":""},{"id":7,"employee_name":"Herrod Chandler","employee_salary":137500,"employee_age":59,"profile_image":""},{"id":8,"employee_name":"Rhona Davidson","employee_salary":327900,"employee_age":55,"profile_image":""},{"id":9,"employee_name":"Colleen Hurst","employee_salary":205500,"employee_age":39,"profile_image":""},{"id":10,"employee_name":"Sonya Frost","employee_salary":103600,"employee_age":23,"profile_image":""},{"id":11,"employee_name":"Jena Gaines","employee_salary":90560,"employee_age":30,"profile_image":""},{"id":12,"employee_name":"Quinn Flynn","employee_salary":342000,"employee_age":22,"profile_image":""},{"id":13,"employee_name":"Charde Marshall","employee_salary":470600,"employee_age":36,"profile_image":""},{"id":14,"employee_name":"Haley Kennedy","employee_salary":313500,"employee_age":43,"profile_image":""},{"id":15,"employee_name":"Tatyana Fitzpatrick","employee_salary":385750,"employee_age":19,"profile_image":""},{"id":16,"employee_name":"Michael Silva","employee_salary":198500,"employee_age":66,"profile_image":""},{"id":17,"employee_name":"Paul Byrd","employee_salary":725000,"employee_age":64,"profile_image":""},{"id":18,"employee_name":"Gloria Little","employee_salary":237500,"employee_age":59,"profile_image":""},{"id":19,"employee_name":"Bradley Greer","employee_salary":132000,"employee_age":41,"profile_image":""},{"id":20,"employee_name":"Dai Rios","employee_salary":217500,"employee_age":35,"profile_image":""},{"id":21,"employee_name":"Jenette Caldwell","employee_salary":345000,"employee_age":30,"profile_image":""},{"id":22,"employee_name":"Yuri Berry","employee_salary":675000,"employee_age":40,"profile_image":""},{"id":23,"employee_name":"Caesar Vance","employee_salary":106450,"employee_age":21,"profile_image":""},{"id":24,"employee_name":"Doris Wilder","employee_salary":85600,"employee_age":23,"profile_image":""}],"message":"Successfully! All records has been fetched."} 
+ </msg>
+<msg timestamp="20240422 16:54:55.688" level="INFO">C:\Users\LENOVO\AppData\Local\Programs\Python\Python310-32\lib\site-packages\urllib3\connectionpool.py:1045: InsecureRequestWarning: Unverified HTTPS request is being made to host 'dummy.restapiexample.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<msg timestamp="20240422 16:54:55.689" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20240422 16:54:53.260" endtime="20240422 16:54:55.689"/>
+</kw>
+<kw name="Status Should Be" library="RequestsLibrary">
+<arg>200</arg>
+<arg>${response}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="PASS" starttime="20240422 16:54:55.689" endtime="20240422 16:54:55.690"/>
+</kw>
+<kw name="Get Value From Json" library="JSONLibrary">
+<var>${data}</var>
+<arg>${response.json()}</arg>
+<arg>data</arg>
+<doc>Get Value From JSON using JSONPath</doc>
+<msg timestamp="20240422 16:54:55.730" level="INFO">${data} = [[{'id': 1, 'employee_name': 'Tiger Nixon', 'employee_salary': 320800, 'employee_age': 61, 'profile_image': ''}, {'id': 2, 'employee_name': 'Garrett Winters', 'employee_salary': 170750, 'employee_age'...</msg>
+<status status="PASS" starttime="20240422 16:54:55.690" endtime="20240422 16:54:55.730"/>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<var>${total}</var>
+<arg>${data}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<msg timestamp="20240422 16:54:55.732" level="INFO">Length is 1</msg>
+<msg timestamp="20240422 16:54:55.733" level="INFO">${total} = 1</msg>
+<status status="PASS" starttime="20240422 16:54:55.731" endtime="20240422 16:54:55.733"/>
+</kw>
+<kw name="Should Not Be Equal" library="BuiltIn">
+<arg>${total}</arg>
+<arg>0</arg>
+<doc>Fails if the given objects are equal.</doc>
+<msg timestamp="20240422 16:54:55.735" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<status status="PASS" starttime="20240422 16:54:55.735" endtime="20240422 16:54:55.735"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${body}</var>
+<arg>${response.content}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20240422 16:54:55.739" level="INFO">${body} = {"status":"success","data":[{"id":1,"employee_name":"Tiger Nixon","employee_salary":320800,"employee_age":61,"profile_image":""},{"id":2,"employee_name":"Garrett Winters","employee_salary":170750,"emp...</msg>
+<status status="PASS" starttime="20240422 16:54:55.736" endtime="20240422 16:54:55.739"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${body}</arg>
+<arg>employee_name</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20240422 16:54:55.740" endtime="20240422 16:54:55.741"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>body: ${body}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20240422 16:54:55.742" endtime="20240422 16:54:55.746"/>
+</kw>
+<status status="PASS" starttime="20240422 16:54:53.258" endtime="20240422 16:54:55.747"/>
+</test>
+<test id="s1-t2" name="Do a POST request and Verify" line="31">
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${header}</var>
+<arg>user-agent</arg>
+<arg>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20240422 16:54:55.752" level="INFO">${header} = {'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36'}</msg>
+<status status="PASS" starttime="20240422 16:54:55.751" endtime="20240422 16:54:55.752"/>
+</kw>
+<kw name="Create Session" library="RequestsLibrary">
+<arg>mysession</arg>
+<arg>${URL}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20240422 16:54:55.753" level="INFO">Creating Session using : alias=mysession, url=https://dummy.restapiexample.com/, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20240422 16:54:55.753" endtime="20240422 16:54:55.753"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${body}</var>
+<arg>name=test</arg>
+<arg>salary=1200</arg>
+<arg>age=21</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20240422 16:54:55.755" level="INFO">${body} = {'name': 'test', 'salary': '1200', 'age': '21'}</msg>
+<status status="PASS" starttime="20240422 16:54:55.754" endtime="20240422 16:54:55.755"/>
+</kw>
+<kw name="POST On Session" library="RequestsLibrary">
+<var>${response}</var>
+<arg>mysession</arg>
+<arg>/api/v1/create</arg>
+<arg>data=${body}</arg>
+<arg>headers=${header}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<msg timestamp="20240422 16:54:59.492" level="INFO">POST Request : url=https://dummy.restapiexample.com/api/v1/create 
+ path_url=/api/v1/create 
+ headers={'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '28', 'Content-Type': 'application/x-www-form-urlencoded'} 
+ body=name=test&amp;salary=1200&amp;age=21 
+ </msg>
+<msg timestamp="20240422 16:54:59.493" level="INFO">POST Response : url=https://dummy.restapiexample.com/api/v1/create 
+ status=200, reason=OK 
+ headers={'Date': 'Mon, 22 Apr 2024 09:54:54 GMT', 'Server': 'Apache', 'Cache-Control': 'no-cache, private, max-age=86400', 'X-RateLimit-Limit': '60', 'X-RateLimit-Remaining': '58', 'Upgrade': 'h2,h2c', 'Connection': 'Upgrade', 'Expires': 'Tue, 23 Apr 2024 09:54:54 GMT', 'Vary': 'Accept-Encoding', 'Content-Encoding': 'gzip', 'X-Endurance-Cache-Level': '2', 'X-nginx-cache': 'WordPress', 'Content-Length': '125', 'Content-Type': 'application/json'} 
+ body={"status":"success","data":{"name":"test","salary":"1200","age":"21","id":5456},"message":"Successfully! Record has been added."} 
+ </msg>
+<msg timestamp="20240422 16:54:59.493" level="INFO">C:\Users\LENOVO\AppData\Local\Programs\Python\Python310-32\lib\site-packages\urllib3\connectionpool.py:1045: InsecureRequestWarning: Unverified HTTPS request is being made to host 'dummy.restapiexample.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<msg timestamp="20240422 16:54:59.494" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20240422 16:54:55.755" endtime="20240422 16:54:59.494"/>
+</kw>
+<kw name="Status Should Be" library="RequestsLibrary">
+<arg>200</arg>
+<arg>${response}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="PASS" starttime="20240422 16:54:59.495" endtime="20240422 16:54:59.496"/>
+</kw>
+<kw name="Get Value From Json" library="JSONLibrary">
+<var>${status}</var>
+<arg>${response.json()}</arg>
+<arg>status</arg>
+<doc>Get Value From JSON using JSONPath</doc>
+<msg timestamp="20240422 16:54:59.533" level="INFO">${status} = ['success']</msg>
+<status status="PASS" starttime="20240422 16:54:59.497" endtime="20240422 16:54:59.533"/>
+</kw>
+<kw name="Get From List" library="Collections">
+<var>${statusFromList}</var>
+<arg>${status}</arg>
+<arg>0</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<msg timestamp="20240422 16:54:59.534" level="INFO">${statusFromList} = success</msg>
+<status status="PASS" starttime="20240422 16:54:59.533" endtime="20240422 16:54:59.534"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>success</arg>
+<arg>${statusFromList}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20240422 16:54:59.534" endtime="20240422 16:54:59.534"/>
+</kw>
+<kw name="Get Value From Json" library="JSONLibrary">
+<var>${data}</var>
+<arg>${response.json()}</arg>
+<arg>data</arg>
+<doc>Get Value From JSON using JSONPath</doc>
+<msg timestamp="20240422 16:54:59.558" level="INFO">${data} = [{'name': 'test', 'salary': '1200', 'age': '21', 'id': 5456}]</msg>
+<status status="PASS" starttime="20240422 16:54:59.534" endtime="20240422 16:54:59.558"/>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<var>${getHeaderValue}</var>
+<arg>${response.headers}</arg>
+<arg>Content-Type</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<msg timestamp="20240422 16:54:59.559" level="INFO">${getHeaderValue} = application/json</msg>
+<status status="PASS" starttime="20240422 16:54:59.558" endtime="20240422 16:54:59.559"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${getHeaderValue}</arg>
+<arg>application/json</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20240422 16:54:59.559" endtime="20240422 16:54:59.559"/>
+</kw>
+<kw name="Get From List" library="Collections">
+<var>${dataFromList}</var>
+<arg>${data}</arg>
+<arg>0</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<msg timestamp="20240422 16:54:59.560" level="INFO">${dataFromList} = {'name': 'test', 'salary': '1200', 'age': '21', 'id': 5456}</msg>
+<status status="PASS" starttime="20240422 16:54:59.559" endtime="20240422 16:54:59.560"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>data from list: ${dataFromList}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20240422 16:54:59.560" endtime="20240422 16:54:59.560"/>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<var>${name}</var>
+<arg>${dataFromList}</arg>
+<arg>name</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<msg timestamp="20240422 16:54:59.561" level="INFO">${name} = test</msg>
+<status status="PASS" starttime="20240422 16:54:59.561" endtime="20240422 16:54:59.561"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>test</arg>
+<arg>${name}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20240422 16:54:59.562" endtime="20240422 16:54:59.562"/>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<var>${salary}</var>
+<arg>${dataFromList}</arg>
+<arg>salary</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<msg timestamp="20240422 16:54:59.562" level="INFO">${salary} = 1200</msg>
+<status status="PASS" starttime="20240422 16:54:59.562" endtime="20240422 16:54:59.563"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>1200</arg>
+<arg>${salary}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20240422 16:54:59.563" endtime="20240422 16:54:59.563"/>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<var>${age}</var>
+<arg>${dataFromList}</arg>
+<arg>age</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<msg timestamp="20240422 16:54:59.564" level="INFO">${age} = 21</msg>
+<status status="PASS" starttime="20240422 16:54:59.563" endtime="20240422 16:54:59.564"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>21</arg>
+<arg>${age}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20240422 16:54:59.564" endtime="20240422 16:54:59.564"/>
+</kw>
+<status status="PASS" starttime="20240422 16:54:55.750" endtime="20240422 16:54:59.565"/>
+</test>
+<test id="s1-t3" name="Verify GET method on a single item" line="60">
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${header}</var>
+<arg>user-agent</arg>
+<arg>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20240422 16:54:59.566" level="INFO">${header} = {'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/'}</msg>
+<status status="PASS" starttime="20240422 16:54:59.566" endtime="20240422 16:54:59.566"/>
+</kw>
+<kw name="Create Session" library="RequestsLibrary">
+<arg>mysession</arg>
+<arg>${URL}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20240422 16:54:59.566" level="INFO">Creating Session using : alias=mysession, url=https://dummy.restapiexample.com/, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20240422 16:54:59.566" endtime="20240422 16:54:59.567"/>
+</kw>
+<kw name="GET On Session" library="RequestsLibrary">
+<var>${response}</var>
+<arg>mysession</arg>
+<arg>/api/v1/employee/1</arg>
+<arg>headers=${header}</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<msg timestamp="20240422 16:55:01.218" level="INFO">GET Request : url=https://dummy.restapiexample.com/api/v1/employee/1 
+ path_url=/api/v1/employee/1 
+ headers={'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg timestamp="20240422 16:55:01.219" level="INFO">GET Response : url=https://dummy.restapiexample.com/api/v1/employee/1 
+ status=200, reason=OK 
+ headers={'Date': 'Mon, 22 Apr 2024 09:54:57 GMT', 'Server': 'nginx/1.21.6', 'Content-Type': 'application/json', 'Content-Length': '152', 'Cache-Control': 'no-cache, private, max-age=86400', 'X-RateLimit-Limit': '60', 'X-RateLimit-Remaining': '58', 'Expires': 'Tue, 23 Apr 2024 09:54:56 GMT', 'Vary': 'Accept-Encoding', 'Content-Encoding': 'gzip', 'X-Endurance-Cache-Level': '2', 'X-nginx-cache': 'WordPress', 'X-Server-Cache': 'true', 'X-Proxy-Cache': 'MISS'} 
+ body={"status":"success","data":{"id":1,"employee_name":"Tiger Nixon","employee_salary":320800,"employee_age":61,"profile_image":""},"message":"Successfully! Record has been fetched."} 
+ </msg>
+<msg timestamp="20240422 16:55:01.219" level="INFO">C:\Users\LENOVO\AppData\Local\Programs\Python\Python310-32\lib\site-packages\urllib3\connectionpool.py:1045: InsecureRequestWarning: Unverified HTTPS request is being made to host 'dummy.restapiexample.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<msg timestamp="20240422 16:55:01.221" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20240422 16:54:59.567" endtime="20240422 16:55:01.221"/>
+</kw>
+<kw name="Status Should Be" library="RequestsLibrary">
+<arg>200</arg>
+<arg>${response}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="PASS" starttime="20240422 16:55:01.221" endtime="20240422 16:55:01.222"/>
+</kw>
+<kw name="Get Value From Json" library="JSONLibrary">
+<var>${data}</var>
+<arg>${response.json()}</arg>
+<arg>data</arg>
+<doc>Get Value From JSON using JSONPath</doc>
+<msg timestamp="20240422 16:55:01.250" level="INFO">${data} = [{'id': 1, 'employee_name': 'Tiger Nixon', 'employee_salary': 320800, 'employee_age': 61, 'profile_image': ''}]</msg>
+<status status="PASS" starttime="20240422 16:55:01.224" endtime="20240422 16:55:01.250"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>data: ${data}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20240422 16:55:01.251" endtime="20240422 16:55:01.251"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${data}</var>
+<arg>${data}[0]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240422 16:55:01.252" level="INFO">${data} = {'id': 1, 'employee_name': 'Tiger Nixon', 'employee_salary': 320800, 'employee_age': 61, 'profile_image': ''}</msg>
+<status status="PASS" starttime="20240422 16:55:01.252" endtime="20240422 16:55:01.252"/>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<var>${id}</var>
+<arg>${data}</arg>
+<arg>id</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<msg timestamp="20240422 16:55:01.253" level="INFO">${id} = 1</msg>
+<status status="PASS" starttime="20240422 16:55:01.252" endtime="20240422 16:55:01.254"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>1</arg>
+<arg>${id}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<msg timestamp="20240422 16:55:01.255" level="INFO">Argument types are:
+&lt;class 'str'&gt;
+&lt;class 'int'&gt;</msg>
+<status status="PASS" starttime="20240422 16:55:01.255" endtime="20240422 16:55:01.255"/>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<var>${employee_name}</var>
+<arg>${data}</arg>
+<arg>employee_name</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<msg timestamp="20240422 16:55:01.256" level="INFO">${employee_name} = Tiger Nixon</msg>
+<status status="PASS" starttime="20240422 16:55:01.256" endtime="20240422 16:55:01.256"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>Tiger Nixon</arg>
+<arg>${employee_name}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20240422 16:55:01.257" endtime="20240422 16:55:01.257"/>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<var>${employee_salary}</var>
+<arg>${data}</arg>
+<arg>employee_salary</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<msg timestamp="20240422 16:55:01.258" level="INFO">${employee_salary} = 320800</msg>
+<status status="PASS" starttime="20240422 16:55:01.258" endtime="20240422 16:55:01.259"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>320800</arg>
+<arg>${employee_salary}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<msg timestamp="20240422 16:55:01.260" level="INFO">Argument types are:
+&lt;class 'str'&gt;
+&lt;class 'int'&gt;</msg>
+<status status="PASS" starttime="20240422 16:55:01.259" endtime="20240422 16:55:01.260"/>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<var>${employee_age}</var>
+<arg>${data}</arg>
+<arg>employee_age</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<msg timestamp="20240422 16:55:01.260" level="INFO">${employee_age} = 61</msg>
+<status status="PASS" starttime="20240422 16:55:01.260" endtime="20240422 16:55:01.260"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>61</arg>
+<arg>${employee_age}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<msg timestamp="20240422 16:55:01.261" level="INFO">Argument types are:
+&lt;class 'str'&gt;
+&lt;class 'int'&gt;</msg>
+<status status="PASS" starttime="20240422 16:55:01.261" endtime="20240422 16:55:01.261"/>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<var>${profile_image}</var>
+<arg>${data}</arg>
+<arg>profile_image</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<msg timestamp="20240422 16:55:01.262" level="INFO">${profile_image} = </msg>
+<status status="PASS" starttime="20240422 16:55:01.262" endtime="20240422 16:55:01.262"/>
+</kw>
+<kw name="Should Be Empty" library="BuiltIn">
+<arg>${profile_image}</arg>
+<doc>Verifies that the given item is empty.</doc>
+<msg timestamp="20240422 16:55:01.263" level="INFO">Length is 0</msg>
+<status status="PASS" starttime="20240422 16:55:01.262" endtime="20240422 16:55:01.263"/>
+</kw>
+<status status="PASS" starttime="20240422 16:54:59.565" endtime="20240422 16:55:01.263"/>
+</test>
+<test id="s1-t4" name="Verify PUT method" line="82">
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${header}</var>
+<arg>user-agent</arg>
+<arg>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20240422 16:55:01.266" level="INFO">${header} = {'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/'}</msg>
+<status status="PASS" starttime="20240422 16:55:01.266" endtime="20240422 16:55:01.267"/>
+</kw>
+<kw name="Create Session" library="RequestsLibrary">
+<arg>mysession</arg>
+<arg>${URL}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20240422 16:55:01.267" level="INFO">Creating Session using : alias=mysession, url=https://dummy.restapiexample.com/, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20240422 16:55:01.267" endtime="20240422 16:55:01.267"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${body}</var>
+<arg>name=test</arg>
+<arg>salary=1200</arg>
+<arg>age=21</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20240422 16:55:01.268" level="INFO">${body} = {'name': 'test', 'salary': '1200', 'age': '21'}</msg>
+<status status="PASS" starttime="20240422 16:55:01.267" endtime="20240422 16:55:01.268"/>
+</kw>
+<kw name="PUT On Session" library="RequestsLibrary">
+<var>${response}</var>
+<arg>mysession</arg>
+<arg>/api/v1/update/21</arg>
+<arg>data=${body}</arg>
+<arg>headers=${header}</arg>
+<doc>Sends a PUT request on a previously created HTTP Session.</doc>
+<msg timestamp="20240422 16:55:02.008" level="INFO">PUT Request : url=https://dummy.restapiexample.com/api/v1/update/21 
+ path_url=/api/v1/update/21 
+ headers={'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '28', 'Content-Type': 'application/x-www-form-urlencoded'} 
+ body=name=test&amp;salary=1200&amp;age=21 
+ </msg>
+<msg timestamp="20240422 16:55:02.008" level="INFO">PUT Response : url=https://dummy.restapiexample.com/api/v1/update/21 
+ status=200, reason=OK 
+ headers={'Date': 'Mon, 22 Apr 2024 09:54:58 GMT', 'Server': 'Apache', 'Cache-Control': 'no-cache, private, max-age=86400', 'X-RateLimit-Limit': '60', 'X-RateLimit-Remaining': '58', 'Upgrade': 'h2,h2c', 'Connection': 'Upgrade', 'Expires': 'Tue, 23 Apr 2024 09:54:58 GMT', 'Vary': 'Accept-Encoding', 'Content-Encoding': 'gzip', 'X-Endurance-Cache-Level': '2', 'X-nginx-cache': 'WordPress', 'Content-Length': '115', 'Content-Type': 'application/json'} 
+ body={"status":"success","data":{"name":"test","salary":"1200","age":"21"},"message":"Successfully! Record has been updated."} 
+ </msg>
+<msg timestamp="20240422 16:55:02.008" level="INFO">C:\Users\LENOVO\AppData\Local\Programs\Python\Python310-32\lib\site-packages\urllib3\connectionpool.py:1045: InsecureRequestWarning: Unverified HTTPS request is being made to host 'dummy.restapiexample.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<msg timestamp="20240422 16:55:02.009" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20240422 16:55:01.268" endtime="20240422 16:55:02.009"/>
+</kw>
+<kw name="Status Should Be" library="RequestsLibrary">
+<arg>200</arg>
+<arg>${response}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="PASS" starttime="20240422 16:55:02.010" endtime="20240422 16:55:02.010"/>
+</kw>
+<kw name="Get Value From Json" library="JSONLibrary">
+<var>${status}</var>
+<arg>${response.json()}</arg>
+<arg>status</arg>
+<doc>Get Value From JSON using JSONPath</doc>
+<msg timestamp="20240422 16:55:02.035" level="INFO">${status} = ['success']</msg>
+<status status="PASS" starttime="20240422 16:55:02.011" endtime="20240422 16:55:02.035"/>
+</kw>
+<kw name="Get From List" library="Collections">
+<var>${statusFromList}</var>
+<arg>${status}</arg>
+<arg>0</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<msg timestamp="20240422 16:55:02.037" level="INFO">${statusFromList} = success</msg>
+<status status="PASS" starttime="20240422 16:55:02.037" endtime="20240422 16:55:02.037"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>success</arg>
+<arg>${statusFromList}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20240422 16:55:02.038" endtime="20240422 16:55:02.038"/>
+</kw>
+<kw name="Get Value From Json" library="JSONLibrary">
+<var>${data}</var>
+<arg>${response.json()}</arg>
+<arg>data</arg>
+<doc>Get Value From JSON using JSONPath</doc>
+<msg timestamp="20240422 16:55:02.063" level="INFO">${data} = [{'name': 'test', 'salary': '1200', 'age': '21'}]</msg>
+<status status="PASS" starttime="20240422 16:55:02.038" endtime="20240422 16:55:02.063"/>
+</kw>
+<kw name="Get From List" library="Collections">
+<var>${dataFromList}</var>
+<arg>${data}</arg>
+<arg>0</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<msg timestamp="20240422 16:55:02.064" level="INFO">${dataFromList} = {'name': 'test', 'salary': '1200', 'age': '21'}</msg>
+<status status="PASS" starttime="20240422 16:55:02.064" endtime="20240422 16:55:02.064"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>data from list: ${dataFromList}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20240422 16:55:02.065" endtime="20240422 16:55:02.065"/>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<var>${name}</var>
+<arg>${dataFromList}</arg>
+<arg>name</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<msg timestamp="20240422 16:55:02.066" level="INFO">${name} = test</msg>
+<status status="PASS" starttime="20240422 16:55:02.066" endtime="20240422 16:55:02.066"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>test</arg>
+<arg>${name}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20240422 16:55:02.067" endtime="20240422 16:55:02.067"/>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<var>${salary}</var>
+<arg>${dataFromList}</arg>
+<arg>salary</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<msg timestamp="20240422 16:55:02.068" level="INFO">${salary} = 1200</msg>
+<status status="PASS" starttime="20240422 16:55:02.067" endtime="20240422 16:55:02.068"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>1200</arg>
+<arg>${salary}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20240422 16:55:02.068" endtime="20240422 16:55:02.068"/>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<var>${age}</var>
+<arg>${dataFromList}</arg>
+<arg>age</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<msg timestamp="20240422 16:55:02.069" level="INFO">${age} = 21</msg>
+<status status="PASS" starttime="20240422 16:55:02.069" endtime="20240422 16:55:02.069"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>21</arg>
+<arg>${age}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20240422 16:55:02.069" endtime="20240422 16:55:02.070"/>
+</kw>
+<status status="PASS" starttime="20240422 16:55:01.265" endtime="20240422 16:55:02.070"/>
+</test>
+<test id="s1-t5" name="Verify DELETE method" line="105">
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${header}</var>
+<arg>user-agent</arg>
+<arg>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20240422 16:55:02.073" level="INFO">${header} = {'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/'}</msg>
+<status status="PASS" starttime="20240422 16:55:02.073" endtime="20240422 16:55:02.073"/>
+</kw>
+<kw name="Create Session" library="RequestsLibrary">
+<arg>mysession</arg>
+<arg>${URL}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20240422 16:55:02.074" level="INFO">Creating Session using : alias=mysession, url=https://dummy.restapiexample.com/, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20240422 16:55:02.073" endtime="20240422 16:55:02.074"/>
+</kw>
+<kw name="DELETE On Session" library="RequestsLibrary">
+<var>${response}</var>
+<arg>mysession</arg>
+<arg>/api/v1/delete/2</arg>
+<arg>headers=${header}</arg>
+<doc>Sends a DELETE request on a previously created HTTP Session.</doc>
+<msg timestamp="20240422 16:55:02.917" level="INFO">DELETE Request : url=https://dummy.restapiexample.com/api/v1/delete/2 
+ path_url=/api/v1/delete/2 
+ headers={'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '0'} 
+ body=None 
+ </msg>
+<msg timestamp="20240422 16:55:02.917" level="INFO">DELETE Response : url=https://dummy.restapiexample.com/api/v1/delete/2 
+ status=200, reason=OK 
+ headers={'Date': 'Mon, 22 Apr 2024 09:54:58 GMT', 'Server': 'Apache', 'Cache-Control': 'no-cache, private, max-age=86400', 'X-RateLimit-Limit': '60', 'X-RateLimit-Remaining': '58', 'Upgrade': 'h2,h2c', 'Connection': 'Upgrade', 'Expires': 'Tue, 23 Apr 2024 09:54:58 GMT', 'Vary': 'Accept-Encoding', 'Content-Encoding': 'gzip', 'X-Endurance-Cache-Level': '2', 'X-nginx-cache': 'WordPress', 'Content-Length': '90', 'Content-Type': 'application/json'} 
+ body={"status":"success","data":"2","message":"Successfully! Record has been deleted"} 
+ </msg>
+<msg timestamp="20240422 16:55:02.917" level="INFO">C:\Users\LENOVO\AppData\Local\Programs\Python\Python310-32\lib\site-packages\urllib3\connectionpool.py:1045: InsecureRequestWarning: Unverified HTTPS request is being made to host 'dummy.restapiexample.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<msg timestamp="20240422 16:55:02.918" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20240422 16:55:02.074" endtime="20240422 16:55:02.918"/>
+</kw>
+<kw name="Status Should Be" library="RequestsLibrary">
+<arg>200</arg>
+<arg>${response}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="PASS" starttime="20240422 16:55:02.919" endtime="20240422 16:55:02.919"/>
+</kw>
+<kw name="Get Value From Json" library="JSONLibrary">
+<var>${status}</var>
+<arg>${response.json()}</arg>
+<arg>status</arg>
+<doc>Get Value From JSON using JSONPath</doc>
+<msg timestamp="20240422 16:55:02.942" level="INFO">${status} = ['success']</msg>
+<status status="PASS" starttime="20240422 16:55:02.919" endtime="20240422 16:55:02.942"/>
+</kw>
+<kw name="Get From List" library="Collections">
+<var>${statusFromList}</var>
+<arg>${status}</arg>
+<arg>0</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<msg timestamp="20240422 16:55:02.943" level="INFO">${statusFromList} = success</msg>
+<status status="PASS" starttime="20240422 16:55:02.943" endtime="20240422 16:55:02.943"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>success</arg>
+<arg>${statusFromList}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20240422 16:55:02.944" endtime="20240422 16:55:02.944"/>
+</kw>
+<kw name="Get Value From Json" library="JSONLibrary">
+<var>${data}</var>
+<arg>${response.json()}</arg>
+<arg>data</arg>
+<doc>Get Value From JSON using JSONPath</doc>
+<msg timestamp="20240422 16:55:02.969" level="INFO">${data} = ['2']</msg>
+<status status="PASS" starttime="20240422 16:55:02.945" endtime="20240422 16:55:02.969"/>
+</kw>
+<kw name="Get From List" library="Collections">
+<var>${dataFromList}</var>
+<arg>${data}</arg>
+<arg>0</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<msg timestamp="20240422 16:55:02.970" level="INFO">${dataFromList} = 2</msg>
+<status status="PASS" starttime="20240422 16:55:02.969" endtime="20240422 16:55:02.970"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>2</arg>
+<arg>${dataFromList}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20240422 16:55:02.970" endtime="20240422 16:55:02.971"/>
+</kw>
+<kw name="Get Value From Json" library="JSONLibrary">
+<var>${message}</var>
+<arg>${response.json()}</arg>
+<arg>message</arg>
+<doc>Get Value From JSON using JSONPath</doc>
+<msg timestamp="20240422 16:55:02.994" level="INFO">${message} = ['Successfully! Record has been deleted']</msg>
+<status status="PASS" starttime="20240422 16:55:02.971" endtime="20240422 16:55:02.994"/>
+</kw>
+<kw name="Get From List" library="Collections">
+<var>${messageFromList}</var>
+<arg>${message}</arg>
+<arg>0</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<msg timestamp="20240422 16:55:02.996" level="INFO">${messageFromList} = Successfully! Record has been deleted</msg>
+<status status="PASS" starttime="20240422 16:55:02.995" endtime="20240422 16:55:02.996"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>Successfully! Record has been deleted</arg>
+<arg>${messageFromList}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20240422 16:55:02.996" endtime="20240422 16:55:02.997"/>
+</kw>
+<status status="PASS" starttime="20240422 16:55:02.072" endtime="20240422 16:55:02.997"/>
+</test>
+<kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20240422 16:55:02.999" endtime="20240422 16:55:03.000"/>
+</kw>
+<doc>Lab 08 - Ex1</doc>
+<status status="PASS" starttime="20240422 16:54:52.624" endtime="20240422 16:55:03.000"/>
+</suite>
+<statistics>
+<total>
+<stat pass="5" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="5" fail="0" skip="0" id="s1" name="Ex4">Ex4</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

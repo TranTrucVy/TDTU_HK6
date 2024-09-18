@@ -1,0 +1,2015 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.10.0 on win32)" generated="20240512 22:38:19.064" rpa="false" schemaversion="4">
+<suite id="s1" name="Test Login" source="D:\CURRENT_SEMESTER\Auto Testing\Auto test - CK\AutomationTestStore\tests\account\test_login.robot">
+<test id="s1-t1" name="TC1 - Login with valid credentials" line="21">
+<kw name="Opening my browser" library="common" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL_HOME}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240512 22:38:19.493" level="INFO">Opening browser 'Chrome' to base url 'https://automationteststore.com/'.</msg>
+<status status="PASS" starttime="20240512 22:38:19.492" endtime="20240512 22:38:38.567"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${URL_HOME}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20240512 22:38:38.575" level="INFO">Current location is 'https://automationteststore.com/'.</msg>
+<status status="PASS" starttime="20240512 22:38:38.568" endtime="20240512 22:38:38.575"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240512 22:38:38.575" endtime="20240512 22:38:38.609"/>
+</kw>
+<status status="PASS" starttime="20240512 22:38:19.492" endtime="20240512 22:38:38.609"/>
+</kw>
+<kw name="Login sucessfully">
+<kw name="Enter page" library="common">
+<arg>${REGISTER_LOGIN_PAGE}</arg>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20240512 22:38:38.612" level="INFO">Opening url 'https://automationteststore.com/index.php?rt=account/login'</msg>
+<status status="PASS" starttime="20240512 22:38:38.611" endtime="20240512 22:38:39.658"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${url}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20240512 22:38:39.669" level="INFO">Current location is 'https://automationteststore.com/index.php?rt=account/login'.</msg>
+<status status="PASS" starttime="20240512 22:38:39.659" endtime="20240512 22:38:39.669"/>
+</kw>
+<status status="PASS" starttime="20240512 22:38:38.610" endtime="20240512 22:38:39.670"/>
+</kw>
+<kw name="Login successfully with registered account" library="login">
+<arg>${valid_login_name_1}</arg>
+<arg>${valid_login_password_1}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_login_name}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240512 22:38:39.671" level="INFO">Typing text 'annepattrick' into text field '//*[@id="loginFrm_loginname"]'.</msg>
+<status status="PASS" starttime="20240512 22:38:39.671" endtime="20240512 22:38:39.878"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_password}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240512 22:38:39.879" level="INFO">Typing text '123456' into text field '//*[@id="loginFrm_password"]'.</msg>
+<status status="PASS" starttime="20240512 22:38:39.878" endtime="20240512 22:38:39.990"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_submit_login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240512 22:38:39.991" level="INFO">Clicking element '//*[@id="loginFrm"]/fieldset/button'.</msg>
+<status status="PASS" starttime="20240512 22:38:39.990" endtime="20240512 22:38:41.114"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Location Should Be</arg>
+<arg>${LOGIN_SUCCESS_URL}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${LOGIN_SUCCESS_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20240512 22:38:41.134" level="INFO">Current location is 'https://automationteststore.com/index.php?rt=account/account'.</msg>
+<status status="PASS" starttime="20240512 22:38:41.117" endtime="20240512 22:38:41.134"/>
+</kw>
+<status status="PASS" starttime="20240512 22:38:41.116" endtime="20240512 22:38:41.135"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${nav_user_name}</arg>
+<arg>Welcome back</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20240512 22:38:41.203" level="INFO">Element '//*[@id="customer_menu_top"]/li' contains text 'Welcome back'.</msg>
+<status status="PASS" starttime="20240512 22:38:41.135" endtime="20240512 22:38:41.204"/>
+</kw>
+<status status="PASS" starttime="20240512 22:38:39.670" endtime="20240512 22:38:41.204"/>
+</kw>
+<status status="PASS" starttime="20240512 22:38:38.610" endtime="20240512 22:38:41.204"/>
+</kw>
+<kw name="Closing my browser" library="common" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240512 22:38:41.206" endtime="20240512 22:38:43.416"/>
+</kw>
+<status status="PASS" starttime="20240512 22:38:41.205" endtime="20240512 22:38:43.416"/>
+</kw>
+<doc>Login with valid credentials</doc>
+<tag>login</tag>
+<status status="PASS" starttime="20240512 22:38:19.490" endtime="20240512 22:38:43.417"/>
+</test>
+<test id="s1-t2" name="TC2 - Login fail (invalid login name)" line="26">
+<kw name="Opening my browser" library="common" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL_HOME}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240512 22:38:43.423" level="INFO">Opening browser 'Chrome' to base url 'https://automationteststore.com/'.</msg>
+<status status="PASS" starttime="20240512 22:38:43.422" endtime="20240512 22:39:04.662"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${URL_HOME}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20240512 22:39:04.671" level="INFO">Current location is 'https://automationteststore.com/'.</msg>
+<status status="PASS" starttime="20240512 22:39:04.663" endtime="20240512 22:39:04.671"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240512 22:39:04.671" endtime="20240512 22:39:04.701"/>
+</kw>
+<status status="PASS" starttime="20240512 22:38:43.422" endtime="20240512 22:39:04.701"/>
+</kw>
+<kw name="Enter page" library="common">
+<arg>${REGISTER_LOGIN_PAGE}</arg>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20240512 22:39:04.703" level="INFO">Opening url 'https://automationteststore.com/index.php?rt=account/login'</msg>
+<status status="PASS" starttime="20240512 22:39:04.703" endtime="20240512 22:39:06.025"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${url}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20240512 22:39:06.039" level="INFO">Current location is 'https://automationteststore.com/index.php?rt=account/login'.</msg>
+<status status="PASS" starttime="20240512 22:39:06.025" endtime="20240512 22:39:06.040"/>
+</kw>
+<status status="PASS" starttime="20240512 22:39:04.702" endtime="20240512 22:39:06.040"/>
+</kw>
+<kw name="Login fail with invalid credentials" library="login">
+<arg>${invalid_login_name}</arg>
+<arg>${valid_login_password_1}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_login_name}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240512 22:39:06.043" level="INFO">Typing text 'invalidloginname' into text field '//*[@id="loginFrm_loginname"]'.</msg>
+<status status="PASS" starttime="20240512 22:39:06.042" endtime="20240512 22:39:06.304"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_password}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240512 22:39:06.305" level="INFO">Typing text '123456' into text field '//*[@id="loginFrm_password"]'.</msg>
+<status status="PASS" starttime="20240512 22:39:06.304" endtime="20240512 22:39:06.457"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_submit_login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240512 22:39:06.458" level="INFO">Clicking element '//*[@id="loginFrm"]/fieldset/button'.</msg>
+<status status="PASS" starttime="20240512 22:39:06.458" endtime="20240512 22:39:07.524"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${REGISTER_LOGIN_PAGE}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20240512 22:39:07.537" level="INFO">Current location is 'https://automationteststore.com/index.php?rt=account/login'.</msg>
+<status status="PASS" starttime="20240512 22:39:07.524" endtime="20240512 22:39:07.538"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${login_error_msg}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20240512 22:39:07.564" level="INFO">Current page contains element '//*[@id="maincontainer"]/div[@class='container-fluid']/div[@class='col-md-12 col-xs-12 mt20']/div/div[@class='alert alert-error alert-danger']'.</msg>
+<status status="PASS" starttime="20240512 22:39:07.538" endtime="20240512 22:39:07.565"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${login_error_msg}</arg>
+<arg>Error: Incorrect login or password provided.</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20240512 22:39:07.597" level="INFO">Element '//*[@id="maincontainer"]/div[@class='container-fluid']/div[@class='col-md-12 col-xs-12 mt20']/div/div[@class='alert alert-error alert-danger']' contains text 'Error: Incorrect login or password provided.'.</msg>
+<status status="PASS" starttime="20240512 22:39:07.565" endtime="20240512 22:39:07.597"/>
+</kw>
+<status status="PASS" starttime="20240512 22:39:06.041" endtime="20240512 22:39:07.597"/>
+</kw>
+<kw name="Closing my browser" library="common" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240512 22:39:07.598" endtime="20240512 22:39:09.744"/>
+</kw>
+<status status="PASS" starttime="20240512 22:39:07.598" endtime="20240512 22:39:09.744"/>
+</kw>
+<doc>Login fail (invalid login name)</doc>
+<tag>login</tag>
+<status status="PASS" starttime="20240512 22:38:43.420" endtime="20240512 22:39:09.745"/>
+</test>
+<test id="s1-t3" name="TC3 - Login fail (invalid password)" line="32">
+<kw name="Opening my browser" library="common" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL_HOME}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240512 22:39:09.752" level="INFO">Opening browser 'Chrome' to base url 'https://automationteststore.com/'.</msg>
+<status status="PASS" starttime="20240512 22:39:09.751" endtime="20240512 22:39:25.852"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${URL_HOME}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20240512 22:39:25.860" level="INFO">Current location is 'https://automationteststore.com/'.</msg>
+<status status="PASS" starttime="20240512 22:39:25.852" endtime="20240512 22:39:25.861"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240512 22:39:25.861" endtime="20240512 22:39:25.889"/>
+</kw>
+<status status="PASS" starttime="20240512 22:39:09.750" endtime="20240512 22:39:25.889"/>
+</kw>
+<kw name="Enter page" library="common">
+<arg>${REGISTER_LOGIN_PAGE}</arg>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20240512 22:39:25.892" level="INFO">Opening url 'https://automationteststore.com/index.php?rt=account/login'</msg>
+<status status="PASS" starttime="20240512 22:39:25.891" endtime="20240512 22:39:26.819"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${url}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20240512 22:39:26.827" level="INFO">Current location is 'https://automationteststore.com/index.php?rt=account/login'.</msg>
+<status status="PASS" starttime="20240512 22:39:26.819" endtime="20240512 22:39:26.827"/>
+</kw>
+<status status="PASS" starttime="20240512 22:39:25.890" endtime="20240512 22:39:26.827"/>
+</kw>
+<kw name="Login fail with invalid credentials" library="login">
+<arg>${valid_login_name_1}</arg>
+<arg>${invalid_login_password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_login_name}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240512 22:39:26.829" level="INFO">Typing text 'annepattrick' into text field '//*[@id="loginFrm_loginname"]'.</msg>
+<status status="PASS" starttime="20240512 22:39:26.828" endtime="20240512 22:39:26.973"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_password}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240512 22:39:26.974" level="INFO">Typing text 'invalidpassword' into text field '//*[@id="loginFrm_password"]'.</msg>
+<status status="PASS" starttime="20240512 22:39:26.974" endtime="20240512 22:39:27.143"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_submit_login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240512 22:39:27.144" level="INFO">Clicking element '//*[@id="loginFrm"]/fieldset/button'.</msg>
+<status status="PASS" starttime="20240512 22:39:27.143" endtime="20240512 22:39:27.601"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${REGISTER_LOGIN_PAGE}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20240512 22:39:27.956" level="INFO">Current location is 'https://automationteststore.com/index.php?rt=account/login'.</msg>
+<status status="PASS" starttime="20240512 22:39:27.602" endtime="20240512 22:39:27.957"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${login_error_msg}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20240512 22:39:27.973" level="INFO">Current page contains element '//*[@id="maincontainer"]/div[@class='container-fluid']/div[@class='col-md-12 col-xs-12 mt20']/div/div[@class='alert alert-error alert-danger']'.</msg>
+<status status="PASS" starttime="20240512 22:39:27.957" endtime="20240512 22:39:27.973"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${login_error_msg}</arg>
+<arg>Error: Incorrect login or password provided.</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20240512 22:39:28.012" level="INFO">Element '//*[@id="maincontainer"]/div[@class='container-fluid']/div[@class='col-md-12 col-xs-12 mt20']/div/div[@class='alert alert-error alert-danger']' contains text 'Error: Incorrect login or password provided.'.</msg>
+<status status="PASS" starttime="20240512 22:39:27.974" endtime="20240512 22:39:28.012"/>
+</kw>
+<status status="PASS" starttime="20240512 22:39:26.828" endtime="20240512 22:39:28.012"/>
+</kw>
+<kw name="Closing my browser" library="common" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240512 22:39:28.014" endtime="20240512 22:39:30.178"/>
+</kw>
+<status status="PASS" starttime="20240512 22:39:28.013" endtime="20240512 22:39:30.179"/>
+</kw>
+<doc>Login fail (invalid password)</doc>
+<tag>login</tag>
+<status status="PASS" starttime="20240512 22:39:09.749" endtime="20240512 22:39:30.179"/>
+</test>
+<test id="s1-t4" name="TC4 - Login fail (invalid login name and password)" line="38">
+<kw name="Opening my browser" library="common" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL_HOME}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240512 22:39:30.185" level="INFO">Opening browser 'Chrome' to base url 'https://automationteststore.com/'.</msg>
+<status status="PASS" starttime="20240512 22:39:30.184" endtime="20240512 22:39:50.892"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${URL_HOME}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20240512 22:39:50.901" level="INFO">Current location is 'https://automationteststore.com/'.</msg>
+<status status="PASS" starttime="20240512 22:39:50.892" endtime="20240512 22:39:50.901"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240512 22:39:50.901" endtime="20240512 22:39:50.933"/>
+</kw>
+<status status="PASS" starttime="20240512 22:39:30.183" endtime="20240512 22:39:50.933"/>
+</kw>
+<kw name="Enter page" library="common">
+<arg>${REGISTER_LOGIN_PAGE}</arg>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20240512 22:39:50.934" level="INFO">Opening url 'https://automationteststore.com/index.php?rt=account/login'</msg>
+<status status="PASS" starttime="20240512 22:39:50.934" endtime="20240512 22:39:51.703"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${url}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20240512 22:39:51.712" level="INFO">Current location is 'https://automationteststore.com/index.php?rt=account/login'.</msg>
+<status status="PASS" starttime="20240512 22:39:51.704" endtime="20240512 22:39:51.712"/>
+</kw>
+<status status="PASS" starttime="20240512 22:39:50.934" endtime="20240512 22:39:51.712"/>
+</kw>
+<kw name="Login fail with invalid credentials" library="login">
+<arg>${invalid_login_name}</arg>
+<arg>${invalid_login_password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_login_name}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240512 22:39:51.714" level="INFO">Typing text 'invalidloginname' into text field '//*[@id="loginFrm_loginname"]'.</msg>
+<status status="PASS" starttime="20240512 22:39:51.713" endtime="20240512 22:39:51.855"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_password}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240512 22:39:51.856" level="INFO">Typing text 'invalidpassword' into text field '//*[@id="loginFrm_password"]'.</msg>
+<status status="PASS" starttime="20240512 22:39:51.855" endtime="20240512 22:39:51.978"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_submit_login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240512 22:39:51.979" level="INFO">Clicking element '//*[@id="loginFrm"]/fieldset/button'.</msg>
+<status status="PASS" starttime="20240512 22:39:51.978" endtime="20240512 22:39:53.080"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${REGISTER_LOGIN_PAGE}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20240512 22:39:53.090" level="INFO">Current location is 'https://automationteststore.com/index.php?rt=account/login'.</msg>
+<status status="PASS" starttime="20240512 22:39:53.080" endtime="20240512 22:39:53.090"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${login_error_msg}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20240512 22:39:53.112" level="INFO">Current page contains element '//*[@id="maincontainer"]/div[@class='container-fluid']/div[@class='col-md-12 col-xs-12 mt20']/div/div[@class='alert alert-error alert-danger']'.</msg>
+<status status="PASS" starttime="20240512 22:39:53.091" endtime="20240512 22:39:53.112"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${login_error_msg}</arg>
+<arg>Error: Incorrect login or password provided.</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20240512 22:39:53.158" level="INFO">Element '//*[@id="maincontainer"]/div[@class='container-fluid']/div[@class='col-md-12 col-xs-12 mt20']/div/div[@class='alert alert-error alert-danger']' contains text 'Error: Incorrect login or password provided.'.</msg>
+<status status="PASS" starttime="20240512 22:39:53.112" endtime="20240512 22:39:53.158"/>
+</kw>
+<status status="PASS" starttime="20240512 22:39:51.713" endtime="20240512 22:39:53.158"/>
+</kw>
+<kw name="Closing my browser" library="common" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240512 22:39:53.160" endtime="20240512 22:39:55.329"/>
+</kw>
+<status status="PASS" starttime="20240512 22:39:53.159" endtime="20240512 22:39:55.330"/>
+</kw>
+<doc>Login fail (invalid login name and password)</doc>
+<tag>login</tag>
+<status status="PASS" starttime="20240512 22:39:30.182" endtime="20240512 22:39:55.330"/>
+</test>
+<test id="s1-t5" name="TC5 - Login fail (empty login name)" line="44">
+<kw name="Opening my browser" library="common" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL_HOME}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240512 22:39:55.336" level="INFO">Opening browser 'Chrome' to base url 'https://automationteststore.com/'.</msg>
+<status status="PASS" starttime="20240512 22:39:55.335" endtime="20240512 22:40:15.087"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${URL_HOME}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20240512 22:40:15.094" level="INFO">Current location is 'https://automationteststore.com/'.</msg>
+<status status="PASS" starttime="20240512 22:40:15.087" endtime="20240512 22:40:15.094"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240512 22:40:15.094" endtime="20240512 22:40:15.134"/>
+</kw>
+<status status="PASS" starttime="20240512 22:39:55.335" endtime="20240512 22:40:15.134"/>
+</kw>
+<kw name="Enter page" library="common">
+<arg>${REGISTER_LOGIN_PAGE}</arg>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20240512 22:40:15.136" level="INFO">Opening url 'https://automationteststore.com/index.php?rt=account/login'</msg>
+<status status="PASS" starttime="20240512 22:40:15.136" endtime="20240512 22:40:16.044"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${url}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20240512 22:40:16.050" level="INFO">Current location is 'https://automationteststore.com/index.php?rt=account/login'.</msg>
+<status status="PASS" starttime="20240512 22:40:16.044" endtime="20240512 22:40:16.050"/>
+</kw>
+<status status="PASS" starttime="20240512 22:40:15.135" endtime="20240512 22:40:16.050"/>
+</kw>
+<kw name="Login fail with invalid credentials" library="login">
+<arg>${EMPTY}</arg>
+<arg>${valid_login_password_1}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_login_name}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240512 22:40:16.054" level="INFO">Typing text '' into text field '//*[@id="loginFrm_loginname"]'.</msg>
+<status status="PASS" starttime="20240512 22:40:16.052" endtime="20240512 22:40:16.209"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_password}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240512 22:40:16.210" level="INFO">Typing text '123456' into text field '//*[@id="loginFrm_password"]'.</msg>
+<status status="PASS" starttime="20240512 22:40:16.209" endtime="20240512 22:40:16.318"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_submit_login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240512 22:40:16.318" level="INFO">Clicking element '//*[@id="loginFrm"]/fieldset/button'.</msg>
+<status status="PASS" starttime="20240512 22:40:16.318" endtime="20240512 22:40:17.077"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${REGISTER_LOGIN_PAGE}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20240512 22:40:17.086" level="INFO">Current location is 'https://automationteststore.com/index.php?rt=account/login'.</msg>
+<status status="PASS" starttime="20240512 22:40:17.079" endtime="20240512 22:40:17.086"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${login_error_msg}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20240512 22:40:17.097" level="INFO">Current page contains element '//*[@id="maincontainer"]/div[@class='container-fluid']/div[@class='col-md-12 col-xs-12 mt20']/div/div[@class='alert alert-error alert-danger']'.</msg>
+<status status="PASS" starttime="20240512 22:40:17.086" endtime="20240512 22:40:17.097"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${login_error_msg}</arg>
+<arg>Error: Incorrect login or password provided.</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20240512 22:40:17.115" level="INFO">Element '//*[@id="maincontainer"]/div[@class='container-fluid']/div[@class='col-md-12 col-xs-12 mt20']/div/div[@class='alert alert-error alert-danger']' contains text 'Error: Incorrect login or password provided.'.</msg>
+<status status="PASS" starttime="20240512 22:40:17.097" endtime="20240512 22:40:17.115"/>
+</kw>
+<status status="PASS" starttime="20240512 22:40:16.051" endtime="20240512 22:40:17.116"/>
+</kw>
+<kw name="Closing my browser" library="common" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240512 22:40:17.116" endtime="20240512 22:40:19.280"/>
+</kw>
+<status status="PASS" starttime="20240512 22:40:17.116" endtime="20240512 22:40:19.281"/>
+</kw>
+<doc>Login fail (empty login name)</doc>
+<tag>login</tag>
+<status status="PASS" starttime="20240512 22:39:55.334" endtime="20240512 22:40:19.282"/>
+</test>
+<test id="s1-t6" name="TC6 - Login fail (empty password)" line="50">
+<kw name="Opening my browser" library="common" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL_HOME}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240512 22:40:19.288" level="INFO">Opening browser 'Chrome' to base url 'https://automationteststore.com/'.</msg>
+<status status="PASS" starttime="20240512 22:40:19.287" endtime="20240512 22:40:45.879"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${URL_HOME}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20240512 22:40:45.892" level="INFO">Current location is 'https://automationteststore.com/'.</msg>
+<status status="PASS" starttime="20240512 22:40:45.879" endtime="20240512 22:40:45.892"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240512 22:40:45.893" endtime="20240512 22:40:45.938"/>
+</kw>
+<status status="PASS" starttime="20240512 22:40:19.287" endtime="20240512 22:40:45.938"/>
+</kw>
+<kw name="Enter page" library="common">
+<arg>${REGISTER_LOGIN_PAGE}</arg>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20240512 22:40:45.940" level="INFO">Opening url 'https://automationteststore.com/index.php?rt=account/login'</msg>
+<status status="PASS" starttime="20240512 22:40:45.940" endtime="20240512 22:40:46.752"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${url}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20240512 22:40:46.767" level="INFO">Current location is 'https://automationteststore.com/index.php?rt=account/login'.</msg>
+<status status="PASS" starttime="20240512 22:40:46.752" endtime="20240512 22:40:46.767"/>
+</kw>
+<status status="PASS" starttime="20240512 22:40:45.940" endtime="20240512 22:40:46.767"/>
+</kw>
+<kw name="Login fail with invalid credentials" library="login">
+<arg>${valid_login_name_1}</arg>
+<arg>${EMPTY}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_login_name}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240512 22:40:46.770" level="INFO">Typing text 'annepattrick' into text field '//*[@id="loginFrm_loginname"]'.</msg>
+<status status="PASS" starttime="20240512 22:40:46.769" endtime="20240512 22:40:46.983"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_password}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240512 22:40:46.984" level="INFO">Typing text '' into text field '//*[@id="loginFrm_password"]'.</msg>
+<status status="PASS" starttime="20240512 22:40:46.983" endtime="20240512 22:40:47.154"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_submit_login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240512 22:40:47.156" level="INFO">Clicking element '//*[@id="loginFrm"]/fieldset/button'.</msg>
+<status status="PASS" starttime="20240512 22:40:47.154" endtime="20240512 22:40:48.294"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${REGISTER_LOGIN_PAGE}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20240512 22:40:48.300" level="INFO">Current location is 'https://automationteststore.com/index.php?rt=account/login'.</msg>
+<status status="PASS" starttime="20240512 22:40:48.294" endtime="20240512 22:40:48.301"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${login_error_msg}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20240512 22:40:48.316" level="INFO">Current page contains element '//*[@id="maincontainer"]/div[@class='container-fluid']/div[@class='col-md-12 col-xs-12 mt20']/div/div[@class='alert alert-error alert-danger']'.</msg>
+<status status="PASS" starttime="20240512 22:40:48.301" endtime="20240512 22:40:48.316"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${login_error_msg}</arg>
+<arg>Error: Incorrect login or password provided.</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20240512 22:40:48.348" level="INFO">Element '//*[@id="maincontainer"]/div[@class='container-fluid']/div[@class='col-md-12 col-xs-12 mt20']/div/div[@class='alert alert-error alert-danger']' contains text 'Error: Incorrect login or password provided.'.</msg>
+<status status="PASS" starttime="20240512 22:40:48.317" endtime="20240512 22:40:48.348"/>
+</kw>
+<status status="PASS" starttime="20240512 22:40:46.768" endtime="20240512 22:40:48.348"/>
+</kw>
+<kw name="Closing my browser" library="common" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240512 22:40:48.350" endtime="20240512 22:40:50.574"/>
+</kw>
+<status status="PASS" starttime="20240512 22:40:48.349" endtime="20240512 22:40:50.574"/>
+</kw>
+<doc>Login fail (empty password)</doc>
+<tag>login</tag>
+<status status="PASS" starttime="20240512 22:40:19.285" endtime="20240512 22:40:50.576"/>
+</test>
+<test id="s1-t7" name="TC7 - Login fail (empty login name and password)" line="56">
+<kw name="Opening my browser" library="common" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL_HOME}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240512 22:40:50.582" level="INFO">Opening browser 'Chrome' to base url 'https://automationteststore.com/'.</msg>
+<status status="PASS" starttime="20240512 22:40:50.581" endtime="20240512 22:41:00.708"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${URL_HOME}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20240512 22:41:00.714" level="INFO">Current location is 'https://automationteststore.com/'.</msg>
+<status status="PASS" starttime="20240512 22:41:00.708" endtime="20240512 22:41:00.714"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240512 22:41:00.714" endtime="20240512 22:41:00.757"/>
+</kw>
+<status status="PASS" starttime="20240512 22:40:50.581" endtime="20240512 22:41:00.757"/>
+</kw>
+<kw name="Enter page" library="common">
+<arg>${REGISTER_LOGIN_PAGE}</arg>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20240512 22:41:00.759" level="INFO">Opening url 'https://automationteststore.com/index.php?rt=account/login'</msg>
+<status status="PASS" starttime="20240512 22:41:00.759" endtime="20240512 22:41:01.491"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${url}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20240512 22:41:01.499" level="INFO">Current location is 'https://automationteststore.com/index.php?rt=account/login'.</msg>
+<status status="PASS" starttime="20240512 22:41:01.491" endtime="20240512 22:41:01.500"/>
+</kw>
+<status status="PASS" starttime="20240512 22:41:00.758" endtime="20240512 22:41:01.500"/>
+</kw>
+<kw name="Login fail with invalid credentials" library="login">
+<arg>${EMPTY}</arg>
+<arg>${EMPTY}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_login_name}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240512 22:41:01.504" level="INFO">Typing text '' into text field '//*[@id="loginFrm_loginname"]'.</msg>
+<status status="PASS" starttime="20240512 22:41:01.503" endtime="20240512 22:41:01.613"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_password}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240512 22:41:01.615" level="INFO">Typing text '' into text field '//*[@id="loginFrm_password"]'.</msg>
+<status status="PASS" starttime="20240512 22:41:01.613" endtime="20240512 22:41:01.739"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_submit_login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240512 22:41:01.740" level="INFO">Clicking element '//*[@id="loginFrm"]/fieldset/button'.</msg>
+<status status="PASS" starttime="20240512 22:41:01.739" endtime="20240512 22:41:02.513"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${REGISTER_LOGIN_PAGE}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20240512 22:41:02.532" level="INFO">Current location is 'https://automationteststore.com/index.php?rt=account/login'.</msg>
+<status status="PASS" starttime="20240512 22:41:02.514" endtime="20240512 22:41:02.532"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${login_error_msg}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20240512 22:41:02.561" level="INFO">Current page contains element '//*[@id="maincontainer"]/div[@class='container-fluid']/div[@class='col-md-12 col-xs-12 mt20']/div/div[@class='alert alert-error alert-danger']'.</msg>
+<status status="PASS" starttime="20240512 22:41:02.532" endtime="20240512 22:41:02.561"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${login_error_msg}</arg>
+<arg>Error: Incorrect login or password provided.</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20240512 22:41:02.612" level="INFO">Element '//*[@id="maincontainer"]/div[@class='container-fluid']/div[@class='col-md-12 col-xs-12 mt20']/div/div[@class='alert alert-error alert-danger']' contains text 'Error: Incorrect login or password provided.'.</msg>
+<status status="PASS" starttime="20240512 22:41:02.562" endtime="20240512 22:41:02.612"/>
+</kw>
+<status status="PASS" starttime="20240512 22:41:01.501" endtime="20240512 22:41:02.612"/>
+</kw>
+<kw name="Closing my browser" library="common" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240512 22:41:02.614" endtime="20240512 22:41:04.795"/>
+</kw>
+<status status="PASS" starttime="20240512 22:41:02.613" endtime="20240512 22:41:04.796"/>
+</kw>
+<doc>Login fail (empty login name and password)</doc>
+<tag>login</tag>
+<status status="PASS" starttime="20240512 22:40:50.579" endtime="20240512 22:41:04.797"/>
+</test>
+<test id="s1-t8" name="TC8 - Login fail (invalid login name and empty password)" line="62">
+<kw name="Opening my browser" library="common" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL_HOME}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240512 22:41:04.803" level="INFO">Opening browser 'Chrome' to base url 'https://automationteststore.com/'.</msg>
+<status status="PASS" starttime="20240512 22:41:04.802" endtime="20240512 22:41:15.584"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${URL_HOME}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20240512 22:41:15.591" level="INFO">Current location is 'https://automationteststore.com/'.</msg>
+<status status="PASS" starttime="20240512 22:41:15.584" endtime="20240512 22:41:15.591"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240512 22:41:15.591" endtime="20240512 22:41:15.621"/>
+</kw>
+<status status="PASS" starttime="20240512 22:41:04.801" endtime="20240512 22:41:15.621"/>
+</kw>
+<kw name="Enter page" library="common">
+<arg>${REGISTER_LOGIN_PAGE}</arg>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20240512 22:41:15.623" level="INFO">Opening url 'https://automationteststore.com/index.php?rt=account/login'</msg>
+<status status="PASS" starttime="20240512 22:41:15.622" endtime="20240512 22:41:16.357"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${url}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20240512 22:41:16.372" level="INFO">Current location is 'https://automationteststore.com/index.php?rt=account/login'.</msg>
+<status status="PASS" starttime="20240512 22:41:16.358" endtime="20240512 22:41:16.372"/>
+</kw>
+<status status="PASS" starttime="20240512 22:41:15.622" endtime="20240512 22:41:16.372"/>
+</kw>
+<kw name="Login fail with invalid credentials" library="login">
+<arg>${invalid_login_name}</arg>
+<arg>${EMPTY}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_login_name}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240512 22:41:16.375" level="INFO">Typing text 'invalidloginname' into text field '//*[@id="loginFrm_loginname"]'.</msg>
+<status status="PASS" starttime="20240512 22:41:16.374" endtime="20240512 22:41:16.562"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_password}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240512 22:41:16.563" level="INFO">Typing text '' into text field '//*[@id="loginFrm_password"]'.</msg>
+<status status="PASS" starttime="20240512 22:41:16.562" endtime="20240512 22:41:16.646"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_submit_login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240512 22:41:16.646" level="INFO">Clicking element '//*[@id="loginFrm"]/fieldset/button'.</msg>
+<status status="PASS" starttime="20240512 22:41:16.646" endtime="20240512 22:41:17.429"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${REGISTER_LOGIN_PAGE}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20240512 22:41:17.441" level="INFO">Current location is 'https://automationteststore.com/index.php?rt=account/login'.</msg>
+<status status="PASS" starttime="20240512 22:41:17.429" endtime="20240512 22:41:17.441"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${login_error_msg}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20240512 22:41:17.467" level="INFO">Current page contains element '//*[@id="maincontainer"]/div[@class='container-fluid']/div[@class='col-md-12 col-xs-12 mt20']/div/div[@class='alert alert-error alert-danger']'.</msg>
+<status status="PASS" starttime="20240512 22:41:17.442" endtime="20240512 22:41:17.467"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${login_error_msg}</arg>
+<arg>Error: Incorrect login or password provided.</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20240512 22:41:17.519" level="INFO">Element '//*[@id="maincontainer"]/div[@class='container-fluid']/div[@class='col-md-12 col-xs-12 mt20']/div/div[@class='alert alert-error alert-danger']' contains text 'Error: Incorrect login or password provided.'.</msg>
+<status status="PASS" starttime="20240512 22:41:17.468" endtime="20240512 22:41:17.520"/>
+</kw>
+<status status="PASS" starttime="20240512 22:41:16.373" endtime="20240512 22:41:17.520"/>
+</kw>
+<kw name="Closing my browser" library="common" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240512 22:41:17.523" endtime="20240512 22:41:19.713"/>
+</kw>
+<status status="PASS" starttime="20240512 22:41:17.522" endtime="20240512 22:41:19.713"/>
+</kw>
+<doc>Login fail (invalid login name and empty password)</doc>
+<tag>login</tag>
+<status status="PASS" starttime="20240512 22:41:04.800" endtime="20240512 22:41:19.714"/>
+</test>
+<test id="s1-t9" name="TC9 - Login fail (empty login name and invalid password)" line="68">
+<kw name="Opening my browser" library="common" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL_HOME}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240512 22:41:19.721" level="INFO">Opening browser 'Chrome' to base url 'https://automationteststore.com/'.</msg>
+<status status="PASS" starttime="20240512 22:41:19.720" endtime="20240512 22:41:31.124"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${URL_HOME}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20240512 22:41:31.129" level="INFO">Current location is 'https://automationteststore.com/'.</msg>
+<status status="PASS" starttime="20240512 22:41:31.124" endtime="20240512 22:41:31.130"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240512 22:41:31.130" endtime="20240512 22:41:31.162"/>
+</kw>
+<status status="PASS" starttime="20240512 22:41:19.719" endtime="20240512 22:41:31.162"/>
+</kw>
+<kw name="Enter page" library="common">
+<arg>${REGISTER_LOGIN_PAGE}</arg>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20240512 22:41:31.164" level="INFO">Opening url 'https://automationteststore.com/index.php?rt=account/login'</msg>
+<status status="PASS" starttime="20240512 22:41:31.163" endtime="20240512 22:41:31.887"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${url}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20240512 22:41:31.903" level="INFO">Current location is 'https://automationteststore.com/index.php?rt=account/login'.</msg>
+<status status="PASS" starttime="20240512 22:41:31.887" endtime="20240512 22:41:31.904"/>
+</kw>
+<status status="PASS" starttime="20240512 22:41:31.163" endtime="20240512 22:41:31.904"/>
+</kw>
+<kw name="Login fail with invalid credentials" library="login">
+<arg>${EMPTY}</arg>
+<arg>${invalid_login_password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_login_name}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240512 22:41:31.909" level="INFO">Typing text '' into text field '//*[@id="loginFrm_loginname"]'.</msg>
+<status status="PASS" starttime="20240512 22:41:31.907" endtime="20240512 22:41:32.093"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_password}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240512 22:41:32.094" level="INFO">Typing text 'invalidpassword' into text field '//*[@id="loginFrm_password"]'.</msg>
+<status status="PASS" starttime="20240512 22:41:32.093" endtime="20240512 22:41:32.233"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_submit_login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240512 22:41:32.235" level="INFO">Clicking element '//*[@id="loginFrm"]/fieldset/button'.</msg>
+<status status="PASS" starttime="20240512 22:41:32.235" endtime="20240512 22:41:33.022"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${REGISTER_LOGIN_PAGE}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20240512 22:41:33.032" level="INFO">Current location is 'https://automationteststore.com/index.php?rt=account/login'.</msg>
+<status status="PASS" starttime="20240512 22:41:33.022" endtime="20240512 22:41:33.033"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${login_error_msg}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20240512 22:41:33.050" level="INFO">Current page contains element '//*[@id="maincontainer"]/div[@class='container-fluid']/div[@class='col-md-12 col-xs-12 mt20']/div/div[@class='alert alert-error alert-danger']'.</msg>
+<status status="PASS" starttime="20240512 22:41:33.033" endtime="20240512 22:41:33.051"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${login_error_msg}</arg>
+<arg>Error: Incorrect login or password provided.</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20240512 22:41:33.089" level="INFO">Element '//*[@id="maincontainer"]/div[@class='container-fluid']/div[@class='col-md-12 col-xs-12 mt20']/div/div[@class='alert alert-error alert-danger']' contains text 'Error: Incorrect login or password provided.'.</msg>
+<status status="PASS" starttime="20240512 22:41:33.051" endtime="20240512 22:41:33.089"/>
+</kw>
+<status status="PASS" starttime="20240512 22:41:31.905" endtime="20240512 22:41:33.089"/>
+</kw>
+<kw name="Closing my browser" library="common" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240512 22:41:33.092" endtime="20240512 22:41:35.300"/>
+</kw>
+<status status="PASS" starttime="20240512 22:41:33.091" endtime="20240512 22:41:35.300"/>
+</kw>
+<doc>Login fail (empty login name and invalid password)</doc>
+<tag>login</tag>
+<status status="PASS" starttime="20240512 22:41:19.717" endtime="20240512 22:41:35.301"/>
+</test>
+<test id="s1-t10" name="TC10 - Login fail (invalid login name) then login successfully" line="74">
+<kw name="Opening my browser" library="common" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL_HOME}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240512 22:41:35.307" level="INFO">Opening browser 'Chrome' to base url 'https://automationteststore.com/'.</msg>
+<status status="PASS" starttime="20240512 22:41:35.307" endtime="20240512 22:41:46.496"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${URL_HOME}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20240512 22:41:46.503" level="INFO">Current location is 'https://automationteststore.com/'.</msg>
+<status status="PASS" starttime="20240512 22:41:46.497" endtime="20240512 22:41:46.503"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240512 22:41:46.504" endtime="20240512 22:41:46.533"/>
+</kw>
+<status status="PASS" starttime="20240512 22:41:35.306" endtime="20240512 22:41:46.533"/>
+</kw>
+<kw name="Enter page" library="common">
+<arg>${REGISTER_LOGIN_PAGE}</arg>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20240512 22:41:46.536" level="INFO">Opening url 'https://automationteststore.com/index.php?rt=account/login'</msg>
+<status status="PASS" starttime="20240512 22:41:46.534" endtime="20240512 22:41:47.224"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${url}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20240512 22:41:47.242" level="INFO">Current location is 'https://automationteststore.com/index.php?rt=account/login'.</msg>
+<status status="PASS" starttime="20240512 22:41:47.225" endtime="20240512 22:41:47.242"/>
+</kw>
+<status status="PASS" starttime="20240512 22:41:46.534" endtime="20240512 22:41:47.243"/>
+</kw>
+<kw name="Login fail with invalid credentials" library="login">
+<arg>${invalid_login_name}</arg>
+<arg>${valid_login_password_1}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_login_name}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240512 22:41:47.246" level="INFO">Typing text 'invalidloginname' into text field '//*[@id="loginFrm_loginname"]'.</msg>
+<status status="PASS" starttime="20240512 22:41:47.244" endtime="20240512 22:41:47.503"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_password}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240512 22:41:47.504" level="INFO">Typing text '123456' into text field '//*[@id="loginFrm_password"]'.</msg>
+<status status="PASS" starttime="20240512 22:41:47.504" endtime="20240512 22:41:47.602"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_submit_login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240512 22:41:47.603" level="INFO">Clicking element '//*[@id="loginFrm"]/fieldset/button'.</msg>
+<status status="PASS" starttime="20240512 22:41:47.602" endtime="20240512 22:41:48.396"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${REGISTER_LOGIN_PAGE}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20240512 22:41:48.407" level="INFO">Current location is 'https://automationteststore.com/index.php?rt=account/login'.</msg>
+<status status="PASS" starttime="20240512 22:41:48.397" endtime="20240512 22:41:48.407"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${login_error_msg}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20240512 22:41:48.432" level="INFO">Current page contains element '//*[@id="maincontainer"]/div[@class='container-fluid']/div[@class='col-md-12 col-xs-12 mt20']/div/div[@class='alert alert-error alert-danger']'.</msg>
+<status status="PASS" starttime="20240512 22:41:48.408" endtime="20240512 22:41:48.432"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${login_error_msg}</arg>
+<arg>Error: Incorrect login or password provided.</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20240512 22:41:48.476" level="INFO">Element '//*[@id="maincontainer"]/div[@class='container-fluid']/div[@class='col-md-12 col-xs-12 mt20']/div/div[@class='alert alert-error alert-danger']' contains text 'Error: Incorrect login or password provided.'.</msg>
+<status status="PASS" starttime="20240512 22:41:48.432" endtime="20240512 22:41:48.476"/>
+</kw>
+<status status="PASS" starttime="20240512 22:41:47.244" endtime="20240512 22:41:48.477"/>
+</kw>
+<kw name="Login successfully with registered account" library="login">
+<arg>${valid_login_name_1}</arg>
+<arg>${valid_login_password_1}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_login_name}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240512 22:41:48.481" level="INFO">Typing text 'annepattrick' into text field '//*[@id="loginFrm_loginname"]'.</msg>
+<status status="PASS" starttime="20240512 22:41:48.480" endtime="20240512 22:41:48.601"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_password}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240512 22:41:48.602" level="INFO">Typing text '123456' into text field '//*[@id="loginFrm_password"]'.</msg>
+<status status="PASS" starttime="20240512 22:41:48.602" endtime="20240512 22:41:48.698"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_submit_login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240512 22:41:48.699" level="INFO">Clicking element '//*[@id="loginFrm"]/fieldset/button'.</msg>
+<status status="PASS" starttime="20240512 22:41:48.698" endtime="20240512 22:41:49.822"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Location Should Be</arg>
+<arg>${LOGIN_SUCCESS_URL}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${LOGIN_SUCCESS_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20240512 22:41:49.828" level="INFO">Current location is 'https://automationteststore.com/index.php?rt=account/account'.</msg>
+<status status="PASS" starttime="20240512 22:41:49.823" endtime="20240512 22:41:49.828"/>
+</kw>
+<status status="PASS" starttime="20240512 22:41:49.822" endtime="20240512 22:41:49.828"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${nav_user_name}</arg>
+<arg>Welcome back</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20240512 22:41:49.858" level="INFO">Element '//*[@id="customer_menu_top"]/li' contains text 'Welcome back'.</msg>
+<status status="PASS" starttime="20240512 22:41:49.828" endtime="20240512 22:41:49.858"/>
+</kw>
+<status status="PASS" starttime="20240512 22:41:48.479" endtime="20240512 22:41:49.858"/>
+</kw>
+<kw name="Closing my browser" library="common" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240512 22:41:49.860" endtime="20240512 22:41:52.037"/>
+</kw>
+<status status="PASS" starttime="20240512 22:41:49.860" endtime="20240512 22:41:52.037"/>
+</kw>
+<doc>Login fail then login successfully</doc>
+<tag>login</tag>
+<status status="PASS" starttime="20240512 22:41:35.304" endtime="20240512 22:41:52.038"/>
+</test>
+<test id="s1-t11" name="TC11 - Login fail (invalid password) then login successfully" line="82">
+<kw name="Opening my browser" library="common" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL_HOME}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240512 22:41:52.045" level="INFO">Opening browser 'Chrome' to base url 'https://automationteststore.com/'.</msg>
+<status status="PASS" starttime="20240512 22:41:52.044" endtime="20240512 22:42:03.935"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${URL_HOME}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20240512 22:42:03.940" level="INFO">Current location is 'https://automationteststore.com/'.</msg>
+<status status="PASS" starttime="20240512 22:42:03.935" endtime="20240512 22:42:03.940"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240512 22:42:03.940" endtime="20240512 22:42:03.971"/>
+</kw>
+<status status="PASS" starttime="20240512 22:41:52.043" endtime="20240512 22:42:03.971"/>
+</kw>
+<kw name="Enter page" library="common">
+<arg>${REGISTER_LOGIN_PAGE}</arg>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20240512 22:42:03.973" level="INFO">Opening url 'https://automationteststore.com/index.php?rt=account/login'</msg>
+<status status="PASS" starttime="20240512 22:42:03.972" endtime="20240512 22:42:04.720"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${url}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20240512 22:42:04.729" level="INFO">Current location is 'https://automationteststore.com/index.php?rt=account/login'.</msg>
+<status status="PASS" starttime="20240512 22:42:04.720" endtime="20240512 22:42:04.729"/>
+</kw>
+<status status="PASS" starttime="20240512 22:42:03.972" endtime="20240512 22:42:04.729"/>
+</kw>
+<kw name="Login fail with invalid credentials" library="login">
+<arg>${valid_login_name_1}</arg>
+<arg>${invalid_login_password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_login_name}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240512 22:42:04.731" level="INFO">Typing text 'annepattrick' into text field '//*[@id="loginFrm_loginname"]'.</msg>
+<status status="PASS" starttime="20240512 22:42:04.730" endtime="20240512 22:42:04.928"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_password}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240512 22:42:04.929" level="INFO">Typing text 'invalidpassword' into text field '//*[@id="loginFrm_password"]'.</msg>
+<status status="PASS" starttime="20240512 22:42:04.928" endtime="20240512 22:42:05.076"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_submit_login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240512 22:42:05.077" level="INFO">Clicking element '//*[@id="loginFrm"]/fieldset/button'.</msg>
+<status status="PASS" starttime="20240512 22:42:05.076" endtime="20240512 22:42:05.899"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${REGISTER_LOGIN_PAGE}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20240512 22:42:05.910" level="INFO">Current location is 'https://automationteststore.com/index.php?rt=account/login'.</msg>
+<status status="PASS" starttime="20240512 22:42:05.899" endtime="20240512 22:42:05.910"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${login_error_msg}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20240512 22:42:05.927" level="INFO">Current page contains element '//*[@id="maincontainer"]/div[@class='container-fluid']/div[@class='col-md-12 col-xs-12 mt20']/div/div[@class='alert alert-error alert-danger']'.</msg>
+<status status="PASS" starttime="20240512 22:42:05.910" endtime="20240512 22:42:05.927"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${login_error_msg}</arg>
+<arg>Error: Incorrect login or password provided.</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20240512 22:42:05.968" level="INFO">Element '//*[@id="maincontainer"]/div[@class='container-fluid']/div[@class='col-md-12 col-xs-12 mt20']/div/div[@class='alert alert-error alert-danger']' contains text 'Error: Incorrect login or password provided.'.</msg>
+<status status="PASS" starttime="20240512 22:42:05.928" endtime="20240512 22:42:05.968"/>
+</kw>
+<status status="PASS" starttime="20240512 22:42:04.729" endtime="20240512 22:42:05.968"/>
+</kw>
+<kw name="Login successfully with registered account" library="login">
+<arg>${valid_login_name_1}</arg>
+<arg>${valid_login_password_1}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_login_name}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240512 22:42:05.972" level="INFO">Typing text 'annepattrick' into text field '//*[@id="loginFrm_loginname"]'.</msg>
+<status status="PASS" starttime="20240512 22:42:05.971" endtime="20240512 22:42:06.114"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_password}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240512 22:42:06.115" level="INFO">Typing text '123456' into text field '//*[@id="loginFrm_password"]'.</msg>
+<status status="PASS" starttime="20240512 22:42:06.114" endtime="20240512 22:42:06.265"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_submit_login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240512 22:42:06.266" level="INFO">Clicking element '//*[@id="loginFrm"]/fieldset/button'.</msg>
+<status status="PASS" starttime="20240512 22:42:06.266" endtime="20240512 22:42:08.023"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Location Should Be</arg>
+<arg>${LOGIN_SUCCESS_URL}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${LOGIN_SUCCESS_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20240512 22:42:08.035" level="INFO">Current location is 'https://automationteststore.com/index.php?rt=account/account'.</msg>
+<status status="PASS" starttime="20240512 22:42:08.024" endtime="20240512 22:42:08.035"/>
+</kw>
+<status status="PASS" starttime="20240512 22:42:08.023" endtime="20240512 22:42:08.036"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${nav_user_name}</arg>
+<arg>Welcome back</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20240512 22:42:08.080" level="INFO">Element '//*[@id="customer_menu_top"]/li' contains text 'Welcome back'.</msg>
+<status status="PASS" starttime="20240512 22:42:08.036" endtime="20240512 22:42:08.080"/>
+</kw>
+<status status="PASS" starttime="20240512 22:42:05.969" endtime="20240512 22:42:08.080"/>
+</kw>
+<kw name="Closing my browser" library="common" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240512 22:42:08.083" endtime="20240512 22:42:10.307"/>
+</kw>
+<status status="PASS" starttime="20240512 22:42:08.082" endtime="20240512 22:42:10.307"/>
+</kw>
+<doc>Login fail then login successfully</doc>
+<tag>login</tag>
+<status status="PASS" starttime="20240512 22:41:52.042" endtime="20240512 22:42:10.308"/>
+</test>
+<test id="s1-t12" name="TC12 - Login fail (invalid login name and password) then login successfully" line="90">
+<kw name="Opening my browser" library="common" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL_HOME}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240512 22:42:10.313" level="INFO">Opening browser 'Chrome' to base url 'https://automationteststore.com/'.</msg>
+<status status="PASS" starttime="20240512 22:42:10.312" endtime="20240512 22:42:24.240"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${URL_HOME}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20240512 22:42:24.246" level="INFO">Current location is 'https://automationteststore.com/'.</msg>
+<status status="PASS" starttime="20240512 22:42:24.240" endtime="20240512 22:42:24.246"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240512 22:42:24.246" endtime="20240512 22:42:24.273"/>
+</kw>
+<status status="PASS" starttime="20240512 22:42:10.312" endtime="20240512 22:42:24.273"/>
+</kw>
+<kw name="Enter page" library="common">
+<arg>${REGISTER_LOGIN_PAGE}</arg>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20240512 22:42:24.274" level="INFO">Opening url 'https://automationteststore.com/index.php?rt=account/login'</msg>
+<status status="PASS" starttime="20240512 22:42:24.274" endtime="20240512 22:42:25.317"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${url}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20240512 22:42:25.331" level="INFO">Current location is 'https://automationteststore.com/index.php?rt=account/login'.</msg>
+<status status="PASS" starttime="20240512 22:42:25.317" endtime="20240512 22:42:25.331"/>
+</kw>
+<status status="PASS" starttime="20240512 22:42:24.274" endtime="20240512 22:42:25.331"/>
+</kw>
+<kw name="Login fail with invalid credentials" library="login">
+<arg>${invalid_login_name}</arg>
+<arg>${invalid_login_password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_login_name}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240512 22:42:25.334" level="INFO">Typing text 'invalidloginname' into text field '//*[@id="loginFrm_loginname"]'.</msg>
+<status status="PASS" starttime="20240512 22:42:25.334" endtime="20240512 22:42:25.483"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_password}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240512 22:42:25.484" level="INFO">Typing text 'invalidpassword' into text field '//*[@id="loginFrm_password"]'.</msg>
+<status status="PASS" starttime="20240512 22:42:25.484" endtime="20240512 22:42:25.642"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_submit_login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240512 22:42:25.642" level="INFO">Clicking element '//*[@id="loginFrm"]/fieldset/button'.</msg>
+<status status="PASS" starttime="20240512 22:42:25.642" endtime="20240512 22:42:26.395"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${REGISTER_LOGIN_PAGE}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20240512 22:42:26.403" level="INFO">Current location is 'https://automationteststore.com/index.php?rt=account/login'.</msg>
+<status status="PASS" starttime="20240512 22:42:26.395" endtime="20240512 22:42:26.403"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${login_error_msg}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20240512 22:42:26.416" level="INFO">Current page contains element '//*[@id="maincontainer"]/div[@class='container-fluid']/div[@class='col-md-12 col-xs-12 mt20']/div/div[@class='alert alert-error alert-danger']'.</msg>
+<status status="PASS" starttime="20240512 22:42:26.403" endtime="20240512 22:42:26.416"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${login_error_msg}</arg>
+<arg>Error: Incorrect login or password provided.</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20240512 22:42:26.437" level="INFO">Element '//*[@id="maincontainer"]/div[@class='container-fluid']/div[@class='col-md-12 col-xs-12 mt20']/div/div[@class='alert alert-error alert-danger']' contains text 'Error: Incorrect login or password provided.'.</msg>
+<status status="PASS" starttime="20240512 22:42:26.416" endtime="20240512 22:42:26.438"/>
+</kw>
+<status status="PASS" starttime="20240512 22:42:25.332" endtime="20240512 22:42:26.438"/>
+</kw>
+<kw name="Login successfully with registered account" library="login">
+<arg>${valid_login_name_1}</arg>
+<arg>${valid_login_password_1}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_login_name}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240512 22:42:26.440" level="INFO">Typing text 'annepattrick' into text field '//*[@id="loginFrm_loginname"]'.</msg>
+<status status="PASS" starttime="20240512 22:42:26.440" endtime="20240512 22:42:26.555"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_password}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240512 22:42:26.556" level="INFO">Typing text '123456' into text field '//*[@id="loginFrm_password"]'.</msg>
+<status status="PASS" starttime="20240512 22:42:26.555" endtime="20240512 22:42:26.689"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_submit_login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240512 22:42:26.690" level="INFO">Clicking element '//*[@id="loginFrm"]/fieldset/button'.</msg>
+<status status="PASS" starttime="20240512 22:42:26.689" endtime="20240512 22:42:27.800"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Location Should Be</arg>
+<arg>${LOGIN_SUCCESS_URL}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${LOGIN_SUCCESS_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20240512 22:42:27.805" level="INFO">Current location is 'https://automationteststore.com/index.php?rt=account/account'.</msg>
+<status status="PASS" starttime="20240512 22:42:27.800" endtime="20240512 22:42:27.805"/>
+</kw>
+<status status="PASS" starttime="20240512 22:42:27.800" endtime="20240512 22:42:27.805"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${nav_user_name}</arg>
+<arg>Welcome back</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20240512 22:42:27.825" level="INFO">Element '//*[@id="customer_menu_top"]/li' contains text 'Welcome back'.</msg>
+<status status="PASS" starttime="20240512 22:42:27.805" endtime="20240512 22:42:27.825"/>
+</kw>
+<status status="PASS" starttime="20240512 22:42:26.438" endtime="20240512 22:42:27.825"/>
+</kw>
+<kw name="Closing my browser" library="common" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240512 22:42:27.827" endtime="20240512 22:42:29.973"/>
+</kw>
+<status status="PASS" starttime="20240512 22:42:27.826" endtime="20240512 22:42:29.974"/>
+</kw>
+<doc>Login fail then login successfully</doc>
+<tag>login</tag>
+<status status="PASS" starttime="20240512 22:42:10.311" endtime="20240512 22:42:29.975"/>
+</test>
+<test id="s1-t13" name="TC13 - Login fail (empty login name) then login successfully" line="98">
+<kw name="Opening my browser" library="common" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL_HOME}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240512 22:42:29.981" level="INFO">Opening browser 'Chrome' to base url 'https://automationteststore.com/'.</msg>
+<status status="PASS" starttime="20240512 22:42:29.980" endtime="20240512 22:42:40.544"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${URL_HOME}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20240512 22:42:40.554" level="INFO">Current location is 'https://automationteststore.com/'.</msg>
+<status status="PASS" starttime="20240512 22:42:40.544" endtime="20240512 22:42:40.554"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240512 22:42:40.554" endtime="20240512 22:42:40.591"/>
+</kw>
+<status status="PASS" starttime="20240512 22:42:29.979" endtime="20240512 22:42:40.592"/>
+</kw>
+<kw name="Enter page" library="common">
+<arg>${REGISTER_LOGIN_PAGE}</arg>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20240512 22:42:40.593" level="INFO">Opening url 'https://automationteststore.com/index.php?rt=account/login'</msg>
+<status status="PASS" starttime="20240512 22:42:40.593" endtime="20240512 22:42:41.344"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${url}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20240512 22:42:41.357" level="INFO">Current location is 'https://automationteststore.com/index.php?rt=account/login'.</msg>
+<status status="PASS" starttime="20240512 22:42:41.345" endtime="20240512 22:42:41.357"/>
+</kw>
+<status status="PASS" starttime="20240512 22:42:40.592" endtime="20240512 22:42:41.357"/>
+</kw>
+<kw name="Login fail with invalid credentials" library="login">
+<arg>${EMPTY}</arg>
+<arg>${valid_login_password_1}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_login_name}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240512 22:42:41.361" level="INFO">Typing text '' into text field '//*[@id="loginFrm_loginname"]'.</msg>
+<status status="PASS" starttime="20240512 22:42:41.361" endtime="20240512 22:42:41.461"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_password}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240512 22:42:41.462" level="INFO">Typing text '123456' into text field '//*[@id="loginFrm_password"]'.</msg>
+<status status="PASS" starttime="20240512 22:42:41.461" endtime="20240512 22:42:41.543"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_submit_login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240512 22:42:41.544" level="INFO">Clicking element '//*[@id="loginFrm"]/fieldset/button'.</msg>
+<status status="PASS" starttime="20240512 22:42:41.544" endtime="20240512 22:42:42.324"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${REGISTER_LOGIN_PAGE}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20240512 22:42:42.335" level="INFO">Current location is 'https://automationteststore.com/index.php?rt=account/login'.</msg>
+<status status="PASS" starttime="20240512 22:42:42.324" endtime="20240512 22:42:42.336"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${login_error_msg}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20240512 22:42:42.356" level="INFO">Current page contains element '//*[@id="maincontainer"]/div[@class='container-fluid']/div[@class='col-md-12 col-xs-12 mt20']/div/div[@class='alert alert-error alert-danger']'.</msg>
+<status status="PASS" starttime="20240512 22:42:42.336" endtime="20240512 22:42:42.356"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${login_error_msg}</arg>
+<arg>Error: Incorrect login or password provided.</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20240512 22:42:42.397" level="INFO">Element '//*[@id="maincontainer"]/div[@class='container-fluid']/div[@class='col-md-12 col-xs-12 mt20']/div/div[@class='alert alert-error alert-danger']' contains text 'Error: Incorrect login or password provided.'.</msg>
+<status status="PASS" starttime="20240512 22:42:42.356" endtime="20240512 22:42:42.397"/>
+</kw>
+<status status="PASS" starttime="20240512 22:42:41.358" endtime="20240512 22:42:42.397"/>
+</kw>
+<kw name="Login successfully with registered account" library="login">
+<arg>${valid_login_name_1}</arg>
+<arg>${valid_login_password_1}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_login_name}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240512 22:42:42.400" level="INFO">Typing text 'annepattrick' into text field '//*[@id="loginFrm_loginname"]'.</msg>
+<status status="PASS" starttime="20240512 22:42:42.399" endtime="20240512 22:42:42.517"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_password}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240512 22:42:42.517" level="INFO">Typing text '123456' into text field '//*[@id="loginFrm_password"]'.</msg>
+<status status="PASS" starttime="20240512 22:42:42.517" endtime="20240512 22:42:42.599"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_submit_login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240512 22:42:42.600" level="INFO">Clicking element '//*[@id="loginFrm"]/fieldset/button'.</msg>
+<status status="PASS" starttime="20240512 22:42:42.599" endtime="20240512 22:42:44.019"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Location Should Be</arg>
+<arg>${LOGIN_SUCCESS_URL}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${LOGIN_SUCCESS_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20240512 22:42:44.032" level="INFO">Current location is 'https://automationteststore.com/index.php?rt=account/account'.</msg>
+<status status="PASS" starttime="20240512 22:42:44.020" endtime="20240512 22:42:44.032"/>
+</kw>
+<status status="PASS" starttime="20240512 22:42:44.019" endtime="20240512 22:42:44.032"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${nav_user_name}</arg>
+<arg>Welcome back</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20240512 22:42:44.084" level="INFO">Element '//*[@id="customer_menu_top"]/li' contains text 'Welcome back'.</msg>
+<status status="PASS" starttime="20240512 22:42:44.032" endtime="20240512 22:42:44.084"/>
+</kw>
+<status status="PASS" starttime="20240512 22:42:42.398" endtime="20240512 22:42:44.084"/>
+</kw>
+<kw name="Closing my browser" library="common" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240512 22:42:44.087" endtime="20240512 22:42:46.295"/>
+</kw>
+<status status="PASS" starttime="20240512 22:42:44.086" endtime="20240512 22:42:46.295"/>
+</kw>
+<doc>Login fail then login successfully</doc>
+<tag>login</tag>
+<status status="PASS" starttime="20240512 22:42:29.978" endtime="20240512 22:42:46.295"/>
+</test>
+<test id="s1-t14" name="TC14 - Login fail (empty password) then login successfully" line="106">
+<kw name="Opening my browser" library="common" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL_HOME}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240512 22:42:46.302" level="INFO">Opening browser 'Chrome' to base url 'https://automationteststore.com/'.</msg>
+<status status="PASS" starttime="20240512 22:42:46.301" endtime="20240512 22:42:57.006"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${URL_HOME}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20240512 22:42:57.014" level="INFO">Current location is 'https://automationteststore.com/'.</msg>
+<status status="PASS" starttime="20240512 22:42:57.006" endtime="20240512 22:42:57.014"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240512 22:42:57.014" endtime="20240512 22:42:57.051"/>
+</kw>
+<status status="PASS" starttime="20240512 22:42:46.300" endtime="20240512 22:42:57.051"/>
+</kw>
+<kw name="Enter page" library="common">
+<arg>${REGISTER_LOGIN_PAGE}</arg>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20240512 22:42:57.052" level="INFO">Opening url 'https://automationteststore.com/index.php?rt=account/login'</msg>
+<status status="PASS" starttime="20240512 22:42:57.052" endtime="20240512 22:42:57.794"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${url}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20240512 22:42:57.805" level="INFO">Current location is 'https://automationteststore.com/index.php?rt=account/login'.</msg>
+<status status="PASS" starttime="20240512 22:42:57.794" endtime="20240512 22:42:57.805"/>
+</kw>
+<status status="PASS" starttime="20240512 22:42:57.052" endtime="20240512 22:42:57.805"/>
+</kw>
+<kw name="Login fail with invalid credentials" library="login">
+<arg>${valid_login_name_1}</arg>
+<arg>${EMPTY}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_login_name}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240512 22:42:57.808" level="INFO">Typing text 'annepattrick' into text field '//*[@id="loginFrm_loginname"]'.</msg>
+<status status="PASS" starttime="20240512 22:42:57.807" endtime="20240512 22:42:57.967"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_password}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240512 22:42:57.967" level="INFO">Typing text '' into text field '//*[@id="loginFrm_password"]'.</msg>
+<status status="PASS" starttime="20240512 22:42:57.967" endtime="20240512 22:42:58.069"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_submit_login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240512 22:42:58.070" level="INFO">Clicking element '//*[@id="loginFrm"]/fieldset/button'.</msg>
+<status status="PASS" starttime="20240512 22:42:58.069" endtime="20240512 22:42:58.879"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${REGISTER_LOGIN_PAGE}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20240512 22:42:58.890" level="INFO">Current location is 'https://automationteststore.com/index.php?rt=account/login'.</msg>
+<status status="PASS" starttime="20240512 22:42:58.879" endtime="20240512 22:42:58.890"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${login_error_msg}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20240512 22:42:58.911" level="INFO">Current page contains element '//*[@id="maincontainer"]/div[@class='container-fluid']/div[@class='col-md-12 col-xs-12 mt20']/div/div[@class='alert alert-error alert-danger']'.</msg>
+<status status="PASS" starttime="20240512 22:42:58.891" endtime="20240512 22:42:58.911"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${login_error_msg}</arg>
+<arg>Error: Incorrect login or password provided.</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20240512 22:42:58.950" level="INFO">Element '//*[@id="maincontainer"]/div[@class='container-fluid']/div[@class='col-md-12 col-xs-12 mt20']/div/div[@class='alert alert-error alert-danger']' contains text 'Error: Incorrect login or password provided.'.</msg>
+<status status="PASS" starttime="20240512 22:42:58.911" endtime="20240512 22:42:58.950"/>
+</kw>
+<status status="PASS" starttime="20240512 22:42:57.806" endtime="20240512 22:42:58.950"/>
+</kw>
+<kw name="Login successfully with registered account" library="login">
+<arg>${valid_login_name_1}</arg>
+<arg>${valid_login_password_1}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_login_name}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240512 22:42:58.954" level="INFO">Typing text 'annepattrick' into text field '//*[@id="loginFrm_loginname"]'.</msg>
+<status status="PASS" starttime="20240512 22:42:58.953" endtime="20240512 22:42:59.158"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_password}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240512 22:42:59.160" level="INFO">Typing text '123456' into text field '//*[@id="loginFrm_password"]'.</msg>
+<status status="PASS" starttime="20240512 22:42:59.158" endtime="20240512 22:42:59.355"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_submit_login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240512 22:42:59.356" level="INFO">Clicking element '//*[@id="loginFrm"]/fieldset/button'.</msg>
+<status status="PASS" starttime="20240512 22:42:59.355" endtime="20240512 22:43:00.471"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Location Should Be</arg>
+<arg>${LOGIN_SUCCESS_URL}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${LOGIN_SUCCESS_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20240512 22:43:00.487" level="INFO">Current location is 'https://automationteststore.com/index.php?rt=account/account'.</msg>
+<status status="PASS" starttime="20240512 22:43:00.472" endtime="20240512 22:43:00.488"/>
+</kw>
+<status status="PASS" starttime="20240512 22:43:00.471" endtime="20240512 22:43:00.488"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${nav_user_name}</arg>
+<arg>Welcome back</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20240512 22:43:00.539" level="INFO">Element '//*[@id="customer_menu_top"]/li' contains text 'Welcome back'.</msg>
+<status status="PASS" starttime="20240512 22:43:00.488" endtime="20240512 22:43:00.540"/>
+</kw>
+<status status="PASS" starttime="20240512 22:42:58.952" endtime="20240512 22:43:00.540"/>
+</kw>
+<kw name="Closing my browser" library="common" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240512 22:43:00.542" endtime="20240512 22:43:02.698"/>
+</kw>
+<status status="PASS" starttime="20240512 22:43:00.541" endtime="20240512 22:43:02.698"/>
+</kw>
+<doc>Login fail then login successfully</doc>
+<tag>login</tag>
+<status status="PASS" starttime="20240512 22:42:46.299" endtime="20240512 22:43:02.699"/>
+</test>
+<test id="s1-t15" name="TC15 - Login fail (empty login name and password) then login successfully" line="114">
+<kw name="Opening my browser" library="common" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL_HOME}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240512 22:43:02.706" level="INFO">Opening browser 'Chrome' to base url 'https://automationteststore.com/'.</msg>
+<status status="PASS" starttime="20240512 22:43:02.704" endtime="20240512 22:43:15.615"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${URL_HOME}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20240512 22:43:15.627" level="INFO">Current location is 'https://automationteststore.com/'.</msg>
+<status status="PASS" starttime="20240512 22:43:15.616" endtime="20240512 22:43:15.627"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240512 22:43:15.628" endtime="20240512 22:43:15.671"/>
+</kw>
+<status status="PASS" starttime="20240512 22:43:02.704" endtime="20240512 22:43:15.671"/>
+</kw>
+<kw name="Enter page" library="common">
+<arg>${REGISTER_LOGIN_PAGE}</arg>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20240512 22:43:15.673" level="INFO">Opening url 'https://automationteststore.com/index.php?rt=account/login'</msg>
+<status status="PASS" starttime="20240512 22:43:15.672" endtime="20240512 22:43:16.437"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${url}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20240512 22:43:16.447" level="INFO">Current location is 'https://automationteststore.com/index.php?rt=account/login'.</msg>
+<status status="PASS" starttime="20240512 22:43:16.438" endtime="20240512 22:43:16.447"/>
+</kw>
+<status status="PASS" starttime="20240512 22:43:15.672" endtime="20240512 22:43:16.448"/>
+</kw>
+<kw name="Login fail with invalid credentials" library="login">
+<arg>${EMPTY}</arg>
+<arg>${EMPTY}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_login_name}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240512 22:43:16.456" level="INFO">Typing text '' into text field '//*[@id="loginFrm_loginname"]'.</msg>
+<status status="PASS" starttime="20240512 22:43:16.453" endtime="20240512 22:43:16.605"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_password}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240512 22:43:16.606" level="INFO">Typing text '' into text field '//*[@id="loginFrm_password"]'.</msg>
+<status status="PASS" starttime="20240512 22:43:16.605" endtime="20240512 22:43:16.738"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_submit_login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240512 22:43:16.741" level="INFO">Clicking element '//*[@id="loginFrm"]/fieldset/button'.</msg>
+<status status="PASS" starttime="20240512 22:43:16.740" endtime="20240512 22:43:17.227"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${REGISTER_LOGIN_PAGE}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20240512 22:43:17.596" level="INFO">Current location is 'https://automationteststore.com/index.php?rt=account/login'.</msg>
+<status status="PASS" starttime="20240512 22:43:17.227" endtime="20240512 22:43:17.596"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${login_error_msg}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20240512 22:43:17.609" level="INFO">Current page contains element '//*[@id="maincontainer"]/div[@class='container-fluid']/div[@class='col-md-12 col-xs-12 mt20']/div/div[@class='alert alert-error alert-danger']'.</msg>
+<status status="PASS" starttime="20240512 22:43:17.596" endtime="20240512 22:43:17.609"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${login_error_msg}</arg>
+<arg>Error: Incorrect login or password provided.</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20240512 22:43:17.630" level="INFO">Element '//*[@id="maincontainer"]/div[@class='container-fluid']/div[@class='col-md-12 col-xs-12 mt20']/div/div[@class='alert alert-error alert-danger']' contains text 'Error: Incorrect login or password provided.'.</msg>
+<status status="PASS" starttime="20240512 22:43:17.609" endtime="20240512 22:43:17.630"/>
+</kw>
+<status status="PASS" starttime="20240512 22:43:16.449" endtime="20240512 22:43:17.630"/>
+</kw>
+<kw name="Login successfully with registered account" library="login">
+<arg>${valid_login_name_1}</arg>
+<arg>${valid_login_password_1}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_login_name}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240512 22:43:17.632" level="INFO">Typing text 'annepattrick' into text field '//*[@id="loginFrm_loginname"]'.</msg>
+<status status="PASS" starttime="20240512 22:43:17.631" endtime="20240512 22:43:17.768"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_password}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240512 22:43:17.769" level="INFO">Typing text '123456' into text field '//*[@id="loginFrm_password"]'.</msg>
+<status status="PASS" starttime="20240512 22:43:17.768" endtime="20240512 22:43:17.849"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_submit_login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240512 22:43:17.852" level="INFO">Clicking element '//*[@id="loginFrm"]/fieldset/button'.</msg>
+<status status="PASS" starttime="20240512 22:43:17.851" endtime="20240512 22:43:18.991"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Location Should Be</arg>
+<arg>${LOGIN_SUCCESS_URL}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${LOGIN_SUCCESS_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20240512 22:43:19.003" level="INFO">Current location is 'https://automationteststore.com/index.php?rt=account/account'.</msg>
+<status status="PASS" starttime="20240512 22:43:18.992" endtime="20240512 22:43:19.003"/>
+</kw>
+<status status="PASS" starttime="20240512 22:43:18.991" endtime="20240512 22:43:19.003"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${nav_user_name}</arg>
+<arg>Welcome back</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20240512 22:43:19.029" level="INFO">Element '//*[@id="customer_menu_top"]/li' contains text 'Welcome back'.</msg>
+<status status="PASS" starttime="20240512 22:43:19.003" endtime="20240512 22:43:19.030"/>
+</kw>
+<status status="PASS" starttime="20240512 22:43:17.631" endtime="20240512 22:43:19.030"/>
+</kw>
+<kw name="Closing my browser" library="common" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240512 22:43:19.032" endtime="20240512 22:43:21.231"/>
+</kw>
+<status status="PASS" starttime="20240512 22:43:19.031" endtime="20240512 22:43:21.231"/>
+</kw>
+<doc>Login fail then login successfully</doc>
+<tag>login</tag>
+<status status="PASS" starttime="20240512 22:43:02.702" endtime="20240512 22:43:21.232"/>
+</test>
+<test id="s1-t16" name="TC16 - Try login after login successfully" line="122">
+<kw name="Opening my browser" library="common" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL_HOME}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240512 22:43:21.237" level="INFO">Opening browser 'Chrome' to base url 'https://automationteststore.com/'.</msg>
+<status status="PASS" starttime="20240512 22:43:21.236" endtime="20240512 22:43:32.425"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${URL_HOME}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20240512 22:43:32.431" level="INFO">Current location is 'https://automationteststore.com/'.</msg>
+<status status="PASS" starttime="20240512 22:43:32.425" endtime="20240512 22:43:32.432"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240512 22:43:32.432" endtime="20240512 22:43:32.470"/>
+</kw>
+<status status="PASS" starttime="20240512 22:43:21.235" endtime="20240512 22:43:32.470"/>
+</kw>
+<kw name="Login sucessfully">
+<kw name="Enter page" library="common">
+<arg>${REGISTER_LOGIN_PAGE}</arg>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20240512 22:43:32.471" level="INFO">Opening url 'https://automationteststore.com/index.php?rt=account/login'</msg>
+<status status="PASS" starttime="20240512 22:43:32.471" endtime="20240512 22:43:34.356"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${url}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20240512 22:43:34.367" level="INFO">Current location is 'https://automationteststore.com/index.php?rt=account/login'.</msg>
+<status status="PASS" starttime="20240512 22:43:34.356" endtime="20240512 22:43:34.367"/>
+</kw>
+<status status="PASS" starttime="20240512 22:43:32.471" endtime="20240512 22:43:34.368"/>
+</kw>
+<kw name="Login successfully with registered account" library="login">
+<arg>${valid_login_name_1}</arg>
+<arg>${valid_login_password_1}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_login_name}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240512 22:43:34.371" level="INFO">Typing text 'annepattrick' into text field '//*[@id="loginFrm_loginname"]'.</msg>
+<status status="PASS" starttime="20240512 22:43:34.369" endtime="20240512 22:43:34.557"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_password}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240512 22:43:34.558" level="INFO">Typing text '123456' into text field '//*[@id="loginFrm_password"]'.</msg>
+<status status="PASS" starttime="20240512 22:43:34.558" endtime="20240512 22:43:34.641"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_submit_login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240512 22:43:34.642" level="INFO">Clicking element '//*[@id="loginFrm"]/fieldset/button'.</msg>
+<status status="PASS" starttime="20240512 22:43:34.641" endtime="20240512 22:43:35.712"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Location Should Be</arg>
+<arg>${LOGIN_SUCCESS_URL}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${LOGIN_SUCCESS_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20240512 22:43:35.718" level="INFO">Current location is 'https://automationteststore.com/index.php?rt=account/account'.</msg>
+<status status="PASS" starttime="20240512 22:43:35.713" endtime="20240512 22:43:35.718"/>
+</kw>
+<status status="PASS" starttime="20240512 22:43:35.713" endtime="20240512 22:43:35.718"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${nav_user_name}</arg>
+<arg>Welcome back</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20240512 22:43:35.743" level="INFO">Element '//*[@id="customer_menu_top"]/li' contains text 'Welcome back'.</msg>
+<status status="PASS" starttime="20240512 22:43:35.718" endtime="20240512 22:43:35.743"/>
+</kw>
+<status status="PASS" starttime="20240512 22:43:34.368" endtime="20240512 22:43:35.743"/>
+</kw>
+<status status="PASS" starttime="20240512 22:43:32.471" endtime="20240512 22:43:35.744"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${REGISTER_LOGIN_PAGE}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20240512 22:43:35.745" level="INFO">Opening url 'https://automationteststore.com/index.php?rt=account/login'</msg>
+<status status="PASS" starttime="20240512 22:43:35.744" endtime="20240512 22:43:36.770"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Location Should Be</arg>
+<arg>${LOGIN_SUCCESS_URL}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${LOGIN_SUCCESS_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20240512 22:43:36.782" level="INFO">Current location is 'https://automationteststore.com/index.php?rt=account/account'.</msg>
+<status status="PASS" starttime="20240512 22:43:36.771" endtime="20240512 22:43:36.782"/>
+</kw>
+<status status="PASS" starttime="20240512 22:43:36.771" endtime="20240512 22:43:36.782"/>
+</kw>
+<kw name="Closing my browser" library="common" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240512 22:43:36.783" endtime="20240512 22:43:38.984"/>
+</kw>
+<status status="PASS" starttime="20240512 22:43:36.783" endtime="20240512 22:43:38.985"/>
+</kw>
+<doc>Try login after login successfully</doc>
+<tag>login</tag>
+<status status="PASS" starttime="20240512 22:43:21.234" endtime="20240512 22:43:38.986"/>
+</test>
+<test id="s1-t17" name="TC17 - Logout after login successfully" line="129">
+<kw name="Opening my browser" library="common" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL_HOME}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240512 22:43:38.991" level="INFO">Opening browser 'Chrome' to base url 'https://automationteststore.com/'.</msg>
+<status status="PASS" starttime="20240512 22:43:38.990" endtime="20240512 22:43:49.613"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${URL_HOME}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20240512 22:43:49.621" level="INFO">Current location is 'https://automationteststore.com/'.</msg>
+<status status="PASS" starttime="20240512 22:43:49.613" endtime="20240512 22:43:49.621"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240512 22:43:49.621" endtime="20240512 22:43:49.648"/>
+</kw>
+<status status="PASS" starttime="20240512 22:43:38.990" endtime="20240512 22:43:49.648"/>
+</kw>
+<kw name="Login sucessfully">
+<kw name="Enter page" library="common">
+<arg>${REGISTER_LOGIN_PAGE}</arg>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20240512 22:43:49.650" level="INFO">Opening url 'https://automationteststore.com/index.php?rt=account/login'</msg>
+<status status="PASS" starttime="20240512 22:43:49.649" endtime="20240512 22:43:50.426"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${url}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20240512 22:43:50.438" level="INFO">Current location is 'https://automationteststore.com/index.php?rt=account/login'.</msg>
+<status status="PASS" starttime="20240512 22:43:50.426" endtime="20240512 22:43:50.439"/>
+</kw>
+<status status="PASS" starttime="20240512 22:43:49.649" endtime="20240512 22:43:50.439"/>
+</kw>
+<kw name="Login successfully with registered account" library="login">
+<arg>${valid_login_name_1}</arg>
+<arg>${valid_login_password_1}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_login_name}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240512 22:43:50.441" level="INFO">Typing text 'annepattrick' into text field '//*[@id="loginFrm_loginname"]'.</msg>
+<status status="PASS" starttime="20240512 22:43:50.439" endtime="20240512 22:43:50.562"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_password}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240512 22:43:50.563" level="INFO">Typing text '123456' into text field '//*[@id="loginFrm_password"]'.</msg>
+<status status="PASS" starttime="20240512 22:43:50.562" endtime="20240512 22:43:50.698"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_submit_login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240512 22:43:50.698" level="INFO">Clicking element '//*[@id="loginFrm"]/fieldset/button'.</msg>
+<status status="PASS" starttime="20240512 22:43:50.698" endtime="20240512 22:43:51.823"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Location Should Be</arg>
+<arg>${LOGIN_SUCCESS_URL}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${LOGIN_SUCCESS_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20240512 22:43:51.837" level="INFO">Current location is 'https://automationteststore.com/index.php?rt=account/account'.</msg>
+<status status="PASS" starttime="20240512 22:43:51.824" endtime="20240512 22:43:51.837"/>
+</kw>
+<status status="PASS" starttime="20240512 22:43:51.824" endtime="20240512 22:43:51.837"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${nav_user_name}</arg>
+<arg>Welcome back</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20240512 22:43:51.898" level="INFO">Element '//*[@id="customer_menu_top"]/li' contains text 'Welcome back'.</msg>
+<status status="PASS" starttime="20240512 22:43:51.838" endtime="20240512 22:43:51.898"/>
+</kw>
+<status status="PASS" starttime="20240512 22:43:50.439" endtime="20240512 22:43:51.898"/>
+</kw>
+<status status="PASS" starttime="20240512 22:43:49.649" endtime="20240512 22:43:51.899"/>
+</kw>
+<kw name="Logout successfully" library="login">
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${nav_user_name}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20240512 22:43:51.903" level="INFO">Simulating Mouse Over on element '//*[@id="customer_menu_top"]/li'.</msg>
+<status status="PASS" starttime="20240512 22:43:51.902" endtime="20240512 22:43:52.196"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${dropdown_menu}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20240512 22:43:52.220" level="INFO">Current page contains element '//*[@id="customer_menu_top"]/li/ul'.</msg>
+<status status="PASS" starttime="20240512 22:43:52.197" endtime="20240512 22:43:52.220"/>
+</kw>
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<var>${class_name}</var>
+<arg>${nav_user_name}</arg>
+<arg>class</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<msg timestamp="20240512 22:43:52.249" level="INFO">${class_name} = dropdown open</msg>
+<status status="PASS" starttime="20240512 22:43:52.221" endtime="20240512 22:43:52.249"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${class_name}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20240512 22:43:52.249" endtime="20240512 22:43:52.250"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${class_name}</arg>
+<arg>open</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20240512 22:43:52.250" endtime="20240512 22:43:52.250"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_logout}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240512 22:43:52.251" level="INFO">Clicking element '//*[@id="customer_menu_top"]/li/ul/li[10]'.</msg>
+<status status="PASS" starttime="20240512 22:43:52.250" endtime="20240512 22:43:53.332"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Location Should Be</arg>
+<arg>${LOGOUT_SUCCESS_URL}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${LOGOUT_SUCCESS_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20240512 22:43:53.341" level="INFO">Current location is 'https://automationteststore.com/index.php?rt=account/logout'.</msg>
+<status status="PASS" starttime="20240512 22:43:53.333" endtime="20240512 22:43:53.341"/>
+</kw>
+<status status="PASS" starttime="20240512 22:43:53.333" endtime="20240512 22:43:53.341"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Account Logout</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20240512 22:43:53.364" level="INFO">Current page contains text 'Account Logout'.</msg>
+<status status="PASS" starttime="20240512 22:43:53.341" endtime="20240512 22:43:53.365"/>
+</kw>
+<status status="PASS" starttime="20240512 22:43:51.901" endtime="20240512 22:43:53.365"/>
+</kw>
+<kw name="Closing my browser" library="common" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240512 22:43:53.366" endtime="20240512 22:43:55.533"/>
+</kw>
+<status status="PASS" starttime="20240512 22:43:53.365" endtime="20240512 22:43:55.534"/>
+</kw>
+<doc>Logout after login successfully</doc>
+<tag>login</tag>
+<status status="PASS" starttime="20240512 22:43:38.988" endtime="20240512 22:43:55.535"/>
+</test>
+<test id="s1-t18" name="TC18 - Logout fail (not login yet)" line="135">
+<kw name="Opening my browser" library="common" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL_HOME}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240512 22:43:55.542" level="INFO">Opening browser 'Chrome' to base url 'https://automationteststore.com/'.</msg>
+<status status="PASS" starttime="20240512 22:43:55.540" endtime="20240512 22:44:06.206"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${URL_HOME}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20240512 22:44:06.215" level="INFO">Current location is 'https://automationteststore.com/'.</msg>
+<status status="PASS" starttime="20240512 22:44:06.206" endtime="20240512 22:44:06.215"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240512 22:44:06.216" endtime="20240512 22:44:06.254"/>
+</kw>
+<status status="PASS" starttime="20240512 22:43:55.539" endtime="20240512 22:44:06.254"/>
+</kw>
+<kw name="Enter page" library="common">
+<arg>${REGISTER_LOGIN_PAGE}</arg>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20240512 22:44:06.257" level="INFO">Opening url 'https://automationteststore.com/index.php?rt=account/login'</msg>
+<status status="PASS" starttime="20240512 22:44:06.256" endtime="20240512 22:44:07.315"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${url}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20240512 22:44:07.322" level="INFO">Current location is 'https://automationteststore.com/index.php?rt=account/login'.</msg>
+<status status="PASS" starttime="20240512 22:44:07.315" endtime="20240512 22:44:07.322"/>
+</kw>
+<status status="PASS" starttime="20240512 22:44:06.256" endtime="20240512 22:44:07.322"/>
+</kw>
+<kw name="Page Should Not Contain Element" library="SeleniumLibrary">
+<arg>${dropdown_menu}</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<msg timestamp="20240512 22:44:07.337" level="INFO">Current page does not contain element '//*[@id="customer_menu_top"]/li/ul'.</msg>
+<status status="PASS" starttime="20240512 22:44:07.323" endtime="20240512 22:44:07.337"/>
+</kw>
+<kw name="Page Should Not Contain Element" library="SeleniumLibrary">
+<arg>${btn_logout}</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<msg timestamp="20240512 22:44:07.350" level="INFO">Current page does not contain element '//*[@id="customer_menu_top"]/li/ul/li[10]'.</msg>
+<status status="PASS" starttime="20240512 22:44:07.338" endtime="20240512 22:44:07.350"/>
+</kw>
+<kw name="Closing my browser" library="common" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240512 22:44:07.351" endtime="20240512 22:44:09.554"/>
+</kw>
+<status status="PASS" starttime="20240512 22:44:07.351" endtime="20240512 22:44:09.554"/>
+</kw>
+<doc>Logout fail (not login yet)</doc>
+<tag>login</tag>
+<status status="PASS" starttime="20240512 22:43:55.538" endtime="20240512 22:44:09.556"/>
+</test>
+<doc>Module - account/login</doc>
+<status status="PASS" starttime="20240512 22:38:19.067" endtime="20240512 22:44:09.561"/>
+</suite>
+<statistics>
+<total>
+<stat pass="18" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="18" fail="0" skip="0">login</stat>
+</tag>
+<suite>
+<stat pass="18" fail="0" skip="0" id="s1" name="Test Login">Test Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

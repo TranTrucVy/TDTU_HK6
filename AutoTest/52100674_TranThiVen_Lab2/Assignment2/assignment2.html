@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.10.9 on win32)" generated="2024-02-28T18:46:27.621356" rpa="false" schemaversion="5">
+<suite id="s1" name="Assignment2" source="D:\HK6\AutoTest\52100674_TranThiVen_Lab2\Assignment2.robot">
+<test id="s1-t1" name="Assignment2" line="16">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-02-28T18:46:27.636438" level="INFO">Starting Assignment 2 Test Case</msg>
+<arg>Starting Assignment 2 Test Case</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-02-28T18:46:27.636438" elapsed="0.000000"/>
+</kw>
+<kw name="CompareNumber">
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="DisplayComparisonMsg">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-02-28T18:46:27.638362" level="INFO">Numbers are equal</msg>
+<arg>${comparison_result}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-02-28T18:46:27.637255" elapsed="0.001107"/>
+</kw>
+<arg>Numbers are equal</arg>
+<status status="PASS" start="2024-02-28T18:46:27.637255" elapsed="0.001107"/>
+</kw>
+<arg>'${arg1}' == '${arg2}'</arg>
+<arg>DisplayComparisonMsg</arg>
+<arg>Numbers are equal</arg>
+<arg>ELSE IF</arg>
+<arg>'${arg1}' &lt; '${arg2}'</arg>
+<arg>DisplayComparisonMsg</arg>
+<arg>${arg1} is less than ${arg2}</arg>
+<arg>ELSE IF</arg>
+<arg>'${arg1}' &gt; '${arg2}'</arg>
+<arg>DisplayComparisonMsg</arg>
+<arg>${arg1} is greater than ${arg2}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-02-28T18:46:27.637255" elapsed="0.001107"/>
+</kw>
+<arg>10</arg>
+<arg>10</arg>
+<status status="PASS" start="2024-02-28T18:46:27.637255" elapsed="0.001107"/>
+</kw>
+<kw name="CompareNumber">
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="DisplayComparisonMsg">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-02-28T18:46:27.639312" level="INFO">5 is less than 8</msg>
+<arg>${comparison_result}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-02-28T18:46:27.639312" elapsed="0.000000"/>
+</kw>
+<arg>${arg1} is less than ${arg2}</arg>
+<status status="PASS" start="2024-02-28T18:46:27.639312" elapsed="0.000000"/>
+</kw>
+<arg>'${arg1}' == '${arg2}'</arg>
+<arg>DisplayComparisonMsg</arg>
+<arg>Numbers are equal</arg>
+<arg>ELSE IF</arg>
+<arg>'${arg1}' &lt; '${arg2}'</arg>
+<arg>DisplayComparisonMsg</arg>
+<arg>${arg1} is less than ${arg2}</arg>
+<arg>ELSE IF</arg>
+<arg>'${arg1}' &gt; '${arg2}'</arg>
+<arg>DisplayComparisonMsg</arg>
+<arg>${arg1} is greater than ${arg2}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-02-28T18:46:27.639312" elapsed="0.000000"/>
+</kw>
+<arg>5</arg>
+<arg>8</arg>
+<status status="PASS" start="2024-02-28T18:46:27.639312" elapsed="0.000000"/>
+</kw>
+<kw name="CompareNumber">
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="DisplayComparisonMsg">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-02-28T18:46:27.641360" level="INFO">8 is greater than 5</msg>
+<arg>${comparison_result}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-02-28T18:46:27.641360" elapsed="0.000000"/>
+</kw>
+<arg>${arg1} is greater than ${arg2}</arg>
+<status status="PASS" start="2024-02-28T18:46:27.640271" elapsed="0.001089"/>
+</kw>
+<arg>'${arg1}' == '${arg2}'</arg>
+<arg>DisplayComparisonMsg</arg>
+<arg>Numbers are equal</arg>
+<arg>ELSE IF</arg>
+<arg>'${arg1}' &lt; '${arg2}'</arg>
+<arg>DisplayComparisonMsg</arg>
+<arg>${arg1} is less than ${arg2}</arg>
+<arg>ELSE IF</arg>
+<arg>'${arg1}' &gt; '${arg2}'</arg>
+<arg>DisplayComparisonMsg</arg>
+<arg>${arg1} is greater than ${arg2}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-02-28T18:46:27.640271" elapsed="0.001089"/>
+</kw>
+<arg>8</arg>
+<arg>5</arg>
+<status status="PASS" start="2024-02-28T18:46:27.640271" elapsed="0.001089"/>
+</kw>
+<kw name="CompareNumber">
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="DisplayComparisonMsg">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-02-28T18:46:27.642274" level="INFO">10 is less than 5</msg>
+<arg>${comparison_result}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-02-28T18:46:27.642274" elapsed="0.000000"/>
+</kw>
+<arg>${arg1} is less than ${arg2}</arg>
+<status status="PASS" start="2024-02-28T18:46:27.642274" elapsed="0.000000"/>
+</kw>
+<arg>'${arg1}' == '${arg2}'</arg>
+<arg>DisplayComparisonMsg</arg>
+<arg>Numbers are equal</arg>
+<arg>ELSE IF</arg>
+<arg>'${arg1}' &lt; '${arg2}'</arg>
+<arg>DisplayComparisonMsg</arg>
+<arg>${arg1} is less than ${arg2}</arg>
+<arg>ELSE IF</arg>
+<arg>'${arg1}' &gt; '${arg2}'</arg>
+<arg>DisplayComparisonMsg</arg>
+<arg>${arg1} is greater than ${arg2}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-02-28T18:46:27.642274" elapsed="0.000000"/>
+</kw>
+<arg>10</arg>
+<arg>5</arg>
+<status status="PASS" start="2024-02-28T18:46:27.642274" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-02-28T18:46:27.643341" level="INFO">Ending Assignment 2 Test Case</msg>
+<arg>Ending Assignment 2 Test Case</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-02-28T18:46:27.643341" elapsed="0.000000"/>
+</kw>
+<doc>Test CompareNumber and DisplayComparisonMsg</doc>
+<status status="PASS" start="2024-02-28T18:46:27.635414" elapsed="0.008860"/>
+</test>
+<status status="PASS" start="2024-02-28T18:46:27.621356" elapsed="0.024913"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Assignment2">Assignment2</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

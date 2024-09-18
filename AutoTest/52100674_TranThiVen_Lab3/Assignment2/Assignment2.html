@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.11.4 on win32)" generated="2024-03-02T13:50:06.303932" rpa="false" schemaversion="5">
+<suite id="s1" name="Assignment2" source="E:\52100674\Assignment2\Assignment2.robot">
+<test id="s1-t1" name="Verify that you navigated successfully" line="5">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-03-02T13:50:06.518584" level="INFO">Opening browser 'Chrome' to base url 'https://practicetestautomation.com/practice-test-login/'.</msg>
+<arg>https://practicetestautomation.com/practice-test-login/</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-03-02T13:50:06.518584" elapsed="5.372196"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-02T13:50:11.892295" level="INFO">Typing text 'student' into text field 'id=username'.</msg>
+<arg>id=username</arg>
+<arg>student</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-02T13:50:11.891796" elapsed="0.117740"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-03-02T13:50:12.012038" level="INFO">Typing password into text field 'id=password'.</msg>
+<msg time="2024-03-02T13:50:12.088592" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>id=password</arg>
+<arg>Password123</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-02T13:50:12.011538" elapsed="0.141099"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-03-02T13:50:12.153137" level="INFO">Clicking button 'id=submit'.</msg>
+<arg>id=submit</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-02T13:50:12.153137" elapsed="1.331782"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-02T13:50:13.485419" level="INFO">Clicking element 'xpath=//*[@id="menu-item-20"]/a'.</msg>
+<arg>xpath=//*[@id="menu-item-20"]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-02T13:50:13.485419" elapsed="0.539202"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-02T13:50:14.025621" level="INFO">Clicking element 'xpath=//*[@id="loop-container"]/div/article/div[2]/div[2]/div[1]/p/a'.</msg>
+<arg>xpath=//*[@id="loop-container"]/div/article/div[2]/div[2]/div[1]/p/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-02T13:50:14.025122" elapsed="0.495423"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-02T13:50:19.521555" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-02T13:50:14.521032" elapsed="5.001023"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2024-03-02T13:50:19.591969" level="INFO">Element '//*[@id="food_list"]/h2' contains text 'Test Exceptions'.</msg>
+<arg>//*[@id="food_list"]/h2</arg>
+<arg>Test Exceptions</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2024-03-02T13:50:19.523557" elapsed="0.068412"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-02T13:50:24.593104" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-02T13:50:19.593067" elapsed="5.000037"/>
+</kw>
+<status status="PASS" start="2024-03-02T13:50:06.517083" elapsed="18.078369"/>
+</test>
+<status status="PASS" start="2024-03-02T13:50:06.305434" elapsed="18.292928"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Assignment2">Assignment2</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

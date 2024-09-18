@@ -1,0 +1,1588 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.10.0 on win32)" generated="20240518 15:18:59.723" rpa="false" schemaversion="4">
+<suite id="s1" name="Test Updatecart" source="D:\CURRENT_SEMESTER\Auto Testing\Auto test - CK\AutomationTestStore\tests\cart\test_updatecart.robot">
+<test id="s1-t1" name="Update add valid quantity by input text" line="10">
+<kw name="Opening my browser" library="common" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL_HOME}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240518 15:19:00.031" level="INFO">Opening browser 'Chrome' to base url 'https://automationteststore.com/'.</msg>
+<status status="PASS" starttime="20240518 15:19:00.029" endtime="20240518 15:19:09.747"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${URL_HOME}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20240518 15:19:09.755" level="INFO">Current location is 'https://automationteststore.com/'.</msg>
+<status status="PASS" starttime="20240518 15:19:09.748" endtime="20240518 15:19:09.755"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240518 15:19:09.755" endtime="20240518 15:19:09.802"/>
+</kw>
+<status status="PASS" starttime="20240518 15:19:00.029" endtime="20240518 15:19:09.803"/>
+</kw>
+<kw name="Update add valid quantity by input text" library="updatecart">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="block_frame_featured_1769"]/div/div[1]/div[2]/div[3]/a/i</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240518 15:19:09.805" level="INFO">Clicking element 'xpath=//*[@id="block_frame_featured_1769"]/div/div[1]/div[2]/div[3]/a/i'.</msg>
+<status status="PASS" starttime="20240518 15:19:09.804" endtime="20240518 15:19:10.186"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240518 15:19:10.187" level="INFO">Clicking element 'xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a'.</msg>
+<status status="PASS" starttime="20240518 15:19:10.186" endtime="20240518 15:19:11.181"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${quantity}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[1]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240518 15:19:11.209" level="INFO">${quantity} = 1</msg>
+<status status="PASS" starttime="20240518 15:19:11.182" endtime="20240518 15:19:11.209"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${price}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[2]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240518 15:19:11.230" level="INFO">${price} = $29.50</msg>
+<status status="PASS" starttime="20240518 15:19:11.210" endtime="20240518 15:19:11.230"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${price}</var>
+<arg>${price[1:].replace(",", "")}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240518 15:19:11.231" level="INFO">${price} = 29.50</msg>
+<status status="PASS" starttime="20240518 15:19:11.230" endtime="20240518 15:19:11.231"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="cart_quantity50"]</arg>
+<arg>10</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240518 15:19:11.232" level="INFO">Typing text '10' into text field '//*[@id="cart_quantity50"]'.</msg>
+<status status="PASS" starttime="20240518 15:19:11.231" endtime="20240518 15:19:11.322"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="cart_update"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240518 15:19:11.324" level="INFO">Clicking element 'xpath=//*[@id="cart_update"]'.</msg>
+<status status="PASS" starttime="20240518 15:19:11.323" endtime="20240518 15:19:12.361"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${update_quantity}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[1]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240518 15:19:12.381" level="INFO">${update_quantity} = 10</msg>
+<status status="PASS" starttime="20240518 15:19:12.361" endtime="20240518 15:19:12.381"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${update_price}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[2]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240518 15:19:12.397" level="INFO">${update_price} = $295.00</msg>
+<status status="PASS" starttime="20240518 15:19:12.382" endtime="20240518 15:19:12.397"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${update_price}</var>
+<arg>${update_price[1:].replace(",", "")}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240518 15:19:12.398" level="INFO">${update_price} = 295.00</msg>
+<status status="PASS" starttime="20240518 15:19:12.398" endtime="20240518 15:19:12.398"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${distance_quantity}</var>
+<arg>int(${update_quantity}) - int(${quantity})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20240518 15:19:12.399" level="INFO">${distance_quantity} = 9</msg>
+<status status="PASS" starttime="20240518 15:19:12.399" endtime="20240518 15:19:12.399"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${distance_price}</var>
+<arg>float(${update_price}) - float(${price})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20240518 15:19:12.400" level="INFO">${distance_price} = 265.5</msg>
+<status status="PASS" starttime="20240518 15:19:12.399" endtime="20240518 15:19:12.400"/>
+</kw>
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<var>${update_quantity_distance}</var>
+<arg>//*[@id="cart_quantity50"]</arg>
+<arg>value</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<msg timestamp="20240518 15:19:12.419" level="INFO">${update_quantity_distance} = 10</msg>
+<status status="PASS" starttime="20240518 15:19:12.400" endtime="20240518 15:19:12.419"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${update_quantity_distance}</var>
+<arg>int(${update_quantity_distance}) - int(${quantity})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20240518 15:19:12.420" level="INFO">${update_quantity_distance} = 9</msg>
+<status status="PASS" starttime="20240518 15:19:12.419" endtime="20240518 15:19:12.421"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${item_price}</var>
+<arg>xpath=//*[@id="cart"]/div/div[1]/table/tbody/tr[2]/td[4]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240518 15:19:12.439" level="INFO">${item_price} = $29.50</msg>
+<status status="PASS" starttime="20240518 15:19:12.421" endtime="20240518 15:19:12.440"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${item_price}</var>
+<arg>${item_price[1:].replace(",", "")}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240518 15:19:12.441" level="INFO">${item_price} = 29.50</msg>
+<status status="PASS" starttime="20240518 15:19:12.440" endtime="20240518 15:19:12.441"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${item_price}</var>
+<arg>float(float(${item_price}) * int(${update_quantity_distance}))</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20240518 15:19:12.442" level="INFO">${item_price} = 265.5</msg>
+<status status="PASS" starttime="20240518 15:19:12.441" endtime="20240518 15:19:12.442"/>
+</kw>
+<kw name="Should Be Equal As Numbers" library="BuiltIn">
+<arg>${distance_quantity}</arg>
+<arg>${update_quantity_distance}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" starttime="20240518 15:19:12.442" endtime="20240518 15:19:12.442"/>
+</kw>
+<kw name="Should Be Equal As Numbers" library="BuiltIn">
+<arg>${distance_price}</arg>
+<arg>${item_price}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" starttime="20240518 15:19:12.442" endtime="20240518 15:19:12.443"/>
+</kw>
+<status status="PASS" starttime="20240518 15:19:09.803" endtime="20240518 15:19:12.443"/>
+</kw>
+<kw name="Closing my browser" library="common" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240518 15:19:12.444" endtime="20240518 15:19:14.598"/>
+</kw>
+<status status="PASS" starttime="20240518 15:19:12.443" endtime="20240518 15:19:14.598"/>
+</kw>
+<status status="PASS" starttime="20240518 15:19:00.029" endtime="20240518 15:19:14.599"/>
+</test>
+<test id="s1-t2" name="Update remove valid quantity by input text" line="13">
+<kw name="Opening my browser" library="common" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL_HOME}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240518 15:19:14.601" level="INFO">Opening browser 'Chrome' to base url 'https://automationteststore.com/'.</msg>
+<status status="PASS" starttime="20240518 15:19:14.600" endtime="20240518 15:19:28.240"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${URL_HOME}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20240518 15:19:28.248" level="INFO">Current location is 'https://automationteststore.com/'.</msg>
+<status status="PASS" starttime="20240518 15:19:28.241" endtime="20240518 15:19:28.249"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240518 15:19:28.249" endtime="20240518 15:19:28.280"/>
+</kw>
+<status status="PASS" starttime="20240518 15:19:14.599" endtime="20240518 15:19:28.281"/>
+</kw>
+<kw name="Update remove valid quantity by input text" library="updatecart">
+<for flavor="IN RANGE">
+<var>${i}</var>
+<value>5</value>
+<iter>
+<var name="${i}">0</var>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${item1}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240518 15:19:28.283" level="INFO">Clicking element 'xpath=//*[@id="block_frame_featured_1769"]/div/div[1]/div[2]/div[3]/a/i'.</msg>
+<status status="PASS" starttime="20240518 15:19:28.282" endtime="20240518 15:19:28.639"/>
+</kw>
+<status status="PASS" starttime="20240518 15:19:28.282" endtime="20240518 15:19:28.639"/>
+</iter>
+<iter>
+<var name="${i}">1</var>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${item1}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240518 15:19:28.641" level="INFO">Clicking element 'xpath=//*[@id="block_frame_featured_1769"]/div/div[1]/div[2]/div[3]/a/i'.</msg>
+<status status="PASS" starttime="20240518 15:19:28.640" endtime="20240518 15:19:28.989"/>
+</kw>
+<status status="PASS" starttime="20240518 15:19:28.640" endtime="20240518 15:19:28.990"/>
+</iter>
+<iter>
+<var name="${i}">2</var>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${item1}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240518 15:19:28.993" level="INFO">Clicking element 'xpath=//*[@id="block_frame_featured_1769"]/div/div[1]/div[2]/div[3]/a/i'.</msg>
+<status status="PASS" starttime="20240518 15:19:28.991" endtime="20240518 15:19:29.396"/>
+</kw>
+<status status="PASS" starttime="20240518 15:19:28.991" endtime="20240518 15:19:29.396"/>
+</iter>
+<iter>
+<var name="${i}">3</var>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${item1}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240518 15:19:29.398" level="INFO">Clicking element 'xpath=//*[@id="block_frame_featured_1769"]/div/div[1]/div[2]/div[3]/a/i'.</msg>
+<status status="PASS" starttime="20240518 15:19:29.397" endtime="20240518 15:19:29.751"/>
+</kw>
+<status status="PASS" starttime="20240518 15:19:29.397" endtime="20240518 15:19:29.751"/>
+</iter>
+<iter>
+<var name="${i}">4</var>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${item1}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240518 15:19:29.753" level="INFO">Clicking element 'xpath=//*[@id="block_frame_featured_1769"]/div/div[1]/div[2]/div[3]/a/i'.</msg>
+<status status="PASS" starttime="20240518 15:19:29.752" endtime="20240518 15:19:30.089"/>
+</kw>
+<status status="PASS" starttime="20240518 15:19:29.751" endtime="20240518 15:19:30.089"/>
+</iter>
+<status status="PASS" starttime="20240518 15:19:28.282" endtime="20240518 15:19:30.090"/>
+</for>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240518 15:19:30.092" level="INFO">Clicking element 'xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a'.</msg>
+<status status="PASS" starttime="20240518 15:19:30.091" endtime="20240518 15:19:31.104"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${quantity}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[1]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240518 15:19:31.150" level="INFO">${quantity} = 5</msg>
+<status status="PASS" starttime="20240518 15:19:31.105" endtime="20240518 15:19:31.150"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${price}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[2]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240518 15:19:31.172" level="INFO">${price} = $147.50</msg>
+<status status="PASS" starttime="20240518 15:19:31.150" endtime="20240518 15:19:31.173"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${price}</var>
+<arg>${price[1:].replace(",", "")}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240518 15:19:31.174" level="INFO">${price} = 147.50</msg>
+<status status="PASS" starttime="20240518 15:19:31.173" endtime="20240518 15:19:31.174"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="cart_quantity50"]</arg>
+<arg>2</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240518 15:19:31.176" level="INFO">Typing text '2' into text field '//*[@id="cart_quantity50"]'.</msg>
+<status status="PASS" starttime="20240518 15:19:31.175" endtime="20240518 15:19:31.319"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="cart_update"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240518 15:19:31.321" level="INFO">Clicking element 'xpath=//*[@id="cart_update"]'.</msg>
+<status status="PASS" starttime="20240518 15:19:31.320" endtime="20240518 15:19:32.297"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${update_quantity}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[1]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240518 15:19:32.326" level="INFO">${update_quantity} = 2</msg>
+<status status="PASS" starttime="20240518 15:19:32.298" endtime="20240518 15:19:32.326"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${update_price}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[2]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240518 15:19:32.351" level="INFO">${update_price} = $59.00</msg>
+<status status="PASS" starttime="20240518 15:19:32.327" endtime="20240518 15:19:32.351"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${update_price}</var>
+<arg>${update_price[1:].replace(",", "")}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240518 15:19:32.353" level="INFO">${update_price} = 59.00</msg>
+<status status="PASS" starttime="20240518 15:19:32.351" endtime="20240518 15:19:32.353"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${distance_quantity}</var>
+<arg>int(${update_quantity}) - int(${quantity})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20240518 15:19:32.354" level="INFO">${distance_quantity} = -3</msg>
+<status status="PASS" starttime="20240518 15:19:32.353" endtime="20240518 15:19:32.354"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${distance_price}</var>
+<arg>float(${update_price}) - float(${price})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20240518 15:19:32.355" level="INFO">${distance_price} = -88.5</msg>
+<status status="PASS" starttime="20240518 15:19:32.354" endtime="20240518 15:19:32.355"/>
+</kw>
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<var>${update_quantity_distance}</var>
+<arg>//*[@id="cart_quantity50"]</arg>
+<arg>value</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<msg timestamp="20240518 15:19:32.383" level="INFO">${update_quantity_distance} = 2</msg>
+<status status="PASS" starttime="20240518 15:19:32.355" endtime="20240518 15:19:32.383"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${update_quantity_distance}</var>
+<arg>int(${update_quantity_distance}) - int(${quantity})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20240518 15:19:32.384" level="INFO">${update_quantity_distance} = -3</msg>
+<status status="PASS" starttime="20240518 15:19:32.384" endtime="20240518 15:19:32.384"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${item_price}</var>
+<arg>xpath=//*[@id="cart"]/div/div[1]/table/tbody/tr[2]/td[4]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240518 15:19:32.411" level="INFO">${item_price} = $29.50</msg>
+<status status="PASS" starttime="20240518 15:19:32.385" endtime="20240518 15:19:32.411"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${item_price}</var>
+<arg>${item_price[1:].replace(",", "")}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240518 15:19:32.413" level="INFO">${item_price} = 29.50</msg>
+<status status="PASS" starttime="20240518 15:19:32.412" endtime="20240518 15:19:32.413"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${item_price}</var>
+<arg>float(float(${item_price}) * int(${update_quantity_distance}))</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20240518 15:19:32.415" level="INFO">${item_price} = -88.5</msg>
+<status status="PASS" starttime="20240518 15:19:32.414" endtime="20240518 15:19:32.415"/>
+</kw>
+<kw name="Should Be Equal As Numbers" library="BuiltIn">
+<arg>${distance_quantity}</arg>
+<arg>${update_quantity_distance}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" starttime="20240518 15:19:32.415" endtime="20240518 15:19:32.416"/>
+</kw>
+<kw name="Should Be Equal As Numbers" library="BuiltIn">
+<arg>${distance_price}</arg>
+<arg>${item_price}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" starttime="20240518 15:19:32.416" endtime="20240518 15:19:32.417"/>
+</kw>
+<status status="PASS" starttime="20240518 15:19:28.281" endtime="20240518 15:19:32.417"/>
+</kw>
+<kw name="Closing my browser" library="common" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240518 15:19:32.418" endtime="20240518 15:19:34.567"/>
+</kw>
+<status status="PASS" starttime="20240518 15:19:32.417" endtime="20240518 15:19:34.568"/>
+</kw>
+<status status="PASS" starttime="20240518 15:19:14.599" endtime="20240518 15:19:34.568"/>
+</test>
+<test id="s1-t3" name="Update zero quantity by input text" line="16">
+<kw name="Opening my browser" library="common" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL_HOME}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240518 15:19:34.572" level="INFO">Opening browser 'Chrome' to base url 'https://automationteststore.com/'.</msg>
+<status status="PASS" starttime="20240518 15:19:34.571" endtime="20240518 15:19:43.132"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${URL_HOME}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20240518 15:19:43.139" level="INFO">Current location is 'https://automationteststore.com/'.</msg>
+<status status="PASS" starttime="20240518 15:19:43.132" endtime="20240518 15:19:43.140"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240518 15:19:43.140" endtime="20240518 15:19:43.180"/>
+</kw>
+<status status="PASS" starttime="20240518 15:19:34.570" endtime="20240518 15:19:43.181"/>
+</kw>
+<kw name="Update zero quantity by input text" library="updatecart">
+<for flavor="IN RANGE">
+<var>${i}</var>
+<value>5</value>
+<iter>
+<var name="${i}">0</var>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${item1}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240518 15:19:43.185" level="INFO">Clicking element 'xpath=//*[@id="block_frame_featured_1769"]/div/div[1]/div[2]/div[3]/a/i'.</msg>
+<status status="PASS" starttime="20240518 15:19:43.183" endtime="20240518 15:19:43.551"/>
+</kw>
+<status status="PASS" starttime="20240518 15:19:43.183" endtime="20240518 15:19:43.551"/>
+</iter>
+<iter>
+<var name="${i}">1</var>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${item1}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240518 15:19:43.553" level="INFO">Clicking element 'xpath=//*[@id="block_frame_featured_1769"]/div/div[1]/div[2]/div[3]/a/i'.</msg>
+<status status="PASS" starttime="20240518 15:19:43.552" endtime="20240518 15:19:43.894"/>
+</kw>
+<status status="PASS" starttime="20240518 15:19:43.552" endtime="20240518 15:19:43.895"/>
+</iter>
+<iter>
+<var name="${i}">2</var>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${item1}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240518 15:19:43.897" level="INFO">Clicking element 'xpath=//*[@id="block_frame_featured_1769"]/div/div[1]/div[2]/div[3]/a/i'.</msg>
+<status status="PASS" starttime="20240518 15:19:43.896" endtime="20240518 15:19:44.222"/>
+</kw>
+<status status="PASS" starttime="20240518 15:19:43.895" endtime="20240518 15:19:44.223"/>
+</iter>
+<iter>
+<var name="${i}">3</var>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${item1}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240518 15:19:44.224" level="INFO">Clicking element 'xpath=//*[@id="block_frame_featured_1769"]/div/div[1]/div[2]/div[3]/a/i'.</msg>
+<status status="PASS" starttime="20240518 15:19:44.224" endtime="20240518 15:19:45.155"/>
+</kw>
+<status status="PASS" starttime="20240518 15:19:44.223" endtime="20240518 15:19:45.156"/>
+</iter>
+<iter>
+<var name="${i}">4</var>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${item1}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240518 15:19:45.158" level="INFO">Clicking element 'xpath=//*[@id="block_frame_featured_1769"]/div/div[1]/div[2]/div[3]/a/i'.</msg>
+<status status="PASS" starttime="20240518 15:19:45.157" endtime="20240518 15:19:45.506"/>
+</kw>
+<status status="PASS" starttime="20240518 15:19:45.156" endtime="20240518 15:19:45.506"/>
+</iter>
+<status status="PASS" starttime="20240518 15:19:43.182" endtime="20240518 15:19:45.507"/>
+</for>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240518 15:19:45.508" level="INFO">Clicking element 'xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a'.</msg>
+<status status="PASS" starttime="20240518 15:19:45.507" endtime="20240518 15:19:46.786"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${quantity}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[1]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240518 15:19:46.814" level="INFO">${quantity} = 5</msg>
+<status status="PASS" starttime="20240518 15:19:46.786" endtime="20240518 15:19:46.814"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${price}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[2]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240518 15:19:46.832" level="INFO">${price} = $147.50</msg>
+<status status="PASS" starttime="20240518 15:19:46.814" endtime="20240518 15:19:46.832"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${price}</var>
+<arg>${price[1:].replace(",", "")}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240518 15:19:46.833" level="INFO">${price} = 147.50</msg>
+<status status="PASS" starttime="20240518 15:19:46.832" endtime="20240518 15:19:46.833"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${item_price}</var>
+<arg>xpath=//*[@id="cart"]/div/div[1]/table/tbody/tr[2]/td[4]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240518 15:19:46.851" level="INFO">${item_price} = $29.50</msg>
+<status status="PASS" starttime="20240518 15:19:46.833" endtime="20240518 15:19:46.851"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="cart_quantity50"]</arg>
+<arg>0</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240518 15:19:46.852" level="INFO">Typing text '0' into text field '//*[@id="cart_quantity50"]'.</msg>
+<status status="PASS" starttime="20240518 15:19:46.852" endtime="20240518 15:19:46.947"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="cart_update"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240518 15:19:46.948" level="INFO">Clicking element 'xpath=//*[@id="cart_update"]'.</msg>
+<status status="PASS" starttime="20240518 15:19:46.947" endtime="20240518 15:19:47.927"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${update_quantity}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[1]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240518 15:19:47.948" level="INFO">${update_quantity} = 0</msg>
+<status status="PASS" starttime="20240518 15:19:47.928" endtime="20240518 15:19:47.948"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${update_price}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[2]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240518 15:19:47.964" level="INFO">${update_price} = $0.00</msg>
+<status status="PASS" starttime="20240518 15:19:47.948" endtime="20240518 15:19:47.964"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${update_price}</var>
+<arg>${update_price[1:].replace(",", "")}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240518 15:19:47.966" level="INFO">${update_price} = 0.00</msg>
+<status status="PASS" starttime="20240518 15:19:47.965" endtime="20240518 15:19:47.966"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${distance_quantity}</var>
+<arg>int(${update_quantity}) - int(${quantity})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20240518 15:19:47.966" level="INFO">${distance_quantity} = -5</msg>
+<status status="PASS" starttime="20240518 15:19:47.966" endtime="20240518 15:19:47.966"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${distance_price}</var>
+<arg>float(${update_price}) - float(${price})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20240518 15:19:47.966" level="INFO">${distance_price} = -147.5</msg>
+<status status="PASS" starttime="20240518 15:19:47.966" endtime="20240518 15:19:47.968"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${update_quantity_distance}</var>
+<arg>0</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240518 15:19:47.968" level="INFO">${update_quantity_distance} = 0</msg>
+<status status="PASS" starttime="20240518 15:19:47.968" endtime="20240518 15:19:47.968"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${update_quantity_distance}</var>
+<arg>int(${update_quantity_distance}) - int(${quantity})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20240518 15:19:47.968" level="INFO">${update_quantity_distance} = -5</msg>
+<status status="PASS" starttime="20240518 15:19:47.968" endtime="20240518 15:19:47.968"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${item_price}</var>
+<arg>${item_price[1:].replace(",", "")}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240518 15:19:47.969" level="INFO">${item_price} = 29.50</msg>
+<status status="PASS" starttime="20240518 15:19:47.969" endtime="20240518 15:19:47.969"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${item_price}</var>
+<arg>float(float(${item_price}) * int(${update_quantity_distance}))</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20240518 15:19:47.970" level="INFO">${item_price} = -147.5</msg>
+<status status="PASS" starttime="20240518 15:19:47.970" endtime="20240518 15:19:47.970"/>
+</kw>
+<kw name="Should Be Equal As Numbers" library="BuiltIn">
+<arg>${distance_quantity}</arg>
+<arg>${update_quantity_distance}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" starttime="20240518 15:19:47.970" endtime="20240518 15:19:47.971"/>
+</kw>
+<kw name="Should Be Equal As Numbers" library="BuiltIn">
+<arg>${distance_price}</arg>
+<arg>${item_price}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" starttime="20240518 15:19:47.971" endtime="20240518 15:19:47.971"/>
+</kw>
+<status status="PASS" starttime="20240518 15:19:43.181" endtime="20240518 15:19:47.972"/>
+</kw>
+<kw name="Closing my browser" library="common" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240518 15:19:47.972" endtime="20240518 15:19:50.105"/>
+</kw>
+<status status="PASS" starttime="20240518 15:19:47.972" endtime="20240518 15:19:50.105"/>
+</kw>
+<status status="PASS" starttime="20240518 15:19:34.569" endtime="20240518 15:19:50.105"/>
+</test>
+<test id="s1-t4" name="Update not a number quantity by input text" line="19">
+<kw name="Opening my browser" library="common" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL_HOME}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240518 15:19:50.106" level="INFO">Opening browser 'Chrome' to base url 'https://automationteststore.com/'.</msg>
+<status status="PASS" starttime="20240518 15:19:50.106" endtime="20240518 15:20:00.450"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${URL_HOME}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20240518 15:20:00.459" level="INFO">Current location is 'https://automationteststore.com/'.</msg>
+<status status="PASS" starttime="20240518 15:20:00.451" endtime="20240518 15:20:00.459"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240518 15:20:00.459" endtime="20240518 15:20:00.502"/>
+</kw>
+<status status="PASS" starttime="20240518 15:19:50.105" endtime="20240518 15:20:00.503"/>
+</kw>
+<kw name="Update not a number quantity by input text" library="updatecart">
+<for flavor="IN RANGE">
+<var>${i}</var>
+<value>5</value>
+<iter>
+<var name="${i}">0</var>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${item1}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240518 15:20:00.508" level="INFO">Clicking element 'xpath=//*[@id="block_frame_featured_1769"]/div/div[1]/div[2]/div[3]/a/i'.</msg>
+<status status="PASS" starttime="20240518 15:20:00.507" endtime="20240518 15:20:00.879"/>
+</kw>
+<status status="PASS" starttime="20240518 15:20:00.506" endtime="20240518 15:20:00.880"/>
+</iter>
+<iter>
+<var name="${i}">1</var>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${item1}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240518 15:20:00.881" level="INFO">Clicking element 'xpath=//*[@id="block_frame_featured_1769"]/div/div[1]/div[2]/div[3]/a/i'.</msg>
+<status status="PASS" starttime="20240518 15:20:00.880" endtime="20240518 15:20:01.219"/>
+</kw>
+<status status="PASS" starttime="20240518 15:20:00.880" endtime="20240518 15:20:01.219"/>
+</iter>
+<iter>
+<var name="${i}">2</var>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${item1}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240518 15:20:01.220" level="INFO">Clicking element 'xpath=//*[@id="block_frame_featured_1769"]/div/div[1]/div[2]/div[3]/a/i'.</msg>
+<status status="PASS" starttime="20240518 15:20:01.219" endtime="20240518 15:20:01.549"/>
+</kw>
+<status status="PASS" starttime="20240518 15:20:01.219" endtime="20240518 15:20:01.550"/>
+</iter>
+<iter>
+<var name="${i}">3</var>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${item1}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240518 15:20:01.552" level="INFO">Clicking element 'xpath=//*[@id="block_frame_featured_1769"]/div/div[1]/div[2]/div[3]/a/i'.</msg>
+<status status="PASS" starttime="20240518 15:20:01.551" endtime="20240518 15:20:01.884"/>
+</kw>
+<status status="PASS" starttime="20240518 15:20:01.550" endtime="20240518 15:20:01.885"/>
+</iter>
+<iter>
+<var name="${i}">4</var>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${item1}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240518 15:20:01.887" level="INFO">Clicking element 'xpath=//*[@id="block_frame_featured_1769"]/div/div[1]/div[2]/div[3]/a/i'.</msg>
+<status status="PASS" starttime="20240518 15:20:01.886" endtime="20240518 15:20:02.226"/>
+</kw>
+<status status="PASS" starttime="20240518 15:20:01.885" endtime="20240518 15:20:02.226"/>
+</iter>
+<status status="PASS" starttime="20240518 15:20:00.505" endtime="20240518 15:20:02.226"/>
+</for>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240518 15:20:02.227" level="INFO">Clicking element 'xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a'.</msg>
+<status status="PASS" starttime="20240518 15:20:02.227" endtime="20240518 15:20:03.217"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${quantity}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[1]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240518 15:20:03.244" level="INFO">${quantity} = 5</msg>
+<status status="PASS" starttime="20240518 15:20:03.217" endtime="20240518 15:20:03.244"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${price}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[2]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240518 15:20:03.263" level="INFO">${price} = $147.50</msg>
+<status status="PASS" starttime="20240518 15:20:03.245" endtime="20240518 15:20:03.263"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${price}</var>
+<arg>${price[1:].replace(",", "")}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240518 15:20:03.264" level="INFO">${price} = 147.50</msg>
+<status status="PASS" starttime="20240518 15:20:03.263" endtime="20240518 15:20:03.264"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${item_price}</var>
+<arg>xpath=//*[@id="cart"]/div/div[1]/table/tbody/tr[2]/td[4]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240518 15:20:03.281" level="INFO">${item_price} = $29.50</msg>
+<status status="PASS" starttime="20240518 15:20:03.264" endtime="20240518 15:20:03.281"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="cart_quantity50"]</arg>
+<arg>abcde</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240518 15:20:03.283" level="INFO">Typing text 'abcde' into text field '//*[@id="cart_quantity50"]'.</msg>
+<status status="PASS" starttime="20240518 15:20:03.282" endtime="20240518 15:20:03.397"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="cart_update"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240518 15:20:03.398" level="INFO">Clicking element 'xpath=//*[@id="cart_update"]'.</msg>
+<status status="PASS" starttime="20240518 15:20:03.397" endtime="20240518 15:20:04.397"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${update_quantity}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[1]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240518 15:20:04.438" level="INFO">${update_quantity} = 0</msg>
+<status status="PASS" starttime="20240518 15:20:04.397" endtime="20240518 15:20:04.439"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${update_price}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[2]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240518 15:20:04.473" level="INFO">${update_price} = $0.00</msg>
+<status status="PASS" starttime="20240518 15:20:04.439" endtime="20240518 15:20:04.473"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${update_price}</var>
+<arg>${update_price[1:].replace(",", "")}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240518 15:20:04.475" level="INFO">${update_price} = 0.00</msg>
+<status status="PASS" starttime="20240518 15:20:04.474" endtime="20240518 15:20:04.475"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${distance_quantity}</var>
+<arg>int(${update_quantity}) - int(${quantity})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20240518 15:20:04.478" level="INFO">${distance_quantity} = -5</msg>
+<status status="PASS" starttime="20240518 15:20:04.476" endtime="20240518 15:20:04.478"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${distance_price}</var>
+<arg>float(${update_price}) - float(${price})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20240518 15:20:04.480" level="INFO">${distance_price} = -147.5</msg>
+<status status="PASS" starttime="20240518 15:20:04.478" endtime="20240518 15:20:04.480"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${update_quantity_distance}</var>
+<arg>0</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240518 15:20:04.482" level="INFO">${update_quantity_distance} = 0</msg>
+<status status="PASS" starttime="20240518 15:20:04.481" endtime="20240518 15:20:04.482"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${update_quantity_distance}</var>
+<arg>int(${update_quantity_distance}) - int(${quantity})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20240518 15:20:04.484" level="INFO">${update_quantity_distance} = -5</msg>
+<status status="PASS" starttime="20240518 15:20:04.483" endtime="20240518 15:20:04.484"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${item_price}</var>
+<arg>${item_price[1:].replace(",", "")}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240518 15:20:04.487" level="INFO">${item_price} = 29.50</msg>
+<status status="PASS" starttime="20240518 15:20:04.485" endtime="20240518 15:20:04.488"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${item_price}</var>
+<arg>float(float(${item_price}) * int(${update_quantity_distance}))</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20240518 15:20:04.490" level="INFO">${item_price} = -147.5</msg>
+<status status="PASS" starttime="20240518 15:20:04.488" endtime="20240518 15:20:04.490"/>
+</kw>
+<kw name="Should Be Equal As Numbers" library="BuiltIn">
+<arg>${distance_quantity}</arg>
+<arg>${update_quantity_distance}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" starttime="20240518 15:20:04.490" endtime="20240518 15:20:04.492"/>
+</kw>
+<kw name="Should Be Equal As Numbers" library="BuiltIn">
+<arg>${distance_price}</arg>
+<arg>${item_price}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" starttime="20240518 15:20:04.492" endtime="20240518 15:20:04.493"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>xpath=/html/body/div/div[2]/div/div/div/div</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20240518 15:20:04.521" level="INFO">Current page contains element 'xpath=/html/body/div/div[2]/div/div/div/div'.</msg>
+<status status="PASS" starttime="20240518 15:20:04.493" endtime="20240518 15:20:04.521"/>
+</kw>
+<status status="PASS" starttime="20240518 15:20:00.504" endtime="20240518 15:20:04.522"/>
+</kw>
+<kw name="Closing my browser" library="common" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240518 15:20:04.524" endtime="20240518 15:20:06.712"/>
+</kw>
+<status status="PASS" starttime="20240518 15:20:04.523" endtime="20240518 15:20:06.713"/>
+</kw>
+<status status="PASS" starttime="20240518 15:19:50.105" endtime="20240518 15:20:06.713"/>
+</test>
+<test id="s1-t5" name="Update negative number by input text" line="22">
+<kw name="Opening my browser" library="common" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL_HOME}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240518 15:20:06.716" level="INFO">Opening browser 'Chrome' to base url 'https://automationteststore.com/'.</msg>
+<status status="PASS" starttime="20240518 15:20:06.715" endtime="20240518 15:20:15.765"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${URL_HOME}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20240518 15:20:15.772" level="INFO">Current location is 'https://automationteststore.com/'.</msg>
+<status status="PASS" starttime="20240518 15:20:15.766" endtime="20240518 15:20:15.772"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240518 15:20:15.773" endtime="20240518 15:20:15.804"/>
+</kw>
+<status status="PASS" starttime="20240518 15:20:06.714" endtime="20240518 15:20:15.804"/>
+</kw>
+<kw name="Update negative number by input text" library="updatecart">
+<for flavor="IN RANGE">
+<var>${i}</var>
+<value>5</value>
+<iter>
+<var name="${i}">0</var>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${item1}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240518 15:20:15.807" level="INFO">Clicking element 'xpath=//*[@id="block_frame_featured_1769"]/div/div[1]/div[2]/div[3]/a/i'.</msg>
+<status status="PASS" starttime="20240518 15:20:15.806" endtime="20240518 15:20:16.174"/>
+</kw>
+<status status="PASS" starttime="20240518 15:20:15.805" endtime="20240518 15:20:16.174"/>
+</iter>
+<iter>
+<var name="${i}">1</var>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${item1}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240518 15:20:16.177" level="INFO">Clicking element 'xpath=//*[@id="block_frame_featured_1769"]/div/div[1]/div[2]/div[3]/a/i'.</msg>
+<status status="PASS" starttime="20240518 15:20:16.175" endtime="20240518 15:20:16.516"/>
+</kw>
+<status status="PASS" starttime="20240518 15:20:16.175" endtime="20240518 15:20:16.517"/>
+</iter>
+<iter>
+<var name="${i}">2</var>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${item1}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240518 15:20:16.519" level="INFO">Clicking element 'xpath=//*[@id="block_frame_featured_1769"]/div/div[1]/div[2]/div[3]/a/i'.</msg>
+<status status="PASS" starttime="20240518 15:20:16.518" endtime="20240518 15:20:16.886"/>
+</kw>
+<status status="PASS" starttime="20240518 15:20:16.517" endtime="20240518 15:20:16.886"/>
+</iter>
+<iter>
+<var name="${i}">3</var>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${item1}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240518 15:20:16.889" level="INFO">Clicking element 'xpath=//*[@id="block_frame_featured_1769"]/div/div[1]/div[2]/div[3]/a/i'.</msg>
+<status status="PASS" starttime="20240518 15:20:16.887" endtime="20240518 15:20:17.255"/>
+</kw>
+<status status="PASS" starttime="20240518 15:20:16.887" endtime="20240518 15:20:17.255"/>
+</iter>
+<iter>
+<var name="${i}">4</var>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${item1}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240518 15:20:17.258" level="INFO">Clicking element 'xpath=//*[@id="block_frame_featured_1769"]/div/div[1]/div[2]/div[3]/a/i'.</msg>
+<status status="PASS" starttime="20240518 15:20:17.256" endtime="20240518 15:20:17.635"/>
+</kw>
+<status status="PASS" starttime="20240518 15:20:17.256" endtime="20240518 15:20:17.636"/>
+</iter>
+<status status="PASS" starttime="20240518 15:20:15.805" endtime="20240518 15:20:17.637"/>
+</for>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240518 15:20:17.641" level="INFO">Clicking element 'xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a'.</msg>
+<status status="PASS" starttime="20240518 15:20:17.639" endtime="20240518 15:20:18.653"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@id="maincontainer"]/div/div[1]/div/h1/span[1][contains(text(),' Shopping Cart')]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240518 15:20:18.653" endtime="20240518 15:20:18.671"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${quantity}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[1]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240518 15:20:18.711" level="INFO">${quantity} = 5</msg>
+<status status="PASS" starttime="20240518 15:20:18.671" endtime="20240518 15:20:18.711"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${price}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[2]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240518 15:20:18.737" level="INFO">${price} = $147.50</msg>
+<status status="PASS" starttime="20240518 15:20:18.711" endtime="20240518 15:20:18.737"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${price}</var>
+<arg>${price[1:].replace(",", "")}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240518 15:20:18.740" level="INFO">${price} = 147.50</msg>
+<status status="PASS" starttime="20240518 15:20:18.738" endtime="20240518 15:20:18.740"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${item_price}</var>
+<arg>xpath=//*[@id="cart"]/div/div[1]/table/tbody/tr[2]/td[4]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240518 15:20:18.781" level="INFO">${item_price} = $29.50</msg>
+<status status="PASS" starttime="20240518 15:20:18.741" endtime="20240518 15:20:18.781"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="cart_quantity50"]</arg>
+<arg>-5</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240518 15:20:18.783" level="INFO">Typing text '-5' into text field '//*[@id="cart_quantity50"]'.</msg>
+<status status="PASS" starttime="20240518 15:20:18.781" endtime="20240518 15:20:18.953"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="cart_update"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240518 15:20:18.955" level="INFO">Clicking element 'xpath=//*[@id="cart_update"]'.</msg>
+<status status="PASS" starttime="20240518 15:20:18.954" endtime="20240518 15:20:20.235"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${update_quantity}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[1]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240518 15:20:20.266" level="INFO">${update_quantity} = 0</msg>
+<status status="PASS" starttime="20240518 15:20:20.235" endtime="20240518 15:20:20.266"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${update_price}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[2]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240518 15:20:20.291" level="INFO">${update_price} = $0.00</msg>
+<status status="PASS" starttime="20240518 15:20:20.267" endtime="20240518 15:20:20.292"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${update_price}</var>
+<arg>${update_price[1:].replace(",", "")}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240518 15:20:20.294" level="INFO">${update_price} = 0.00</msg>
+<status status="PASS" starttime="20240518 15:20:20.292" endtime="20240518 15:20:20.294"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${distance_quantity}</var>
+<arg>int(${update_quantity}) - int(${quantity})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20240518 15:20:20.295" level="INFO">${distance_quantity} = -5</msg>
+<status status="PASS" starttime="20240518 15:20:20.294" endtime="20240518 15:20:20.295"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${distance_price}</var>
+<arg>float(${update_price}) - float(${price})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20240518 15:20:20.297" level="INFO">${distance_price} = -147.5</msg>
+<status status="PASS" starttime="20240518 15:20:20.296" endtime="20240518 15:20:20.297"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${update_quantity_distance}</var>
+<arg>0</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240518 15:20:20.298" level="INFO">${update_quantity_distance} = 0</msg>
+<status status="PASS" starttime="20240518 15:20:20.298" endtime="20240518 15:20:20.298"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${update_quantity_distance}</var>
+<arg>int(${update_quantity_distance}) - int(${quantity})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20240518 15:20:20.299" level="INFO">${update_quantity_distance} = -5</msg>
+<status status="PASS" starttime="20240518 15:20:20.299" endtime="20240518 15:20:20.299"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${item_price}</var>
+<arg>${item_price[1:].replace(",", "")}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240518 15:20:20.301" level="INFO">${item_price} = 29.50</msg>
+<status status="PASS" starttime="20240518 15:20:20.300" endtime="20240518 15:20:20.301"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${item_price}</var>
+<arg>float(float(${item_price}) * int(${update_quantity_distance}))</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20240518 15:20:20.303" level="INFO">${item_price} = -147.5</msg>
+<status status="PASS" starttime="20240518 15:20:20.302" endtime="20240518 15:20:20.303"/>
+</kw>
+<kw name="Should Be Equal As Numbers" library="BuiltIn">
+<arg>${distance_quantity}</arg>
+<arg>${update_quantity_distance}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" starttime="20240518 15:20:20.303" endtime="20240518 15:20:20.304"/>
+</kw>
+<kw name="Should Be Equal As Numbers" library="BuiltIn">
+<arg>${distance_price}</arg>
+<arg>${item_price}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" starttime="20240518 15:20:20.304" endtime="20240518 15:20:20.305"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>xpath=/html/body/div/div[2]/div/div/div/div</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20240518 15:20:20.318" level="INFO">Current page contains element 'xpath=/html/body/div/div[2]/div/div/div/div'.</msg>
+<status status="PASS" starttime="20240518 15:20:20.305" endtime="20240518 15:20:20.319"/>
+</kw>
+<status status="PASS" starttime="20240518 15:20:15.805" endtime="20240518 15:20:20.319"/>
+</kw>
+<kw name="Closing my browser" library="common" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240518 15:20:20.320" endtime="20240518 15:20:22.470"/>
+</kw>
+<status status="PASS" starttime="20240518 15:20:20.320" endtime="20240518 15:20:22.471"/>
+</kw>
+<status status="PASS" starttime="20240518 15:20:06.714" endtime="20240518 15:20:22.472"/>
+</test>
+<test id="s1-t6" name="Update exceed in stock quantity by input text" line="25">
+<kw name="Opening my browser" library="common" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL_HOME}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240518 15:20:22.478" level="INFO">Opening browser 'Chrome' to base url 'https://automationteststore.com/'.</msg>
+<status status="PASS" starttime="20240518 15:20:22.476" endtime="20240518 15:20:34.270"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${URL_HOME}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20240518 15:20:34.277" level="INFO">Current location is 'https://automationteststore.com/'.</msg>
+<status status="PASS" starttime="20240518 15:20:34.270" endtime="20240518 15:20:34.277"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240518 15:20:34.277" endtime="20240518 15:20:34.314"/>
+</kw>
+<status status="PASS" starttime="20240518 15:20:22.475" endtime="20240518 15:20:34.314"/>
+</kw>
+<kw name="Update exceed in stock quantity by input text" library="updatecart">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="categorymenu"]/nav/ul/li[6]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240518 15:20:34.315" level="INFO">Clicking element '//*[@id="categorymenu"]/nav/ul/li[6]/a'.</msg>
+<status status="PASS" starttime="20240518 15:20:34.315" endtime="20240518 15:20:35.349"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="maincontainer"]/div/div/div/div/div[2]/div[1]/div[2]/a/img</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240518 15:20:35.352" level="INFO">Clicking element '//*[@id="maincontainer"]/div/div/div/div/div[2]/div[1]/div[2]/a/img'.</msg>
+<status status="PASS" starttime="20240518 15:20:35.350" endtime="20240518 15:20:36.971"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="product"]/fieldset/div[5]/ul/li/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240518 15:20:36.972" level="INFO">Clicking element '//*[@id="product"]/fieldset/div[5]/ul/li/a'.</msg>
+<status status="PASS" starttime="20240518 15:20:36.971" endtime="20240518 15:20:38.249"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${quantity}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[1]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240518 15:20:38.277" level="INFO">${quantity} = 1</msg>
+<status status="PASS" starttime="20240518 15:20:38.249" endtime="20240518 15:20:38.277"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${price}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[2]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240518 15:20:38.293" level="INFO">${price} = $45.00</msg>
+<status status="PASS" starttime="20240518 15:20:38.278" endtime="20240518 15:20:38.294"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${price}</var>
+<arg>${price[1:].replace(",", "")}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240518 15:20:38.295" level="INFO">${price} = 45.00</msg>
+<status status="PASS" starttime="20240518 15:20:38.294" endtime="20240518 15:20:38.295"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${item_price}</var>
+<arg>xpath=//*[@id="cart"]/div/div[1]/table/tbody/tr[2]/td[4]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240518 15:20:38.311" level="INFO">${item_price} = $45.00</msg>
+<status status="PASS" starttime="20240518 15:20:38.295" endtime="20240518 15:20:38.311"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="cart_quantity7808d50be7efed8dd74bfcc27df4d70570"]</arg>
+<arg>200</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240518 15:20:38.313" level="INFO">Typing text '200' into text field '//*[@id="cart_quantity7808d50be7efed8dd74bfcc27df4d70570"]'.</msg>
+<status status="PASS" starttime="20240518 15:20:38.311" endtime="20240518 15:20:38.401"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="cart_update"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240518 15:20:38.403" level="INFO">Clicking element 'xpath=//*[@id="cart_update"]'.</msg>
+<status status="PASS" starttime="20240518 15:20:38.402" endtime="20240518 15:20:39.423"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${update_quantity}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[1]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240518 15:20:39.449" level="INFO">${update_quantity} = 200</msg>
+<status status="PASS" starttime="20240518 15:20:39.424" endtime="20240518 15:20:39.449"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${update_price}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[2]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240518 15:20:39.465" level="INFO">${update_price} = $9,000.00</msg>
+<status status="PASS" starttime="20240518 15:20:39.449" endtime="20240518 15:20:39.466"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${update_price}</var>
+<arg>${update_price[1:].replace(",", "")}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240518 15:20:39.467" level="INFO">${update_price} = 9000.00</msg>
+<status status="PASS" starttime="20240518 15:20:39.466" endtime="20240518 15:20:39.467"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${distance_quantity}</var>
+<arg>int(${update_quantity}) - int(${quantity})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20240518 15:20:39.467" level="INFO">${distance_quantity} = 199</msg>
+<status status="PASS" starttime="20240518 15:20:39.467" endtime="20240518 15:20:39.467"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${distance_price}</var>
+<arg>float(${update_price}) - float(${price})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20240518 15:20:39.468" level="INFO">${distance_price} = 8955.0</msg>
+<status status="PASS" starttime="20240518 15:20:39.468" endtime="20240518 15:20:39.468"/>
+</kw>
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<var>${update_quantity_distance}</var>
+<arg>//*[@id="cart_quantity7808d50be7efed8dd74bfcc27df4d70570"]</arg>
+<arg>value</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<msg timestamp="20240518 15:20:39.488" level="INFO">${update_quantity_distance} = 200</msg>
+<status status="PASS" starttime="20240518 15:20:39.468" endtime="20240518 15:20:39.488"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${update_quantity_distance}</var>
+<arg>int(${update_quantity_distance}) - int(${quantity})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20240518 15:20:39.489" level="INFO">${update_quantity_distance} = 199</msg>
+<status status="PASS" starttime="20240518 15:20:39.489" endtime="20240518 15:20:39.489"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${item_price}</var>
+<arg>${item_price[1:].replace(",", "")}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240518 15:20:39.490" level="INFO">${item_price} = 45.00</msg>
+<status status="PASS" starttime="20240518 15:20:39.489" endtime="20240518 15:20:39.490"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${item_price}</var>
+<arg>float(float(${item_price}) * int(${update_quantity_distance}))</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20240518 15:20:39.491" level="INFO">${item_price} = 8955.0</msg>
+<status status="PASS" starttime="20240518 15:20:39.490" endtime="20240518 15:20:39.491"/>
+</kw>
+<kw name="Should Be Equal As Numbers" library="BuiltIn">
+<arg>${distance_quantity}</arg>
+<arg>${update_quantity_distance}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" starttime="20240518 15:20:39.491" endtime="20240518 15:20:39.491"/>
+</kw>
+<kw name="Should Be Equal As Numbers" library="BuiltIn">
+<arg>${distance_price}</arg>
+<arg>${item_price}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" starttime="20240518 15:20:39.492" endtime="20240518 15:20:39.492"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${error_message}</var>
+<arg>//*[@id="maincontainer"]/div/div/div/div/strong</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240518 15:20:39.509" level="INFO">${error_message} = Products marked with *** are not available in the desired quantity or out of stock!</msg>
+<status status="PASS" starttime="20240518 15:20:39.492" endtime="20240518 15:20:39.510"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${error_message}</arg>
+<arg>Products marked with *** are not available in the desired quantity or out of stock!</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20240518 15:20:39.510" endtime="20240518 15:20:39.510"/>
+</kw>
+<status status="PASS" starttime="20240518 15:20:34.315" endtime="20240518 15:20:39.511"/>
+</kw>
+<kw name="Closing my browser" library="common" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240518 15:20:39.511" endtime="20240518 15:20:41.653"/>
+</kw>
+<status status="PASS" starttime="20240518 15:20:39.511" endtime="20240518 15:20:41.654"/>
+</kw>
+<status status="PASS" starttime="20240518 15:20:22.474" endtime="20240518 15:20:41.655"/>
+</test>
+<test id="s1-t7" name="Update remove item by delete button" line="28">
+<kw name="Opening my browser" library="common" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL_HOME}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240518 15:20:41.660" level="INFO">Opening browser 'Chrome' to base url 'https://automationteststore.com/'.</msg>
+<status status="PASS" starttime="20240518 15:20:41.659" endtime="20240518 15:20:51.916"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${URL_HOME}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20240518 15:20:51.927" level="INFO">Current location is 'https://automationteststore.com/'.</msg>
+<status status="PASS" starttime="20240518 15:20:51.917" endtime="20240518 15:20:51.927"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240518 15:20:51.927" endtime="20240518 15:20:51.975"/>
+</kw>
+<status status="PASS" starttime="20240518 15:20:41.658" endtime="20240518 15:20:51.976"/>
+</kw>
+<kw name="Update remove item by delete button" library="updatecart">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="categorymenu"]/nav/ul/li[6]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240518 15:20:51.977" level="INFO">Clicking element 'xpath=//*[@id="categorymenu"]/nav/ul/li[6]/a'.</msg>
+<status status="PASS" starttime="20240518 15:20:51.977" endtime="20240518 15:20:52.986"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="maincontainer"]/div/div/div/div/div[2]/div[1]/div[2]/a/img</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240518 15:20:52.987" level="INFO">Clicking element 'xpath=//*[@id="maincontainer"]/div/div/div/div/div[2]/div[1]/div[2]/a/img'.</msg>
+<status status="PASS" starttime="20240518 15:20:52.987" endtime="20240518 15:20:54.251"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="product_quantity"]</arg>
+<arg>10</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240518 15:20:54.253" level="INFO">Typing text '10' into text field '//*[@id="product_quantity"]'.</msg>
+<status status="PASS" starttime="20240518 15:20:54.252" endtime="20240518 15:20:54.376"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="product"]/fieldset/div[5]/ul/li/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240518 15:20:54.378" level="INFO">Clicking element 'xpath=//*[@id="product"]/fieldset/div[5]/ul/li/a'.</msg>
+<status status="PASS" starttime="20240518 15:20:54.377" endtime="20240518 15:20:55.658"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${quantity}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[1]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240518 15:20:55.687" level="INFO">${quantity} = 10</msg>
+<status status="PASS" starttime="20240518 15:20:55.659" endtime="20240518 15:20:55.687"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${price}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[2]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240518 15:20:55.713" level="INFO">${price} = $450.00</msg>
+<status status="PASS" starttime="20240518 15:20:55.688" endtime="20240518 15:20:55.713"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${price}</var>
+<arg>${price[1:].replace(",", "")}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240518 15:20:55.716" level="INFO">${price} = 450.00</msg>
+<status status="PASS" starttime="20240518 15:20:55.714" endtime="20240518 15:20:55.716"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${item_price}</var>
+<arg>xpath=//*[@id="cart"]/div/div[1]/table/tbody/tr[2]/td[4]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240518 15:20:55.740" level="INFO">${item_price} = $45.00</msg>
+<status status="PASS" starttime="20240518 15:20:55.717" endtime="20240518 15:20:55.740"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="cart"]/div/div[1]/table/tbody/tr[2]/td[7]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240518 15:20:55.742" level="INFO">Clicking element 'xpath=//*[@id="cart"]/div/div[1]/table/tbody/tr[2]/td[7]/a'.</msg>
+<status status="PASS" starttime="20240518 15:20:55.741" endtime="20240518 15:20:56.717"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${update_quantity}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[1]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240518 15:20:56.744" level="INFO">${update_quantity} = 0</msg>
+<status status="PASS" starttime="20240518 15:20:56.718" endtime="20240518 15:20:56.744"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${update_price}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[2]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240518 15:20:56.771" level="INFO">${update_price} = $0.00</msg>
+<status status="PASS" starttime="20240518 15:20:56.745" endtime="20240518 15:20:56.771"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${update_price}</var>
+<arg>${update_price[1:].replace(",", "")}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240518 15:20:56.772" level="INFO">${update_price} = 0.00</msg>
+<status status="PASS" starttime="20240518 15:20:56.771" endtime="20240518 15:20:56.772"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${distance_quantity}</var>
+<arg>int(${update_quantity}) - int(${quantity})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20240518 15:20:56.773" level="INFO">${distance_quantity} = -10</msg>
+<status status="PASS" starttime="20240518 15:20:56.772" endtime="20240518 15:20:56.773"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${distance_price}</var>
+<arg>float(${update_price}) - float(${price})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20240518 15:20:56.775" level="INFO">${distance_price} = -450.0</msg>
+<status status="PASS" starttime="20240518 15:20:56.774" endtime="20240518 15:20:56.775"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${update_quantity_distance}</var>
+<arg>0</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240518 15:20:56.776" level="INFO">${update_quantity_distance} = 0</msg>
+<status status="PASS" starttime="20240518 15:20:56.775" endtime="20240518 15:20:56.776"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${update_quantity_distance}</var>
+<arg>int(${update_quantity_distance}) - int(${quantity})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20240518 15:20:56.777" level="INFO">${update_quantity_distance} = -10</msg>
+<status status="PASS" starttime="20240518 15:20:56.776" endtime="20240518 15:20:56.777"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${item_price}</var>
+<arg>${item_price[1:].replace(",", "")}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240518 15:20:56.780" level="INFO">${item_price} = 45.00</msg>
+<status status="PASS" starttime="20240518 15:20:56.779" endtime="20240518 15:20:56.780"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${item_price}</var>
+<arg>float(float(${item_price}) * int(${update_quantity_distance}))</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20240518 15:20:56.781" level="INFO">${item_price} = -450.0</msg>
+<status status="PASS" starttime="20240518 15:20:56.780" endtime="20240518 15:20:56.781"/>
+</kw>
+<kw name="Should Be Equal As Numbers" library="BuiltIn">
+<arg>${distance_quantity}</arg>
+<arg>${update_quantity_distance}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" starttime="20240518 15:20:56.782" endtime="20240518 15:20:56.782"/>
+</kw>
+<kw name="Should Be Equal As Numbers" library="BuiltIn">
+<arg>${distance_price}</arg>
+<arg>${item_price}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" starttime="20240518 15:20:56.783" endtime="20240518 15:20:56.783"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>xpath=/html/body/div/div[2]/div/div/div/div</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20240518 15:20:56.797" level="INFO">Current page contains element 'xpath=/html/body/div/div[2]/div/div/div/div'.</msg>
+<status status="PASS" starttime="20240518 15:20:56.783" endtime="20240518 15:20:56.797"/>
+</kw>
+<status status="PASS" starttime="20240518 15:20:51.976" endtime="20240518 15:20:56.797"/>
+</kw>
+<kw name="Closing my browser" library="common" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240518 15:20:56.798" endtime="20240518 15:20:58.944"/>
+</kw>
+<status status="PASS" starttime="20240518 15:20:56.798" endtime="20240518 15:20:58.944"/>
+</kw>
+<status status="PASS" starttime="20240518 15:20:41.656" endtime="20240518 15:20:58.945"/>
+</test>
+<test id="s1-t8" name="Update no change quantity" line="31">
+<kw name="Opening my browser" library="common" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL_HOME}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240518 15:20:58.949" level="INFO">Opening browser 'Chrome' to base url 'https://automationteststore.com/'.</msg>
+<status status="PASS" starttime="20240518 15:20:58.947" endtime="20240518 15:21:10.012"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${URL_HOME}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20240518 15:21:10.022" level="INFO">Current location is 'https://automationteststore.com/'.</msg>
+<status status="PASS" starttime="20240518 15:21:10.013" endtime="20240518 15:21:10.022"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240518 15:21:10.023" endtime="20240518 15:21:10.066"/>
+</kw>
+<status status="PASS" starttime="20240518 15:20:58.946" endtime="20240518 15:21:10.066"/>
+</kw>
+<kw name="Update no change quantity" library="updatecart">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="categorymenu"]/nav/ul/li[6]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240518 15:21:10.069" level="INFO">Clicking element 'xpath=//*[@id="categorymenu"]/nav/ul/li[6]/a'.</msg>
+<status status="PASS" starttime="20240518 15:21:10.068" endtime="20240518 15:21:11.099"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@id="maincontainer"]/div/div/div/h1/span[1][contains(text(),'Men')]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240518 15:21:11.101" endtime="20240518 15:21:11.131"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="maincontainer"]/div/div/div/div/div[2]/div[1]/div[2]/a/img</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240518 15:21:11.134" level="INFO">Clicking element 'xpath=//*[@id="maincontainer"]/div/div/div/div/div[2]/div[1]/div[2]/a/img'.</msg>
+<status status="PASS" starttime="20240518 15:21:11.132" endtime="20240518 15:21:12.451"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@id="product_details"]/div/div[2]/div/div/h1/span[contains(text(),'ck IN2U Eau De Toilette Spray for Him')]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240518 15:21:12.452" endtime="20240518 15:21:12.485"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="product_quantity"]</arg>
+<arg>5</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240518 15:21:12.487" level="INFO">Typing text '5' into text field '//*[@id="product_quantity"]'.</msg>
+<status status="PASS" starttime="20240518 15:21:12.486" endtime="20240518 15:21:12.610"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="product"]/fieldset/div[5]/ul/li/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240518 15:21:12.612" level="INFO">Clicking element 'xpath=//*[@id="product"]/fieldset/div[5]/ul/li/a'.</msg>
+<status status="PASS" starttime="20240518 15:21:12.611" endtime="20240518 15:21:13.913"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@id="maincontainer"]/div/div[1]/div/h1/span[1][contains(text(),' Shopping Cart')]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240518 15:21:13.914" endtime="20240518 15:21:13.946"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${quantity}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[1]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240518 15:21:14.015" level="INFO">${quantity} = 5</msg>
+<status status="PASS" starttime="20240518 15:21:13.948" endtime="20240518 15:21:14.015"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${price}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[2]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240518 15:21:14.045" level="INFO">${price} = $225.00</msg>
+<status status="PASS" starttime="20240518 15:21:14.016" endtime="20240518 15:21:14.045"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${price}</var>
+<arg>${price[1:].replace(",", "")}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240518 15:21:14.048" level="INFO">${price} = 225.00</msg>
+<status status="PASS" starttime="20240518 15:21:14.046" endtime="20240518 15:21:14.048"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${item_price}</var>
+<arg>xpath=//*[@id="cart"]/div/div[1]/table/tbody/tr[2]/td[4]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240518 15:21:14.076" level="INFO">${item_price} = $45.00</msg>
+<status status="PASS" starttime="20240518 15:21:14.048" endtime="20240518 15:21:14.076"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>//*[@id="cart"]/div/div[1]/table/tbody</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20240518 15:21:14.089" level="INFO">Current page contains element '//*[@id="cart"]/div/div[1]/table/tbody'.</msg>
+<status status="PASS" starttime="20240518 15:21:14.076" endtime="20240518 15:21:14.090"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="cart_update"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240518 15:21:14.091" level="INFO">Clicking element 'xpath=//*[@id="cart_update"]'.</msg>
+<status status="PASS" starttime="20240518 15:21:14.090" endtime="20240518 15:21:15.410"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${update_quantity}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[1]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240518 15:21:15.440" level="INFO">${update_quantity} = 5</msg>
+<status status="PASS" starttime="20240518 15:21:15.410" endtime="20240518 15:21:15.440"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${update_price}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[2]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240518 15:21:15.467" level="INFO">${update_price} = $225.00</msg>
+<status status="PASS" starttime="20240518 15:21:15.441" endtime="20240518 15:21:15.467"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${update_price}</var>
+<arg>${update_price[1:].replace(",", "")}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240518 15:21:15.469" level="INFO">${update_price} = 225.00</msg>
+<status status="PASS" starttime="20240518 15:21:15.467" endtime="20240518 15:21:15.469"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${distance_quantity}</var>
+<arg>int(${update_quantity}) - int(${quantity})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20240518 15:21:15.470" level="INFO">${distance_quantity} = 0</msg>
+<status status="PASS" starttime="20240518 15:21:15.469" endtime="20240518 15:21:15.470"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${distance_price}</var>
+<arg>float(${update_price}) - float(${price})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20240518 15:21:15.471" level="INFO">${distance_price} = 0.0</msg>
+<status status="PASS" starttime="20240518 15:21:15.470" endtime="20240518 15:21:15.471"/>
+</kw>
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<var>${update_quantity_distance}</var>
+<arg>//*[@id="cart_quantity7808d50be7efed8dd74bfcc27df4d70570"]</arg>
+<arg>value</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<msg timestamp="20240518 15:21:15.505" level="INFO">${update_quantity_distance} = 5</msg>
+<status status="PASS" starttime="20240518 15:21:15.472" endtime="20240518 15:21:15.506"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${update_quantity_distance}</var>
+<arg>int(${update_quantity_distance}) - int(${quantity})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20240518 15:21:15.507" level="INFO">${update_quantity_distance} = 0</msg>
+<status status="PASS" starttime="20240518 15:21:15.506" endtime="20240518 15:21:15.507"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${item_price}</var>
+<arg>${item_price[1:].replace(",", "")}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240518 15:21:15.508" level="INFO">${item_price} = 45.00</msg>
+<status status="PASS" starttime="20240518 15:21:15.507" endtime="20240518 15:21:15.509"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${item_price}</var>
+<arg>float(float(${item_price}) * int(${update_quantity_distance}))</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20240518 15:21:15.510" level="INFO">${item_price} = 0.0</msg>
+<status status="PASS" starttime="20240518 15:21:15.509" endtime="20240518 15:21:15.510"/>
+</kw>
+<kw name="Should Be Equal As Numbers" library="BuiltIn">
+<arg>${distance_quantity}</arg>
+<arg>${update_quantity_distance}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" starttime="20240518 15:21:15.510" endtime="20240518 15:21:15.511"/>
+</kw>
+<kw name="Should Be Equal As Numbers" library="BuiltIn">
+<arg>${distance_price}</arg>
+<arg>${item_price}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" starttime="20240518 15:21:15.511" endtime="20240518 15:21:15.512"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>//*[@id="cart"]/div/div[1]/table/tbody</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20240518 15:21:15.524" level="INFO">Current page contains element '//*[@id="cart"]/div/div[1]/table/tbody'.</msg>
+<status status="PASS" starttime="20240518 15:21:15.512" endtime="20240518 15:21:15.524"/>
+</kw>
+<status status="PASS" starttime="20240518 15:21:10.067" endtime="20240518 15:21:15.524"/>
+</kw>
+<kw name="Closing my browser" library="common" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240518 15:21:15.525" endtime="20240518 15:21:17.690"/>
+</kw>
+<status status="PASS" starttime="20240518 15:21:15.525" endtime="20240518 15:21:17.691"/>
+</kw>
+<status status="PASS" starttime="20240518 15:20:58.945" endtime="20240518 15:21:17.691"/>
+</test>
+<doc>Cart</doc>
+<status status="PASS" starttime="20240518 15:18:59.742" endtime="20240518 15:21:17.692"/>
+</suite>
+<statistics>
+<total>
+<stat pass="8" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="8" fail="0" skip="0" id="s1" name="Test Updatecart">Test Updatecart</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

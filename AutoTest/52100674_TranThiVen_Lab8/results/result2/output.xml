@@ -1,0 +1,1524 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.10.0 on win32)" generated="20240423 16:12:03.744" rpa="false" schemaversion="4">
+<suite id="s1" name="Ex2" source="D:\CURRENT_SEMESTER\Auto Testing\lab08\tests\Ex2.robot">
+<test id="s1-t1" name="TC1: File Upload - No File" line="27">
+<kw name="Open The Browser">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240423 16:12:04.100" level="INFO">Opening browser 'Chrome' to base url 'https://practice-automation.com/'.</msg>
+<status status="PASS" starttime="20240423 16:12:04.100" endtime="20240423 16:12:10.286"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20240423 16:12:10.297" level="INFO">Current location is 'https://practice-automation.com/'.</msg>
+<status status="PASS" starttime="20240423 16:12:10.286" endtime="20240423 16:12:10.297"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240423 16:12:10.298" endtime="20240423 16:12:10.333"/>
+</kw>
+<status status="PASS" starttime="20240423 16:12:04.099" endtime="20240423 16:12:10.333"/>
+</kw>
+<kw name="Enter page">
+<arg>${FILE_UPLOAD_BTN}</arg>
+<arg>${FILE_UPLOAD_URL}</arg>
+<kw name="Get WebElement" library="SeleniumLibrary">
+<var>${btn}</var>
+<arg>xpath=${xpath}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<msg timestamp="20240423 16:12:10.351" level="INFO">${btn} = &lt;selenium.webdriver.remote.webelement.WebElement (session="e9c1fa8afeda1a6ee576226e458efe8d", element="f.7E8F768E3BB1F034DB5E70E10B5B6041.d.D1D303C13DF3B8AC0FB100B70F783F87.e.43")&gt;</msg>
+<status status="PASS" starttime="20240423 16:12:10.334" endtime="20240423 16:12:10.351"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${btn}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20240423 16:12:10.352" level="INFO">Current page contains element '&lt;selenium.webdriver.remote.webelement.WebElement (session="e9c1fa8afeda1a6ee576226e458efe8d", element="f.7E8F768E3BB1F034DB5E70E10B5B6041.d.D1D303C13DF3B8AC0FB100B70F783F87.e.43")&gt;'.</msg>
+<status status="PASS" starttime="20240423 16:12:10.351" endtime="20240423 16:12:10.352"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${btn}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20240423 16:12:10.352" endtime="20240423 16:12:10.631"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240423 16:12:10.632" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="e9c1fa8afeda1a6ee576226e458efe8d", element="f.7E8F768E3BB1F034DB5E70E10B5B6041.d.D1D303C13DF3B8AC0FB100B70F783F87.e.43")&gt;'.</msg>
+<status status="PASS" starttime="20240423 16:12:10.632" endtime="20240423 16:12:11.969"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>10s</arg>
+<arg>2s</arg>
+<arg>Location Should Be</arg>
+<arg>url=${url}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>url=${url}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20240423 16:12:11.981" level="INFO">Current location is 'https://practice-automation.com/file-upload/'.</msg>
+<status status="PASS" starttime="20240423 16:12:11.971" endtime="20240423 16:12:11.981"/>
+</kw>
+<status status="PASS" starttime="20240423 16:12:11.970" endtime="20240423 16:12:11.981"/>
+</kw>
+<status status="PASS" starttime="20240423 16:12:10.333" endtime="20240423 16:12:11.981"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${UPLOAD_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240423 16:12:11.984" level="INFO">Clicking element '//*[@id="upload-btn"]'.</msg>
+<status status="PASS" starttime="20240423 16:12:11.982" endtime="20240423 16:12:12.169"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@id="wpcf7-f13587-p1037-o1"]/form/div[2]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240423 16:12:12.170" endtime="20240423 16:12:12.943"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>//*[@id="wpcf7-f13587-p1037-o1"]/form/p[1]/span[1]/span</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20240423 16:12:12.967" level="INFO">Current page contains element '//*[@id="wpcf7-f13587-p1037-o1"]/form/p[1]/span[1]/span'.</msg>
+<status status="PASS" starttime="20240423 16:12:12.944" endtime="20240423 16:12:12.967"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${input_msg}</var>
+<arg>//*[@id="wpcf7-f13587-p1037-o1"]/form/p[1]/span[1]/span</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240423 16:12:13.014" level="INFO">${input_msg} = Please fill out this field.</msg>
+<status status="PASS" starttime="20240423 16:12:12.968" endtime="20240423 16:12:13.015"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${input_msg}</arg>
+<arg>Please fill out this field.</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20240423 16:12:13.016" endtime="20240423 16:12:13.017"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>//*[@id="wpcf7-f13587-p1037-o1"]/form/div[2]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20240423 16:12:13.038" level="INFO">Current page contains element '//*[@id="wpcf7-f13587-p1037-o1"]/form/div[2]'.</msg>
+<status status="PASS" starttime="20240423 16:12:13.018" endtime="20240423 16:12:13.039"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${upload_msg}</var>
+<arg>//*[@id="wpcf7-f13587-p1037-o1"]/form/div[2]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240423 16:12:13.082" level="INFO">${upload_msg} = One or more fields have an error. Please check and try again.</msg>
+<status status="PASS" starttime="20240423 16:12:13.040" endtime="20240423 16:12:13.082"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${upload_msg}</arg>
+<arg>One or more fields have an error. Please check and try again.</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20240423 16:12:13.084" endtime="20240423 16:12:13.086"/>
+</kw>
+<status status="PASS" starttime="20240423 16:12:04.098" endtime="20240423 16:12:13.088"/>
+</test>
+<test id="s1-t2" name="TC2: File Upload - File size too large" line="46">
+<kw name="Open The Browser">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240423 16:12:13.103" level="INFO">Opening browser 'Chrome' to base url 'https://practice-automation.com/'.</msg>
+<status status="PASS" starttime="20240423 16:12:13.100" endtime="20240423 16:12:18.691"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20240423 16:12:18.701" level="INFO">Current location is 'https://practice-automation.com/'.</msg>
+<status status="PASS" starttime="20240423 16:12:18.691" endtime="20240423 16:12:18.701"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240423 16:12:18.701" endtime="20240423 16:12:18.736"/>
+</kw>
+<status status="PASS" starttime="20240423 16:12:13.098" endtime="20240423 16:12:18.736"/>
+</kw>
+<kw name="Enter page">
+<arg>${FILE_UPLOAD_BTN}</arg>
+<arg>${FILE_UPLOAD_URL}</arg>
+<kw name="Get WebElement" library="SeleniumLibrary">
+<var>${btn}</var>
+<arg>xpath=${xpath}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<msg timestamp="20240423 16:12:18.751" level="INFO">${btn} = &lt;selenium.webdriver.remote.webelement.WebElement (session="636e829448097e9dbf70e7e5089b2668", element="f.8D8D132EE9454BCFC776ECADB840097C.d.07C6B7AA7D8A74D5D128DBEFB8A4CB79.e.39")&gt;</msg>
+<status status="PASS" starttime="20240423 16:12:18.737" endtime="20240423 16:12:18.751"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${btn}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20240423 16:12:18.752" level="INFO">Current page contains element '&lt;selenium.webdriver.remote.webelement.WebElement (session="636e829448097e9dbf70e7e5089b2668", element="f.8D8D132EE9454BCFC776ECADB840097C.d.07C6B7AA7D8A74D5D128DBEFB8A4CB79.e.39")&gt;'.</msg>
+<status status="PASS" starttime="20240423 16:12:18.751" endtime="20240423 16:12:18.752"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${btn}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20240423 16:12:18.753" endtime="20240423 16:12:19.031"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240423 16:12:19.032" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="636e829448097e9dbf70e7e5089b2668", element="f.8D8D132EE9454BCFC776ECADB840097C.d.07C6B7AA7D8A74D5D128DBEFB8A4CB79.e.39")&gt;'.</msg>
+<status status="PASS" starttime="20240423 16:12:19.031" endtime="20240423 16:12:19.577"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>10s</arg>
+<arg>2s</arg>
+<arg>Location Should Be</arg>
+<arg>url=${url}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>url=${url}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20240423 16:12:19.591" level="INFO">Current location is 'https://practice-automation.com/file-upload/'.</msg>
+<status status="PASS" starttime="20240423 16:12:19.578" endtime="20240423 16:12:19.591"/>
+</kw>
+<status status="PASS" starttime="20240423 16:12:19.577" endtime="20240423 16:12:19.592"/>
+</kw>
+<status status="PASS" starttime="20240423 16:12:18.736" endtime="20240423 16:12:19.592"/>
+</kw>
+<kw name="Join Path" library="OperatingSystem">
+<var>${file_path}</var>
+<arg>D:\\CURRENT_SEMESTER\\Auto Testing\\lab08\\tests/../src</arg>
+<arg>big_file.pdf</arg>
+<doc>Joins the given path part(s) to the given base path.</doc>
+<msg timestamp="20240423 16:12:19.594" level="INFO">${file_path} = D:\CURRENT_SEMESTER\Auto Testing\lab08\src\big_file.pdf</msg>
+<status status="PASS" starttime="20240423 16:12:19.593" endtime="20240423 16:12:19.594"/>
+</kw>
+<kw name="File Should Exist" library="OperatingSystem">
+<arg>D:\\CURRENT_SEMESTER\\Auto Testing\\lab08\\tests/../src/big_file.pdf</arg>
+<doc>Fails unless the given ``path`` points to an existing file.</doc>
+<msg timestamp="20240423 16:12:19.596" level="INFO" html="true">File '&lt;a href="file://D:\CURRENT_SEMESTER\Auto Testing\lab08\src\big_file.pdf"&gt;D:\CURRENT_SEMESTER\Auto Testing\lab08\src\big_file.pdf&lt;/a&gt;' exists.</msg>
+<status status="PASS" starttime="20240423 16:12:19.595" endtime="20240423 16:12:19.596"/>
+</kw>
+<kw name="Choose File" library="SeleniumLibrary">
+<arg>//*[@id="file-upload"]</arg>
+<arg>${file_path}</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<msg timestamp="20240423 16:12:19.598" level="INFO">Sending D:\CURRENT_SEMESTER\Auto Testing\lab08\src\big_file.pdf to browser.</msg>
+<status status="PASS" starttime="20240423 16:12:19.597" endtime="20240423 16:12:19.765"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${UPLOAD_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240423 16:12:19.766" level="INFO">Clicking element '//*[@id="upload-btn"]'.</msg>
+<status status="PASS" starttime="20240423 16:12:19.765" endtime="20240423 16:12:19.822"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@id="wpcf7-f13587-p1037-o1"]/form/div[2]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240423 16:12:19.822" endtime="20240423 16:12:21.978"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>//*[@id="wpcf7-f13587-p1037-o1"]/form/p[1]/span[1]/span</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20240423 16:12:21.992" level="INFO">Current page contains element '//*[@id="wpcf7-f13587-p1037-o1"]/form/p[1]/span[1]/span'.</msg>
+<status status="PASS" starttime="20240423 16:12:21.979" endtime="20240423 16:12:21.992"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${input_msg}</var>
+<arg>//*[@id="wpcf7-f13587-p1037-o1"]/form/p[1]/span[1]/span</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240423 16:12:22.038" level="INFO">${input_msg} = Uploaded file is too big.</msg>
+<status status="PASS" starttime="20240423 16:12:21.993" endtime="20240423 16:12:22.038"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${input_msg}</arg>
+<arg>Uploaded file is too big.</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20240423 16:12:22.039" endtime="20240423 16:12:22.040"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>//*[@id="wpcf7-f13587-p1037-o1"]/form/div[2]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20240423 16:12:22.052" level="INFO">Current page contains element '//*[@id="wpcf7-f13587-p1037-o1"]/form/div[2]'.</msg>
+<status status="PASS" starttime="20240423 16:12:22.040" endtime="20240423 16:12:22.053"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${upload_msg}</var>
+<arg>//*[@id="wpcf7-f13587-p1037-o1"]/form/div[2]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240423 16:12:22.081" level="INFO">${upload_msg} = One or more fields have an error. Please check and try again.</msg>
+<status status="PASS" starttime="20240423 16:12:22.054" endtime="20240423 16:12:22.081"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${upload_msg}</arg>
+<arg>One or more fields have an error. Please check and try again.</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20240423 16:12:22.082" endtime="20240423 16:12:22.083"/>
+</kw>
+<doc>File size is larger than 1MB</doc>
+<status status="PASS" starttime="20240423 16:12:13.095" endtime="20240423 16:12:22.084"/>
+</test>
+<test id="s1-t3" name="TC3: File Upload - File type is not allowed" line="70">
+<kw name="Open The Browser">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240423 16:12:22.091" level="INFO">Opening browser 'Chrome' to base url 'https://practice-automation.com/'.</msg>
+<status status="PASS" starttime="20240423 16:12:22.090" endtime="20240423 16:12:27.341"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20240423 16:12:27.352" level="INFO">Current location is 'https://practice-automation.com/'.</msg>
+<status status="PASS" starttime="20240423 16:12:27.342" endtime="20240423 16:12:27.352"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240423 16:12:27.353" endtime="20240423 16:12:27.384"/>
+</kw>
+<status status="PASS" starttime="20240423 16:12:22.089" endtime="20240423 16:12:27.384"/>
+</kw>
+<kw name="Enter page">
+<arg>${FILE_UPLOAD_BTN}</arg>
+<arg>${FILE_UPLOAD_URL}</arg>
+<kw name="Get WebElement" library="SeleniumLibrary">
+<var>${btn}</var>
+<arg>xpath=${xpath}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<msg timestamp="20240423 16:12:27.399" level="INFO">${btn} = &lt;selenium.webdriver.remote.webelement.WebElement (session="6ac45777e83c641ac05d29488cb207d0", element="f.E24B8F2D9483E460542C26ED3A2C51E9.d.664AB325E77905C04C19FB2EB8E2D65F.e.43")&gt;</msg>
+<status status="PASS" starttime="20240423 16:12:27.385" endtime="20240423 16:12:27.399"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${btn}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20240423 16:12:27.400" level="INFO">Current page contains element '&lt;selenium.webdriver.remote.webelement.WebElement (session="6ac45777e83c641ac05d29488cb207d0", element="f.E24B8F2D9483E460542C26ED3A2C51E9.d.664AB325E77905C04C19FB2EB8E2D65F.e.43")&gt;'.</msg>
+<status status="PASS" starttime="20240423 16:12:27.399" endtime="20240423 16:12:27.400"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${btn}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20240423 16:12:27.400" endtime="20240423 16:12:27.697"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240423 16:12:27.701" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="6ac45777e83c641ac05d29488cb207d0", element="f.E24B8F2D9483E460542C26ED3A2C51E9.d.664AB325E77905C04C19FB2EB8E2D65F.e.43")&gt;'.</msg>
+<status status="PASS" starttime="20240423 16:12:27.698" endtime="20240423 16:12:28.264"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>10s</arg>
+<arg>2s</arg>
+<arg>Location Should Be</arg>
+<arg>url=${url}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>url=${url}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20240423 16:12:28.294" level="INFO">Current location is 'https://practice-automation.com/file-upload/'.</msg>
+<status status="PASS" starttime="20240423 16:12:28.266" endtime="20240423 16:12:28.294"/>
+</kw>
+<status status="PASS" starttime="20240423 16:12:28.265" endtime="20240423 16:12:28.294"/>
+</kw>
+<status status="PASS" starttime="20240423 16:12:27.385" endtime="20240423 16:12:28.295"/>
+</kw>
+<kw name="Join Path" library="OperatingSystem">
+<var>${file_path}</var>
+<arg>D:\\CURRENT_SEMESTER\\Auto Testing\\lab08\\tests/../src</arg>
+<arg>wrong_type_file.svg</arg>
+<doc>Joins the given path part(s) to the given base path.</doc>
+<msg timestamp="20240423 16:12:28.297" level="INFO">${file_path} = D:\CURRENT_SEMESTER\Auto Testing\lab08\src\wrong_type_file.svg</msg>
+<status status="PASS" starttime="20240423 16:12:28.296" endtime="20240423 16:12:28.297"/>
+</kw>
+<kw name="File Should Exist" library="OperatingSystem">
+<arg>D:\\CURRENT_SEMESTER\\Auto Testing\\lab08\\tests/../src/wrong_type_file.svg</arg>
+<doc>Fails unless the given ``path`` points to an existing file.</doc>
+<msg timestamp="20240423 16:12:28.300" level="INFO" html="true">File '&lt;a href="file://D:\CURRENT_SEMESTER\Auto Testing\lab08\src\wrong_type_file.svg"&gt;D:\CURRENT_SEMESTER\Auto Testing\lab08\src\wrong_type_file.svg&lt;/a&gt;' exists.</msg>
+<status status="PASS" starttime="20240423 16:12:28.299" endtime="20240423 16:12:28.300"/>
+</kw>
+<kw name="Choose File" library="SeleniumLibrary">
+<arg>//*[@id="file-upload"]</arg>
+<arg>${file_path}</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<msg timestamp="20240423 16:12:28.303" level="INFO">Sending D:\CURRENT_SEMESTER\Auto Testing\lab08\src\wrong_type_file.svg to browser.</msg>
+<status status="PASS" starttime="20240423 16:12:28.301" endtime="20240423 16:12:28.387"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${UPLOAD_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240423 16:12:28.392" level="INFO">Clicking element '//*[@id="upload-btn"]'.</msg>
+<status status="PASS" starttime="20240423 16:12:28.390" endtime="20240423 16:12:28.510"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@id="wpcf7-f13587-p1037-o1"]/form/div[2]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240423 16:12:28.511" endtime="20240423 16:12:29.236"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>//*[@id="wpcf7-f13587-p1037-o1"]/form/p[1]/span[1]/span</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20240423 16:12:29.260" level="INFO">Current page contains element '//*[@id="wpcf7-f13587-p1037-o1"]/form/p[1]/span[1]/span'.</msg>
+<status status="PASS" starttime="20240423 16:12:29.237" endtime="20240423 16:12:29.261"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${input_msg}</var>
+<arg>//*[@id="wpcf7-f13587-p1037-o1"]/form/p[1]/span[1]/span</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240423 16:12:29.304" level="INFO">${input_msg} = You are not allowed to upload files of this type.</msg>
+<status status="PASS" starttime="20240423 16:12:29.262" endtime="20240423 16:12:29.304"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${input_msg}</arg>
+<arg>You are not allowed to upload files of this type.</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20240423 16:12:29.306" endtime="20240423 16:12:29.307"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>//*[@id="wpcf7-f13587-p1037-o1"]/form/div[2]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20240423 16:12:29.321" level="INFO">Current page contains element '//*[@id="wpcf7-f13587-p1037-o1"]/form/div[2]'.</msg>
+<status status="PASS" starttime="20240423 16:12:29.307" endtime="20240423 16:12:29.321"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${upload_msg}</var>
+<arg>//*[@id="wpcf7-f13587-p1037-o1"]/form/div[2]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240423 16:12:29.356" level="INFO">${upload_msg} = One or more fields have an error. Please check and try again.</msg>
+<status status="PASS" starttime="20240423 16:12:29.322" endtime="20240423 16:12:29.356"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${upload_msg}</arg>
+<arg>One or more fields have an error. Please check and try again.</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20240423 16:12:29.357" endtime="20240423 16:12:29.358"/>
+</kw>
+<doc>File type is not included (txt, docx, pdf, jpeg, png, jpg, gif)</doc>
+<status status="PASS" starttime="20240423 16:12:22.087" endtime="20240423 16:12:29.359"/>
+</test>
+<test id="s1-t4" name="TC4: File Upload - File uploaded successfully" line="94">
+<kw name="Open The Browser">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240423 16:12:29.368" level="INFO">Opening browser 'Chrome' to base url 'https://practice-automation.com/'.</msg>
+<status status="PASS" starttime="20240423 16:12:29.366" endtime="20240423 16:12:35.837"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20240423 16:12:35.845" level="INFO">Current location is 'https://practice-automation.com/'.</msg>
+<status status="PASS" starttime="20240423 16:12:35.837" endtime="20240423 16:12:35.845"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240423 16:12:35.845" endtime="20240423 16:12:35.879"/>
+</kw>
+<status status="PASS" starttime="20240423 16:12:29.365" endtime="20240423 16:12:35.880"/>
+</kw>
+<kw name="Enter page">
+<arg>${FILE_UPLOAD_BTN}</arg>
+<arg>${FILE_UPLOAD_URL}</arg>
+<kw name="Get WebElement" library="SeleniumLibrary">
+<var>${btn}</var>
+<arg>xpath=${xpath}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<msg timestamp="20240423 16:12:35.895" level="INFO">${btn} = &lt;selenium.webdriver.remote.webelement.WebElement (session="9785494a843f109bae92719c9b2eb4eb", element="f.EEA7A25689DC3935A3EE4CDD5741CB35.d.C56E5ED7F2A7B7FAA608C9156C2B6D48.e.43")&gt;</msg>
+<status status="PASS" starttime="20240423 16:12:35.881" endtime="20240423 16:12:35.895"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${btn}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20240423 16:12:35.896" level="INFO">Current page contains element '&lt;selenium.webdriver.remote.webelement.WebElement (session="9785494a843f109bae92719c9b2eb4eb", element="f.EEA7A25689DC3935A3EE4CDD5741CB35.d.C56E5ED7F2A7B7FAA608C9156C2B6D48.e.43")&gt;'.</msg>
+<status status="PASS" starttime="20240423 16:12:35.895" endtime="20240423 16:12:35.896"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${btn}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20240423 16:12:35.896" endtime="20240423 16:12:36.199"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240423 16:12:36.202" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="9785494a843f109bae92719c9b2eb4eb", element="f.EEA7A25689DC3935A3EE4CDD5741CB35.d.C56E5ED7F2A7B7FAA608C9156C2B6D48.e.43")&gt;'.</msg>
+<status status="PASS" starttime="20240423 16:12:36.199" endtime="20240423 16:12:36.935"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>10s</arg>
+<arg>2s</arg>
+<arg>Location Should Be</arg>
+<arg>url=${url}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>url=${url}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20240423 16:12:36.942" level="INFO">Current location is 'https://practice-automation.com/file-upload/'.</msg>
+<status status="PASS" starttime="20240423 16:12:36.936" endtime="20240423 16:12:36.943"/>
+</kw>
+<status status="PASS" starttime="20240423 16:12:36.935" endtime="20240423 16:12:36.943"/>
+</kw>
+<status status="PASS" starttime="20240423 16:12:35.880" endtime="20240423 16:12:36.943"/>
+</kw>
+<kw name="Join Path" library="OperatingSystem">
+<var>${file_path}</var>
+<arg>D:\\CURRENT_SEMESTER\\Auto Testing\\lab08\\tests/../src</arg>
+<arg>right_file.pdf</arg>
+<doc>Joins the given path part(s) to the given base path.</doc>
+<msg timestamp="20240423 16:12:36.945" level="INFO">${file_path} = D:\CURRENT_SEMESTER\Auto Testing\lab08\src\right_file.pdf</msg>
+<status status="PASS" starttime="20240423 16:12:36.944" endtime="20240423 16:12:36.945"/>
+</kw>
+<kw name="File Should Exist" library="OperatingSystem">
+<arg>D:\\CURRENT_SEMESTER\\Auto Testing\\lab08\\tests/../src/right_file.pdf</arg>
+<doc>Fails unless the given ``path`` points to an existing file.</doc>
+<msg timestamp="20240423 16:12:36.947" level="INFO" html="true">File '&lt;a href="file://D:\CURRENT_SEMESTER\Auto Testing\lab08\src\right_file.pdf"&gt;D:\CURRENT_SEMESTER\Auto Testing\lab08\src\right_file.pdf&lt;/a&gt;' exists.</msg>
+<status status="PASS" starttime="20240423 16:12:36.946" endtime="20240423 16:12:36.947"/>
+</kw>
+<kw name="Choose File" library="SeleniumLibrary">
+<arg>//*[@id="file-upload"]</arg>
+<arg>${file_path}</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<msg timestamp="20240423 16:12:36.950" level="INFO">Sending D:\CURRENT_SEMESTER\Auto Testing\lab08\src\right_file.pdf to browser.</msg>
+<status status="PASS" starttime="20240423 16:12:36.948" endtime="20240423 16:12:37.041"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${UPLOAD_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240423 16:12:37.044" level="INFO">Clicking element '//*[@id="upload-btn"]'.</msg>
+<status status="PASS" starttime="20240423 16:12:37.043" endtime="20240423 16:12:37.212"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@id="wpcf7-f13587-p1037-o1"]/form/div[2]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240423 16:12:37.213" endtime="20240423 16:12:38.734"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>//*[@id="wpcf7-f13587-p1037-o1"]/form/div[2]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20240423 16:12:38.751" level="INFO">Current page contains element '//*[@id="wpcf7-f13587-p1037-o1"]/form/div[2]'.</msg>
+<status status="PASS" starttime="20240423 16:12:38.735" endtime="20240423 16:12:38.751"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${upload_msg}</var>
+<arg>//*[@id="wpcf7-f13587-p1037-o1"]/form/div[2]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240423 16:12:38.800" level="INFO">${upload_msg} = There was an error trying to send your message. Please try again later.</msg>
+<status status="PASS" starttime="20240423 16:12:38.752" endtime="20240423 16:12:38.800"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${upload_msg}</arg>
+<arg>There was an error trying to send your message. Please try again later.</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20240423 16:12:38.803" endtime="20240423 16:12:38.804"/>
+</kw>
+<doc>File uploaded successfully</doc>
+<status status="PASS" starttime="20240423 16:12:29.364" endtime="20240423 16:12:38.805"/>
+</test>
+<test id="s1-t5" name="TC5: File Download - Normal" line="113">
+<kw name="Join Path" library="OperatingSystem">
+<var>${download_path}</var>
+<arg>D:\\CURRENT_SEMESTER\\Auto Testing\\lab08\\tests/../downloads</arg>
+<doc>Joins the given path part(s) to the given base path.</doc>
+<msg timestamp="20240423 16:12:38.810" level="INFO">${download_path} = D:\CURRENT_SEMESTER\Auto Testing\lab08\downloads</msg>
+<status status="PASS" starttime="20240423 16:12:38.809" endtime="20240423 16:12:38.810"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>download_path: ${download_path}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20240423 16:12:38.811" endtime="20240423 16:12:38.812"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${chrome_options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20240423 16:12:38.814" level="INFO">${chrome_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x04ED7DC0&gt;</msg>
+<status status="PASS" starttime="20240423 16:12:38.813" endtime="20240423 16:12:38.814"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${prefs}</var>
+<arg>download.default_directory=${download_path}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20240423 16:12:38.817" level="INFO">${prefs} = {'download.default_directory': 'D:\\CURRENT_SEMESTER\\Auto Testing\\lab08\\downloads'}</msg>
+<status status="PASS" starttime="20240423 16:12:38.815" endtime="20240423 16:12:38.817"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_experimental_option</arg>
+<arg>prefs</arg>
+<arg>${prefs}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20240423 16:12:38.818" endtime="20240423 16:12:38.819"/>
+</kw>
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>Chrome</arg>
+<arg>options=${chrome_options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20240423 16:12:38.821" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20240423 16:12:38.820" endtime="20240423 16:12:40.636"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${FILE_DOWNLOAD_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20240423 16:12:40.637" level="INFO">Opening url 'https://practice-automation.com/file-download/'</msg>
+<status status="PASS" starttime="20240423 16:12:40.637" endtime="20240423 16:12:43.593"/>
+</kw>
+<kw name="Delete File With Name">
+<arg>test.pdf</arg>
+<kw name="Join Path" library="OperatingSystem">
+<var>${folder_path}</var>
+<arg>D:\\CURRENT_SEMESTER\\Auto Testing\\lab08\\tests/../downloads</arg>
+<doc>Joins the given path part(s) to the given base path.</doc>
+<msg timestamp="20240423 16:12:43.595" level="INFO">${folder_path} = D:\CURRENT_SEMESTER\Auto Testing\lab08\downloads</msg>
+<status status="PASS" starttime="20240423 16:12:43.595" endtime="20240423 16:12:43.595"/>
+</kw>
+<kw name="Join Path" library="OperatingSystem">
+<var>${file_path}</var>
+<arg>${folder_path}</arg>
+<arg>${file_name}</arg>
+<doc>Joins the given path part(s) to the given base path.</doc>
+<msg timestamp="20240423 16:12:43.595" level="INFO">${file_path} = D:\CURRENT_SEMESTER\Auto Testing\lab08\downloads\test.pdf</msg>
+<status status="PASS" starttime="20240423 16:12:43.595" endtime="20240423 16:12:43.596"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<arg>Remove File</arg>
+<arg>${file_path}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<kw name="Remove File" library="OperatingSystem">
+<arg>${file_path}</arg>
+<doc>Removes a file with the given path.</doc>
+<msg timestamp="20240423 16:12:43.597" level="INFO" html="true">File '&lt;a href="file://D:\CURRENT_SEMESTER\Auto Testing\lab08\downloads\test.pdf"&gt;D:\CURRENT_SEMESTER\Auto Testing\lab08\downloads\test.pdf&lt;/a&gt;' does not exist.</msg>
+<status status="PASS" starttime="20240423 16:12:43.596" endtime="20240423 16:12:43.597"/>
+</kw>
+<status status="PASS" starttime="20240423 16:12:43.596" endtime="20240423 16:12:43.597"/>
+</kw>
+<status status="PASS" starttime="20240423 16:12:43.593" endtime="20240423 16:12:43.597"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>10s</arg>
+<arg>2s</arg>
+<arg>File Should Not Exist</arg>
+<arg>path=${download_path}/test.pdf</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="File Should Not Exist" library="OperatingSystem">
+<arg>path=${download_path}/test.pdf</arg>
+<doc>Fails if the given path points to an existing file.</doc>
+<msg timestamp="20240423 16:12:43.598" level="INFO" html="true">File '&lt;a href="file://D:\CURRENT_SEMESTER\Auto Testing\lab08\downloads\test.pdf"&gt;D:\CURRENT_SEMESTER\Auto Testing\lab08\downloads\test.pdf&lt;/a&gt;' does not exist.</msg>
+<status status="PASS" starttime="20240423 16:12:43.598" endtime="20240423 16:12:43.598"/>
+</kw>
+<status status="PASS" starttime="20240423 16:12:43.598" endtime="20240423 16:12:43.599"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>//*[@id="post-1042"]/div/div[1]/div/div/div/div[3]/a</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20240423 16:12:43.610" level="INFO">Current page contains element '//*[@id="post-1042"]/div/div[1]/div/div/div/div[3]/a'.</msg>
+<status status="PASS" starttime="20240423 16:12:43.599" endtime="20240423 16:12:43.611"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="post-1042"]/div/div[1]/div/div/div/div[3]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240423 16:12:43.612" level="INFO">Clicking element '//*[@id="post-1042"]/div/div[1]/div/div/div/div[3]/a'.</msg>
+<status status="PASS" starttime="20240423 16:12:43.611" endtime="20240423 16:12:44.424"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>10s</arg>
+<arg>2s</arg>
+<arg>File Should Exist</arg>
+<arg>path=${download_path}/test.pdf</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="File Should Exist" library="OperatingSystem">
+<arg>path=${download_path}/test.pdf</arg>
+<doc>Fails unless the given ``path`` points to an existing file.</doc>
+<msg timestamp="20240423 16:12:44.427" level="FAIL">File 'D:\CURRENT_SEMESTER\Auto Testing\lab08\downloads\test.pdf' does not exist.</msg>
+<status status="FAIL" starttime="20240423 16:12:44.427" endtime="20240423 16:12:44.428"/>
+</kw>
+<kw name="File Should Exist" library="OperatingSystem">
+<arg>path=${download_path}/test.pdf</arg>
+<doc>Fails unless the given ``path`` points to an existing file.</doc>
+<msg timestamp="20240423 16:12:46.433" level="INFO" html="true">File '&lt;a href="file://D:\CURRENT_SEMESTER\Auto Testing\lab08\downloads\test.pdf"&gt;D:\CURRENT_SEMESTER\Auto Testing\lab08\downloads\test.pdf&lt;/a&gt;' exists.</msg>
+<status status="PASS" starttime="20240423 16:12:46.431" endtime="20240423 16:12:46.433"/>
+</kw>
+<status status="PASS" starttime="20240423 16:12:44.426" endtime="20240423 16:12:46.433"/>
+</kw>
+<status status="PASS" starttime="20240423 16:12:38.808" endtime="20240423 16:12:46.433"/>
+</test>
+<test id="s1-t6" name="TC6: File Download - Password protected FAIL with Wrong password" line="133">
+<kw name="Join Path" library="OperatingSystem">
+<var>${download_path}</var>
+<arg>D:\\CURRENT_SEMESTER\\Auto Testing\\lab08\\tests/../downloads</arg>
+<doc>Joins the given path part(s) to the given base path.</doc>
+<msg timestamp="20240423 16:12:46.439" level="INFO">${download_path} = D:\CURRENT_SEMESTER\Auto Testing\lab08\downloads</msg>
+<status status="PASS" starttime="20240423 16:12:46.439" endtime="20240423 16:12:46.439"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${chrome_options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20240423 16:12:46.440" level="INFO">${chrome_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x048DB1A8&gt;</msg>
+<status status="PASS" starttime="20240423 16:12:46.440" endtime="20240423 16:12:46.440"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${prefs}</var>
+<arg>download.default_directory=${download_path}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20240423 16:12:46.441" level="INFO">${prefs} = {'download.default_directory': 'D:\\CURRENT_SEMESTER\\Auto Testing\\lab08\\downloads'}</msg>
+<status status="PASS" starttime="20240423 16:12:46.441" endtime="20240423 16:12:46.441"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_experimental_option</arg>
+<arg>prefs</arg>
+<arg>${prefs}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20240423 16:12:46.442" endtime="20240423 16:12:46.442"/>
+</kw>
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>Chrome</arg>
+<arg>options=${chrome_options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20240423 16:12:46.443" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20240423 16:12:46.443" endtime="20240423 16:12:48.362"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${FILE_DOWNLOAD_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20240423 16:12:48.363" level="INFO">Opening url 'https://practice-automation.com/file-download/'</msg>
+<status status="PASS" starttime="20240423 16:12:48.362" endtime="20240423 16:12:51.612"/>
+</kw>
+<kw name="Delete File With Name">
+<arg>test.docx</arg>
+<kw name="Join Path" library="OperatingSystem">
+<var>${folder_path}</var>
+<arg>D:\\CURRENT_SEMESTER\\Auto Testing\\lab08\\tests/../downloads</arg>
+<doc>Joins the given path part(s) to the given base path.</doc>
+<msg timestamp="20240423 16:12:51.614" level="INFO">${folder_path} = D:\CURRENT_SEMESTER\Auto Testing\lab08\downloads</msg>
+<status status="PASS" starttime="20240423 16:12:51.614" endtime="20240423 16:12:51.614"/>
+</kw>
+<kw name="Join Path" library="OperatingSystem">
+<var>${file_path}</var>
+<arg>${folder_path}</arg>
+<arg>${file_name}</arg>
+<doc>Joins the given path part(s) to the given base path.</doc>
+<msg timestamp="20240423 16:12:51.615" level="INFO">${file_path} = D:\CURRENT_SEMESTER\Auto Testing\lab08\downloads\test.docx</msg>
+<status status="PASS" starttime="20240423 16:12:51.614" endtime="20240423 16:12:51.615"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<arg>Remove File</arg>
+<arg>${file_path}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<kw name="Remove File" library="OperatingSystem">
+<arg>${file_path}</arg>
+<doc>Removes a file with the given path.</doc>
+<msg timestamp="20240423 16:12:51.616" level="INFO" html="true">File '&lt;a href="file://D:\CURRENT_SEMESTER\Auto Testing\lab08\downloads\test.docx"&gt;D:\CURRENT_SEMESTER\Auto Testing\lab08\downloads\test.docx&lt;/a&gt;' does not exist.</msg>
+<status status="PASS" starttime="20240423 16:12:51.615" endtime="20240423 16:12:51.616"/>
+</kw>
+<status status="PASS" starttime="20240423 16:12:51.615" endtime="20240423 16:12:51.616"/>
+</kw>
+<status status="PASS" starttime="20240423 16:12:51.613" endtime="20240423 16:12:51.617"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>10s</arg>
+<arg>2s</arg>
+<arg>File Should Not Exist</arg>
+<arg>path=${download_path}/test.docx</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="File Should Not Exist" library="OperatingSystem">
+<arg>path=${download_path}/test.docx</arg>
+<doc>Fails if the given path points to an existing file.</doc>
+<msg timestamp="20240423 16:12:51.619" level="INFO" html="true">File '&lt;a href="file://D:\CURRENT_SEMESTER\Auto Testing\lab08\downloads\test.docx"&gt;D:\CURRENT_SEMESTER\Auto Testing\lab08\downloads\test.docx&lt;/a&gt;' does not exist.</msg>
+<status status="PASS" starttime="20240423 16:12:51.618" endtime="20240423 16:12:51.619"/>
+</kw>
+<status status="PASS" starttime="20240423 16:12:51.618" endtime="20240423 16:12:51.619"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>//*[@id="post-1042"]/div/div[3]/div/div/div/div[3]/a</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20240423 16:12:51.643" level="INFO">Current page contains element '//*[@id="post-1042"]/div/div[3]/div/div/div/div[3]/a'.</msg>
+<status status="PASS" starttime="20240423 16:12:51.620" endtime="20240423 16:12:51.643"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="post-1042"]/div/div[3]/div/div/div/div[3]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240423 16:12:51.646" level="INFO">Clicking element '//*[@id="post-1042"]/div/div[3]/div/div/div/div[3]/a'.</msg>
+<status status="PASS" starttime="20240423 16:12:51.644" endtime="20240423 16:12:51.721"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>10s</arg>
+<arg>2s</arg>
+<arg>Page Should Contain Element</arg>
+<arg>//*[@id="wpdm-lock-frame"]</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>//*[@id="wpdm-lock-frame"]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20240423 16:12:51.734" level="INFO">Current page contains element '//*[@id="wpdm-lock-frame"]'.</msg>
+<status status="PASS" starttime="20240423 16:12:51.722" endtime="20240423 16:12:51.735"/>
+</kw>
+<status status="PASS" starttime="20240423 16:12:51.722" endtime="20240423 16:12:51.735"/>
+</kw>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>//*[@id="wpdm-lock-frame"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20240423 16:12:51.736" level="INFO">Selecting frame '//*[@id="wpdm-lock-frame"]'.</msg>
+<status status="PASS" starttime="20240423 16:12:51.735" endtime="20240423 16:12:52.091"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//input[@name="password"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240423 16:12:52.092" endtime="20240423 16:12:53.231"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@name="password"]</arg>
+<arg>${wrong_password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240423 16:12:53.233" level="INFO">Typing text 'auce' into text field '//input[@name="password"]'.</msg>
+<status status="PASS" starttime="20240423 16:12:53.232" endtime="20240423 16:12:53.325"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//input[@type="submit"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240423 16:12:53.325" endtime="20240423 16:12:53.349"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//input[@type="submit"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240423 16:12:53.351" level="INFO">Clicking element '//input[@type="submit"]'.</msg>
+<status status="PASS" starttime="20240423 16:12:53.349" endtime="20240423 16:12:53.481"/>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20240423 16:12:53.482" endtime="20240423 16:12:53.484"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240423 16:12:58.491" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20240423 16:12:53.484" endtime="20240423 16:12:58.491"/>
+</kw>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>//*[@id="wpdm-lock-frame"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20240423 16:12:58.492" level="INFO">Selecting frame '//*[@id="wpdm-lock-frame"]'.</msg>
+<status status="PASS" starttime="20240423 16:12:58.492" endtime="20240423 16:12:58.518"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Enter Correct Password to Download</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20240423 16:12:58.693" level="INFO">Current page contains text 'Enter Correct Password to Download'.</msg>
+<status status="PASS" starttime="20240423 16:12:58.519" endtime="20240423 16:12:58.694"/>
+</kw>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>//*[@id="wpdm-lock-frame"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20240423 16:12:58.695" level="INFO">Selecting frame '//*[@id="wpdm-lock-frame"]'.</msg>
+<status status="PASS" starttime="20240423 16:12:58.695" endtime="20240423 16:12:58.731"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>//*[@id="msg_921"]/div</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240423 16:12:58.762" level="INFO">Element '//*[@id="msg_921"]/div' is displayed.</msg>
+<status status="PASS" starttime="20240423 16:12:58.731" endtime="20240423 16:12:58.762"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${error_msg}</var>
+<arg>//*[@id="msg_921"]/div</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240423 16:12:58.790" level="INFO">${error_msg} = Wrong Password!   Try Again</msg>
+<status status="PASS" starttime="20240423 16:12:58.764" endtime="20240423 16:12:58.790"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${error_msg}</arg>
+<arg>Wrong Password!</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20240423 16:12:58.791" endtime="20240423 16:12:58.791"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${error_msg}</arg>
+<arg>Try Again</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20240423 16:12:58.792" endtime="20240423 16:12:58.792"/>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20240423 16:12:58.792" endtime="20240423 16:12:58.796"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>10s</arg>
+<arg>2s</arg>
+<arg>File Should Not Exist</arg>
+<arg>path=${download_path}/test.docx</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="File Should Not Exist" library="OperatingSystem">
+<arg>path=${download_path}/test.docx</arg>
+<doc>Fails if the given path points to an existing file.</doc>
+<msg timestamp="20240423 16:12:58.798" level="INFO" html="true">File '&lt;a href="file://D:\CURRENT_SEMESTER\Auto Testing\lab08\downloads\test.docx"&gt;D:\CURRENT_SEMESTER\Auto Testing\lab08\downloads\test.docx&lt;/a&gt;' does not exist.</msg>
+<status status="PASS" starttime="20240423 16:12:58.797" endtime="20240423 16:12:58.798"/>
+</kw>
+<status status="PASS" starttime="20240423 16:12:58.797" endtime="20240423 16:12:58.798"/>
+</kw>
+<status status="PASS" starttime="20240423 16:12:46.438" endtime="20240423 16:12:58.799"/>
+</test>
+<test id="s1-t7" name="TC7: File Download - Password protected FAIL with No password" line="174">
+<kw name="Join Path" library="OperatingSystem">
+<var>${download_path}</var>
+<arg>D:\\CURRENT_SEMESTER\\Auto Testing\\lab08\\tests/../downloads</arg>
+<doc>Joins the given path part(s) to the given base path.</doc>
+<msg timestamp="20240423 16:12:58.802" level="INFO">${download_path} = D:\CURRENT_SEMESTER\Auto Testing\lab08\downloads</msg>
+<status status="PASS" starttime="20240423 16:12:58.801" endtime="20240423 16:12:58.802"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${chrome_options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20240423 16:12:58.803" level="INFO">${chrome_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x04922D78&gt;</msg>
+<status status="PASS" starttime="20240423 16:12:58.802" endtime="20240423 16:12:58.803"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${prefs}</var>
+<arg>download.default_directory=${download_path}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20240423 16:12:58.803" level="INFO">${prefs} = {'download.default_directory': 'D:\\CURRENT_SEMESTER\\Auto Testing\\lab08\\downloads'}</msg>
+<status status="PASS" starttime="20240423 16:12:58.803" endtime="20240423 16:12:58.804"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_experimental_option</arg>
+<arg>prefs</arg>
+<arg>${prefs}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20240423 16:12:58.804" endtime="20240423 16:12:58.805"/>
+</kw>
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>Chrome</arg>
+<arg>options=${chrome_options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20240423 16:12:58.805" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20240423 16:12:58.805" endtime="20240423 16:13:00.550"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${FILE_DOWNLOAD_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20240423 16:13:00.552" level="INFO">Opening url 'https://practice-automation.com/file-download/'</msg>
+<status status="PASS" starttime="20240423 16:13:00.551" endtime="20240423 16:13:03.426"/>
+</kw>
+<kw name="Delete File With Name">
+<arg>test.docx</arg>
+<kw name="Join Path" library="OperatingSystem">
+<var>${folder_path}</var>
+<arg>D:\\CURRENT_SEMESTER\\Auto Testing\\lab08\\tests/../downloads</arg>
+<doc>Joins the given path part(s) to the given base path.</doc>
+<msg timestamp="20240423 16:13:03.428" level="INFO">${folder_path} = D:\CURRENT_SEMESTER\Auto Testing\lab08\downloads</msg>
+<status status="PASS" starttime="20240423 16:13:03.427" endtime="20240423 16:13:03.428"/>
+</kw>
+<kw name="Join Path" library="OperatingSystem">
+<var>${file_path}</var>
+<arg>${folder_path}</arg>
+<arg>${file_name}</arg>
+<doc>Joins the given path part(s) to the given base path.</doc>
+<msg timestamp="20240423 16:13:03.429" level="INFO">${file_path} = D:\CURRENT_SEMESTER\Auto Testing\lab08\downloads\test.docx</msg>
+<status status="PASS" starttime="20240423 16:13:03.428" endtime="20240423 16:13:03.429"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<arg>Remove File</arg>
+<arg>${file_path}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<kw name="Remove File" library="OperatingSystem">
+<arg>${file_path}</arg>
+<doc>Removes a file with the given path.</doc>
+<msg timestamp="20240423 16:13:03.431" level="INFO" html="true">File '&lt;a href="file://D:\CURRENT_SEMESTER\Auto Testing\lab08\downloads\test.docx"&gt;D:\CURRENT_SEMESTER\Auto Testing\lab08\downloads\test.docx&lt;/a&gt;' does not exist.</msg>
+<status status="PASS" starttime="20240423 16:13:03.430" endtime="20240423 16:13:03.431"/>
+</kw>
+<status status="PASS" starttime="20240423 16:13:03.429" endtime="20240423 16:13:03.432"/>
+</kw>
+<status status="PASS" starttime="20240423 16:13:03.427" endtime="20240423 16:13:03.432"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>10s</arg>
+<arg>2s</arg>
+<arg>File Should Not Exist</arg>
+<arg>path=${download_path}/test.docx</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="File Should Not Exist" library="OperatingSystem">
+<arg>path=${download_path}/test.docx</arg>
+<doc>Fails if the given path points to an existing file.</doc>
+<msg timestamp="20240423 16:13:03.435" level="INFO" html="true">File '&lt;a href="file://D:\CURRENT_SEMESTER\Auto Testing\lab08\downloads\test.docx"&gt;D:\CURRENT_SEMESTER\Auto Testing\lab08\downloads\test.docx&lt;/a&gt;' does not exist.</msg>
+<status status="PASS" starttime="20240423 16:13:03.434" endtime="20240423 16:13:03.435"/>
+</kw>
+<status status="PASS" starttime="20240423 16:13:03.433" endtime="20240423 16:13:03.435"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>//*[@id="post-1042"]/div/div[3]/div/div/div/div[3]/a</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20240423 16:13:03.462" level="INFO">Current page contains element '//*[@id="post-1042"]/div/div[3]/div/div/div/div[3]/a'.</msg>
+<status status="PASS" starttime="20240423 16:13:03.437" endtime="20240423 16:13:03.462"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="post-1042"]/div/div[3]/div/div/div/div[3]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240423 16:13:03.465" level="INFO">Clicking element '//*[@id="post-1042"]/div/div[3]/div/div/div/div[3]/a'.</msg>
+<status status="PASS" starttime="20240423 16:13:03.464" endtime="20240423 16:13:03.574"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>10s</arg>
+<arg>2s</arg>
+<arg>Page Should Contain Element</arg>
+<arg>//*[@id="wpdm-lock-frame"]</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>//*[@id="wpdm-lock-frame"]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20240423 16:13:03.597" level="INFO">Current page contains element '//*[@id="wpdm-lock-frame"]'.</msg>
+<status status="PASS" starttime="20240423 16:13:03.576" endtime="20240423 16:13:03.597"/>
+</kw>
+<status status="PASS" starttime="20240423 16:13:03.575" endtime="20240423 16:13:03.597"/>
+</kw>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>//*[@id="wpdm-lock-frame"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20240423 16:13:03.599" level="INFO">Selecting frame '//*[@id="wpdm-lock-frame"]'.</msg>
+<status status="PASS" starttime="20240423 16:13:03.598" endtime="20240423 16:13:03.910"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//input[@name="password"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240423 16:13:03.911" endtime="20240423 16:13:04.661"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@name="password"]</arg>
+<arg>${EMPTY}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240423 16:13:04.663" level="INFO">Typing text '' into text field '//input[@name="password"]'.</msg>
+<status status="PASS" starttime="20240423 16:13:04.662" endtime="20240423 16:13:04.794"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//input[@type="submit"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240423 16:13:04.795" endtime="20240423 16:13:04.821"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//input[@type="submit"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240423 16:13:04.822" level="INFO">Clicking element '//input[@type="submit"]'.</msg>
+<status status="PASS" starttime="20240423 16:13:04.822" endtime="20240423 16:13:04.913"/>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20240423 16:13:04.914" endtime="20240423 16:13:04.917"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240423 16:13:09.922" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20240423 16:13:04.918" endtime="20240423 16:13:09.922"/>
+</kw>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>//*[@id="wpdm-lock-frame"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20240423 16:13:09.925" level="INFO">Selecting frame '//*[@id="wpdm-lock-frame"]'.</msg>
+<status status="PASS" starttime="20240423 16:13:09.924" endtime="20240423 16:13:09.982"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Enter Correct Password to Download</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20240423 16:13:10.172" level="INFO">Current page contains text 'Enter Correct Password to Download'.</msg>
+<status status="PASS" starttime="20240423 16:13:09.983" endtime="20240423 16:13:10.172"/>
+</kw>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>//*[@id="wpdm-lock-frame"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20240423 16:13:10.175" level="INFO">Selecting frame '//*[@id="wpdm-lock-frame"]'.</msg>
+<status status="PASS" starttime="20240423 16:13:10.174" endtime="20240423 16:13:10.235"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>//*[@id="msg_921"]/div</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240423 16:13:10.280" level="INFO">Element '//*[@id="msg_921"]/div' is displayed.</msg>
+<status status="PASS" starttime="20240423 16:13:10.235" endtime="20240423 16:13:10.281"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${error_msg}</var>
+<arg>//*[@id="msg_921"]/div</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240423 16:13:10.334" level="INFO">${error_msg} = undefined</msg>
+<status status="PASS" starttime="20240423 16:13:10.282" endtime="20240423 16:13:10.334"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${error_msg}</arg>
+<arg>undefined</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20240423 16:13:10.335" endtime="20240423 16:13:10.336"/>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20240423 16:13:10.337" endtime="20240423 16:13:10.345"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>10s</arg>
+<arg>2s</arg>
+<arg>File Should Not Exist</arg>
+<arg>path=${download_path}/test.docx</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="File Should Not Exist" library="OperatingSystem">
+<arg>path=${download_path}/test.docx</arg>
+<doc>Fails if the given path points to an existing file.</doc>
+<msg timestamp="20240423 16:13:10.349" level="INFO" html="true">File '&lt;a href="file://D:\CURRENT_SEMESTER\Auto Testing\lab08\downloads\test.docx"&gt;D:\CURRENT_SEMESTER\Auto Testing\lab08\downloads\test.docx&lt;/a&gt;' does not exist.</msg>
+<status status="PASS" starttime="20240423 16:13:10.348" endtime="20240423 16:13:10.349"/>
+</kw>
+<status status="PASS" starttime="20240423 16:13:10.347" endtime="20240423 16:13:10.349"/>
+</kw>
+<status status="PASS" starttime="20240423 16:12:58.800" endtime="20240423 16:13:10.351"/>
+</test>
+<test id="s1-t8" name="TC8: File Download - Password protected SUCCESS with Correct password" line="214">
+<kw name="Join Path" library="OperatingSystem">
+<var>${download_path}</var>
+<arg>D:\\CURRENT_SEMESTER\\Auto Testing\\lab08\\tests/../downloads</arg>
+<doc>Joins the given path part(s) to the given base path.</doc>
+<msg timestamp="20240423 16:13:10.357" level="INFO">${download_path} = D:\CURRENT_SEMESTER\Auto Testing\lab08\downloads</msg>
+<status status="PASS" starttime="20240423 16:13:10.356" endtime="20240423 16:13:10.357"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${chrome_options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20240423 16:13:10.359" level="INFO">${chrome_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x04ED7748&gt;</msg>
+<status status="PASS" starttime="20240423 16:13:10.358" endtime="20240423 16:13:10.359"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${prefs}</var>
+<arg>download.default_directory=${download_path}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20240423 16:13:10.361" level="INFO">${prefs} = {'download.default_directory': 'D:\\CURRENT_SEMESTER\\Auto Testing\\lab08\\downloads'}</msg>
+<status status="PASS" starttime="20240423 16:13:10.360" endtime="20240423 16:13:10.361"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_experimental_option</arg>
+<arg>prefs</arg>
+<arg>${prefs}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20240423 16:13:10.362" endtime="20240423 16:13:10.363"/>
+</kw>
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>Chrome</arg>
+<arg>options=${chrome_options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20240423 16:13:10.365" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20240423 16:13:10.364" endtime="20240423 16:13:12.220"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${FILE_DOWNLOAD_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20240423 16:13:12.221" level="INFO">Opening url 'https://practice-automation.com/file-download/'</msg>
+<status status="PASS" starttime="20240423 16:13:12.221" endtime="20240423 16:13:15.011"/>
+</kw>
+<kw name="Delete File With Name">
+<arg>test.docx</arg>
+<kw name="Join Path" library="OperatingSystem">
+<var>${folder_path}</var>
+<arg>D:\\CURRENT_SEMESTER\\Auto Testing\\lab08\\tests/../downloads</arg>
+<doc>Joins the given path part(s) to the given base path.</doc>
+<msg timestamp="20240423 16:13:15.013" level="INFO">${folder_path} = D:\CURRENT_SEMESTER\Auto Testing\lab08\downloads</msg>
+<status status="PASS" starttime="20240423 16:13:15.012" endtime="20240423 16:13:15.013"/>
+</kw>
+<kw name="Join Path" library="OperatingSystem">
+<var>${file_path}</var>
+<arg>${folder_path}</arg>
+<arg>${file_name}</arg>
+<doc>Joins the given path part(s) to the given base path.</doc>
+<msg timestamp="20240423 16:13:15.013" level="INFO">${file_path} = D:\CURRENT_SEMESTER\Auto Testing\lab08\downloads\test.docx</msg>
+<status status="PASS" starttime="20240423 16:13:15.013" endtime="20240423 16:13:15.013"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<arg>Remove File</arg>
+<arg>${file_path}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<kw name="Remove File" library="OperatingSystem">
+<arg>${file_path}</arg>
+<doc>Removes a file with the given path.</doc>
+<msg timestamp="20240423 16:13:15.014" level="INFO" html="true">File '&lt;a href="file://D:\CURRENT_SEMESTER\Auto Testing\lab08\downloads\test.docx"&gt;D:\CURRENT_SEMESTER\Auto Testing\lab08\downloads\test.docx&lt;/a&gt;' does not exist.</msg>
+<status status="PASS" starttime="20240423 16:13:15.014" endtime="20240423 16:13:15.015"/>
+</kw>
+<status status="PASS" starttime="20240423 16:13:15.014" endtime="20240423 16:13:15.015"/>
+</kw>
+<status status="PASS" starttime="20240423 16:13:15.011" endtime="20240423 16:13:15.015"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>10s</arg>
+<arg>2s</arg>
+<arg>File Should Not Exist</arg>
+<arg>path=${download_path}/test.docx</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="File Should Not Exist" library="OperatingSystem">
+<arg>path=${download_path}/test.docx</arg>
+<doc>Fails if the given path points to an existing file.</doc>
+<msg timestamp="20240423 16:13:15.016" level="INFO" html="true">File '&lt;a href="file://D:\CURRENT_SEMESTER\Auto Testing\lab08\downloads\test.docx"&gt;D:\CURRENT_SEMESTER\Auto Testing\lab08\downloads\test.docx&lt;/a&gt;' does not exist.</msg>
+<status status="PASS" starttime="20240423 16:13:15.016" endtime="20240423 16:13:15.016"/>
+</kw>
+<status status="PASS" starttime="20240423 16:13:15.015" endtime="20240423 16:13:15.017"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>//*[@id="post-1042"]/div/div[3]/div/div/div/div[3]/a</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20240423 16:13:15.030" level="INFO">Current page contains element '//*[@id="post-1042"]/div/div[3]/div/div/div/div[3]/a'.</msg>
+<status status="PASS" starttime="20240423 16:13:15.017" endtime="20240423 16:13:15.030"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="post-1042"]/div/div[3]/div/div/div/div[3]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240423 16:13:15.032" level="INFO">Clicking element '//*[@id="post-1042"]/div/div[3]/div/div/div/div[3]/a'.</msg>
+<status status="PASS" starttime="20240423 16:13:15.031" endtime="20240423 16:13:15.105"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>10s</arg>
+<arg>2s</arg>
+<arg>Page Should Contain Element</arg>
+<arg>//*[@id="wpdm-lock-frame"]</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>//*[@id="wpdm-lock-frame"]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20240423 16:13:15.123" level="INFO">Current page contains element '//*[@id="wpdm-lock-frame"]'.</msg>
+<status status="PASS" starttime="20240423 16:13:15.106" endtime="20240423 16:13:15.123"/>
+</kw>
+<status status="PASS" starttime="20240423 16:13:15.106" endtime="20240423 16:13:15.123"/>
+</kw>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>//*[@id="wpdm-lock-frame"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20240423 16:13:15.124" level="INFO">Selecting frame '//*[@id="wpdm-lock-frame"]'.</msg>
+<status status="PASS" starttime="20240423 16:13:15.123" endtime="20240423 16:13:15.737"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//input[@name="password"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240423 16:13:15.738" endtime="20240423 16:13:16.019"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@name="password"]</arg>
+<arg>${right_password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240423 16:13:16.021" level="INFO">Typing text 'automateNow' into text field '//input[@name="password"]'.</msg>
+<status status="PASS" starttime="20240423 16:13:16.019" endtime="20240423 16:13:16.213"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//input[@type="submit"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240423 16:13:16.214" endtime="20240423 16:13:16.236"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//input[@type="submit"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240423 16:13:16.237" level="INFO">Clicking element '//input[@type="submit"]'.</msg>
+<status status="PASS" starttime="20240423 16:13:16.236" endtime="20240423 16:13:16.331"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240423 16:13:21.344" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20240423 16:13:16.332" endtime="20240423 16:13:21.344"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>10s</arg>
+<arg>2s</arg>
+<arg>File Should Exist</arg>
+<arg>path=D:\\CURRENT_SEMESTER\\Auto Testing\\lab08\\downloads\\test.docx</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="File Should Exist" library="OperatingSystem">
+<arg>path=D:\\CURRENT_SEMESTER\\Auto Testing\\lab08\\downloads\\test.docx</arg>
+<doc>Fails unless the given ``path`` points to an existing file.</doc>
+<msg timestamp="20240423 16:13:21.349" level="INFO" html="true">File '&lt;a href="file://D:\CURRENT_SEMESTER\Auto Testing\lab08\downloads\test.docx"&gt;D:\CURRENT_SEMESTER\Auto Testing\lab08\downloads\test.docx&lt;/a&gt;' exists.</msg>
+<status status="PASS" starttime="20240423 16:13:21.348" endtime="20240423 16:13:21.349"/>
+</kw>
+<status status="PASS" starttime="20240423 16:13:21.347" endtime="20240423 16:13:21.349"/>
+</kw>
+<status status="PASS" starttime="20240423 16:13:10.354" endtime="20240423 16:13:21.351"/>
+</test>
+<test id="s1-t9" name="TC9: File Download - Password protected: FAIL then SUCCESS" line="246">
+<kw name="Join Path" library="OperatingSystem">
+<var>${download_path}</var>
+<arg>D:\\CURRENT_SEMESTER\\Auto Testing\\lab08\\tests/../downloads</arg>
+<doc>Joins the given path part(s) to the given base path.</doc>
+<msg timestamp="20240423 16:13:21.357" level="INFO">${download_path} = D:\CURRENT_SEMESTER\Auto Testing\lab08\downloads</msg>
+<status status="PASS" starttime="20240423 16:13:21.356" endtime="20240423 16:13:21.357"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${chrome_options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20240423 16:13:21.360" level="INFO">${chrome_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x04ED7D30&gt;</msg>
+<status status="PASS" starttime="20240423 16:13:21.358" endtime="20240423 16:13:21.360"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${prefs}</var>
+<arg>download.default_directory=${download_path}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20240423 16:13:21.363" level="INFO">${prefs} = {'download.default_directory': 'D:\\CURRENT_SEMESTER\\Auto Testing\\lab08\\downloads'}</msg>
+<status status="PASS" starttime="20240423 16:13:21.361" endtime="20240423 16:13:21.364"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_experimental_option</arg>
+<arg>prefs</arg>
+<arg>${prefs}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20240423 16:13:21.365" endtime="20240423 16:13:21.366"/>
+</kw>
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>Chrome</arg>
+<arg>options=${chrome_options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20240423 16:13:21.369" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20240423 16:13:21.367" endtime="20240423 16:13:23.231"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${FILE_DOWNLOAD_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20240423 16:13:23.232" level="INFO">Opening url 'https://practice-automation.com/file-download/'</msg>
+<status status="PASS" starttime="20240423 16:13:23.232" endtime="20240423 16:13:26.045"/>
+</kw>
+<kw name="Delete File With Name">
+<arg>test.docx</arg>
+<kw name="Join Path" library="OperatingSystem">
+<var>${folder_path}</var>
+<arg>D:\\CURRENT_SEMESTER\\Auto Testing\\lab08\\tests/../downloads</arg>
+<doc>Joins the given path part(s) to the given base path.</doc>
+<msg timestamp="20240423 16:13:26.049" level="INFO">${folder_path} = D:\CURRENT_SEMESTER\Auto Testing\lab08\downloads</msg>
+<status status="PASS" starttime="20240423 16:13:26.048" endtime="20240423 16:13:26.049"/>
+</kw>
+<kw name="Join Path" library="OperatingSystem">
+<var>${file_path}</var>
+<arg>${folder_path}</arg>
+<arg>${file_name}</arg>
+<doc>Joins the given path part(s) to the given base path.</doc>
+<msg timestamp="20240423 16:13:26.050" level="INFO">${file_path} = D:\CURRENT_SEMESTER\Auto Testing\lab08\downloads\test.docx</msg>
+<status status="PASS" starttime="20240423 16:13:26.049" endtime="20240423 16:13:26.050"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<arg>Remove File</arg>
+<arg>${file_path}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<kw name="Remove File" library="OperatingSystem">
+<arg>${file_path}</arg>
+<doc>Removes a file with the given path.</doc>
+<msg timestamp="20240423 16:13:26.051" level="INFO" html="true">Removed file '&lt;a href="file://D:\CURRENT_SEMESTER\Auto Testing\lab08\downloads\test.docx"&gt;D:\CURRENT_SEMESTER\Auto Testing\lab08\downloads\test.docx&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20240423 16:13:26.050" endtime="20240423 16:13:26.051"/>
+</kw>
+<status status="PASS" starttime="20240423 16:13:26.050" endtime="20240423 16:13:26.051"/>
+</kw>
+<status status="PASS" starttime="20240423 16:13:26.046" endtime="20240423 16:13:26.052"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>10s</arg>
+<arg>2s</arg>
+<arg>File Should Not Exist</arg>
+<arg>path=${download_path}/test.docx</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="File Should Not Exist" library="OperatingSystem">
+<arg>path=${download_path}/test.docx</arg>
+<doc>Fails if the given path points to an existing file.</doc>
+<msg timestamp="20240423 16:13:26.054" level="INFO" html="true">File '&lt;a href="file://D:\CURRENT_SEMESTER\Auto Testing\lab08\downloads\test.docx"&gt;D:\CURRENT_SEMESTER\Auto Testing\lab08\downloads\test.docx&lt;/a&gt;' does not exist.</msg>
+<status status="PASS" starttime="20240423 16:13:26.053" endtime="20240423 16:13:26.054"/>
+</kw>
+<status status="PASS" starttime="20240423 16:13:26.053" endtime="20240423 16:13:26.054"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>//*[@id="post-1042"]/div/div[3]/div/div/div/div[3]/a</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20240423 16:13:26.069" level="INFO">Current page contains element '//*[@id="post-1042"]/div/div[3]/div/div/div/div[3]/a'.</msg>
+<status status="PASS" starttime="20240423 16:13:26.055" endtime="20240423 16:13:26.070"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="post-1042"]/div/div[3]/div/div/div/div[3]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240423 16:13:26.072" level="INFO">Clicking element '//*[@id="post-1042"]/div/div[3]/div/div/div/div[3]/a'.</msg>
+<status status="PASS" starttime="20240423 16:13:26.071" endtime="20240423 16:13:26.180"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>10s</arg>
+<arg>2s</arg>
+<arg>Page Should Contain Element</arg>
+<arg>//*[@id="wpdm-lock-frame"]</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>//*[@id="wpdm-lock-frame"]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20240423 16:13:26.198" level="INFO">Current page contains element '//*[@id="wpdm-lock-frame"]'.</msg>
+<status status="PASS" starttime="20240423 16:13:26.181" endtime="20240423 16:13:26.198"/>
+</kw>
+<status status="PASS" starttime="20240423 16:13:26.181" endtime="20240423 16:13:26.198"/>
+</kw>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>//*[@id="wpdm-lock-frame"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20240423 16:13:26.199" level="INFO">Selecting frame '//*[@id="wpdm-lock-frame"]'.</msg>
+<status status="PASS" starttime="20240423 16:13:26.199" endtime="20240423 16:13:26.579"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//input[@name="password"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240423 16:13:26.580" endtime="20240423 16:13:27.106"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@name="password"]</arg>
+<arg>${wrong_password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240423 16:13:27.108" level="INFO">Typing text 'auce' into text field '//input[@name="password"]'.</msg>
+<status status="PASS" starttime="20240423 16:13:27.107" endtime="20240423 16:13:27.278"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//input[@type="submit"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240423 16:13:27.279" endtime="20240423 16:13:27.318"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//input[@type="submit"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240423 16:13:27.319" level="INFO">Clicking element '//input[@type="submit"]'.</msg>
+<status status="PASS" starttime="20240423 16:13:27.318" endtime="20240423 16:13:27.471"/>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20240423 16:13:27.472" endtime="20240423 16:13:27.476"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240423 16:13:32.493" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20240423 16:13:27.478" endtime="20240423 16:13:32.493"/>
+</kw>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>//*[@id="wpdm-lock-frame"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20240423 16:13:32.498" level="INFO">Selecting frame '//*[@id="wpdm-lock-frame"]'.</msg>
+<status status="PASS" starttime="20240423 16:13:32.496" endtime="20240423 16:13:32.598"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Enter Correct Password to Download</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20240423 16:13:32.819" level="INFO">Current page contains text 'Enter Correct Password to Download'.</msg>
+<status status="PASS" starttime="20240423 16:13:32.599" endtime="20240423 16:13:32.819"/>
+</kw>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>//*[@id="wpdm-lock-frame"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20240423 16:13:32.823" level="INFO">Selecting frame '//*[@id="wpdm-lock-frame"]'.</msg>
+<status status="PASS" starttime="20240423 16:13:32.821" endtime="20240423 16:13:32.885"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${TRY_AGAIN_BTN}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240423 16:13:32.926" level="INFO">Element '//*[@id="msg_921"]/div' is displayed.</msg>
+<status status="PASS" starttime="20240423 16:13:32.886" endtime="20240423 16:13:32.926"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${error_msg}</var>
+<arg>${TRY_AGAIN_BTN}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240423 16:13:33.002" level="INFO">${error_msg} = Wrong Password!   Try Again</msg>
+<status status="PASS" starttime="20240423 16:13:32.928" endtime="20240423 16:13:33.002"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${error_msg}</arg>
+<arg>Wrong Password!</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20240423 16:13:33.004" endtime="20240423 16:13:33.005"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${error_msg}</arg>
+<arg>Try Again</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20240423 16:13:33.006" endtime="20240423 16:13:33.007"/>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20240423 16:13:33.009" endtime="20240423 16:13:33.019"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>10s</arg>
+<arg>2s</arg>
+<arg>File Should Not Exist</arg>
+<arg>path=${download_path}/test.docx</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="File Should Not Exist" library="OperatingSystem">
+<arg>path=${download_path}/test.docx</arg>
+<doc>Fails if the given path points to an existing file.</doc>
+<msg timestamp="20240423 16:13:33.024" level="INFO" html="true">File '&lt;a href="file://D:\CURRENT_SEMESTER\Auto Testing\lab08\downloads\test.docx"&gt;D:\CURRENT_SEMESTER\Auto Testing\lab08\downloads\test.docx&lt;/a&gt;' does not exist.</msg>
+<status status="PASS" starttime="20240423 16:13:33.022" endtime="20240423 16:13:33.024"/>
+</kw>
+<status status="PASS" starttime="20240423 16:13:33.021" endtime="20240423 16:13:33.025"/>
+</kw>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>//*[@id="wpdm-lock-frame"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20240423 16:13:33.029" level="INFO">Selecting frame '//*[@id="wpdm-lock-frame"]'.</msg>
+<status status="PASS" starttime="20240423 16:13:33.026" endtime="20240423 16:13:33.121"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${TRY_AGAIN_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240423 16:13:33.124" level="INFO">Clicking element '//*[@id="msg_921"]/div'.</msg>
+<status status="PASS" starttime="20240423 16:13:33.122" endtime="20240423 16:13:33.379"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//input[@name="password"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240423 16:13:33.381" endtime="20240423 16:13:33.419"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@name="password"]</arg>
+<arg>${right_password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240423 16:13:33.422" level="INFO">Typing text 'automateNow' into text field '//input[@name="password"]'.</msg>
+<status status="PASS" starttime="20240423 16:13:33.421" endtime="20240423 16:13:33.722"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//input[@type="submit"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240423 16:13:33.722" endtime="20240423 16:13:33.747"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//input[@type="submit"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240423 16:13:33.749" level="INFO">Clicking element '//input[@type="submit"]'.</msg>
+<status status="PASS" starttime="20240423 16:13:33.748" endtime="20240423 16:13:33.844"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240423 16:13:38.853" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20240423 16:13:33.844" endtime="20240423 16:13:38.854"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>10s</arg>
+<arg>2s</arg>
+<arg>File Should Exist</arg>
+<arg>path=${download_path}/test.docx</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="File Should Exist" library="OperatingSystem">
+<arg>path=${download_path}/test.docx</arg>
+<doc>Fails unless the given ``path`` points to an existing file.</doc>
+<msg timestamp="20240423 16:13:38.856" level="INFO" html="true">File '&lt;a href="file://D:\CURRENT_SEMESTER\Auto Testing\lab08\downloads\test.docx"&gt;D:\CURRENT_SEMESTER\Auto Testing\lab08\downloads\test.docx&lt;/a&gt;' exists.</msg>
+<status status="PASS" starttime="20240423 16:13:38.855" endtime="20240423 16:13:38.857"/>
+</kw>
+<status status="PASS" starttime="20240423 16:13:38.855" endtime="20240423 16:13:38.857"/>
+</kw>
+<status status="PASS" starttime="20240423 16:13:21.354" endtime="20240423 16:13:38.858"/>
+</test>
+<kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20240423 16:13:38.864" endtime="20240423 16:14:35.988"/>
+</kw>
+<doc>Lab 08 - Ex1</doc>
+<status status="PASS" starttime="20240423 16:12:03.746" endtime="20240423 16:14:35.988"/>
+</suite>
+<statistics>
+<total>
+<stat pass="9" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="9" fail="0" skip="0" id="s1" name="Ex2">Ex2</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

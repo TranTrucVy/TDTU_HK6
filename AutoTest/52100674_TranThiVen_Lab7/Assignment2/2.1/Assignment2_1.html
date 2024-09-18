@@ -1,0 +1,1202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.10.9 on win32)" generated="2024-04-17T23:45:35.142298" rpa="false" schemaversion="5">
+<suite id="s1" name="Assignment2 1" source="D:\HK6\AutoTest\52100674_TranThiVen_Lab7\Assignment2\2.1\Assignment2_1.robot">
+<test id="s1-t1" name="TC1: Verify popup - Check alert popup" line="27">
+<kw name="Open The Browser">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:45:35.290063" level="INFO">Opening browser 'Chrome' to base url 'https://practice-automation.com/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-04-17T23:45:35.290063" elapsed="4.705871"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:45:40.005132" level="INFO">Current location is 'https://practice-automation.com/'.</msg>
+<arg>${URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-04-17T23:45:39.995934" elapsed="0.009198"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-04-17T23:45:40.005132" elapsed="0.131478"/>
+</kw>
+<status status="PASS" start="2024-04-17T23:45:35.281861" elapsed="4.854749"/>
+</kw>
+<kw name="Enter page">
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:45:40.166309" level="INFO">${btn} = &lt;selenium.webdriver.remote.webelement.WebElement (session="238cc2f3683dfeb7cbb4d32370d51842", element="f.426D3DA42227789EF266FA664F3FCF59.d.4EC2293567FA7EF2E98DC1A8C21DCA33.e.46")&gt;</msg>
+<var>${btn}</var>
+<arg>xpath=${xpath}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:45:40.136610" elapsed="0.029699"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:45:40.166309" level="INFO">Current page contains element '&lt;selenium.webdriver.remote.webelement.WebElement (session="238cc2f3683dfeb7cbb4d32370d51842", element="f.426D3DA42227789EF266FA664F3FCF59.d.4EC2293567FA7EF2E98DC1A8C21DCA33.e.46")&gt;'.</msg>
+<arg>${btn}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-04-17T23:45:40.166309" elapsed="0.000000"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${btn}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-04-17T23:45:40.166309" elapsed="0.301638"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:45:40.467947" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="238cc2f3683dfeb7cbb4d32370d51842", element="f.426D3DA42227789EF266FA664F3FCF59.d.4EC2293567FA7EF2E98DC1A8C21DCA33.e.46")&gt;'.</msg>
+<arg>${btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:45:40.467947" elapsed="0.569994"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:45:41.044724" level="INFO">Current location is 'https://practice-automation.com/popups/'.</msg>
+<arg>url=${url}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-04-17T23:45:41.037941" elapsed="0.006783"/>
+</kw>
+<arg>10s</arg>
+<arg>2s</arg>
+<arg>Location Should Be</arg>
+<arg>url=${url}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-04-17T23:45:41.037941" elapsed="0.006783"/>
+</kw>
+<arg>${POPUP_BTN}</arg>
+<arg>${POPUP_URL}</arg>
+<status status="PASS" start="2024-04-17T23:45:40.136610" elapsed="0.908114"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:45:41.065687" level="INFO">Current page contains element '//*[@id="alert"]'.</msg>
+<arg>${ALERT_BTN}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-04-17T23:45:41.050735" elapsed="0.014952"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:45:41.066785" level="INFO">Clicking button '//*[@id="alert"]'.</msg>
+<arg>${ALERT_BTN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:45:41.066785" elapsed="0.155416"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Alert Should Be Present" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:45:41.229215" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<arg>Hi there, pal!</arg>
+<arg>accept</arg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<status status="PASS" start="2024-04-17T23:45:41.229215" elapsed="0.004096"/>
+</kw>
+<arg>10s</arg>
+<arg>2s</arg>
+<arg>Alert Should Be Present</arg>
+<arg>Hi there, pal!</arg>
+<arg>accept</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-04-17T23:45:41.229215" elapsed="0.004096"/>
+</kw>
+<kw name="Alert Should Not Be Present" owner="SeleniumLibrary">
+<doc>Verifies that no alert is present.</doc>
+<status status="PASS" start="2024-04-17T23:45:41.235740" elapsed="5.078646"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-04-17T23:45:46.317073" elapsed="2.139908"/>
+</kw>
+<status status="PASS" start="2024-04-17T23:45:35.281861" elapsed="13.175770"/>
+</test>
+<test id="s1-t2" name="TC2: Verify popup - Check confirm OK" line="38">
+<kw name="Open The Browser">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:45:48.457631" level="INFO">Opening browser 'Chrome' to base url 'https://practice-automation.com/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-04-17T23:45:48.457631" elapsed="3.270625"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:45:53.202241" level="INFO">Current location is 'https://practice-automation.com/'.</msg>
+<arg>${URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-04-17T23:45:51.728256" elapsed="1.473985"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-04-17T23:45:53.202241" elapsed="0.123066"/>
+</kw>
+<status status="PASS" start="2024-04-17T23:45:48.457631" elapsed="4.867676"/>
+</kw>
+<kw name="Enter page">
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:45:53.357957" level="INFO">${btn} = &lt;selenium.webdriver.remote.webelement.WebElement (session="5aa588977e8f06f4e2451a8fb91ebfb8", element="f.E5F0E2DEFE6B862FE4D4D9AC6CAFD725.d.6D551F222B67D2D4E2769ACE03B130AC.e.46")&gt;</msg>
+<var>${btn}</var>
+<arg>xpath=${xpath}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:45:53.332831" elapsed="0.025126"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:45:53.365478" level="INFO">Current page contains element '&lt;selenium.webdriver.remote.webelement.WebElement (session="5aa588977e8f06f4e2451a8fb91ebfb8", element="f.E5F0E2DEFE6B862FE4D4D9AC6CAFD725.d.6D551F222B67D2D4E2769ACE03B130AC.e.46")&gt;'.</msg>
+<arg>${btn}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-04-17T23:45:53.357957" elapsed="0.007521"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${btn}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-04-17T23:45:53.365478" elapsed="0.313459"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:45:53.682025" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="5aa588977e8f06f4e2451a8fb91ebfb8", element="f.E5F0E2DEFE6B862FE4D4D9AC6CAFD725.d.6D551F222B67D2D4E2769ACE03B130AC.e.46")&gt;'.</msg>
+<arg>${btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:45:53.682025" elapsed="0.553727"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:45:54.245678" level="INFO">Current location is 'https://practice-automation.com/popups/'.</msg>
+<arg>url=${url}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-04-17T23:45:54.236408" elapsed="0.009270"/>
+</kw>
+<arg>10s</arg>
+<arg>2s</arg>
+<arg>Location Should Be</arg>
+<arg>url=${url}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-04-17T23:45:54.235752" elapsed="0.009926"/>
+</kw>
+<arg>${POPUP_BTN}</arg>
+<arg>${POPUP_URL}</arg>
+<status status="PASS" start="2024-04-17T23:45:53.332831" elapsed="0.912847"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:45:54.260105" level="INFO">Current page contains element '//*[@id="confirm"]'.</msg>
+<arg>${CONFIRM_BTN}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-04-17T23:45:54.248012" elapsed="0.012093"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:45:54.260105" level="INFO">Clicking button '//*[@id="confirm"]'.</msg>
+<arg>${CONFIRM_BTN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:45:54.260105" elapsed="0.096277"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Alert Should Be Present" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:45:54.365346" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<arg>OK or Cancel, which will it be?</arg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<status status="PASS" start="2024-04-17T23:45:54.365346" elapsed="0.002061"/>
+</kw>
+<arg>10s</arg>
+<arg>2s</arg>
+<arg>Alert Should Be Present</arg>
+<arg>OK or Cancel, which will it be?</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-04-17T23:45:54.364751" elapsed="0.002656"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:45:54.399337" level="INFO">${text} = OK it is!</msg>
+<var>${text}</var>
+<arg>${CONFIRM_TEXT}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:45:54.367407" elapsed="0.031930"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${text}</arg>
+<arg>OK it is!</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-04-17T23:45:54.399337" elapsed="0.000000"/>
+</kw>
+<kw name="Alert Should Not Be Present" owner="SeleniumLibrary">
+<doc>Verifies that no alert is present.</doc>
+<status status="PASS" start="2024-04-17T23:45:54.399337" elapsed="5.081550"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-04-17T23:45:59.482501" elapsed="2.132871"/>
+</kw>
+<status status="PASS" start="2024-04-17T23:45:48.457631" elapsed="13.159583"/>
+</test>
+<test id="s1-t3" name="TC3: Verify popup - Check confirm Cancel" line="51">
+<kw name="Open The Browser">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:46:01.617214" level="INFO">Opening browser 'Chrome' to base url 'https://practice-automation.com/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-04-17T23:46:01.617214" elapsed="4.915196"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:46:06.540435" level="INFO">Current location is 'https://practice-automation.com/'.</msg>
+<arg>${URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-04-17T23:46:06.532410" elapsed="0.008025"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-04-17T23:46:06.540435" elapsed="0.139070"/>
+</kw>
+<status status="PASS" start="2024-04-17T23:46:01.617214" elapsed="5.062291"/>
+</kw>
+<kw name="Enter page">
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:46:06.705520" level="INFO">${btn} = &lt;selenium.webdriver.remote.webelement.WebElement (session="a22b57088ff7bfbafef2fcfd6305dd0e", element="f.52FB8EE06131B3726D2A05755881D8F9.d.987100E50B6E0B556BD7D684565BBDF4.e.45")&gt;</msg>
+<var>${btn}</var>
+<arg>xpath=${xpath}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:46:06.679505" elapsed="0.026015"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:46:06.705520" level="INFO">Current page contains element '&lt;selenium.webdriver.remote.webelement.WebElement (session="a22b57088ff7bfbafef2fcfd6305dd0e", element="f.52FB8EE06131B3726D2A05755881D8F9.d.987100E50B6E0B556BD7D684565BBDF4.e.45")&gt;'.</msg>
+<arg>${btn}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-04-17T23:46:06.705520" elapsed="0.000000"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${btn}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-04-17T23:46:06.705520" elapsed="0.313312"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:46:07.024938" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="a22b57088ff7bfbafef2fcfd6305dd0e", element="f.52FB8EE06131B3726D2A05755881D8F9.d.987100E50B6E0B556BD7D684565BBDF4.e.45")&gt;'.</msg>
+<arg>${btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:46:07.018832" elapsed="0.621683"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:46:07.656912" level="INFO">Current location is 'https://practice-automation.com/popups/'.</msg>
+<arg>url=${url}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-04-17T23:46:07.640515" elapsed="0.016397"/>
+</kw>
+<arg>10s</arg>
+<arg>2s</arg>
+<arg>Location Should Be</arg>
+<arg>url=${url}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-04-17T23:46:07.640515" elapsed="0.016397"/>
+</kw>
+<arg>${POPUP_BTN}</arg>
+<arg>${POPUP_URL}</arg>
+<status status="PASS" start="2024-04-17T23:46:06.679505" elapsed="0.977407"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:46:07.673262" level="INFO">Current page contains element '//*[@id="confirm"]'.</msg>
+<arg>${CONFIRM_BTN}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-04-17T23:46:07.656912" elapsed="0.016350"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:46:07.673262" level="INFO">Clicking button '//*[@id="confirm"]'.</msg>
+<arg>${CONFIRM_BTN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:46:07.673262" elapsed="0.130736"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Alert Should Be Present" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:46:07.803998" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<arg>OK or Cancel, which will it be?</arg>
+<arg>DISMISS</arg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<status status="PASS" start="2024-04-17T23:46:07.803998" elapsed="0.000000"/>
+</kw>
+<arg>10s</arg>
+<arg>2s</arg>
+<arg>Alert Should Be Present</arg>
+<arg>OK or Cancel, which will it be?</arg>
+<arg>DISMISS</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-04-17T23:46:07.803998" elapsed="0.008014"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:46:07.844486" level="INFO">${text} = Cancel it is!</msg>
+<var>${text}</var>
+<arg>${CONFIRM_TEXT}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:46:07.812012" elapsed="0.032474"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${text}</arg>
+<arg>Cancel it is!</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-04-17T23:46:07.844486" elapsed="0.000000"/>
+</kw>
+<kw name="Alert Should Not Be Present" owner="SeleniumLibrary">
+<doc>Verifies that no alert is present.</doc>
+<status status="PASS" start="2024-04-17T23:46:07.847574" elapsed="5.092334"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-04-17T23:46:12.939908" elapsed="2.125407"/>
+</kw>
+<status status="PASS" start="2024-04-17T23:46:01.617214" elapsed="13.448101"/>
+</test>
+<test id="s1-t4" name="TC4: Verify popup - Check confirm OK &amp; Cancel" line="64">
+<kw name="Open The Browser">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:46:15.065315" level="INFO">Opening browser 'Chrome' to base url 'https://practice-automation.com/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-04-17T23:46:15.065315" elapsed="4.346225"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:46:19.419536" level="INFO">Current location is 'https://practice-automation.com/'.</msg>
+<arg>${URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-04-17T23:46:19.411540" elapsed="0.007996"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-04-17T23:46:19.419536" elapsed="0.131474"/>
+</kw>
+<status status="PASS" start="2024-04-17T23:46:15.065315" elapsed="4.485695"/>
+</kw>
+<kw name="Enter page">
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:46:19.584380" level="INFO">${btn} = &lt;selenium.webdriver.remote.webelement.WebElement (session="97c1fd1069b4b9087bbcbe47e119566f", element="f.8628494564E14472A9D6E2342AA3B7EE.d.9863FE86BF1DC14F55043A9B9B081F20.e.48")&gt;</msg>
+<var>${btn}</var>
+<arg>xpath=${xpath}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:46:19.559155" elapsed="0.025225"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:46:19.584380" level="INFO">Current page contains element '&lt;selenium.webdriver.remote.webelement.WebElement (session="97c1fd1069b4b9087bbcbe47e119566f", element="f.8628494564E14472A9D6E2342AA3B7EE.d.9863FE86BF1DC14F55043A9B9B081F20.e.48")&gt;'.</msg>
+<arg>${btn}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-04-17T23:46:19.584380" elapsed="0.000000"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${btn}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-04-17T23:46:19.584380" elapsed="0.302387"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:46:19.886767" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="97c1fd1069b4b9087bbcbe47e119566f", element="f.8628494564E14472A9D6E2342AA3B7EE.d.9863FE86BF1DC14F55043A9B9B081F20.e.48")&gt;'.</msg>
+<arg>${btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:46:19.886767" elapsed="0.590013"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:46:20.481363" level="INFO">Current location is 'https://practice-automation.com/popups/'.</msg>
+<arg>url=${url}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-04-17T23:46:20.476780" elapsed="0.004583"/>
+</kw>
+<arg>10s</arg>
+<arg>2s</arg>
+<arg>Location Should Be</arg>
+<arg>url=${url}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-04-17T23:46:20.476780" elapsed="0.004583"/>
+</kw>
+<arg>${POPUP_BTN}</arg>
+<arg>${POPUP_URL}</arg>
+<status status="PASS" start="2024-04-17T23:46:19.559155" elapsed="0.929718"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:46:20.505114" level="INFO">Current page contains element '//*[@id="confirm"]'.</msg>
+<arg>${CONFIRM_BTN}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-04-17T23:46:20.488873" elapsed="0.016241"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:46:20.505114" level="INFO">Clicking button '//*[@id="confirm"]'.</msg>
+<arg>${CONFIRM_BTN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:46:20.505114" elapsed="0.176232"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Alert Should Be Present" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:46:20.681346" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<arg>OK or Cancel, which will it be?</arg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<status status="PASS" start="2024-04-17T23:46:20.681346" elapsed="0.006343"/>
+</kw>
+<arg>10s</arg>
+<arg>2s</arg>
+<arg>Alert Should Be Present</arg>
+<arg>OK or Cancel, which will it be?</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-04-17T23:46:20.681346" elapsed="0.006343"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:46:20.709807" level="INFO">${text} = OK it is!</msg>
+<var>${text}</var>
+<arg>${CONFIRM_TEXT}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:46:20.688702" elapsed="0.021105"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${text}</arg>
+<arg>OK it is!</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-04-17T23:46:20.717804" elapsed="0.000000"/>
+</kw>
+<kw name="Alert Should Not Be Present" owner="SeleniumLibrary">
+<doc>Verifies that no alert is present.</doc>
+<status status="PASS" start="2024-04-17T23:46:20.717804" elapsed="5.045446"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:46:25.781429" level="INFO">Current page contains element '//*[@id="confirm"]'.</msg>
+<arg>${CONFIRM_BTN}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-04-17T23:46:25.763250" elapsed="0.018179"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:46:25.781429" level="INFO">Clicking button '//*[@id="confirm"]'.</msg>
+<arg>${CONFIRM_BTN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:46:25.781429" elapsed="0.091399"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Alert Should Be Present" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:46:25.876962" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<arg>OK or Cancel, which will it be?</arg>
+<arg>DISMISS</arg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<status status="PASS" start="2024-04-17T23:46:25.876962" elapsed="0.008337"/>
+</kw>
+<arg>10s</arg>
+<arg>2s</arg>
+<arg>Alert Should Be Present</arg>
+<arg>OK or Cancel, which will it be?</arg>
+<arg>DISMISS</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-04-17T23:46:25.872828" elapsed="0.013481"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:46:25.914429" level="INFO">${text} = Cancel it is!</msg>
+<var>${text}</var>
+<arg>${CONFIRM_TEXT}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:46:25.886309" elapsed="0.028120"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${text}</arg>
+<arg>Cancel it is!</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-04-17T23:46:25.914429" elapsed="0.000000"/>
+</kw>
+<kw name="Alert Should Not Be Present" owner="SeleniumLibrary">
+<doc>Verifies that no alert is present.</doc>
+<status status="PASS" start="2024-04-17T23:46:25.914429" elapsed="5.107556"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-04-17T23:46:31.023858" elapsed="2.141031"/>
+</kw>
+<status status="PASS" start="2024-04-17T23:46:15.065315" elapsed="18.101827"/>
+</test>
+<test id="s1-t5" name="TC5: Verify popup - Check prompt with input text &amp; OK" line="85">
+<kw name="Open The Browser">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:46:33.167142" level="INFO">Opening browser 'Chrome' to base url 'https://practice-automation.com/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-04-17T23:46:33.167142" elapsed="4.610841"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:46:37.785980" level="INFO">Current location is 'https://practice-automation.com/'.</msg>
+<arg>${URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-04-17T23:46:37.777983" elapsed="0.007997"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-04-17T23:46:37.785980" elapsed="0.131156"/>
+</kw>
+<status status="PASS" start="2024-04-17T23:46:33.167142" elapsed="4.749994"/>
+</kw>
+<kw name="Enter page">
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:46:37.949370" level="INFO">${btn} = &lt;selenium.webdriver.remote.webelement.WebElement (session="19681f9948578860783a80de119b2175", element="f.BC6833B17FE3B86FDDA84D3D714A18E9.d.1AC3D05F6628AE03080DBA27AE8EB2C7.e.47")&gt;</msg>
+<var>${btn}</var>
+<arg>xpath=${xpath}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:46:37.925111" elapsed="0.024259"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:46:37.949370" level="INFO">Current page contains element '&lt;selenium.webdriver.remote.webelement.WebElement (session="19681f9948578860783a80de119b2175", element="f.BC6833B17FE3B86FDDA84D3D714A18E9.d.1AC3D05F6628AE03080DBA27AE8EB2C7.e.47")&gt;'.</msg>
+<arg>${btn}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-04-17T23:46:37.949370" elapsed="0.000000"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${btn}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-04-17T23:46:37.949370" elapsed="0.315537"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:46:38.264907" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="19681f9948578860783a80de119b2175", element="f.BC6833B17FE3B86FDDA84D3D714A18E9.d.1AC3D05F6628AE03080DBA27AE8EB2C7.e.47")&gt;'.</msg>
+<arg>${btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:46:38.264907" elapsed="0.577392"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:46:38.852484" level="INFO">Current location is 'https://practice-automation.com/popups/'.</msg>
+<arg>url=${url}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-04-17T23:46:38.842299" elapsed="0.010185"/>
+</kw>
+<arg>10s</arg>
+<arg>2s</arg>
+<arg>Location Should Be</arg>
+<arg>url=${url}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-04-17T23:46:38.842299" elapsed="0.010185"/>
+</kw>
+<arg>${POPUP_BTN}</arg>
+<arg>${POPUP_URL}</arg>
+<status status="PASS" start="2024-04-17T23:46:37.925111" elapsed="0.927373"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:46:38.868595" level="INFO">Current page contains element '//*[@id="prompt"]'.</msg>
+<arg>${PROMPT_BTN}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-04-17T23:46:38.852484" elapsed="0.016111"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:46:38.868595" level="INFO">Clicking button '//*[@id="prompt"]'.</msg>
+<arg>${PROMPT_BTN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:46:38.868595" elapsed="0.105228"/>
+</kw>
+<kw name="Input Text Into Alert" owner="SeleniumLibrary">
+<arg>abc</arg>
+<arg>accept</arg>
+<doc>Types the given ``text`` into an input field in an alert.</doc>
+<status status="PASS" start="2024-04-17T23:46:38.973823" elapsed="0.010306"/>
+</kw>
+<kw name="Alert Should Not Be Present" owner="SeleniumLibrary">
+<doc>Verifies that no alert is present.</doc>
+<status status="PASS" start="2024-04-17T23:46:38.985164" elapsed="5.082347"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:46:44.098670" level="INFO">${text} = Nice to meet you, abc!</msg>
+<var>${text}</var>
+<arg>${PROMPT_TEXT}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:46:44.067511" elapsed="0.031159"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${text}</arg>
+<arg>Nice to meet you, abc!</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-04-17T23:46:44.098670" elapsed="0.001512"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-04-17T23:46:44.100182" elapsed="2.109864"/>
+</kw>
+<status status="PASS" start="2024-04-17T23:46:33.167142" elapsed="13.042904"/>
+</test>
+<test id="s1-t6" name="TC6: Verify popup - Check prompt with no input &amp; OK" line="98">
+<kw name="Open The Browser">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:46:46.213175" level="INFO">Opening browser 'Chrome' to base url 'https://practice-automation.com/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-04-17T23:46:46.213175" elapsed="4.827792"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:46:51.049371" level="INFO">Current location is 'https://practice-automation.com/'.</msg>
+<arg>${URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-04-17T23:46:51.040967" elapsed="0.008404"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-04-17T23:46:51.049371" elapsed="0.123600"/>
+</kw>
+<status status="PASS" start="2024-04-17T23:46:46.213175" elapsed="4.967825"/>
+</kw>
+<kw name="Enter page">
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:46:51.205489" level="INFO">${btn} = &lt;selenium.webdriver.remote.webelement.WebElement (session="2e5e787f01f9337fa5f8c0c000400e14", element="f.B9B35FFF66D48267B98848AD61366A56.d.FB965811BE2AF6F975DA1A167C35930E.e.48")&gt;</msg>
+<var>${btn}</var>
+<arg>xpath=${xpath}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:46:51.181000" elapsed="0.024489"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:46:51.205489" level="INFO">Current page contains element '&lt;selenium.webdriver.remote.webelement.WebElement (session="2e5e787f01f9337fa5f8c0c000400e14", element="f.B9B35FFF66D48267B98848AD61366A56.d.FB965811BE2AF6F975DA1A167C35930E.e.48")&gt;'.</msg>
+<arg>${btn}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-04-17T23:46:51.205489" elapsed="0.000000"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${btn}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-04-17T23:46:51.205489" elapsed="0.316798"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:46:51.522287" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="2e5e787f01f9337fa5f8c0c000400e14", element="f.B9B35FFF66D48267B98848AD61366A56.d.FB965811BE2AF6F975DA1A167C35930E.e.48")&gt;'.</msg>
+<arg>${btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:46:51.522287" elapsed="0.608040"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:46:52.138969" level="INFO">Current location is 'https://practice-automation.com/popups/'.</msg>
+<arg>url=${url}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-04-17T23:46:52.130327" elapsed="0.008642"/>
+</kw>
+<arg>10s</arg>
+<arg>2s</arg>
+<arg>Location Should Be</arg>
+<arg>url=${url}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-04-17T23:46:52.130327" elapsed="0.008642"/>
+</kw>
+<arg>${POPUP_BTN}</arg>
+<arg>${POPUP_URL}</arg>
+<status status="PASS" start="2024-04-17T23:46:51.181000" elapsed="0.957969"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:46:52.154598" level="INFO">Current page contains element '//*[@id="prompt"]'.</msg>
+<arg>${PROMPT_BTN}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-04-17T23:46:52.138969" elapsed="0.015629"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:46:52.162617" level="INFO">Clicking button '//*[@id="prompt"]'.</msg>
+<arg>${PROMPT_BTN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:46:52.162617" elapsed="0.137502"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Input Text Into Alert" owner="SeleniumLibrary">
+<arg>${EMPTY}</arg>
+<arg>accept</arg>
+<doc>Types the given ``text`` into an input field in an alert.</doc>
+<status status="PASS" start="2024-04-17T23:46:52.301934" elapsed="0.006333"/>
+</kw>
+<arg>10s</arg>
+<arg>2s</arg>
+<arg>Input Text Into Alert</arg>
+<arg>${EMPTY}</arg>
+<arg>accept</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-04-17T23:46:52.300119" elapsed="0.008148"/>
+</kw>
+<kw name="Alert Should Not Be Present" owner="SeleniumLibrary">
+<doc>Verifies that no alert is present.</doc>
+<status status="PASS" start="2024-04-17T23:46:52.308267" elapsed="5.123879"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:46:57.472559" level="INFO">${text} = Fine, be that way...</msg>
+<var>${text}</var>
+<arg>${PROMPT_TEXT}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:46:57.432653" elapsed="0.039906"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${text}</arg>
+<arg>Fine, be that way...</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-04-17T23:46:57.472559" elapsed="0.000000"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-04-17T23:46:57.472559" elapsed="2.121642"/>
+</kw>
+<status status="PASS" start="2024-04-17T23:46:46.210046" elapsed="13.386168"/>
+</test>
+<test id="s1-t7" name="TC7: Verify popup - Check prompt with input text &amp; Cancel" line="111">
+<kw name="Open The Browser">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:46:59.596214" level="INFO">Opening browser 'Chrome' to base url 'https://practice-automation.com/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-04-17T23:46:59.596214" elapsed="4.569232"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:47:04.173438" level="INFO">Current location is 'https://practice-automation.com/'.</msg>
+<arg>${URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-04-17T23:47:04.165446" elapsed="0.007992"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-04-17T23:47:04.173438" elapsed="0.137056"/>
+</kw>
+<status status="PASS" start="2024-04-17T23:46:59.596214" elapsed="4.714280"/>
+</kw>
+<kw name="Enter page">
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:47:04.342832" level="INFO">${btn} = &lt;selenium.webdriver.remote.webelement.WebElement (session="ff50f594efe70911f53323e4b3e51d1d", element="f.0FE5DD18483F3A56CC649166CA61CE28.d.3CBC37A8266C2C9BFC3041AD0871AC2A.e.46")&gt;</msg>
+<var>${btn}</var>
+<arg>xpath=${xpath}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:47:04.318496" elapsed="0.024336"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:47:04.342832" level="INFO">Current page contains element '&lt;selenium.webdriver.remote.webelement.WebElement (session="ff50f594efe70911f53323e4b3e51d1d", element="f.0FE5DD18483F3A56CC649166CA61CE28.d.3CBC37A8266C2C9BFC3041AD0871AC2A.e.46")&gt;'.</msg>
+<arg>${btn}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-04-17T23:47:04.342832" elapsed="0.000000"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${btn}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-04-17T23:47:04.342832" elapsed="0.338026"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:47:04.680858" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="ff50f594efe70911f53323e4b3e51d1d", element="f.0FE5DD18483F3A56CC649166CA61CE28.d.3CBC37A8266C2C9BFC3041AD0871AC2A.e.46")&gt;'.</msg>
+<arg>${btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:47:04.680858" elapsed="1.269156"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:47:05.966005" level="INFO">Current location is 'https://practice-automation.com/popups/'.</msg>
+<arg>url=${url}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-04-17T23:47:05.950014" elapsed="0.015991"/>
+</kw>
+<arg>10s</arg>
+<arg>2s</arg>
+<arg>Location Should Be</arg>
+<arg>url=${url}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-04-17T23:47:05.950014" elapsed="0.015991"/>
+</kw>
+<arg>${POPUP_BTN}</arg>
+<arg>${POPUP_URL}</arg>
+<status status="PASS" start="2024-04-17T23:47:04.318496" elapsed="1.647509"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:47:05.982059" level="INFO">Current page contains element '//*[@id="prompt"]'.</msg>
+<arg>${PROMPT_BTN}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-04-17T23:47:05.966005" elapsed="0.016054"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:47:05.982059" level="INFO">Clicking button '//*[@id="prompt"]'.</msg>
+<arg>${PROMPT_BTN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:47:05.982059" elapsed="0.152530"/>
+</kw>
+<kw name="Input Text Into Alert" owner="SeleniumLibrary">
+<arg>abc</arg>
+<arg>dismiss</arg>
+<doc>Types the given ``text`` into an input field in an alert.</doc>
+<status status="PASS" start="2024-04-17T23:47:06.134589" elapsed="0.007905"/>
+</kw>
+<kw name="Alert Should Not Be Present" owner="SeleniumLibrary">
+<doc>Verifies that no alert is present.</doc>
+<status status="PASS" start="2024-04-17T23:47:06.142494" elapsed="5.110691"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:47:11.295752" level="INFO">${text} = Fine, be that way...</msg>
+<var>${text}</var>
+<arg>${PROMPT_TEXT}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:47:11.253185" elapsed="0.050173"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${text}</arg>
+<arg>Fine, be that way...</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-04-17T23:47:11.303358" elapsed="0.000000"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-04-17T23:47:11.303358" elapsed="2.118026"/>
+</kw>
+<status status="PASS" start="2024-04-17T23:46:59.596214" elapsed="13.826725"/>
+</test>
+<test id="s1-t8" name="TC8: Verify popup - Check prompt with no input &amp; Cancel" line="124">
+<kw name="Open The Browser">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:47:13.429976" level="INFO">Opening browser 'Chrome' to base url 'https://practice-automation.com/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-04-17T23:47:13.429158" elapsed="4.906519"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:47:18.351692" level="INFO">Current location is 'https://practice-automation.com/'.</msg>
+<arg>${URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-04-17T23:47:18.335677" elapsed="0.016015"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-04-17T23:47:18.351692" elapsed="0.134936"/>
+</kw>
+<status status="PASS" start="2024-04-17T23:47:13.425645" elapsed="5.060983"/>
+</kw>
+<kw name="Enter page">
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:47:18.515929" level="INFO">${btn} = &lt;selenium.webdriver.remote.webelement.WebElement (session="61b1d07011e9848d2940204298891f19", element="f.E4E9DC1215DCBB6E8D9BD14C1F026016.d.9D97ECB2FDD653C9CC11A3C9B011D374.e.46")&gt;</msg>
+<var>${btn}</var>
+<arg>xpath=${xpath}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:47:18.491648" elapsed="0.024281"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:47:18.524032" level="INFO">Current page contains element '&lt;selenium.webdriver.remote.webelement.WebElement (session="61b1d07011e9848d2940204298891f19", element="f.E4E9DC1215DCBB6E8D9BD14C1F026016.d.9D97ECB2FDD653C9CC11A3C9B011D374.e.46")&gt;'.</msg>
+<arg>${btn}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-04-17T23:47:18.515929" elapsed="0.008348"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${btn}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-04-17T23:47:18.524607" elapsed="0.296637"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:47:18.821244" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="61b1d07011e9848d2940204298891f19", element="f.E4E9DC1215DCBB6E8D9BD14C1F026016.d.9D97ECB2FDD653C9CC11A3C9B011D374.e.46")&gt;'.</msg>
+<arg>${btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:47:18.821244" elapsed="0.597545"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:47:19.434870" level="INFO">Current location is 'https://practice-automation.com/popups/'.</msg>
+<arg>url=${url}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-04-17T23:47:19.418789" elapsed="0.016081"/>
+</kw>
+<arg>10s</arg>
+<arg>2s</arg>
+<arg>Location Should Be</arg>
+<arg>url=${url}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-04-17T23:47:19.418789" elapsed="0.016081"/>
+</kw>
+<arg>${POPUP_BTN}</arg>
+<arg>${POPUP_URL}</arg>
+<status status="PASS" start="2024-04-17T23:47:18.491648" elapsed="0.943222"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:47:19.451037" level="INFO">Current page contains element '//*[@id="prompt"]'.</msg>
+<arg>${PROMPT_BTN}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-04-17T23:47:19.434870" elapsed="0.016167"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:47:19.451037" level="INFO">Clicking button '//*[@id="prompt"]'.</msg>
+<arg>${PROMPT_BTN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:47:19.451037" elapsed="0.122608"/>
+</kw>
+<kw name="Input Text Into Alert" owner="SeleniumLibrary">
+<arg>${EMPTY}</arg>
+<arg>dismiss</arg>
+<doc>Types the given ``text`` into an input field in an alert.</doc>
+<status status="PASS" start="2024-04-17T23:47:19.573645" elapsed="0.008326"/>
+</kw>
+<kw name="Alert Should Not Be Present" owner="SeleniumLibrary">
+<doc>Verifies that no alert is present.</doc>
+<status status="PASS" start="2024-04-17T23:47:19.581971" elapsed="5.108898"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:47:24.732059" level="INFO">${text} = Fine, be that way...</msg>
+<var>${text}</var>
+<arg>${PROMPT_TEXT}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:47:24.692116" elapsed="0.039943"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${text}</arg>
+<arg>Fine, be that way...</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-04-17T23:47:24.732059" elapsed="0.008343"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-04-17T23:47:24.741170" elapsed="2.120356"/>
+</kw>
+<status status="PASS" start="2024-04-17T23:47:13.422939" elapsed="13.439113"/>
+</test>
+<test id="s1-t9" name="TC9: Verify popup - Check tooltip show" line="137">
+<kw name="Open The Browser">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:47:26.864885" level="INFO">Opening browser 'Chrome' to base url 'https://practice-automation.com/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-04-17T23:47:26.864885" elapsed="4.830260"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:47:31.705763" level="INFO">Current location is 'https://practice-automation.com/'.</msg>
+<arg>${URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-04-17T23:47:31.695145" elapsed="0.010618"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-04-17T23:47:31.705763" elapsed="0.130089"/>
+</kw>
+<status status="PASS" start="2024-04-17T23:47:26.864885" elapsed="4.970967"/>
+</kw>
+<kw name="Enter page">
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:47:31.860035" level="INFO">${btn} = &lt;selenium.webdriver.remote.webelement.WebElement (session="df1334578b15e7bab849170fc4aa4f75", element="f.3038532814C7E9C5B5A464B627F4A23E.d.64D161A06950B1FF363115A2A68D80CB.e.41")&gt;</msg>
+<var>${btn}</var>
+<arg>xpath=${xpath}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:47:31.835852" elapsed="0.024183"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:47:31.860035" level="INFO">Current page contains element '&lt;selenium.webdriver.remote.webelement.WebElement (session="df1334578b15e7bab849170fc4aa4f75", element="f.3038532814C7E9C5B5A464B627F4A23E.d.64D161A06950B1FF363115A2A68D80CB.e.41")&gt;'.</msg>
+<arg>${btn}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-04-17T23:47:31.860035" elapsed="0.000000"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${btn}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-04-17T23:47:31.860035" elapsed="0.301466"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:47:32.161501" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="df1334578b15e7bab849170fc4aa4f75", element="f.3038532814C7E9C5B5A464B627F4A23E.d.64D161A06950B1FF363115A2A68D80CB.e.41")&gt;'.</msg>
+<arg>${btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:47:32.161501" elapsed="0.548197"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:47:32.724737" level="INFO">Current location is 'https://practice-automation.com/popups/'.</msg>
+<arg>url=${url}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-04-17T23:47:32.709698" elapsed="0.015039"/>
+</kw>
+<arg>10s</arg>
+<arg>2s</arg>
+<arg>Location Should Be</arg>
+<arg>url=${url}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-04-17T23:47:32.709698" elapsed="0.015039"/>
+</kw>
+<arg>${POPUP_BTN}</arg>
+<arg>${POPUP_URL}</arg>
+<status status="PASS" start="2024-04-17T23:47:31.835852" elapsed="0.888885"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:47:32.765167" level="INFO">Current page contains element '//*[@id="post-1055"]/div/div[5]'.</msg>
+<arg>${TOOLTIP_BTN}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-04-17T23:47:32.724737" elapsed="0.040430"/>
+</kw>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:47:32.797049" level="INFO">${class} = tooltip_text</msg>
+<var>${class}</var>
+<arg>${TOOLTIP_TEXT}</arg>
+<arg>class</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:47:32.765167" elapsed="0.031882"/>
+</kw>
+<kw name="Should Not Contain" owner="BuiltIn">
+<arg>${class}</arg>
+<arg>show</arg>
+<doc>Fails if ``container`` contains ``item`` one or more times.</doc>
+<status status="PASS" start="2024-04-17T23:47:32.797049" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:47:32.797049" level="INFO">Clicking element '//*[@id="post-1055"]/div/div[5]'.</msg>
+<arg>${TOOLTIP_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:47:32.797049" elapsed="0.073129"/>
+</kw>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:47:32.886620" level="INFO">${class} = tooltip_text show</msg>
+<var>${class}</var>
+<arg>${TOOLTIP_TEXT}</arg>
+<arg>class</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:47:32.872673" elapsed="0.013947"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${class}</arg>
+<arg>show</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2024-04-17T23:47:32.886620" elapsed="0.008075"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:47:32.918750" level="INFO">${text} = Cool text</msg>
+<var>${text}</var>
+<arg>${TOOLTIP_TEXT}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:47:32.894695" elapsed="0.024055"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${text}</arg>
+<arg>Cool text</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-04-17T23:47:32.918750" elapsed="0.008101"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-04-17T23:47:32.926851" elapsed="2.093138"/>
+</kw>
+<status status="PASS" start="2024-04-17T23:47:26.864885" elapsed="8.155104"/>
+</test>
+<test id="s1-t10" name="TC10: Verify popup - Check tooltip hide" line="154">
+<kw name="Open The Browser">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:47:35.019989" level="INFO">Opening browser 'Chrome' to base url 'https://practice-automation.com/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-04-17T23:47:35.019989" elapsed="3.294231"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:47:39.431139" level="INFO">Current location is 'https://practice-automation.com/'.</msg>
+<arg>${URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-04-17T23:47:38.314220" elapsed="1.116919"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-04-17T23:47:39.431139" elapsed="0.129627"/>
+</kw>
+<status status="PASS" start="2024-04-17T23:47:35.019989" elapsed="4.540777"/>
+</kw>
+<kw name="Enter page">
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:47:39.589095" level="INFO">${btn} = &lt;selenium.webdriver.remote.webelement.WebElement (session="6a18c1a55ecc0ceccb69934e4206316a", element="f.FEA4A4B9B1727069C77DCEF4D3D264B0.d.FA1CC8B5DACAEC6B03D03FA121B53B56.e.46")&gt;</msg>
+<var>${btn}</var>
+<arg>xpath=${xpath}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:47:39.563985" elapsed="0.025110"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:47:39.593400" level="INFO">Current page contains element '&lt;selenium.webdriver.remote.webelement.WebElement (session="6a18c1a55ecc0ceccb69934e4206316a", element="f.FEA4A4B9B1727069C77DCEF4D3D264B0.d.FA1CC8B5DACAEC6B03D03FA121B53B56.e.46")&gt;'.</msg>
+<arg>${btn}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-04-17T23:47:39.589095" elapsed="0.004305"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${btn}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-04-17T23:47:39.593400" elapsed="0.290524"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:47:39.883924" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="6a18c1a55ecc0ceccb69934e4206316a", element="f.FEA4A4B9B1727069C77DCEF4D3D264B0.d.FA1CC8B5DACAEC6B03D03FA121B53B56.e.46")&gt;'.</msg>
+<arg>${btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:47:39.883924" elapsed="0.573172"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:47:40.466269" level="INFO">Current location is 'https://practice-automation.com/popups/'.</msg>
+<arg>url=${url}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-04-17T23:47:40.457096" elapsed="0.009173"/>
+</kw>
+<arg>10s</arg>
+<arg>2s</arg>
+<arg>Location Should Be</arg>
+<arg>url=${url}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-04-17T23:47:40.457096" elapsed="0.009173"/>
+</kw>
+<arg>${POPUP_BTN}</arg>
+<arg>${POPUP_URL}</arg>
+<status status="PASS" start="2024-04-17T23:47:39.562965" elapsed="0.903304"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:47:40.480246" level="INFO">Current page contains element '//*[@id="post-1055"]/div/div[5]'.</msg>
+<arg>${TOOLTIP_BTN}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-04-17T23:47:40.471776" elapsed="0.008470"/>
+</kw>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:47:40.513071" level="INFO">${class} = tooltip_text</msg>
+<var>${class}</var>
+<arg>${TOOLTIP_TEXT}</arg>
+<arg>class</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:47:40.480246" elapsed="0.032825"/>
+</kw>
+<kw name="Should Not Contain" owner="BuiltIn">
+<arg>${class}</arg>
+<arg>show</arg>
+<doc>Fails if ``container`` contains ``item`` one or more times.</doc>
+<status status="PASS" start="2024-04-17T23:47:40.520377" elapsed="0.000357"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:47:40.524964" level="INFO">Clicking element '//*[@id="post-1055"]/div/div[5]'.</msg>
+<arg>${TOOLTIP_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:47:40.524357" elapsed="0.046427"/>
+</kw>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:47:40.587369" level="INFO">${class} = tooltip_text show</msg>
+<var>${class}</var>
+<arg>${TOOLTIP_TEXT}</arg>
+<arg>class</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:47:40.570784" elapsed="0.016585"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${class}</arg>
+<arg>show</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2024-04-17T23:47:40.587369" elapsed="0.001051"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:47:40.603706" level="INFO">${text} = Cool text</msg>
+<var>${text}</var>
+<arg>${TOOLTIP_TEXT}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:47:40.588420" elapsed="0.015286"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${text}</arg>
+<arg>Cool text</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-04-17T23:47:40.609514" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:47:40.609514" level="INFO">Clicking element '//*[@id="post-1055"]/div/div[5]'.</msg>
+<arg>${TOOLTIP_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:47:40.609514" elapsed="0.036311"/>
+</kw>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:47:40.661715" level="INFO">${class} = tooltip_text</msg>
+<var>${class}</var>
+<arg>${TOOLTIP_TEXT}</arg>
+<arg>class</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:47:40.645825" elapsed="0.015890"/>
+</kw>
+<kw name="Should Not Contain" owner="BuiltIn">
+<arg>${class}</arg>
+<arg>show</arg>
+<doc>Fails if ``container`` contains ``item`` one or more times.</doc>
+<status status="PASS" start="2024-04-17T23:47:40.661715" elapsed="0.000000"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-04-17T23:47:40.661715" elapsed="2.096732"/>
+</kw>
+<status status="PASS" start="2024-04-17T23:47:35.019989" elapsed="7.740493"/>
+</test>
+<doc>Lab 07 - Assignment2_1</doc>
+<status status="PASS" start="2024-04-17T23:45:35.142298" elapsed="127.618184"/>
+</suite>
+<statistics>
+<total>
+<stat pass="10" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="10" fail="0" skip="0" id="s1" name="Assignment2 1">Assignment2 1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

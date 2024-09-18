@@ -1,0 +1,710 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.10.9 on win32)" generated="2024-05-25T10:20:21.266859" rpa="false" schemaversion="5">
+<suite id="s1" name="Test Paymentasregist" source="d:\HK6\AutoTest\52100843_52100916_52100674_Final\source\tests\payment\test_paymentasregist.robot">
+<test id="s1-t1" name="Payment regist and submit zipcode than 10 characters" line="22">
+<kw name="Opening my browser" owner="common" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-05-25T10:20:21.498306" level="INFO">Opening browser 'Chrome' to base url 'https://automationteststore.com/'.</msg>
+<arg>${URL_HOME}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-05-25T10:20:21.498306" elapsed="9.551231"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-25T10:20:31.059618" level="INFO">Current location is 'https://automationteststore.com/'.</msg>
+<arg>${URL_HOME}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-05-25T10:20:31.050568" elapsed="0.009050"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-05-25T10:20:31.059618" elapsed="0.032413"/>
+</kw>
+<status status="PASS" start="2024-05-25T10:20:21.498306" elapsed="9.594727"/>
+</kw>
+<kw name="Payment regist and submit zipcode than 10 characters" owner="paymentasregist">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-25T10:20:31.135234" level="INFO">${quantity} = 0</msg>
+<var>${quantity}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[1]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-25T10:20:31.095033" elapsed="0.041792"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-25T10:20:31.178222" level="INFO">${price} = $0.00</msg>
+<var>${price}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[2]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-25T10:20:31.138342" elapsed="0.040902"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-25T10:20:31.180305" level="INFO">${price} = 0.00</msg>
+<var>${price}</var>
+<arg>${price}[1:]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-25T10:20:31.179244" elapsed="0.001061"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-25T10:20:31.181351" level="INFO">Clicking element 'xpath=//*[@id="block_frame_featured_1769"]/div/div[1]/div[2]/div[3]/a/i'.</msg>
+<arg>xpath=//*[@id="block_frame_featured_1769"]/div/div[1]/div[2]/div[3]/a/i</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-25T10:20:31.180305" elapsed="0.380604"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-25T10:20:31.583879" level="INFO">${update_quantity} = 1</msg>
+<var>${update_quantity}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[1]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-25T10:20:31.563535" elapsed="0.020344"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-25T10:20:31.602135" level="INFO">${update_price} = $29.50</msg>
+<var>${update_price}</var>
+<arg>xpath=/html/body/div/header/div[2]/div/div[3]/ul/li/a/span[2]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-25T10:20:31.583879" elapsed="0.018256"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-25T10:20:31.603162" level="INFO">${update_price} = 29.50</msg>
+<var>${update_price}</var>
+<arg>${update_price}[1:]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-25T10:20:31.602135" elapsed="0.001027"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-25T10:20:31.603162" level="INFO">${distance_quantity} = 1</msg>
+<var>${distance_quantity}</var>
+<arg>int(${update_quantity}) - int(${quantity})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-25T10:20:31.603162" elapsed="0.000000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-25T10:20:31.604707" level="INFO">${distance_price} = 29.5</msg>
+<var>${distance_price}</var>
+<arg>float(${update_price}) - float(${price})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-25T10:20:31.604154" elapsed="0.000553"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-25T10:20:31.625867" level="INFO">${item_price} = $29.50</msg>
+<var>${item_price}</var>
+<arg>xpath=//*[@id="block_frame_featured_1769"]/div/div[1]/div[2]/div[3]/div[2]/div</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-25T10:20:31.606032" elapsed="0.019835"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-25T10:20:31.627174" level="INFO">${item_price} = 29.50</msg>
+<var>${item_price}</var>
+<arg>${item_price}[1:]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-25T10:20:31.626958" elapsed="0.000216"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-25T10:20:31.628184" level="INFO">${item_price} = 29.5</msg>
+<var>${item_price}</var>
+<arg>float(${item_price})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-25T10:20:31.627174" elapsed="0.001010"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<msg time="2024-05-25T10:20:31.630208" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${distance_quantity}</arg>
+<arg>1</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-05-25T10:20:31.629204" elapsed="0.001004"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<arg>${distance_price}</arg>
+<arg>${item_price}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-05-25T10:20:31.631224" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-25T10:20:31.632225" level="INFO">Clicking element '//*[@id="main_menu_top"]/li[4]'.</msg>
+<arg>${checkouthome_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-25T10:20:31.631224" elapsed="1.385690"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-05-25T10:20:33.031605" level="INFO">Current page contains element '//*[@id="maincontainer"]/div'.</msg>
+<arg>${payment_content}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-05-25T10:20:33.016914" elapsed="0.015659"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-25T10:20:33.032573" level="INFO">Clicking element 'xpath=/html/body/div[1]/div[2]/div/div/div/div/div[1]/div/form/fieldset/div[1]/label'.</msg>
+<arg>${regist_select}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-25T10:20:33.032573" elapsed="0.042220"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-25T10:20:33.074793" level="INFO">Clicking element '//*[@id="accountFrm"]/fieldset/button'.</msg>
+<arg>${continue_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-25T10:20:33.074793" elapsed="1.209593"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-25T10:20:34.284386" level="INFO">Clicking element '//*[@id="AccountFrm"]/div[5]/div/div/button'.</msg>
+<arg>//*[@id="AccountFrm"]/div[5]/div/div/button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-25T10:20:34.284386" elapsed="0.785062"/>
+</kw>
+<kw name="Generate Long Enquiry" owner="paymentasregist">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-25T10:20:35.069448" level="INFO">${enquiry} = </msg>
+<var>${enquiry}</var>
+<arg>${EMPTY}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-25T10:20:35.069448" elapsed="0.009014"/>
+</kw>
+<for flavor="IN RANGE">
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-25T10:20:35.078462" level="INFO">${enquiry} = 0</msg>
+<var>${enquiry}</var>
+<arg>${enquiry}${i}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-25T10:20:35.078462" elapsed="0.000000"/>
+</kw>
+<var name="${i}">0</var>
+<status status="PASS" start="2024-05-25T10:20:35.078462" elapsed="0.000000"/>
+</iter>
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-25T10:20:35.078462" level="INFO">${enquiry} = 01</msg>
+<var>${enquiry}</var>
+<arg>${enquiry}${i}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-25T10:20:35.078462" elapsed="0.000000"/>
+</kw>
+<var name="${i}">1</var>
+<status status="PASS" start="2024-05-25T10:20:35.078462" elapsed="0.000000"/>
+</iter>
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-25T10:20:35.078462" level="INFO">${enquiry} = 012</msg>
+<var>${enquiry}</var>
+<arg>${enquiry}${i}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-25T10:20:35.078462" elapsed="0.000000"/>
+</kw>
+<var name="${i}">2</var>
+<status status="PASS" start="2024-05-25T10:20:35.078462" elapsed="0.000000"/>
+</iter>
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-25T10:20:35.078462" level="INFO">${enquiry} = 0123</msg>
+<var>${enquiry}</var>
+<arg>${enquiry}${i}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-25T10:20:35.078462" elapsed="0.000000"/>
+</kw>
+<var name="${i}">3</var>
+<status status="PASS" start="2024-05-25T10:20:35.078462" elapsed="0.000000"/>
+</iter>
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-25T10:20:35.078462" level="INFO">${enquiry} = 01234</msg>
+<var>${enquiry}</var>
+<arg>${enquiry}${i}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-25T10:20:35.078462" elapsed="0.000000"/>
+</kw>
+<var name="${i}">4</var>
+<status status="PASS" start="2024-05-25T10:20:35.078462" elapsed="0.000000"/>
+</iter>
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-25T10:20:35.078462" level="INFO">${enquiry} = 012345</msg>
+<var>${enquiry}</var>
+<arg>${enquiry}${i}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-25T10:20:35.078462" elapsed="0.000000"/>
+</kw>
+<var name="${i}">5</var>
+<status status="PASS" start="2024-05-25T10:20:35.078462" elapsed="0.000000"/>
+</iter>
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-25T10:20:35.078462" level="INFO">${enquiry} = 0123456</msg>
+<var>${enquiry}</var>
+<arg>${enquiry}${i}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-25T10:20:35.078462" elapsed="0.000000"/>
+</kw>
+<var name="${i}">6</var>
+<status status="PASS" start="2024-05-25T10:20:35.078462" elapsed="0.000000"/>
+</iter>
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-25T10:20:35.083559" level="INFO">${enquiry} = 01234567</msg>
+<var>${enquiry}</var>
+<arg>${enquiry}${i}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-25T10:20:35.083559" elapsed="0.000000"/>
+</kw>
+<var name="${i}">7</var>
+<status status="PASS" start="2024-05-25T10:20:35.078462" elapsed="0.005097"/>
+</iter>
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-25T10:20:35.083559" level="INFO">${enquiry} = 012345678</msg>
+<var>${enquiry}</var>
+<arg>${enquiry}${i}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-25T10:20:35.083559" elapsed="0.000000"/>
+</kw>
+<var name="${i}">8</var>
+<status status="PASS" start="2024-05-25T10:20:35.083559" elapsed="0.000000"/>
+</iter>
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-25T10:20:35.083559" level="INFO">${enquiry} = 0123456789</msg>
+<var>${enquiry}</var>
+<arg>${enquiry}${i}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-25T10:20:35.083559" elapsed="0.000000"/>
+</kw>
+<var name="${i}">9</var>
+<status status="PASS" start="2024-05-25T10:20:35.083559" elapsed="0.000000"/>
+</iter>
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-25T10:20:35.085188" level="INFO">${enquiry} = 012345678910</msg>
+<var>${enquiry}</var>
+<arg>${enquiry}${i}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-25T10:20:35.085188" elapsed="0.000000"/>
+</kw>
+<var name="${i}">10</var>
+<status status="PASS" start="2024-05-25T10:20:35.085188" elapsed="0.000000"/>
+</iter>
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-25T10:20:35.085188" level="INFO">${enquiry} = 01234567891011</msg>
+<var>${enquiry}</var>
+<arg>${enquiry}${i}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-25T10:20:35.085188" elapsed="0.000000"/>
+</kw>
+<var name="${i}">11</var>
+<status status="PASS" start="2024-05-25T10:20:35.085188" elapsed="0.000000"/>
+</iter>
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-25T10:20:35.091551" level="INFO">${enquiry} = 0123456789101112</msg>
+<var>${enquiry}</var>
+<arg>${enquiry}${i}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-25T10:20:35.088643" elapsed="0.002908"/>
+</kw>
+<var name="${i}">12</var>
+<status status="PASS" start="2024-05-25T10:20:35.085188" elapsed="0.007386"/>
+</iter>
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-25T10:20:35.094372" level="INFO">${enquiry} = 012345678910111213</msg>
+<var>${enquiry}</var>
+<arg>${enquiry}${i}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-25T10:20:35.093568" elapsed="0.000804"/>
+</kw>
+<var name="${i}">13</var>
+<status status="PASS" start="2024-05-25T10:20:35.092574" elapsed="0.002382"/>
+</iter>
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-25T10:20:35.095667" level="INFO">${enquiry} = 01234567891011121314</msg>
+<var>${enquiry}</var>
+<arg>${enquiry}${i}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-25T10:20:35.095667" elapsed="0.002688"/>
+</kw>
+<var name="${i}">14</var>
+<status status="PASS" start="2024-05-25T10:20:35.095667" elapsed="0.002688"/>
+</iter>
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-25T10:20:35.098355" level="INFO">${enquiry} = 0123456789101112131415</msg>
+<var>${enquiry}</var>
+<arg>${enquiry}${i}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-25T10:20:35.098355" elapsed="0.000000"/>
+</kw>
+<var name="${i}">15</var>
+<status status="PASS" start="2024-05-25T10:20:35.098355" elapsed="0.000000"/>
+</iter>
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-25T10:20:35.098355" level="INFO">${enquiry} = 012345678910111213141516</msg>
+<var>${enquiry}</var>
+<arg>${enquiry}${i}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-25T10:20:35.098355" elapsed="0.000000"/>
+</kw>
+<var name="${i}">16</var>
+<status status="PASS" start="2024-05-25T10:20:35.098355" elapsed="0.000000"/>
+</iter>
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-25T10:20:35.098355" level="INFO">${enquiry} = 01234567891011121314151617</msg>
+<var>${enquiry}</var>
+<arg>${enquiry}${i}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-25T10:20:35.098355" elapsed="0.000000"/>
+</kw>
+<var name="${i}">17</var>
+<status status="PASS" start="2024-05-25T10:20:35.098355" elapsed="0.000000"/>
+</iter>
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-25T10:20:35.098355" level="INFO">${enquiry} = 0123456789101112131415161718</msg>
+<var>${enquiry}</var>
+<arg>${enquiry}${i}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-25T10:20:35.098355" elapsed="0.000000"/>
+</kw>
+<var name="${i}">18</var>
+<status status="PASS" start="2024-05-25T10:20:35.098355" elapsed="0.000000"/>
+</iter>
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-25T10:20:35.098355" level="INFO">${enquiry} = 012345678910111213141516171819</msg>
+<var>${enquiry}</var>
+<arg>${enquiry}${i}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-25T10:20:35.098355" elapsed="0.000000"/>
+</kw>
+<var name="${i}">19</var>
+<status status="PASS" start="2024-05-25T10:20:35.098355" elapsed="0.000000"/>
+</iter>
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-25T10:20:35.104835" level="INFO">${enquiry} = 01234567891011121314151617181920</msg>
+<var>${enquiry}</var>
+<arg>${enquiry}${i}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-25T10:20:35.098355" elapsed="0.006480"/>
+</kw>
+<var name="${i}">20</var>
+<status status="PASS" start="2024-05-25T10:20:35.098355" elapsed="0.007483"/>
+</iter>
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-25T10:20:35.106960" level="INFO">${enquiry} = 0123456789101112131415161718192021</msg>
+<var>${enquiry}</var>
+<arg>${enquiry}${i}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-25T10:20:35.105838" elapsed="0.001122"/>
+</kw>
+<var name="${i}">21</var>
+<status status="PASS" start="2024-05-25T10:20:35.105838" elapsed="0.001122"/>
+</iter>
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-25T10:20:35.106960" level="INFO">${enquiry} = 012345678910111213141516171819202122</msg>
+<var>${enquiry}</var>
+<arg>${enquiry}${i}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-25T10:20:35.106960" elapsed="0.001626"/>
+</kw>
+<var name="${i}">22</var>
+<status status="PASS" start="2024-05-25T10:20:35.106960" elapsed="0.001626"/>
+</iter>
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-25T10:20:35.108775" level="INFO">${enquiry} = 01234567891011121314151617181920212223</msg>
+<var>${enquiry}</var>
+<arg>${enquiry}${i}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-25T10:20:35.108775" elapsed="0.000000"/>
+</kw>
+<var name="${i}">23</var>
+<status status="PASS" start="2024-05-25T10:20:35.108775" elapsed="0.000000"/>
+</iter>
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-25T10:20:35.109695" level="INFO">${enquiry} = 0123456789101112131415161718192021222324</msg>
+<var>${enquiry}</var>
+<arg>${enquiry}${i}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-25T10:20:35.109695" elapsed="0.000000"/>
+</kw>
+<var name="${i}">24</var>
+<status status="PASS" start="2024-05-25T10:20:35.109695" elapsed="0.000000"/>
+</iter>
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-25T10:20:35.110644" level="INFO">${enquiry} = 012345678910111213141516171819202122232425</msg>
+<var>${enquiry}</var>
+<arg>${enquiry}${i}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-25T10:20:35.109695" elapsed="0.000949"/>
+</kw>
+<var name="${i}">25</var>
+<status status="PASS" start="2024-05-25T10:20:35.109695" elapsed="0.000949"/>
+</iter>
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-25T10:20:35.110644" level="INFO">${enquiry} = 01234567891011121314151617181920212223242526</msg>
+<var>${enquiry}</var>
+<arg>${enquiry}${i}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-25T10:20:35.110644" elapsed="0.000000"/>
+</kw>
+<var name="${i}">26</var>
+<status status="PASS" start="2024-05-25T10:20:35.110644" elapsed="0.000000"/>
+</iter>
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-25T10:20:35.111693" level="INFO">${enquiry} = 0123456789101112131415161718192021222324252627</msg>
+<var>${enquiry}</var>
+<arg>${enquiry}${i}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-25T10:20:35.111693" elapsed="0.000000"/>
+</kw>
+<var name="${i}">27</var>
+<status status="PASS" start="2024-05-25T10:20:35.110644" elapsed="0.001049"/>
+</iter>
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-25T10:20:35.111693" level="INFO">${enquiry} = 012345678910111213141516171819202122232425262728</msg>
+<var>${enquiry}</var>
+<arg>${enquiry}${i}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-25T10:20:35.111693" elapsed="0.000000"/>
+</kw>
+<var name="${i}">28</var>
+<status status="PASS" start="2024-05-25T10:20:35.111693" elapsed="0.000000"/>
+</iter>
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-25T10:20:35.112692" level="INFO">${enquiry} = 01234567891011121314151617181920212223242526272829</msg>
+<var>${enquiry}</var>
+<arg>${enquiry}${i}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-25T10:20:35.112692" elapsed="0.000000"/>
+</kw>
+<var name="${i}">29</var>
+<status status="PASS" start="2024-05-25T10:20:35.112692" elapsed="0.000000"/>
+</iter>
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-25T10:20:35.113684" level="INFO">${enquiry} = 0123456789101112131415161718192021222324252627282930</msg>
+<var>${enquiry}</var>
+<arg>${enquiry}${i}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-25T10:20:35.112692" elapsed="0.000992"/>
+</kw>
+<var name="${i}">30</var>
+<status status="PASS" start="2024-05-25T10:20:35.112692" elapsed="0.000992"/>
+</iter>
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-25T10:20:35.113684" level="INFO">${enquiry} = 012345678910111213141516171819202122232425262728293031</msg>
+<var>${enquiry}</var>
+<arg>${enquiry}${i}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-25T10:20:35.113684" elapsed="0.000000"/>
+</kw>
+<var name="${i}">31</var>
+<status status="PASS" start="2024-05-25T10:20:35.113684" elapsed="0.000000"/>
+</iter>
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-25T10:20:35.114628" level="INFO">${enquiry} = 01234567891011121314151617181920212223242526272829303132</msg>
+<var>${enquiry}</var>
+<arg>${enquiry}${i}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-25T10:20:35.114628" elapsed="0.000000"/>
+</kw>
+<var name="${i}">32</var>
+<status status="PASS" start="2024-05-25T10:20:35.114628" elapsed="0.001053"/>
+</iter>
+<var>${i}</var>
+<value>33</value>
+<status status="PASS" start="2024-05-25T10:20:35.078462" elapsed="0.037219"/>
+</for>
+<return>
+<value>${enquiry}</value>
+<status status="PASS" start="2024-05-25T10:20:35.115681" elapsed="0.000000"/>
+</return>
+<msg time="2024-05-25T10:20:35.115681" level="INFO">${long_enquiry} = 01234567891011121314151617181920212223242526272829303132</msg>
+<var>${long_enquiry}</var>
+<status status="PASS" start="2024-05-25T10:20:35.069448" elapsed="0.046233"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-25T10:20:35.116722" level="INFO">Typing text '01234567891011121314151617181920212223242526272829303132' into text field '//*[@id="AccountFrm_postcode"]'.</msg>
+<arg>${codepost_input}</arg>
+<arg>${long_enquiry}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-25T10:20:35.116722" elapsed="0.299649"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-25T10:20:35.418479" level="INFO">Clicking element '//*[@id="AccountFrm"]/div[5]/div/div/button'.</msg>
+<arg>//*[@id="AccountFrm"]/div[5]/div/div/button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-25T10:20:35.416371" elapsed="0.782010"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-25T10:20:38.202419" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-25T10:20:36.198381" elapsed="2.004038"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-25T10:20:38.238332" level="INFO">${name_err} = First Name must be between 1 and 32 characters!</msg>
+<var>${name_err}</var>
+<arg>//*[@id="AccountFrm"]/div[1]/fieldset/div[1]/span</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-25T10:20:38.202419" elapsed="0.035913"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-25T10:20:38.256340" level="INFO">${lname_err} = Last Name must be between 1 and 32 characters!</msg>
+<var>${lname_err}</var>
+<arg>//*[@id="AccountFrm"]/div[1]/fieldset/div[2]/span</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-25T10:20:38.239839" elapsed="0.016501"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-25T10:20:38.274065" level="INFO">${email_err} = Email Address does not appear to be valid!</msg>
+<var>${email_err}</var>
+<arg>//*[@id="AccountFrm"]/div[1]/fieldset/div[3]/span</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-25T10:20:38.256340" elapsed="0.018457"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-25T10:20:38.291214" level="INFO">${address_err} = Address 1 must be between 3 and 128 characters!</msg>
+<var>${address_err}</var>
+<arg>//*[@id="AccountFrm"]/div[2]/fieldset/div[2]/span</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-25T10:20:38.274797" elapsed="0.016417"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-25T10:20:38.306256" level="INFO">${city_err} = City must be between 3 and 128 characters!</msg>
+<var>${city_err}</var>
+<arg>//*[@id="AccountFrm"]/div[2]/fieldset/div[4]/span</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-25T10:20:38.291830" elapsed="0.014426"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-25T10:20:38.322017" level="INFO">${region_err} = Please select a region / state!</msg>
+<var>${region_err}</var>
+<arg>//*[@id="AccountFrm"]/div[2]/fieldset/div[5]/span</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-25T10:20:38.307255" elapsed="0.014762"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-25T10:20:38.338065" level="INFO">${post_err} = </msg>
+<var>${post_err}</var>
+<arg>//*[@id="AccountFrm"]/div[2]/fieldset/div[6]/span</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-25T10:20:38.323016" elapsed="0.015049"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-25T10:20:38.356155" level="INFO">${namelogin_err} = Login name must be alphanumeric only and between 5 and 64 characters!</msg>
+<var>${namelogin_err}</var>
+<arg>//*[@id="AccountFrm"]/div[3]/fieldset/div[1]/span</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-25T10:20:38.338065" elapsed="0.018090"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-25T10:20:38.373845" level="INFO">${passlogin_err} = Password must be between 4 and 20 characters!</msg>
+<var>${passlogin_err}</var>
+<arg>//*[@id="AccountFrm"]/div[3]/fieldset/div[2]/span</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-25T10:20:38.356155" elapsed="0.017690"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-25T10:20:38.391853" level="INFO">${passcflogin_err} = </msg>
+<var>${passcflogin_err}</var>
+<arg>//*[@id="AccountFrm"]/div[3]/fieldset/div[3]/span</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-25T10:20:38.373845" elapsed="0.018008"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${name_err}</arg>
+<arg>First Name must be between 1 and 32 characters!</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-05-25T10:20:38.391853" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${lname_err}</arg>
+<arg>Last Name must be between 1 and 32 characters!</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-05-25T10:20:38.391853" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${email_err}</arg>
+<arg>Email Address does not appear to be valid!</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-05-25T10:20:38.391853" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${address_err}</arg>
+<arg>Address 1 must be between 3 and 128 characters!</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-05-25T10:20:38.391853" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${city_err}</arg>
+<arg>City must be between 3 and 128 characters!</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-05-25T10:20:38.391853" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${region_err}</arg>
+<arg>Please select a region / state!</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-05-25T10:20:38.391853" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<msg time="2024-05-25T10:20:38.391853" level="FAIL"> != Zip/postal code must be between 3 and 10 characters!</msg>
+<arg>${post_err}</arg>
+<arg>Zip/postal code must be between 3 and 10 characters!</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="FAIL" start="2024-05-25T10:20:38.391853" elapsed="0.006512"> != Zip/postal code must be between 3 and 10 characters!</status>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${namelogin_err}</arg>
+<arg>Login name must be alphanumeric only and between 5 and 64 characters!</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="NOT RUN" start="2024-05-25T10:20:38.398365" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${passlogin_err}</arg>
+<arg>Password must be between 4 and 20 characters!</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="NOT RUN" start="2024-05-25T10:20:38.398365" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-05-25T10:20:31.094031" elapsed="7.304334"> != Zip/postal code must be between 3 and 10 characters!</status>
+</kw>
+<kw name="Closing my browser" owner="common" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-25T10:20:38.398365" elapsed="3.839220"/>
+</kw>
+<status status="PASS" start="2024-05-25T10:20:38.398365" elapsed="3.839220"/>
+</kw>
+<status status="FAIL" start="2024-05-25T10:20:21.498306" elapsed="20.740395"> != Zip/postal code must be between 3 and 10 characters!</status>
+</test>
+<doc>This test suite is to verify search functionality</doc>
+<status status="FAIL" start="2024-05-25T10:20:21.270377" elapsed="20.968324"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Test Paymentasregist">Test Paymentasregist</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-05-25T10:20:21.458674" level="WARN">Error in file 'd:\HK6\AutoTest\52100843_52100916_52100674_Final\source\resources\payment\paymentasregist.robot' on line 76: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2024-05-25T10:20:21.458674" level="WARN">Error in file 'd:\HK6\AutoTest\52100843_52100916_52100674_Final\source\resources\payment\paymentasregist.robot' on line 83: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+</errors>
+</robot>

@@ -1,0 +1,1634 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.10.9 on win32)" generated="2024-04-17T23:53:35.662541" rpa="false" schemaversion="5">
+<suite id="s1" name="Assignment2 2" source="D:\HK6\AutoTest\52100674_TranThiVen_Lab7\Assignment2\2.2\Assignment2_2.robot">
+<test id="s1-t1" name="TC1: Verify modal - Check simple modal show" line="25">
+<kw name="Open The Browser">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:53:35.766694" level="INFO">Opening browser 'Chrome' to base url 'https://practice-automation.com/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-04-17T23:53:35.766694" elapsed="4.527376"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:53:40.297921" level="INFO">Current location is 'https://practice-automation.com/'.</msg>
+<arg>${URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-04-17T23:53:40.294070" elapsed="0.003851"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-04-17T23:53:40.297921" elapsed="0.115457"/>
+</kw>
+<status status="PASS" start="2024-04-17T23:53:35.765692" elapsed="4.648688"/>
+</kw>
+<kw name="Enter page">
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:53:40.429107" level="INFO">${btn} = &lt;selenium.webdriver.remote.webelement.WebElement (session="5d00a05701b27f0d555b952924a518d6", element="f.BD3A86BC4FA060FFEB92347E0BBCBA6F.d.3CF0776B5754CBD060ACD5CCFB5C76A6.e.49")&gt;</msg>
+<var>${btn}</var>
+<arg>xpath=${xpath}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:53:40.415377" elapsed="0.013730"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:53:40.430145" level="INFO">Current page contains element '&lt;selenium.webdriver.remote.webelement.WebElement (session="5d00a05701b27f0d555b952924a518d6", element="f.BD3A86BC4FA060FFEB92347E0BBCBA6F.d.3CF0776B5754CBD060ACD5CCFB5C76A6.e.49")&gt;'.</msg>
+<arg>${btn}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-04-17T23:53:40.429107" elapsed="0.001038"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${btn}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-04-17T23:53:40.430145" elapsed="0.277880"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:53:40.709025" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="5d00a05701b27f0d555b952924a518d6", element="f.BD3A86BC4FA060FFEB92347E0BBCBA6F.d.3CF0776B5754CBD060ACD5CCFB5C76A6.e.49")&gt;'.</msg>
+<arg>${btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:53:40.708025" elapsed="1.230428"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:53:41.946564" level="INFO">Current location is 'https://practice-automation.com/modals/'.</msg>
+<arg>url=${url}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-04-17T23:53:41.939475" elapsed="0.007089"/>
+</kw>
+<arg>10s</arg>
+<arg>2s</arg>
+<arg>Location Should Be</arg>
+<arg>url=${url}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-04-17T23:53:41.939475" elapsed="0.007089"/>
+</kw>
+<arg>${MODAL_BTN}</arg>
+<arg>${MODAL_URL}</arg>
+<status status="PASS" start="2024-04-17T23:53:40.415377" elapsed="1.531187"/>
+</kw>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:53:41.956559" level="INFO">${simplemodal} = &lt;selenium.webdriver.remote.webelement.WebElement (session="5d00a05701b27f0d555b952924a518d6", element="f.BD3A86BC4FA060FFEB92347E0BBCBA6F.d.64A6A539A090C1F96C70DD28F9C0F01B.e.64")&gt;</msg>
+<var>${simplemodal}</var>
+<arg>${SIMPLE_MODAL}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:53:41.947568" elapsed="0.008991"/>
+</kw>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:53:41.966387" level="INFO">${overlay} = &lt;selenium.webdriver.remote.webelement.WebElement (session="5d00a05701b27f0d555b952924a518d6", element="f.BD3A86BC4FA060FFEB92347E0BBCBA6F.d.64A6A539A090C1F96C70DD28F9C0F01B.e.65")&gt;</msg>
+<var>${overlay}</var>
+<arg>//*[@id="pum-1318"]</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:53:41.957361" elapsed="0.009026"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:53:41.973659" level="INFO">Current page contains element '//*[@id="simpleModal"]'.</msg>
+<arg>${SIMPLE_MODAL_BTN}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-04-17T23:53:41.966387" elapsed="0.008267"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:53:41.974654" level="INFO">Clicking button '//*[@id="simpleModal"]'.</msg>
+<arg>${SIMPLE_MODAL_BTN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:53:41.974654" elapsed="0.081992"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-04-17T23:53:44.064414" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-04-17T23:53:42.056646" elapsed="2.008128"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:53:44.066775" level="INFO">Current page contains element '&lt;selenium.webdriver.remote.webelement.WebElement (session="5d00a05701b27f0d555b952924a518d6", element="f.BD3A86BC4FA060FFEB92347E0BBCBA6F.d.64A6A539A090C1F96C70DD28F9C0F01B.e.64")&gt;'.</msg>
+<arg>${SIMPLE_MODAL}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-04-17T23:53:44.065778" elapsed="0.000997"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-04-17T23:53:44.083416" level="INFO">${display} = block</msg>
+<var>${display}</var>
+<arg>${simplemodal}</arg>
+<arg>value_of_css_property</arg>
+<arg>display</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-04-17T23:53:44.068856" elapsed="0.014560"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${display}</arg>
+<arg>block</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-04-17T23:53:44.085363" elapsed="0.000000"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-04-17T23:53:44.094693" level="INFO">${bg} = block</msg>
+<var>${bg}</var>
+<arg>${overlay}</arg>
+<arg>value_of_css_property</arg>
+<arg>display</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-04-17T23:53:44.087363" elapsed="0.007330"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${bg}</arg>
+<arg>block</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-04-17T23:53:44.095716" elapsed="0.001027"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:53:44.118029" level="INFO">${modal_title} = Simple Modal</msg>
+<var>${modal_title}</var>
+<arg>//*[@id="pum_popup_title_1318"]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:53:44.097694" elapsed="0.020335"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${modal_title}</arg>
+<arg>Simple Modal</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-04-17T23:53:44.119100" elapsed="0.000986"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-04-17T23:53:44.121034" elapsed="2.134870"/>
+</kw>
+<status status="PASS" start="2024-04-17T23:53:35.765692" elapsed="10.491152"/>
+</test>
+<test id="s1-t2" name="TC2: Verify modal - Check simple modal hide" line="48">
+<kw name="Open The Browser">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:53:46.260812" level="INFO">Opening browser 'Chrome' to base url 'https://practice-automation.com/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-04-17T23:53:46.259831" elapsed="6.062200"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:53:52.336812" level="INFO">Current location is 'https://practice-automation.com/'.</msg>
+<arg>${URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-04-17T23:53:52.322031" elapsed="0.014781"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-04-17T23:53:52.336812" elapsed="0.262008"/>
+</kw>
+<status status="PASS" start="2024-04-17T23:53:46.259831" elapsed="6.339973"/>
+</kw>
+<kw name="Enter page">
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:53:52.622421" level="INFO">${btn} = &lt;selenium.webdriver.remote.webelement.WebElement (session="064394953a363a8deb923703ea4e211b", element="f.1B23FF0BDBABD5485A27925949B7C392.d.81B1E69A911BFD40E25E5D01B662B44E.e.45")&gt;</msg>
+<var>${btn}</var>
+<arg>xpath=${xpath}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:53:52.602801" elapsed="0.020635"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:53:52.624444" level="INFO">Current page contains element '&lt;selenium.webdriver.remote.webelement.WebElement (session="064394953a363a8deb923703ea4e211b", element="f.1B23FF0BDBABD5485A27925949B7C392.d.81B1E69A911BFD40E25E5D01B662B44E.e.45")&gt;'.</msg>
+<arg>${btn}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-04-17T23:53:52.623436" elapsed="0.001008"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${btn}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-04-17T23:53:52.624444" elapsed="0.290310"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:53:52.915797" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="064394953a363a8deb923703ea4e211b", element="f.1B23FF0BDBABD5485A27925949B7C392.d.81B1E69A911BFD40E25E5D01B662B44E.e.45")&gt;'.</msg>
+<arg>${btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:53:52.915797" elapsed="0.481989"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:53:53.404773" level="INFO">Current location is 'https://practice-automation.com/modals/'.</msg>
+<arg>url=${url}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-04-17T23:53:53.398821" elapsed="0.005952"/>
+</kw>
+<arg>10s</arg>
+<arg>2s</arg>
+<arg>Location Should Be</arg>
+<arg>url=${url}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-04-17T23:53:53.397786" elapsed="0.006987"/>
+</kw>
+<arg>${MODAL_BTN}</arg>
+<arg>${MODAL_URL}</arg>
+<status status="PASS" start="2024-04-17T23:53:52.600904" elapsed="0.803869"/>
+</kw>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:53:53.419779" level="INFO">${closebtn} = &lt;selenium.webdriver.remote.webelement.WebElement (session="064394953a363a8deb923703ea4e211b", element="f.1B23FF0BDBABD5485A27925949B7C392.d.992797F8FC62AB84C81A68E1CC863765.e.60")&gt;</msg>
+<var>${closebtn}</var>
+<arg>//*[@id="popmake-1318"]/button</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:53:53.405860" elapsed="0.013919"/>
+</kw>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:53:53.432040" level="INFO">${simplemodal} = &lt;selenium.webdriver.remote.webelement.WebElement (session="064394953a363a8deb923703ea4e211b", element="f.1B23FF0BDBABD5485A27925949B7C392.d.992797F8FC62AB84C81A68E1CC863765.e.61")&gt;</msg>
+<var>${simplemodal}</var>
+<arg>${SIMPLE_MODAL}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:53:53.421005" elapsed="0.011035"/>
+</kw>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:53:53.461020" level="INFO">${overlay} = &lt;selenium.webdriver.remote.webelement.WebElement (session="064394953a363a8deb923703ea4e211b", element="f.1B23FF0BDBABD5485A27925949B7C392.d.992797F8FC62AB84C81A68E1CC863765.e.62")&gt;</msg>
+<var>${overlay}</var>
+<arg>//*[@id="pum-1318"]</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:53:53.434075" elapsed="0.026945"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:53:53.470428" level="INFO">Current page contains element '//*[@id="simpleModal"]'.</msg>
+<arg>${SIMPLE_MODAL_BTN}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-04-17T23:53:53.461020" elapsed="0.009408"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:53:53.472432" level="INFO">Clicking button '//*[@id="simpleModal"]'.</msg>
+<arg>${SIMPLE_MODAL_BTN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:53:53.471434" elapsed="0.066168"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-04-17T23:53:55.540179" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-04-17T23:53:53.538637" elapsed="2.001542"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:53:55.543223" level="INFO">Current page contains element '&lt;selenium.webdriver.remote.webelement.WebElement (session="064394953a363a8deb923703ea4e211b", element="f.1B23FF0BDBABD5485A27925949B7C392.d.992797F8FC62AB84C81A68E1CC863765.e.61")&gt;'.</msg>
+<arg>${SIMPLE_MODAL}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-04-17T23:53:55.542311" elapsed="0.000912"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-04-17T23:53:55.572115" level="INFO">${display} = block</msg>
+<var>${display}</var>
+<arg>${simplemodal}</arg>
+<arg>value_of_css_property</arg>
+<arg>display</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-04-17T23:53:55.546202" elapsed="0.025913"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${display}</arg>
+<arg>block</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-04-17T23:53:55.573127" elapsed="0.001163"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-04-17T23:53:55.590120" level="INFO">${bg} = block</msg>
+<var>${bg}</var>
+<arg>${overlay}</arg>
+<arg>value_of_css_property</arg>
+<arg>display</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-04-17T23:53:55.574610" elapsed="0.015510"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${bg}</arg>
+<arg>block</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-04-17T23:53:55.591135" elapsed="0.000986"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:53:55.632153" level="INFO">${modal_title} = Simple Modal</msg>
+<var>${modal_title}</var>
+<arg>//*[@id="pum_popup_title_1318"]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:53:55.593122" elapsed="0.039031"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${modal_title}</arg>
+<arg>Simple Modal</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-04-17T23:53:55.633240" elapsed="0.001416"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:53:55.635759" level="INFO">Clicking button '&lt;selenium.webdriver.remote.webelement.WebElement (session="064394953a363a8deb923703ea4e211b", element="f.1B23FF0BDBABD5485A27925949B7C392.d.992797F8FC62AB84C81A68E1CC863765.e.60")&gt;'.</msg>
+<arg>${closebtn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:53:55.634656" elapsed="0.058224"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-04-17T23:53:57.694770" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-04-17T23:53:55.693856" elapsed="2.001376"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-04-17T23:53:57.720945" level="INFO">${display} = none</msg>
+<var>${display}</var>
+<arg>${simplemodal}</arg>
+<arg>value_of_css_property</arg>
+<arg>display</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-04-17T23:53:57.697279" elapsed="0.023666"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${display}</arg>
+<arg>none</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-04-17T23:53:57.721931" elapsed="0.001014"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-04-17T23:53:57.744557" level="INFO">${bg} = none</msg>
+<var>${bg}</var>
+<arg>${overlay}</arg>
+<arg>value_of_css_property</arg>
+<arg>display</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-04-17T23:53:57.723931" elapsed="0.020626"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${bg}</arg>
+<arg>none</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-04-17T23:53:57.745557" elapsed="0.000000"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-04-17T23:53:57.746556" elapsed="2.120778"/>
+</kw>
+<status status="PASS" start="2024-04-17T23:53:46.258785" elapsed="13.611085"/>
+</test>
+<test id="s1-t3" name="TC3: Verify modal - Form modal show" line="83">
+<kw name="Open The Browser">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:53:59.875836" level="INFO">Opening browser 'Chrome' to base url 'https://practice-automation.com/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-04-17T23:53:59.875836" elapsed="4.552361"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:04.432193" level="INFO">Current location is 'https://practice-automation.com/'.</msg>
+<arg>${URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-04-17T23:54:04.428197" elapsed="0.003996"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-04-17T23:54:04.432193" elapsed="0.124333"/>
+</kw>
+<status status="PASS" start="2024-04-17T23:53:59.874832" elapsed="4.682694"/>
+</kw>
+<kw name="Enter page">
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:04.575052" level="INFO">${btn} = &lt;selenium.webdriver.remote.webelement.WebElement (session="cb437b0fac2829fc5f34af207abae02c", element="f.725FF42D95DE15842373DD55EA3C2328.d.6D7E636511FE35A9D5E600604F4F83F4.e.49")&gt;</msg>
+<var>${btn}</var>
+<arg>xpath=${xpath}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:54:04.559532" elapsed="0.015520"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:04.576051" level="INFO">Current page contains element '&lt;selenium.webdriver.remote.webelement.WebElement (session="cb437b0fac2829fc5f34af207abae02c", element="f.725FF42D95DE15842373DD55EA3C2328.d.6D7E636511FE35A9D5E600604F4F83F4.e.49")&gt;'.</msg>
+<arg>${btn}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-04-17T23:54:04.575052" elapsed="0.000999"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${btn}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-04-17T23:54:04.576051" elapsed="0.276878"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:04.853930" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="cb437b0fac2829fc5f34af207abae02c", element="f.725FF42D95DE15842373DD55EA3C2328.d.6D7E636511FE35A9D5E600604F4F83F4.e.49")&gt;'.</msg>
+<arg>${btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:54:04.852929" elapsed="0.503792"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:05.366629" level="INFO">Current location is 'https://practice-automation.com/modals/'.</msg>
+<arg>url=${url}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-04-17T23:54:05.357719" elapsed="0.008910"/>
+</kw>
+<arg>10s</arg>
+<arg>2s</arg>
+<arg>Location Should Be</arg>
+<arg>url=${url}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-04-17T23:54:05.356721" elapsed="0.009908"/>
+</kw>
+<arg>${MODAL_BTN}</arg>
+<arg>${MODAL_URL}</arg>
+<status status="PASS" start="2024-04-17T23:54:04.558530" elapsed="0.809140"/>
+</kw>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:05.377917" level="INFO">${formmodal} = &lt;selenium.webdriver.remote.webelement.WebElement (session="cb437b0fac2829fc5f34af207abae02c", element="f.725FF42D95DE15842373DD55EA3C2328.d.AA5D673B9F54E45629DB811A4736008F.e.62")&gt;</msg>
+<var>${formmodal}</var>
+<arg>${FORM_MODAL_BTN}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:54:05.367893" elapsed="0.010024"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:05.386590" level="INFO">Current page contains element '//*[@id="formModal"]'.</msg>
+<arg>${FORM_MODAL_BTN}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-04-17T23:54:05.378943" elapsed="0.007647"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:05.387440" level="INFO">Clicking button '//*[@id="formModal"]'.</msg>
+<arg>${FORM_MODAL_BTN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:54:05.387440" elapsed="0.080426"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-04-17T23:54:07.472853" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-04-17T23:54:05.468879" elapsed="2.003974"/>
+</kw>
+<kw name="Check form modal">
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:07.497850" level="INFO">${overlay} = &lt;selenium.webdriver.remote.webelement.WebElement (session="cb437b0fac2829fc5f34af207abae02c", element="f.725FF42D95DE15842373DD55EA3C2328.d.AA5D673B9F54E45629DB811A4736008F.e.68")&gt;</msg>
+<var>${overlay}</var>
+<arg>//*[@id="pum-674"]</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:54:07.476846" elapsed="0.021004"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:07.506993" level="INFO">Current page contains element '//*[@id="popmake-674"]'.</msg>
+<arg>${FORM_MODAL}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-04-17T23:54:07.497850" elapsed="0.009143"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-04-17T23:54:07.514603" level="INFO">${bg} = block</msg>
+<var>${bg}</var>
+<arg>${overlay}</arg>
+<arg>value_of_css_property</arg>
+<arg>display</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-04-17T23:54:07.507992" elapsed="0.006611"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${bg}</arg>
+<arg>block</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-04-17T23:54:07.514603" elapsed="0.000000"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:07.533071" level="INFO">${modal_title} = Modal Containing A Form</msg>
+<var>${modal_title}</var>
+<arg>//*[@id="pum_popup_title_674"]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:54:07.515616" elapsed="0.017455"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${modal_title}</arg>
+<arg>Modal Containing A Form</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-04-17T23:54:07.534370" elapsed="0.000000"/>
+</kw>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:07.548414" level="INFO">${name} = </msg>
+<var>${name}</var>
+<arg>//*[@id="g1051-name"]</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:54:07.534370" elapsed="0.014044"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${name}</arg>
+<arg>${EMPTY}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-04-17T23:54:07.549410" elapsed="0.000000"/>
+</kw>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:07.563417" level="INFO">${email} = </msg>
+<var>${email}</var>
+<arg>//*[@id="g1051-email"]</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:54:07.549410" elapsed="0.014007"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${email}</arg>
+<arg>${EMPTY}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-04-17T23:54:07.563417" elapsed="0.001274"/>
+</kw>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:07.577076" level="INFO">${message} = </msg>
+<var>${message}</var>
+<arg>//*[@id="contact-form-comment-g1051-message"]</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:54:07.564691" elapsed="0.012385"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${message}</arg>
+<arg>${EMPTY}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-04-17T23:54:07.577076" elapsed="0.001003"/>
+</kw>
+<status status="PASS" start="2024-04-17T23:54:07.475808" elapsed="0.102271"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-04-17T23:54:07.578665" elapsed="2.090947"/>
+</kw>
+<status status="PASS" start="2024-04-17T23:53:59.872891" elapsed="9.798829"/>
+</test>
+<test id="s1-t4" name="TC4: Verify modal - Form modal hide" line="98">
+<kw name="Open The Browser">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:09.678026" level="INFO">Opening browser 'Chrome' to base url 'https://practice-automation.com/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-04-17T23:54:09.677027" elapsed="4.375310"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:14.057336" level="INFO">Current location is 'https://practice-automation.com/'.</msg>
+<arg>${URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-04-17T23:54:14.052337" elapsed="0.004999"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-04-17T23:54:14.057336" elapsed="0.119581"/>
+</kw>
+<status status="PASS" start="2024-04-17T23:54:09.676033" elapsed="4.500884"/>
+</kw>
+<kw name="Enter page">
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:14.196411" level="INFO">${btn} = &lt;selenium.webdriver.remote.webelement.WebElement (session="6e5aa1412a03a0c8a17857f6baad0aa3", element="f.F217693649CD3489D1D723B774F88182.d.ACFE4211CFFBE32D2C9B7F12638473EC.e.49")&gt;</msg>
+<var>${btn}</var>
+<arg>xpath=${xpath}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:54:14.178891" elapsed="0.017520"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:14.197427" level="INFO">Current page contains element '&lt;selenium.webdriver.remote.webelement.WebElement (session="6e5aa1412a03a0c8a17857f6baad0aa3", element="f.F217693649CD3489D1D723B774F88182.d.ACFE4211CFFBE32D2C9B7F12638473EC.e.49")&gt;'.</msg>
+<arg>${btn}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-04-17T23:54:14.196411" elapsed="0.001016"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${btn}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-04-17T23:54:14.197427" elapsed="0.281546"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:14.479959" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="6e5aa1412a03a0c8a17857f6baad0aa3", element="f.F217693649CD3489D1D723B774F88182.d.ACFE4211CFFBE32D2C9B7F12638473EC.e.49")&gt;'.</msg>
+<arg>${btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:54:14.478973" elapsed="0.714422"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:15.197392" level="INFO">Current location is 'https://practice-automation.com/modals/'.</msg>
+<arg>url=${url}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-04-17T23:54:15.194394" elapsed="0.004019"/>
+</kw>
+<arg>10s</arg>
+<arg>2s</arg>
+<arg>Location Should Be</arg>
+<arg>url=${url}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-04-17T23:54:15.193395" elapsed="0.005018"/>
+</kw>
+<arg>${MODAL_BTN}</arg>
+<arg>${MODAL_URL}</arg>
+<status status="PASS" start="2024-04-17T23:54:14.177844" elapsed="1.020569"/>
+</kw>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:15.209084" level="INFO">${formmodal} = &lt;selenium.webdriver.remote.webelement.WebElement (session="6e5aa1412a03a0c8a17857f6baad0aa3", element="f.F217693649CD3489D1D723B774F88182.d.60C3CB5A393BED42846234A8C5D5E8C9.e.63")&gt;</msg>
+<var>${formmodal}</var>
+<arg>${FORM_MODAL}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:54:15.198945" elapsed="0.010139"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:15.218099" level="INFO">Current page contains element '//*[@id="formModal"]'.</msg>
+<arg>${FORM_MODAL_BTN}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-04-17T23:54:15.210092" elapsed="0.008007"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:15.220143" level="INFO">Clicking button '//*[@id="formModal"]'.</msg>
+<arg>${FORM_MODAL_BTN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:54:15.219095" elapsed="0.077601"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-04-17T23:54:17.304630" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-04-17T23:54:15.297695" elapsed="2.007327"/>
+</kw>
+<kw name="Check form modal">
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:17.332654" level="INFO">${overlay} = &lt;selenium.webdriver.remote.webelement.WebElement (session="6e5aa1412a03a0c8a17857f6baad0aa3", element="f.F217693649CD3489D1D723B774F88182.d.60C3CB5A393BED42846234A8C5D5E8C9.e.71")&gt;</msg>
+<var>${overlay}</var>
+<arg>//*[@id="pum-674"]</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:54:17.308165" elapsed="0.024489"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:17.341248" level="INFO">Current page contains element '//*[@id="popmake-674"]'.</msg>
+<arg>${FORM_MODAL}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-04-17T23:54:17.332654" elapsed="0.008594"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-04-17T23:54:17.349312" level="INFO">${bg} = block</msg>
+<var>${bg}</var>
+<arg>${overlay}</arg>
+<arg>value_of_css_property</arg>
+<arg>display</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-04-17T23:54:17.341248" elapsed="0.008064"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${bg}</arg>
+<arg>block</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-04-17T23:54:17.349312" elapsed="0.000951"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:17.367457" level="INFO">${modal_title} = Modal Containing A Form</msg>
+<var>${modal_title}</var>
+<arg>//*[@id="pum_popup_title_674"]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:54:17.350263" elapsed="0.017194"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${modal_title}</arg>
+<arg>Modal Containing A Form</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-04-17T23:54:17.367457" elapsed="0.000969"/>
+</kw>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:17.380896" level="INFO">${name} = </msg>
+<var>${name}</var>
+<arg>//*[@id="g1051-name"]</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:54:17.368426" elapsed="0.012470"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${name}</arg>
+<arg>${EMPTY}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-04-17T23:54:17.381838" elapsed="0.000000"/>
+</kw>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:17.395550" level="INFO">${email} = </msg>
+<var>${email}</var>
+<arg>//*[@id="g1051-email"]</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:54:17.381838" elapsed="0.013712"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${email}</arg>
+<arg>${EMPTY}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-04-17T23:54:17.395550" elapsed="0.000000"/>
+</kw>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:17.407804" level="INFO">${message} = </msg>
+<var>${message}</var>
+<arg>//*[@id="contact-form-comment-g1051-message"]</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:54:17.396547" elapsed="0.011257"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${message}</arg>
+<arg>${EMPTY}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-04-17T23:54:17.408801" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-04-17T23:54:17.307155" elapsed="0.101646"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:17.410993" level="INFO">Clicking button '//*[@id="popmake-674"]/button'.</msg>
+<arg>//*[@id="popmake-674"]/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:54:17.409981" elapsed="0.043318"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-04-17T23:54:19.464865" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-04-17T23:54:17.454308" elapsed="2.010557"/>
+</kw>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:19.481168" level="INFO">${overlay} = &lt;selenium.webdriver.remote.webelement.WebElement (session="6e5aa1412a03a0c8a17857f6baad0aa3", element="f.F217693649CD3489D1D723B774F88182.d.60C3CB5A393BED42846234A8C5D5E8C9.e.71")&gt;</msg>
+<var>${overlay}</var>
+<arg>//*[@id="pum-674"]</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:54:19.466848" elapsed="0.014320"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-04-17T23:54:19.496357" level="INFO">${display} = none</msg>
+<var>${display}</var>
+<arg>${formmodal}</arg>
+<arg>value_of_css_property</arg>
+<arg>display</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-04-17T23:54:19.482175" elapsed="0.014182"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${display}</arg>
+<arg>none</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-04-17T23:54:19.497361" elapsed="0.000000"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-04-17T23:54:19.511652" level="INFO">${bg} = none</msg>
+<var>${bg}</var>
+<arg>${overlay}</arg>
+<arg>value_of_css_property</arg>
+<arg>display</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-04-17T23:54:19.498361" elapsed="0.013291"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${bg}</arg>
+<arg>none</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-04-17T23:54:19.512650" elapsed="0.000000"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-04-17T23:54:19.513653" elapsed="2.099981"/>
+</kw>
+<status status="PASS" start="2024-04-17T23:54:09.675030" elapsed="11.940464"/>
+</test>
+<test id="s1-t5" name="TC5: Verify modal - Form modal submit - no input" line="124">
+<kw name="Open The Browser">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:21.620983" level="INFO">Opening browser 'Chrome' to base url 'https://practice-automation.com/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-04-17T23:54:21.620983" elapsed="4.208592"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:25.835068" level="INFO">Current location is 'https://practice-automation.com/'.</msg>
+<arg>${URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-04-17T23:54:25.829575" elapsed="0.005493"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-04-17T23:54:25.835068" elapsed="0.117299"/>
+</kw>
+<status status="PASS" start="2024-04-17T23:54:21.619983" elapsed="4.333393"/>
+</kw>
+<kw name="Enter page">
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:25.968266" level="INFO">${btn} = &lt;selenium.webdriver.remote.webelement.WebElement (session="5a3197ba9f54e94b6adac0a492ded94c", element="f.D3AF66910EF73F3F663352961395265C.d.5FC6EA2C0BEA3B15AD862B542F3B0A27.e.49")&gt;</msg>
+<var>${btn}</var>
+<arg>xpath=${xpath}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:54:25.955559" elapsed="0.012707"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:25.969287" level="INFO">Current page contains element '&lt;selenium.webdriver.remote.webelement.WebElement (session="5a3197ba9f54e94b6adac0a492ded94c", element="f.D3AF66910EF73F3F663352961395265C.d.5FC6EA2C0BEA3B15AD862B542F3B0A27.e.49")&gt;'.</msg>
+<arg>${btn}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-04-17T23:54:25.968266" elapsed="0.001021"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${btn}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-04-17T23:54:25.969287" elapsed="0.278855"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:26.249123" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="5a3197ba9f54e94b6adac0a492ded94c", element="f.D3AF66910EF73F3F663352961395265C.d.5FC6EA2C0BEA3B15AD862B542F3B0A27.e.49")&gt;'.</msg>
+<arg>${btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:54:26.248142" elapsed="0.521267"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:26.776412" level="INFO">Current location is 'https://practice-automation.com/modals/'.</msg>
+<arg>url=${url}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-04-17T23:54:26.770410" elapsed="0.006002"/>
+</kw>
+<arg>10s</arg>
+<arg>2s</arg>
+<arg>Location Should Be</arg>
+<arg>url=${url}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-04-17T23:54:26.769409" elapsed="0.008024"/>
+</kw>
+<arg>${MODAL_BTN}</arg>
+<arg>${MODAL_URL}</arg>
+<status status="PASS" start="2024-04-17T23:54:25.954553" elapsed="0.822880"/>
+</kw>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:26.788019" level="INFO">${formmodal} = &lt;selenium.webdriver.remote.webelement.WebElement (session="5a3197ba9f54e94b6adac0a492ded94c", element="f.D3AF66910EF73F3F663352961395265C.d.965BE3C06D92B05425B63E9AD4CD62D5.e.62")&gt;</msg>
+<var>${formmodal}</var>
+<arg>${FORM_MODAL_BTN}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:54:26.777433" elapsed="0.010586"/>
+</kw>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:26.800175" level="INFO">${submitbtn} = &lt;selenium.webdriver.remote.webelement.WebElement (session="5a3197ba9f54e94b6adac0a492ded94c", element="f.D3AF66910EF73F3F663352961395265C.d.965BE3C06D92B05425B63E9AD4CD62D5.e.63")&gt;</msg>
+<var>${submitbtn}</var>
+<arg>//*[@id="contact-form-1051"]/form/p[1]/button</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:54:26.788598" elapsed="0.011577"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:26.806175" level="INFO">Current page contains element '//*[@id="formModal"]'.</msg>
+<arg>${FORM_MODAL_BTN}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-04-17T23:54:26.801175" elapsed="0.005000"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:26.808174" level="INFO">Clicking button '//*[@id="formModal"]'.</msg>
+<arg>${FORM_MODAL_BTN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:54:26.807179" elapsed="0.084732"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-04-17T23:54:28.905491" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-04-17T23:54:26.893047" elapsed="2.013470"/>
+</kw>
+<kw name="Check form modal">
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:28.928470" level="INFO">${overlay} = &lt;selenium.webdriver.remote.webelement.WebElement (session="5a3197ba9f54e94b6adac0a492ded94c", element="f.D3AF66910EF73F3F663352961395265C.d.965BE3C06D92B05425B63E9AD4CD62D5.e.69")&gt;</msg>
+<var>${overlay}</var>
+<arg>//*[@id="pum-674"]</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:54:28.908478" elapsed="0.019992"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:28.938201" level="INFO">Current page contains element '//*[@id="popmake-674"]'.</msg>
+<arg>${FORM_MODAL}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-04-17T23:54:28.928470" elapsed="0.009731"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-04-17T23:54:28.946238" level="INFO">${bg} = block</msg>
+<var>${bg}</var>
+<arg>${overlay}</arg>
+<arg>value_of_css_property</arg>
+<arg>display</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-04-17T23:54:28.938201" elapsed="0.008037"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${bg}</arg>
+<arg>block</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-04-17T23:54:28.947356" elapsed="0.000000"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:28.965900" level="INFO">${modal_title} = Modal Containing A Form</msg>
+<var>${modal_title}</var>
+<arg>//*[@id="pum_popup_title_674"]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:54:28.947356" elapsed="0.018544"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${modal_title}</arg>
+<arg>Modal Containing A Form</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-04-17T23:54:28.965900" elapsed="0.000000"/>
+</kw>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:28.978997" level="INFO">${name} = </msg>
+<var>${name}</var>
+<arg>//*[@id="g1051-name"]</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:54:28.965900" elapsed="0.013097"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${name}</arg>
+<arg>${EMPTY}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-04-17T23:54:28.978997" elapsed="0.001018"/>
+</kw>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:28.992478" level="INFO">${email} = </msg>
+<var>${email}</var>
+<arg>//*[@id="g1051-email"]</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:54:28.980015" elapsed="0.012463"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${email}</arg>
+<arg>${EMPTY}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-04-17T23:54:28.992478" elapsed="0.000000"/>
+</kw>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:29.004132" level="INFO">${message} = </msg>
+<var>${message}</var>
+<arg>//*[@id="contact-form-comment-g1051-message"]</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:54:28.992478" elapsed="0.011654"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${message}</arg>
+<arg>${EMPTY}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-04-17T23:54:29.004132" elapsed="0.001144"/>
+</kw>
+<status status="PASS" start="2024-04-17T23:54:28.908478" elapsed="0.096798"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${submitbtn}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-04-17T23:54:29.005824" elapsed="0.263661"/>
+</kw>
+<kw name="Element Should Not Be Clickable">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:29.273429" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="5a3197ba9f54e94b6adac0a492ded94c", element="f.D3AF66910EF73F3F663352961395265C.d.965BE3C06D92B05425B63E9AD4CD62D5.e.63")&gt;'.</msg>
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:54:29.272517" elapsed="2.119946"/>
+</kw>
+<msg time="2024-04-17T23:54:31.392463" level="INFO">${status} = True</msg>
+<var>${status}</var>
+<arg>Click Element</arg>
+<arg>${element}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-04-17T23:54:29.272517" elapsed="2.119946"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${status}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-04-17T23:54:31.392463" elapsed="0.000999"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Fail" owner="BuiltIn">
+<msg time="2024-04-17T23:54:31.394463" level="FAIL">"Element should not be clickable"</msg>
+<arg>"Element should not be clickable"</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="FAIL" start="2024-04-17T23:54:31.394463" elapsed="0.000000">"Element should not be clickable"</status>
+</kw>
+<arg>'True'=='${status}'</arg>
+<arg>Fail</arg>
+<arg>"Element should not be clickable"</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="FAIL" start="2024-04-17T23:54:31.393462" elapsed="0.001001">"Element should not be clickable"</status>
+</kw>
+<arg>${submitbtn}</arg>
+<status status="FAIL" start="2024-04-17T23:54:29.271516" elapsed="2.122947">"Element should not be clickable"</status>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2024-04-17T23:54:31.395483" elapsed="0.001007"/>
+</kw>
+<status status="FAIL" start="2024-04-17T23:54:21.617991" elapsed="9.778499">"Element should not be clickable"</status>
+</test>
+<test id="s1-t6" name="TC6: Verify modal - Form modal submit - no required input" line="145">
+<kw name="Open The Browser">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:31.398463" level="INFO">Opening browser 'Chrome' to base url 'https://practice-automation.com/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-04-17T23:54:31.398463" elapsed="4.667109"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:36.070643" level="INFO">Current location is 'https://practice-automation.com/'.</msg>
+<arg>${URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-04-17T23:54:36.066591" elapsed="0.004999"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-04-17T23:54:36.071590" elapsed="0.124742"/>
+</kw>
+<status status="PASS" start="2024-04-17T23:54:31.398463" elapsed="4.798869"/>
+</kw>
+<kw name="Enter page">
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:36.213542" level="INFO">${btn} = &lt;selenium.webdriver.remote.webelement.WebElement (session="f4809d8bf04ea5e4ac9b9370c87b6181", element="f.D2741DC9F6201684166C7CB7F7125B3C.d.E74EF6243D0DCB288766E1CF1F0B9785.e.49")&gt;</msg>
+<var>${btn}</var>
+<arg>xpath=${xpath}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:54:36.199332" elapsed="0.014210"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:36.213542" level="INFO">Current page contains element '&lt;selenium.webdriver.remote.webelement.WebElement (session="f4809d8bf04ea5e4ac9b9370c87b6181", element="f.D2741DC9F6201684166C7CB7F7125B3C.d.E74EF6243D0DCB288766E1CF1F0B9785.e.49")&gt;'.</msg>
+<arg>${btn}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-04-17T23:54:36.213542" elapsed="0.000000"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${btn}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-04-17T23:54:36.213542" elapsed="0.266528"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:36.481127" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="f4809d8bf04ea5e4ac9b9370c87b6181", element="f.D2741DC9F6201684166C7CB7F7125B3C.d.E74EF6243D0DCB288766E1CF1F0B9785.e.49")&gt;'.</msg>
+<arg>${btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:54:36.480070" elapsed="0.469438"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:36.955509" level="INFO">Current location is 'https://practice-automation.com/modals/'.</msg>
+<arg>url=${url}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-04-17T23:54:36.950506" elapsed="0.005003"/>
+</kw>
+<arg>10s</arg>
+<arg>2s</arg>
+<arg>Location Should Be</arg>
+<arg>url=${url}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-04-17T23:54:36.950506" elapsed="0.005003"/>
+</kw>
+<arg>${MODAL_BTN}</arg>
+<arg>${MODAL_URL}</arg>
+<status status="PASS" start="2024-04-17T23:54:36.198349" elapsed="0.757160"/>
+</kw>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:36.975510" level="INFO">${formmodal} = &lt;selenium.webdriver.remote.webelement.WebElement (session="f4809d8bf04ea5e4ac9b9370c87b6181", element="f.D2741DC9F6201684166C7CB7F7125B3C.d.0310D0F2334EB1C770C8B97187946565.e.65")&gt;</msg>
+<var>${formmodal}</var>
+<arg>${FORM_MODAL_BTN}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:54:36.956509" elapsed="0.019001"/>
+</kw>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:36.986529" level="INFO">${submitbtn} = &lt;selenium.webdriver.remote.webelement.WebElement (session="f4809d8bf04ea5e4ac9b9370c87b6181", element="f.D2741DC9F6201684166C7CB7F7125B3C.d.0310D0F2334EB1C770C8B97187946565.e.66")&gt;</msg>
+<var>${submitbtn}</var>
+<arg>//*[@id="contact-form-1051"]/form/p[1]/button</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:54:36.976510" elapsed="0.010019"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:36.995505" level="INFO">Current page contains element '//*[@id="formModal"]'.</msg>
+<arg>${FORM_MODAL_BTN}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-04-17T23:54:36.987514" elapsed="0.007991"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:36.997509" level="INFO">Clicking button '//*[@id="formModal"]'.</msg>
+<arg>${FORM_MODAL_BTN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:54:36.996509" elapsed="0.121105"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-04-17T23:54:39.123671" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-04-17T23:54:37.118614" elapsed="2.005057"/>
+</kw>
+<kw name="Check form modal">
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:39.135868" level="INFO">${overlay} = &lt;selenium.webdriver.remote.webelement.WebElement (session="f4809d8bf04ea5e4ac9b9370c87b6181", element="f.D2741DC9F6201684166C7CB7F7125B3C.d.0310D0F2334EB1C770C8B97187946565.e.72")&gt;</msg>
+<var>${overlay}</var>
+<arg>//*[@id="pum-674"]</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:54:39.125717" elapsed="0.010151"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:39.146871" level="INFO">Current page contains element '//*[@id="popmake-674"]'.</msg>
+<arg>${FORM_MODAL}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-04-17T23:54:39.135868" elapsed="0.011003"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-04-17T23:54:39.154857" level="INFO">${bg} = block</msg>
+<var>${bg}</var>
+<arg>${overlay}</arg>
+<arg>value_of_css_property</arg>
+<arg>display</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-04-17T23:54:39.146871" elapsed="0.007986"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${bg}</arg>
+<arg>block</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-04-17T23:54:39.154857" elapsed="0.000984"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:39.174236" level="INFO">${modal_title} = Modal Containing A Form</msg>
+<var>${modal_title}</var>
+<arg>//*[@id="pum_popup_title_674"]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:54:39.155841" elapsed="0.018395"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${modal_title}</arg>
+<arg>Modal Containing A Form</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-04-17T23:54:39.174428" elapsed="0.000000"/>
+</kw>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:39.187899" level="INFO">${name} = </msg>
+<var>${name}</var>
+<arg>//*[@id="g1051-name"]</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:54:39.174428" elapsed="0.013471"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${name}</arg>
+<arg>${EMPTY}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-04-17T23:54:39.188868" elapsed="0.000904"/>
+</kw>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:39.203800" level="INFO">${email} = </msg>
+<var>${email}</var>
+<arg>//*[@id="g1051-email"]</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:54:39.189772" elapsed="0.014028"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${email}</arg>
+<arg>${EMPTY}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-04-17T23:54:39.204869" elapsed="0.000945"/>
+</kw>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:39.220300" level="INFO">${message} = </msg>
+<var>${message}</var>
+<arg>//*[@id="contact-form-comment-g1051-message"]</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:54:39.205814" elapsed="0.014486"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${message}</arg>
+<arg>${EMPTY}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-04-17T23:54:39.220300" elapsed="0.001998"/>
+</kw>
+<status status="PASS" start="2024-04-17T23:54:39.124720" elapsed="0.097578"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:39.223290" level="INFO">Typing text 'admin@gmail.com' into text field '//*[@id="g1051-email"]'.</msg>
+<arg>//*[@id="g1051-email"]</arg>
+<arg>admin@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:54:39.223290" elapsed="0.108363"/>
+</kw>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:39.343656" level="INFO">${email} = admin@gmail.com</msg>
+<var>${email}</var>
+<arg>//*[@id="g1051-email"]</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:54:39.332663" elapsed="0.010993"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${email}</arg>
+<arg>admin@gmail.com</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-04-17T23:54:39.344961" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:39.347151" level="INFO">Typing text 'This is a test message' into text field '//*[@id="contact-form-comment-g1051-message"]'.</msg>
+<arg>//*[@id="contact-form-comment-g1051-message"]</arg>
+<arg>This is a test message</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:54:39.346132" elapsed="0.104601"/>
+</kw>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:39.462512" level="INFO">${message} = This is a test message</msg>
+<var>${message}</var>
+<arg>//*[@id="contact-form-comment-g1051-message"]</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:54:39.450733" elapsed="0.011779"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${message}</arg>
+<arg>This is a test message</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-04-17T23:54:39.463550" elapsed="0.000993"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${submitbtn}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-04-17T23:54:39.465540" elapsed="0.264134"/>
+</kw>
+<kw name="Element Should Not Be Clickable">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:39.732643" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="f4809d8bf04ea5e4ac9b9370c87b6181", element="f.D2741DC9F6201684166C7CB7F7125B3C.d.0310D0F2334EB1C770C8B97187946565.e.66")&gt;'.</msg>
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:54:39.732643" elapsed="2.449332"/>
+</kw>
+<msg time="2024-04-17T23:54:42.181975" level="INFO">${status} = True</msg>
+<var>${status}</var>
+<arg>Click Element</arg>
+<arg>${element}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-04-17T23:54:39.731638" elapsed="2.450337"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${status}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-04-17T23:54:42.182974" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Fail" owner="BuiltIn">
+<msg time="2024-04-17T23:54:42.183991" level="FAIL">"Element should not be clickable"</msg>
+<arg>"Element should not be clickable"</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="FAIL" start="2024-04-17T23:54:42.182974" elapsed="0.001017">"Element should not be clickable"</status>
+</kw>
+<arg>'True'=='${status}'</arg>
+<arg>Fail</arg>
+<arg>"Element should not be clickable"</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="FAIL" start="2024-04-17T23:54:42.182974" elapsed="0.001017">"Element should not be clickable"</status>
+</kw>
+<arg>${submitbtn}</arg>
+<status status="FAIL" start="2024-04-17T23:54:39.731638" elapsed="2.452353">"Element should not be clickable"</status>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2024-04-17T23:54:42.184977" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-04-17T23:54:31.397465" elapsed="10.787512">"Element should not be clickable"</status>
+</test>
+<test id="s1-t7" name="TC7: Verify modal - Form modal submit - full input" line="177">
+<kw name="Open The Browser">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:42.189018" level="INFO">Opening browser 'Chrome' to base url 'https://practice-automation.com/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-04-17T23:54:42.188090" elapsed="4.517722"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:46.710854" level="INFO">Current location is 'https://practice-automation.com/'.</msg>
+<arg>${URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-04-17T23:54:46.705812" elapsed="0.005986"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-04-17T23:54:46.711798" elapsed="0.117930"/>
+</kw>
+<status status="PASS" start="2024-04-17T23:54:42.188090" elapsed="4.641638"/>
+</kw>
+<kw name="Enter page">
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:46.847951" level="INFO">${btn} = &lt;selenium.webdriver.remote.webelement.WebElement (session="969c3256d53f0320b7824c7f359c74e0", element="f.BB181B6F0291A2EB8073D5BDDB8B60CF.d.8F8F0E97A2C49EA29060373CCBAE974A.e.45")&gt;</msg>
+<var>${btn}</var>
+<arg>xpath=${xpath}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:54:46.832646" elapsed="0.015305"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:46.848947" level="INFO">Current page contains element '&lt;selenium.webdriver.remote.webelement.WebElement (session="969c3256d53f0320b7824c7f359c74e0", element="f.BB181B6F0291A2EB8073D5BDDB8B60CF.d.8F8F0E97A2C49EA29060373CCBAE974A.e.45")&gt;'.</msg>
+<arg>${btn}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-04-17T23:54:46.848947" elapsed="0.000000"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${btn}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-04-17T23:54:46.848947" elapsed="0.295019"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:47.144980" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="969c3256d53f0320b7824c7f359c74e0", element="f.BB181B6F0291A2EB8073D5BDDB8B60CF.d.8F8F0E97A2C49EA29060373CCBAE974A.e.45")&gt;'.</msg>
+<arg>${btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:54:47.144980" elapsed="0.520723"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:47.670701" level="INFO">Current location is 'https://practice-automation.com/modals/'.</msg>
+<arg>url=${url}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-04-17T23:54:47.665703" elapsed="0.006019"/>
+</kw>
+<arg>10s</arg>
+<arg>2s</arg>
+<arg>Location Should Be</arg>
+<arg>url=${url}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-04-17T23:54:47.665703" elapsed="0.006019"/>
+</kw>
+<arg>${MODAL_BTN}</arg>
+<arg>${MODAL_URL}</arg>
+<status status="PASS" start="2024-04-17T23:54:46.831656" elapsed="0.840066"/>
+</kw>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:47.684701" level="INFO">${formmodal} = &lt;selenium.webdriver.remote.webelement.WebElement (session="969c3256d53f0320b7824c7f359c74e0", element="f.BB181B6F0291A2EB8073D5BDDB8B60CF.d.AC067DBAAECD4400747AD8BB471B9251.e.58")&gt;</msg>
+<var>${formmodal}</var>
+<arg>${FORM_MODAL_BTN}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:54:47.672706" elapsed="0.011995"/>
+</kw>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:47.699731" level="INFO">${submitbtn} = &lt;selenium.webdriver.remote.webelement.WebElement (session="969c3256d53f0320b7824c7f359c74e0", element="f.BB181B6F0291A2EB8073D5BDDB8B60CF.d.AC067DBAAECD4400747AD8BB471B9251.e.61")&gt;</msg>
+<var>${submitbtn}</var>
+<arg>//*[@id="contact-form-1051"]/form/p[1]/button</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:54:47.685720" elapsed="0.014011"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:47.706705" level="INFO">Current page contains element '//*[@id="formModal"]'.</msg>
+<arg>${FORM_MODAL_BTN}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-04-17T23:54:47.700703" elapsed="0.007001"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:47.708721" level="INFO">Clicking button '//*[@id="formModal"]'.</msg>
+<arg>${FORM_MODAL_BTN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:54:47.708721" elapsed="0.089184"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-04-17T23:54:49.808104" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-04-17T23:54:47.799905" elapsed="2.008199"/>
+</kw>
+<kw name="Check form modal">
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:49.818359" level="INFO">${overlay} = &lt;selenium.webdriver.remote.webelement.WebElement (session="969c3256d53f0320b7824c7f359c74e0", element="f.BB181B6F0291A2EB8073D5BDDB8B60CF.d.AC067DBAAECD4400747AD8BB471B9251.e.65")&gt;</msg>
+<var>${overlay}</var>
+<arg>//*[@id="pum-674"]</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:54:49.809103" elapsed="0.009256"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:49.827359" level="INFO">Current page contains element '//*[@id="popmake-674"]'.</msg>
+<arg>${FORM_MODAL}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-04-17T23:54:49.818359" elapsed="0.009999"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-04-17T23:54:49.836358" level="INFO">${bg} = block</msg>
+<var>${bg}</var>
+<arg>${overlay}</arg>
+<arg>value_of_css_property</arg>
+<arg>display</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-04-17T23:54:49.828358" elapsed="0.008000"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${bg}</arg>
+<arg>block</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-04-17T23:54:49.836358" elapsed="0.000999"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:49.856839" level="INFO">${modal_title} = Modal Containing A Form</msg>
+<var>${modal_title}</var>
+<arg>//*[@id="pum_popup_title_674"]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:54:49.837357" elapsed="0.019482"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${modal_title}</arg>
+<arg>Modal Containing A Form</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-04-17T23:54:49.857836" elapsed="0.000000"/>
+</kw>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:49.874107" level="INFO">${name} = </msg>
+<var>${name}</var>
+<arg>//*[@id="g1051-name"]</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:54:49.857836" elapsed="0.016271"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${name}</arg>
+<arg>${EMPTY}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-04-17T23:54:49.874107" elapsed="0.002001"/>
+</kw>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:49.890131" level="INFO">${email} = </msg>
+<var>${email}</var>
+<arg>//*[@id="g1051-email"]</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:54:49.876108" elapsed="0.014023"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${email}</arg>
+<arg>${EMPTY}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-04-17T23:54:49.890131" elapsed="0.001994"/>
+</kw>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:49.905437" level="INFO">${message} = </msg>
+<var>${message}</var>
+<arg>//*[@id="contact-form-comment-g1051-message"]</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:54:49.892125" elapsed="0.013312"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${message}</arg>
+<arg>${EMPTY}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-04-17T23:54:49.905437" elapsed="0.001994"/>
+</kw>
+<status status="PASS" start="2024-04-17T23:54:49.809103" elapsed="0.098328"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:49.908431" level="INFO">Typing text 'John Doe' into text field '//*[@id="g1051-name"]'.</msg>
+<arg>//*[@id="g1051-name"]</arg>
+<arg>John Doe</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:54:49.908431" elapsed="0.090517"/>
+</kw>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:50.010722" level="INFO">${name} = John Doe</msg>
+<var>${name}</var>
+<arg>//*[@id="g1051-name"]</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:54:49.999652" elapsed="0.011070"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${name}</arg>
+<arg>John Doe</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-04-17T23:54:50.012441" elapsed="0.001026"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:50.014464" level="INFO">Typing text 'admin@gmail.com' into text field '//*[@id="g1051-email"]'.</msg>
+<arg>//*[@id="g1051-email"]</arg>
+<arg>admin@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:54:50.014464" elapsed="0.097385"/>
+</kw>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:50.124144" level="INFO">${email} = admin@gmail.com</msg>
+<var>${email}</var>
+<arg>//*[@id="g1051-email"]</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:54:50.112831" elapsed="0.011313"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${email}</arg>
+<arg>admin@gmail.com</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-04-17T23:54:50.125429" elapsed="0.001105"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:50.127536" level="INFO">Typing text 'This is a test message' into text field '//*[@id="contact-form-comment-g1051-message"]'.</msg>
+<arg>//*[@id="contact-form-comment-g1051-message"]</arg>
+<arg>This is a test message</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:54:50.126534" elapsed="0.101606"/>
+</kw>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:50.240157" level="INFO">${message} = This is a test message</msg>
+<var>${message}</var>
+<arg>//*[@id="contact-form-comment-g1051-message"]</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:54:50.229131" elapsed="0.011026"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${message}</arg>
+<arg>This is a test message</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-04-17T23:54:50.241259" elapsed="0.001104"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${submitbtn}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-04-17T23:54:50.243274" elapsed="0.266109"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:50.510403" level="INFO">Clicking button '&lt;selenium.webdriver.remote.webelement.WebElement (session="969c3256d53f0320b7824c7f359c74e0", element="f.BB181B6F0291A2EB8073D5BDDB8B60CF.d.AC067DBAAECD4400747AD8BB471B9251.e.61")&gt;'.</msg>
+<arg>${submitbtn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:54:50.510403" elapsed="2.201601"/>
+</kw>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:52.726234" level="INFO">${overlay} = &lt;selenium.webdriver.remote.webelement.WebElement (session="969c3256d53f0320b7824c7f359c74e0", element="f.BB181B6F0291A2EB8073D5BDDB8B60CF.d.D02200D5BFCD24077DA29532B7530F9F.e.85")&gt;</msg>
+<var>${overlay}</var>
+<arg>//*[@id="pum-674"]</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:54:52.713006" elapsed="0.013228"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-04-17T23:54:52.736482" level="INFO">${bg} = none</msg>
+<var>${bg}</var>
+<arg>${overlay}</arg>
+<arg>value_of_css_property</arg>
+<arg>display</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-04-17T23:54:52.726234" elapsed="0.010248"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${bg}</arg>
+<arg>none</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-04-17T23:54:52.737481" elapsed="0.000000"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:52.738480" level="INFO">Clicking button '//*[@id="formModal"]'.</msg>
+<arg>${FORM_MODAL_BTN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:54:52.738480" elapsed="0.090020"/>
+</kw>
+<kw name="Check form modal">
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:52.840489" level="INFO">${overlay} = &lt;selenium.webdriver.remote.webelement.WebElement (session="969c3256d53f0320b7824c7f359c74e0", element="f.BB181B6F0291A2EB8073D5BDDB8B60CF.d.D02200D5BFCD24077DA29532B7530F9F.e.85")&gt;</msg>
+<var>${overlay}</var>
+<arg>//*[@id="pum-674"]</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:54:52.829495" elapsed="0.011994"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:52.851726" level="INFO">Current page contains element '//*[@id="popmake-674"]'.</msg>
+<arg>${FORM_MODAL}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-04-17T23:54:52.841489" elapsed="0.010237"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-04-17T23:54:52.864131" level="INFO">${bg} = block</msg>
+<var>${bg}</var>
+<arg>${overlay}</arg>
+<arg>value_of_css_property</arg>
+<arg>display</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-04-17T23:54:52.852730" elapsed="0.011401"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${bg}</arg>
+<arg>block</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-04-17T23:54:52.865134" elapsed="0.000000"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:52.885661" level="INFO">${modal_title} = Modal Containing A Form</msg>
+<var>${modal_title}</var>
+<arg>//*[@id="pum_popup_title_674"]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:54:52.866133" elapsed="0.020541"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${modal_title}</arg>
+<arg>Modal Containing A Form</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-04-17T23:54:52.886674" elapsed="0.000000"/>
+</kw>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:52.909011" level="INFO">${name} = </msg>
+<var>${name}</var>
+<arg>//*[@id="g1051-name"]</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:54:52.887675" elapsed="0.021336"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${name}</arg>
+<arg>${EMPTY}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-04-17T23:54:52.910031" elapsed="0.001990"/>
+</kw>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:52.934328" level="INFO">${email} = </msg>
+<var>${email}</var>
+<arg>//*[@id="g1051-email"]</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:54:52.912021" elapsed="0.023328"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${email}</arg>
+<arg>${EMPTY}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-04-17T23:54:52.935349" elapsed="0.000997"/>
+</kw>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:54:52.963349" level="INFO">${message} = </msg>
+<var>${message}</var>
+<arg>//*[@id="contact-form-comment-g1051-message"]</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:54:52.937346" elapsed="0.026003"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${message}</arg>
+<arg>${EMPTY}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-04-17T23:54:52.964350" elapsed="0.000999"/>
+</kw>
+<status status="PASS" start="2024-04-17T23:54:52.828500" elapsed="0.137846"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-04-17T23:54:52.967346" elapsed="2.132786"/>
+</kw>
+<status status="PASS" start="2024-04-17T23:54:42.187019" elapsed="12.916205"/>
+</test>
+<doc>Lab 07 - Ex2 - TC2</doc>
+<status status="FAIL" start="2024-04-17T23:53:35.663513" elapsed="79.443580"/>
+</suite>
+<statistics>
+<total>
+<stat pass="5" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="5" fail="2" skip="0" id="s1" name="Assignment2 2">Assignment2 2</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

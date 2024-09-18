@@ -1,0 +1,552 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.10.9 on win32)" generated="2024-05-26T08:04:37.928498" rpa="false" schemaversion="5">
+<suite id="s1" name="Product Detail Page" source="d:\HK6\AutoTest\52100843_52100916_52100674_midterm\source\tests\product_detail_page.robot">
+<test id="s1-t1" name="TC2: Check page and verify product" line="14">
+<kw name="Opening my browser" owner="common" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-05-26T08:04:38.104922" level="INFO">Opening browser 'Chrome' to base url 'https://dapper-pastelito-04ff24.netlify.app/'.</msg>
+<arg>${URL_HOME}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-05-26T08:04:38.104922" elapsed="2.692536"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-26T08:04:40.804462" level="INFO">Current location is 'https://dapper-pastelito-04ff24.netlify.app/'.</msg>
+<arg>${URL_HOME}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-05-26T08:04:40.798491" elapsed="0.005971"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-05-26T08:04:40.804462" elapsed="0.050056"/>
+</kw>
+<status status="PASS" start="2024-05-26T08:04:38.104922" elapsed="2.749596"/>
+</kw>
+<kw name="Verify right name price product" owner="product_detail_page">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-26T08:04:40.857471" level="INFO">Clicking element '//*[@id="root"]/div/div[1]/div/div/div[4]/ul/li[1]'.</msg>
+<arg>${button_shop}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-26T08:04:40.856440" elapsed="0.098423"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-26T08:04:40.961539" level="INFO">Current location is 'https://dapper-pastelito-04ff24.netlify.app/shop'.</msg>
+<arg>${URL_SHOP}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-05-26T08:04:40.954863" elapsed="0.007668"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${menu_bar}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-05-26T08:04:40.962531" elapsed="0.011997"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${product_container}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-05-26T08:04:40.974528" elapsed="0.002169"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=/html/body/div/div/div[2]/div[2]/div[3]/div/div[2]/a/div</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-26T08:04:40.976697" elapsed="1.120290"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-26T08:04:42.113771" level="INFO">${valuehead} = Pan -</msg>
+<var>${valuehead}</var>
+<arg>xpath=/html/body/div/div/div[2]/div[2]/div[3]/div/div[2]/a/div</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-26T08:04:42.098007" elapsed="0.015764"/>
+</kw>
+<kw name="Split String" owner="String">
+<msg time="2024-05-26T08:04:42.113771" level="INFO">${valuehead} = ['Pan ', '']</msg>
+<var>${valuehead}</var>
+<arg>${valuehead}</arg>
+<arg>-</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<status status="PASS" start="2024-05-26T08:04:42.113771" elapsed="0.000984"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-26T08:04:42.114755" level="INFO">${valuehead} = Pan </msg>
+<var>${valuehead}</var>
+<arg>${valuehead[0]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-26T08:04:42.114755" elapsed="0.000000"/>
+</kw>
+<kw name="Strip String" owner="String">
+<msg time="2024-05-26T08:04:42.115746" level="INFO">${valuehead} = Pan</msg>
+<var>${valuehead}</var>
+<arg>${valuehead}</arg>
+<doc>Remove leading and/or trailing whitespaces from the given string.</doc>
+<status status="PASS" start="2024-05-26T08:04:42.115746" elapsed="0.000000"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-26T08:04:42.132391" level="INFO">${valueprice} = $23.35</msg>
+<var>${valueprice}</var>
+<arg>xpath=/html/body/div/div/div[2]/div[2]/div[3]/div/div[2]/span/p[1]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-26T08:04:42.115746" elapsed="0.016645"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-26T08:04:42.133408" level="INFO">Clicking element 'xpath=/html/body/div/div/div[2]/div[2]/div[3]/div/div[2]/a/div'.</msg>
+<arg>xpath=/html/body/div/div/div[2]/div[2]/div[3]/div/div[2]/a/div</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-26T08:04:42.133408" elapsed="0.064833"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-26T08:04:42.215988" level="INFO">${valuehead1} = Pan</msg>
+<var>${valuehead1}</var>
+<arg>xpath=/html/body/div/div/div[2]/div[1]/div[1]/div[2]/div/div[1]/h1</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-26T08:04:42.198241" elapsed="0.017747"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-05-26T08:04:42.227458" level="INFO">Current page contains text 'Pan'.</msg>
+<arg>${valuehead1}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-05-26T08:04:42.215988" elapsed="0.012564"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-26T08:04:42.244033" level="INFO">${valueprice1} = $23.35</msg>
+<var>${valueprice1}</var>
+<arg>xpath=/html/body/div/div/div[2]/div[1]/div[1]/div[2]/div/div[3]/span</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-26T08:04:42.228552" elapsed="0.015481"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-05-26T08:04:42.262568" level="INFO">Current page contains text '$23.35'.</msg>
+<arg>${valueprice1}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-05-26T08:04:42.244033" elapsed="0.018535"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${valueprice}</arg>
+<arg>${valueprice1}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-05-26T08:04:42.263652" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${valuehead}</arg>
+<arg>${valuehead1}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-05-26T08:04:42.263652" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-05-26T08:04:42.275237" level="INFO">Current page contains element '//*[@id="root"]/div/div[2]/div[1]/div[1]'.</msg>
+<arg>${product_infor}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-05-26T08:04:42.264646" elapsed="0.010703"/>
+</kw>
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${product_infor}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-05-26T08:04:42.264646" elapsed="0.010703"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-05-26T08:04:42.290362" level="INFO">Current page contains element '//*[@id="root"]/div/div[2]/div[2]/div'.</msg>
+<arg>${product_related}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-05-26T08:04:42.275349" elapsed="0.015013"/>
+</kw>
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${product_related}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-05-26T08:04:42.275349" elapsed="0.015013"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2024-05-26T08:04:42.310713" level="INFO">${count_item} = 5</msg>
+<var>${count_item}</var>
+<arg>locator=//*[contains(@class, "ui segment")]</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2024-05-26T08:04:42.291368" elapsed="0.020350"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${count_item} &gt; 0</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2024-05-26T08:04:42.311718" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-26T08:04:42.312995" level="INFO">Clicking element '//*[@id="root"]/div/div[1]/div/div/div[4]/ul/li[1]'.</msg>
+<arg>${button_shop}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-26T08:04:42.312681" elapsed="0.044256"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-26T08:04:42.364887" level="INFO">Current location is 'https://dapper-pastelito-04ff24.netlify.app/shop'.</msg>
+<arg>${URL_SHOP}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-05-26T08:04:42.356937" elapsed="0.009044"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${menu_bar}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-05-26T08:04:42.365981" elapsed="0.006918"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${product_container}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-05-26T08:04:42.374017" elapsed="0.010579"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=/html/body/div/div/div[2]/div[2]/div[2]/div/div[2]/a/div</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-26T08:04:42.384596" elapsed="0.660469"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-26T08:04:43.056874" level="INFO">${value_head} = Plate -</msg>
+<var>${value_head}</var>
+<arg>xpath=/html/body/div/div/div[2]/div[2]/div[2]/div/div[2]/a/div</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-26T08:04:43.045065" elapsed="0.011809"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-26T08:04:43.074666" level="INFO">${value_price} = $3.47</msg>
+<var>${value_price}</var>
+<arg>xpath=/html/body/div/div/div[2]/div[2]/div[2]/div/div[2]/span/p[1]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-26T08:04:43.057963" elapsed="0.016703"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-26T08:04:43.075618" level="INFO">Clicking element 'xpath=/html/body/div/div/div[2]/div[2]/div[2]/div/div[2]/a/div'.</msg>
+<arg>xpath=/html/body/div/div/div[2]/div[2]/div[2]/div/div[2]/a/div</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-26T08:04:43.074666" elapsed="0.045276"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-26T08:04:43.145284" level="INFO">${value_head1} = Plate</msg>
+<var>${value_head1}</var>
+<arg>xpath=/html/body/div/div/div[2]/div[1]/div[1]/div[2]/div/div[1]/h1</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-26T08:04:43.120945" elapsed="0.024339"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-05-26T08:04:43.156255" level="INFO">Current page contains text 'Plate'.</msg>
+<arg>${value_head1}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-05-26T08:04:43.145284" elapsed="0.010971"/>
+</kw>
+<kw name="Split String" owner="String">
+<msg time="2024-05-26T08:04:43.157267" level="INFO">${value_head} = ['Plate ', '']</msg>
+<var>${value_head}</var>
+<arg>${value_head}</arg>
+<arg>-</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<status status="PASS" start="2024-05-26T08:04:43.157267" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-26T08:04:43.158239" level="INFO">${value_head} = Plate </msg>
+<var>${value_head}</var>
+<arg>${value_head[0]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-26T08:04:43.157267" elapsed="0.000972"/>
+</kw>
+<kw name="Strip String" owner="String">
+<msg time="2024-05-26T08:04:43.159250" level="INFO">${value_head} = Plate</msg>
+<var>${value_head}</var>
+<arg>${value_head}</arg>
+<doc>Remove leading and/or trailing whitespaces from the given string.</doc>
+<status status="PASS" start="2024-05-26T08:04:43.159250" elapsed="0.000992"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-26T08:04:43.174903" level="INFO">${value_price1} = $3.47</msg>
+<var>${value_price1}</var>
+<arg>xpath=/html/body/div/div/div[2]/div[1]/div[1]/div[2]/div/div[3]/span</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-26T08:04:43.160242" elapsed="0.014661"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-05-26T08:04:43.187909" level="INFO">Current page contains text '$3.47'.</msg>
+<arg>${value_price1}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-05-26T08:04:43.174903" elapsed="0.013006"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${value_price}</arg>
+<arg>${value_price1}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-05-26T08:04:43.188928" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${value_head}</arg>
+<arg>${value_head1}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-05-26T08:04:43.188928" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-05-26T08:04:43.199040" level="INFO">Current page contains element '//*[@id="root"]/div/div[2]/div[1]/div[1]'.</msg>
+<arg>${product_infor}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-05-26T08:04:43.189923" elapsed="0.010097"/>
+</kw>
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${product_infor}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-05-26T08:04:43.189923" elapsed="0.010097"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${product_related}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-05-26T08:04:43.200020" elapsed="0.294693"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-05-26T08:04:43.502269" level="INFO">Current page contains element '//*[@id="root"]/div/div[2]/div[2]/div'.</msg>
+<arg>${product_related}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-05-26T08:04:43.494713" elapsed="0.008579"/>
+</kw>
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${product_related}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-05-26T08:04:43.494713" elapsed="0.008579"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2024-05-26T08:04:43.510836" level="INFO">${count_item} = 5</msg>
+<var>${count_item}</var>
+<arg>locator=//*[contains(@class, "ui segment")]</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2024-05-26T08:04:43.503292" elapsed="0.008025"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${count_item} &gt; 0</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2024-05-26T08:04:43.511317" elapsed="0.000550"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-26T08:04:43.511867" level="INFO">Clicking element '//*[@id="root"]/div/div[1]/div/div/div[4]/ul/li[1]'.</msg>
+<arg>${button_shop}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-26T08:04:43.511867" elapsed="0.083912"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-26T08:04:43.602404" level="INFO">Current location is 'https://dapper-pastelito-04ff24.netlify.app/shop'.</msg>
+<arg>${URL_SHOP}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-05-26T08:04:43.595779" elapsed="0.007607"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${menu_bar}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-05-26T08:04:43.603386" elapsed="0.008178"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${product_container}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-05-26T08:04:43.612259" elapsed="0.007152"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=/html/body/div/div/div[2]/div[2]/div[4]/div/div[2]/a/div</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-26T08:04:43.619411" elapsed="0.640851"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-26T08:04:44.260262" level="INFO">${value_head3} = Mug Tree Stand -</msg>
+<var>${value_head3}</var>
+<arg>xpath=/html/body/div/div/div[2]/div[2]/div[4]/div/div[2]/a/div</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-26T08:04:44.260262" elapsed="0.000000"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-26T08:04:44.294947" level="INFO">${value_price3} = $13.56</msg>
+<var>${value_price3}</var>
+<arg>xpath=/html/body/div/div/div[2]/div[2]/div[4]/div/div[2]/span/p[1]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-26T08:04:44.260262" elapsed="0.034685"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-26T08:04:44.294947" level="INFO">Clicking element 'xpath=/html/body/div/div/div[2]/div[2]/div[4]/div/div[2]/a/div'.</msg>
+<arg>xpath=/html/body/div/div/div[2]/div[2]/div[4]/div/div[2]/a/div</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-26T08:04:44.294947" elapsed="0.072378"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-26T08:04:44.382171" level="INFO">${value_head13} = Mug Tree Stand</msg>
+<var>${value_head13}</var>
+<arg>xpath=/html/body/div/div/div[2]/div[1]/div[1]/div[2]/div/div[1]/h1</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-26T08:04:44.367325" elapsed="0.014846"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-05-26T08:04:44.393234" level="INFO">Current page contains text 'Mug Tree Stand'.</msg>
+<arg>${value_head13}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-05-26T08:04:44.382171" elapsed="0.011063"/>
+</kw>
+<kw name="Split String" owner="String">
+<msg time="2024-05-26T08:04:44.393234" level="INFO">${value_head3} = ['Mug Tree Stand ', '']</msg>
+<var>${value_head3}</var>
+<arg>${value_head3}</arg>
+<arg>-</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<status status="PASS" start="2024-05-26T08:04:44.393234" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-26T08:04:44.393234" level="INFO">${value_head3} = Mug Tree Stand </msg>
+<var>${value_head3}</var>
+<arg>${value_head3[0]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-26T08:04:44.393234" elapsed="0.000000"/>
+</kw>
+<kw name="Strip String" owner="String">
+<msg time="2024-05-26T08:04:44.393234" level="INFO">${value_head3} = Mug Tree Stand</msg>
+<var>${value_head3}</var>
+<arg>${value_head3}</arg>
+<doc>Remove leading and/or trailing whitespaces from the given string.</doc>
+<status status="PASS" start="2024-05-26T08:04:44.393234" elapsed="0.000000"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-26T08:04:44.393234" level="INFO">${value_price13} = $13.56</msg>
+<var>${value_price13}</var>
+<arg>xpath=/html/body/div/div/div[2]/div[1]/div[1]/div[2]/div/div[3]/span</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-26T08:04:44.393234" elapsed="0.000000"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-05-26T08:04:44.419789" level="INFO">Current page contains text '$13.56'.</msg>
+<arg>${value_price13}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-05-26T08:04:44.393234" elapsed="0.026555"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${value_price3}</arg>
+<arg>${value_price13}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-05-26T08:04:44.419789" elapsed="0.001003"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${value_head3}</arg>
+<arg>${value_head13}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-05-26T08:04:44.420792" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-05-26T08:04:44.427864" level="INFO">Current page contains element '//*[@id="root"]/div/div[2]/div[1]/div[1]'.</msg>
+<arg>${product_infor}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-05-26T08:04:44.421793" elapsed="0.006071"/>
+</kw>
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${product_infor}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-05-26T08:04:44.420792" elapsed="0.007072"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2024-05-26T08:04:44.433861" level="INFO">${count_item} = 5</msg>
+<var>${count_item}</var>
+<arg>locator=//*[contains(@class, "ui segment")]</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2024-05-26T08:04:44.427864" elapsed="0.005997"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${count_item} &gt; 0</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2024-05-26T08:04:44.434866" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-05-26T08:04:40.855888" elapsed="3.578978"/>
+</kw>
+<kw name="Test droplist and verify" owner="product_detail_page">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-26T08:04:44.443012" level="INFO">${stock_element} = Stock Available: 93</msg>
+<var>${stock_element}</var>
+<arg>xpath=/html/body/div/div/div[2]/div[1]/div[1]/div[2]/div/div[4]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-26T08:04:44.435863" elapsed="0.007149"/>
+</kw>
+<kw name="Get Substring" owner="String">
+<msg time="2024-05-26T08:04:44.443012" level="INFO">${number_string} = 93</msg>
+<var>${number_string}</var>
+<arg>${stock_element}</arg>
+<arg>17</arg>
+<doc>Returns a substring from ``start`` index to ``end`` index.</doc>
+<status status="PASS" start="2024-05-26T08:04:44.443012" elapsed="0.000000"/>
+</kw>
+<kw name="Convert To Integer" owner="BuiltIn">
+<msg time="2024-05-26T08:04:44.443012" level="INFO">${stock_number} = 93</msg>
+<var>${stock_number}</var>
+<arg>${number_string}</arg>
+<doc>Converts the given item to an integer number.</doc>
+<status status="PASS" start="2024-05-26T08:04:44.443012" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<msg time="2024-05-26T08:04:44.443012" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<msg time="2024-05-26T08:04:44.443012" level="FAIL">93.0 != 46.0</msg>
+<arg>${stock_number}</arg>
+<arg>46</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="FAIL" start="2024-05-26T08:04:44.443012" elapsed="0.000000">93.0 != 46.0</status>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath=/html/body/div/div/div[2]/div[1]/div[1]/div[2]/div/div[5]/span/div/i</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="NOT RUN" start="2024-05-26T08:04:44.443012" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>xpath=/html/body/div/div/div[2]/div[1]/div[1]/div[2]/div/div[5]/span/div/i</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-05-26T08:04:44.443012" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=/html/body/div/div/div[2]/div[1]/div[1]/div[2]/div/div[5]/span/div/div[2]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2024-05-26T08:04:44.443012" elapsed="0.000000"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<var>${elements}</var>
+<arg>xpath=/html/body/div/div/div[2]/div[1]/div[1]/div[2]/div/div[5]/span/div/div[2]/*</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="NOT RUN" start="2024-05-26T08:04:44.443012" elapsed="0.000000"/>
+</kw>
+<kw name="Get Length" owner="BuiltIn">
+<var>${element_count}</var>
+<arg>${elements}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<status status="NOT RUN" start="2024-05-26T08:04:44.443012" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${element_count}</arg>
+<arg>${stock_number}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="NOT RUN" start="2024-05-26T08:04:44.443012" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-05-26T08:04:44.435863" elapsed="0.007149">93.0 != 46.0</status>
+</kw>
+<kw name="Closing my browser" owner="common" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-26T08:04:44.443012" elapsed="2.155734"/>
+</kw>
+<status status="PASS" start="2024-05-26T08:04:44.443012" elapsed="2.155734"/>
+</kw>
+<status status="FAIL" start="2024-05-26T08:04:38.104922" elapsed="8.493824">93.0 != 46.0</status>
+</test>
+<doc>Module1 - Shop page</doc>
+<status status="FAIL" start="2024-05-26T08:04:37.932157" elapsed="8.666589"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Product Detail Page">Product Detail Page</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

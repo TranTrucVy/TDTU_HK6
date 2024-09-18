@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.11.4 on win32)" generated="2024-03-02T13:32:00.636734" rpa="false" schemaversion="5">
+<suite id="s1" name="Assignment1" source="E:\52100674\Assignment1.robot">
+<test id="s1-t1" name="Logged In Successfully" line="5">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-03-02T13:32:00.850884" level="INFO">Opening browser 'Chrome' to base url 'https://practicetestautomation.com/practice-test-login/'.</msg>
+<arg>https://practicetestautomation.com/practice-test-login/</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-03-02T13:32:00.850884" elapsed="4.728348"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-02T13:32:05.581249" level="INFO">Typing text 'student' into text field 'id=username'.</msg>
+<arg>id=username</arg>
+<arg>student</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-02T13:32:05.580235" elapsed="0.113971"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-03-02T13:32:05.695206" level="INFO">Typing password into text field 'id=password'.</msg>
+<msg time="2024-03-02T13:32:05.770259" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>id=password</arg>
+<arg>Password123</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-02T13:32:05.695206" elapsed="0.138098"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-03-02T13:32:05.834304" level="INFO">Clicking button 'id=submit'.</msg>
+<arg>id=submit</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-02T13:32:05.833304" elapsed="0.876067"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-02T13:32:16.710944" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-02T13:32:06.710372" elapsed="10.000572"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2024-03-02T13:32:17.478548" level="INFO">Element 'xpath=//*[@id="loop-container"]/div/article/div[1]/h1' contains text 'Logged In Successfully'.</msg>
+<arg>xpath=//*[@id="loop-container"]/div/article/div[1]/h1</arg>
+<arg>Logged In Successfully</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2024-03-02T13:32:17.422491" elapsed="0.056057"/>
+</kw>
+<status status="PASS" start="2024-03-02T13:32:00.849884" elapsed="16.629665"/>
+</test>
+<status status="PASS" start="2024-03-02T13:32:00.637734" elapsed="16.842826"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Assignment1">Assignment1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

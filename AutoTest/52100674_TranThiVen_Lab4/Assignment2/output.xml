@@ -1,0 +1,3691 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.10.0 on win32)" generated="2024-03-20T17:47:12.756016" rpa="false" schemaversion="5">
+<suite id="s1" name="Ex2" source="D:\CURRENT_SEMESTER\Auto Testing\lab04\tests\Ex2.robot">
+<test id="s1-t1" name="TC 1: Not fill any input" line="13">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:13.069790" level="INFO">Opening browser 'Chrome' to base url 'https://practice-automation.com/form-fields/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-03-20T17:47:13.068782" elapsed="4.003886"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-03-20T17:47:17.073670" elapsed="0.124918"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:17.211100" level="INFO">Current location is 'https://practice-automation.com/form-fields/'.</msg>
+<arg>${URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-03-20T17:47:17.199064" elapsed="0.012036"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>xpath=//button[@id='submit-btn']</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-03-20T17:47:17.212082" elapsed="0.316037"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:17.553902" level="INFO">Current page contains element 'xpath=//button[@id='submit-btn']'.</msg>
+<arg>xpath=//button[@id='submit-btn']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-03-20T17:47:17.530184" elapsed="0.023718"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>xpath=//button[@id='submit-btn']</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-03-20T17:47:17.554918" elapsed="0.332503"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:17.888419" level="INFO">Clicking element 'xpath=//button[@id='submit-btn']'.</msg>
+<arg>xpath=//button[@id='submit-btn']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:47:17.888419" elapsed="0.080956"/>
+</kw>
+<kw name="Check All Inputs Empty">
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:17.988440" level="INFO">${text_inputs} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="e301f240ae050a55f915266cf97c2171", element="f.1836EB5A697F8A7C5CB809FDEE552D1B.d.9A80591CFFC0EC6CA802A0C80793184B.e.16")&gt;, &lt;selenium.webdriv...</msg>
+<var>${text_inputs}</var>
+<arg>${TEXT_INPUT_XPATH}</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:47:17.971375" elapsed="0.017065"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:18.008705" level="INFO">${textareas} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="e301f240ae050a55f915266cf97c2171", element="f.1836EB5A697F8A7C5CB809FDEE552D1B.d.9A80591CFFC0EC6CA802A0C80793184B.e.25")&gt;, &lt;selenium.webdriv...</msg>
+<var>${textareas}</var>
+<arg>${TEXTAREA_XPATH}</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:47:17.988440" elapsed="0.020265"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:18.023400" level="INFO">${checkboxes} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="e301f240ae050a55f915266cf97c2171", element="f.1836EB5A697F8A7C5CB809FDEE552D1B.d.9A80591CFFC0EC6CA802A0C80793184B.e.17")&gt;, &lt;selenium.webdriv...</msg>
+<var>${checkboxes}</var>
+<arg>xpath=//input[@type='checkbox']</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:47:18.008705" elapsed="0.014695"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:18.036684" level="INFO">${radios} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="e301f240ae050a55f915266cf97c2171", element="f.1836EB5A697F8A7C5CB809FDEE552D1B.d.9A80591CFFC0EC6CA802A0C80793184B.e.18")&gt;, &lt;selenium.webdriv...</msg>
+<var>${radios}</var>
+<arg>xpath=//input[@type='radio']</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:47:18.023400" elapsed="0.013284"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:18.048844" level="INFO">${dropdown} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="e301f240ae050a55f915266cf97c2171", element="f.1836EB5A697F8A7C5CB809FDEE552D1B.d.9A80591CFFC0EC6CA802A0C80793184B.e.23")&gt;]</msg>
+<var>${dropdown}</var>
+<arg>id=siblings</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:47:18.037701" elapsed="0.011143"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-03-20T17:47:18.048844" level="INFO">${all_empty} = True</msg>
+<var>${all_empty}</var>
+<arg>${TRUE}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-03-20T17:47:18.048844" elapsed="0.001023"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:18.060843" level="INFO">${value} = </msg>
+<var>${value}</var>
+<arg>${input_field}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:47:18.049867" elapsed="0.010976"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${value}' != ''</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:18.061835" elapsed="0.000000"/>
+</kw>
+<var name="${input_field}">&lt;selenium.webdriver.remote.webelement.WebElement (session="e301f240ae050a55f915266cf97c2171", element="f.1836EB5A697F8A7C5CB809FDEE552D1B.d.9A80591CFFC0EC6CA802A0C80793184B.e.16")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:18.049867" elapsed="0.011968"/>
+</iter>
+<iter>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:18.073860" level="INFO">${value} = </msg>
+<var>${value}</var>
+<arg>${input_field}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:47:18.061835" elapsed="0.012025"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${value}' != ''</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:18.073860" elapsed="0.000000"/>
+</kw>
+<var name="${input_field}">&lt;selenium.webdriver.remote.webelement.WebElement (session="e301f240ae050a55f915266cf97c2171", element="f.1836EB5A697F8A7C5CB809FDEE552D1B.d.9A80591CFFC0EC6CA802A0C80793184B.e.24")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:18.061835" elapsed="0.012025"/>
+</iter>
+<iter>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:18.080854" level="INFO">${value} = </msg>
+<var>${value}</var>
+<arg>${input_field}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:47:18.074852" elapsed="0.006002"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${value}' != ''</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:18.080854" elapsed="0.000000"/>
+</kw>
+<var name="${input_field}">&lt;selenium.webdriver.remote.webelement.WebElement (session="e301f240ae050a55f915266cf97c2171", element="f.1836EB5A697F8A7C5CB809FDEE552D1B.d.9A80591CFFC0EC6CA802A0C80793184B.e.27")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:18.073860" elapsed="0.007974"/>
+</iter>
+<var>${input_field}</var>
+<value>@{text_inputs}</value>
+<status status="PASS" start="2024-03-20T17:47:18.049867" elapsed="0.031967"/>
+</for>
+<for flavor="IN">
+<iter>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:18.087834" level="INFO">${value} = </msg>
+<var>${value}</var>
+<arg>${textarea}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:47:18.081834" elapsed="0.006000"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${value}' != ''</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:18.087834" elapsed="0.001004"/>
+</kw>
+<var name="${textarea}">&lt;selenium.webdriver.remote.webelement.WebElement (session="e301f240ae050a55f915266cf97c2171", element="f.1836EB5A697F8A7C5CB809FDEE552D1B.d.9A80591CFFC0EC6CA802A0C80793184B.e.25")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:18.081834" elapsed="0.007004"/>
+</iter>
+<iter>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:18.095835" level="INFO">${value} = </msg>
+<var>${value}</var>
+<arg>${textarea}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:47:18.088838" elapsed="0.006997"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${value}' != ''</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:18.095835" elapsed="0.000000"/>
+</kw>
+<var name="${textarea}">&lt;selenium.webdriver.remote.webelement.WebElement (session="e301f240ae050a55f915266cf97c2171", element="f.1836EB5A697F8A7C5CB809FDEE552D1B.d.9A80591CFFC0EC6CA802A0C80793184B.e.29")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:18.088838" elapsed="0.008090"/>
+</iter>
+<iter>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:18.103860" level="INFO">${value} = </msg>
+<var>${value}</var>
+<arg>${textarea}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:47:18.096928" elapsed="0.007923"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${value}' != ''</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:18.104851" elapsed="0.000000"/>
+</kw>
+<var name="${textarea}">&lt;selenium.webdriver.remote.webelement.WebElement (session="e301f240ae050a55f915266cf97c2171", element="f.1836EB5A697F8A7C5CB809FDEE552D1B.d.9A80591CFFC0EC6CA802A0C80793184B.e.30")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:18.096928" elapsed="0.007923"/>
+</iter>
+<var>${textarea}</var>
+<value>@{textareas}</value>
+<status status="PASS" start="2024-03-20T17:47:18.081834" elapsed="0.023017"/>
+</for>
+<for flavor="IN">
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-03-20T17:47:18.116129" level="INFO">${selected} = False</msg>
+<var>${selected}</var>
+<arg>${checkbox}</arg>
+<arg>is_selected</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-03-20T17:47:18.105834" elapsed="0.010295"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${selected}</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:18.116129" elapsed="0.000000"/>
+</kw>
+<var name="${checkbox}">&lt;selenium.webdriver.remote.webelement.WebElement (session="e301f240ae050a55f915266cf97c2171", element="f.1836EB5A697F8A7C5CB809FDEE552D1B.d.9A80591CFFC0EC6CA802A0C80793184B.e.17")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:18.104851" elapsed="0.011278"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-03-20T17:47:18.123183" level="INFO">${selected} = False</msg>
+<var>${selected}</var>
+<arg>${checkbox}</arg>
+<arg>is_selected</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-03-20T17:47:18.117126" elapsed="0.006057"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${selected}</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:18.123183" elapsed="0.000000"/>
+</kw>
+<var name="${checkbox}">&lt;selenium.webdriver.remote.webelement.WebElement (session="e301f240ae050a55f915266cf97c2171", element="f.1836EB5A697F8A7C5CB809FDEE552D1B.d.9A80591CFFC0EC6CA802A0C80793184B.e.11")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:18.117126" elapsed="0.006057"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-03-20T17:47:18.133644" level="INFO">${selected} = False</msg>
+<var>${selected}</var>
+<arg>${checkbox}</arg>
+<arg>is_selected</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-03-20T17:47:18.124628" elapsed="0.009016"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${selected}</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:18.134642" elapsed="0.000000"/>
+</kw>
+<var name="${checkbox}">&lt;selenium.webdriver.remote.webelement.WebElement (session="e301f240ae050a55f915266cf97c2171", element="f.1836EB5A697F8A7C5CB809FDEE552D1B.d.9A80591CFFC0EC6CA802A0C80793184B.e.12")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:18.124628" elapsed="0.010014"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-03-20T17:47:18.142822" level="INFO">${selected} = False</msg>
+<var>${selected}</var>
+<arg>${checkbox}</arg>
+<arg>is_selected</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-03-20T17:47:18.134642" elapsed="0.008180"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${selected}</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:18.143835" elapsed="0.000000"/>
+</kw>
+<var name="${checkbox}">&lt;selenium.webdriver.remote.webelement.WebElement (session="e301f240ae050a55f915266cf97c2171", element="f.1836EB5A697F8A7C5CB809FDEE552D1B.d.9A80591CFFC0EC6CA802A0C80793184B.e.13")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:18.134642" elapsed="0.009193"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-03-20T17:47:18.156829" level="INFO">${selected} = False</msg>
+<var>${selected}</var>
+<arg>${checkbox}</arg>
+<arg>is_selected</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-03-20T17:47:18.143835" elapsed="0.012994"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${selected}</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:18.156829" elapsed="0.001002"/>
+</kw>
+<var name="${checkbox}">&lt;selenium.webdriver.remote.webelement.WebElement (session="e301f240ae050a55f915266cf97c2171", element="f.1836EB5A697F8A7C5CB809FDEE552D1B.d.9A80591CFFC0EC6CA802A0C80793184B.e.14")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:18.143835" elapsed="0.013996"/>
+</iter>
+<var>${checkbox}</var>
+<value>@{checkboxes}</value>
+<status status="PASS" start="2024-03-20T17:47:18.104851" elapsed="0.052980"/>
+</for>
+<for flavor="IN">
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-03-20T17:47:18.164877" level="INFO">${selected} = False</msg>
+<var>${selected}</var>
+<arg>${radio}</arg>
+<arg>is_selected</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-03-20T17:47:18.157831" elapsed="0.007046"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${selected}</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:18.164877" elapsed="0.001055"/>
+</kw>
+<var name="${radio}">&lt;selenium.webdriver.remote.webelement.WebElement (session="e301f240ae050a55f915266cf97c2171", element="f.1836EB5A697F8A7C5CB809FDEE552D1B.d.9A80591CFFC0EC6CA802A0C80793184B.e.18")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:18.157831" elapsed="0.008101"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-03-20T17:47:18.173834" level="INFO">${selected} = False</msg>
+<var>${selected}</var>
+<arg>${radio}</arg>
+<arg>is_selected</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-03-20T17:47:18.165932" elapsed="0.007902"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${selected}</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:18.173834" elapsed="0.001055"/>
+</kw>
+<var name="${radio}">&lt;selenium.webdriver.remote.webelement.WebElement (session="e301f240ae050a55f915266cf97c2171", element="f.1836EB5A697F8A7C5CB809FDEE552D1B.d.9A80591CFFC0EC6CA802A0C80793184B.e.19")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:18.165932" elapsed="0.008957"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-03-20T17:47:18.181882" level="INFO">${selected} = False</msg>
+<var>${selected}</var>
+<arg>${radio}</arg>
+<arg>is_selected</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-03-20T17:47:18.174889" elapsed="0.006993"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${selected}</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:18.181882" elapsed="0.000000"/>
+</kw>
+<var name="${radio}">&lt;selenium.webdriver.remote.webelement.WebElement (session="e301f240ae050a55f915266cf97c2171", element="f.1836EB5A697F8A7C5CB809FDEE552D1B.d.9A80591CFFC0EC6CA802A0C80793184B.e.20")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:18.174889" elapsed="0.006993"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-03-20T17:47:18.190833" level="INFO">${selected} = False</msg>
+<var>${selected}</var>
+<arg>${radio}</arg>
+<arg>is_selected</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-03-20T17:47:18.181882" elapsed="0.008951"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${selected}</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:18.190833" elapsed="0.000000"/>
+</kw>
+<var name="${radio}">&lt;selenium.webdriver.remote.webelement.WebElement (session="e301f240ae050a55f915266cf97c2171", element="f.1836EB5A697F8A7C5CB809FDEE552D1B.d.9A80591CFFC0EC6CA802A0C80793184B.e.21")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:18.181882" elapsed="0.008951"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-03-20T17:47:18.196905" level="INFO">${selected} = False</msg>
+<var>${selected}</var>
+<arg>${radio}</arg>
+<arg>is_selected</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-03-20T17:47:18.191831" elapsed="0.005074"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${selected}</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:18.196905" elapsed="0.000977"/>
+</kw>
+<var name="${radio}">&lt;selenium.webdriver.remote.webelement.WebElement (session="e301f240ae050a55f915266cf97c2171", element="f.1836EB5A697F8A7C5CB809FDEE552D1B.d.9A80591CFFC0EC6CA802A0C80793184B.e.22")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:18.190833" elapsed="0.007049"/>
+</iter>
+<var>${radio}</var>
+<value>@{radios}</value>
+<status status="PASS" start="2024-03-20T17:47:18.157831" elapsed="0.040051"/>
+</for>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-03-20T17:47:18.204866" level="INFO">${selected} = False</msg>
+<var>${selected}</var>
+<arg>${dropdown[0]}</arg>
+<arg>is_selected</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-03-20T17:47:18.197882" elapsed="0.006984"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${selected}</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:18.205933" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${all_empty}</value>
+<status status="PASS" start="2024-03-20T17:47:18.205933" elapsed="0.000000"/>
+</return>
+<msg time="2024-03-20T17:47:18.205933" level="INFO">${all_empty} = True</msg>
+<var>${all_empty}</var>
+<status status="PASS" start="2024-03-20T17:47:17.971375" elapsed="0.234558"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${all_empty}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2024-03-20T17:47:18.206951" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-03-20T17:47:13.067878" elapsed="5.139073"/>
+</test>
+<test id="s1-t2" name="TC 2: Fill input name only" line="28">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:18.208894" level="INFO">Opening browser 'Chrome' to base url 'https://practice-automation.com/form-fields/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-03-20T17:47:18.208894" elapsed="4.202280"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-03-20T17:47:22.413172" elapsed="0.135218"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:22.566182" level="INFO">Current location is 'https://practice-automation.com/form-fields/'.</msg>
+<arg>${URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-03-20T17:47:22.550387" elapsed="0.015795"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>id:name</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-03-20T17:47:22.568261" elapsed="0.318914"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:22.888175" level="INFO">Typing text 'John' into text field 'id:name'.</msg>
+<arg>id:name</arg>
+<arg>John</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:47:22.888175" elapsed="0.188324"/>
+</kw>
+<kw name="Textfield Value Should Be" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:23.101519" level="INFO">Content of text field 'id:name' is 'John'.</msg>
+<arg>id:name</arg>
+<arg>John</arg>
+<doc>Verifies text field ``locator`` has exactly text ``expected``.</doc>
+<status status="PASS" start="2024-03-20T17:47:23.077523" elapsed="0.023996"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:23.117501" level="INFO">Current page contains element 'xpath=//button[@id='submit-btn']'.</msg>
+<arg>xpath=//button[@id='submit-btn']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-03-20T17:47:23.102516" elapsed="0.014985"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>xpath=//button[@id='submit-btn']</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-03-20T17:47:23.118520" elapsed="0.287262"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:23.406796" level="INFO">Clicking element 'xpath=//button[@id='submit-btn']'.</msg>
+<arg>xpath=//button[@id='submit-btn']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:47:23.405782" elapsed="0.068546"/>
+</kw>
+<kw name="Alert Should Be Present" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:23.476387" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<arg>Message received!</arg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<status status="PASS" start="2024-03-20T17:47:23.476387" elapsed="0.010970"/>
+</kw>
+<kw name="Check All Inputs Empty">
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:23.506340" level="INFO">${text_inputs} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="921e28c0db670151ef75cef0d3e1d325", element="f.8AF2431144E2DA93BDB5AB3B4BA9C84B.d.505F12E8A27FCE4AA0736653E4C04C94.e.16")&gt;, &lt;selenium.webdriv...</msg>
+<var>${text_inputs}</var>
+<arg>${TEXT_INPUT_XPATH}</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:47:23.490353" elapsed="0.015987"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:23.523622" level="INFO">${textareas} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="921e28c0db670151ef75cef0d3e1d325", element="f.8AF2431144E2DA93BDB5AB3B4BA9C84B.d.505F12E8A27FCE4AA0736653E4C04C94.e.25")&gt;, &lt;selenium.webdriv...</msg>
+<var>${textareas}</var>
+<arg>${TEXTAREA_XPATH}</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:47:23.507342" elapsed="0.016280"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:23.537674" level="INFO">${checkboxes} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="921e28c0db670151ef75cef0d3e1d325", element="f.8AF2431144E2DA93BDB5AB3B4BA9C84B.d.505F12E8A27FCE4AA0736653E4C04C94.e.17")&gt;, &lt;selenium.webdriv...</msg>
+<var>${checkboxes}</var>
+<arg>xpath=//input[@type='checkbox']</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:47:23.524622" elapsed="0.013052"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:23.550623" level="INFO">${radios} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="921e28c0db670151ef75cef0d3e1d325", element="f.8AF2431144E2DA93BDB5AB3B4BA9C84B.d.505F12E8A27FCE4AA0736653E4C04C94.e.18")&gt;, &lt;selenium.webdriv...</msg>
+<var>${radios}</var>
+<arg>xpath=//input[@type='radio']</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:47:23.537674" elapsed="0.012949"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:23.570503" level="INFO">${dropdown} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="921e28c0db670151ef75cef0d3e1d325", element="f.8AF2431144E2DA93BDB5AB3B4BA9C84B.d.505F12E8A27FCE4AA0736653E4C04C94.e.23")&gt;]</msg>
+<var>${dropdown}</var>
+<arg>id=siblings</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:47:23.550623" elapsed="0.019880"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-03-20T17:47:23.571502" level="INFO">${all_empty} = True</msg>
+<var>${all_empty}</var>
+<arg>${TRUE}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-03-20T17:47:23.571502" elapsed="0.000000"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:23.584507" level="INFO">${value} = </msg>
+<var>${value}</var>
+<arg>${input_field}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:47:23.573504" elapsed="0.011003"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${value}' != ''</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:23.585512" elapsed="0.000998"/>
+</kw>
+<var name="${input_field}">&lt;selenium.webdriver.remote.webelement.WebElement (session="921e28c0db670151ef75cef0d3e1d325", element="f.8AF2431144E2DA93BDB5AB3B4BA9C84B.d.505F12E8A27FCE4AA0736653E4C04C94.e.16")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:23.572507" elapsed="0.014003"/>
+</iter>
+<iter>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:23.601979" level="INFO">${value} = </msg>
+<var>${value}</var>
+<arg>${input_field}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:47:23.587997" elapsed="0.013982"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${value}' != ''</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:23.601979" elapsed="0.000996"/>
+</kw>
+<var name="${input_field}">&lt;selenium.webdriver.remote.webelement.WebElement (session="921e28c0db670151ef75cef0d3e1d325", element="f.8AF2431144E2DA93BDB5AB3B4BA9C84B.d.505F12E8A27FCE4AA0736653E4C04C94.e.24")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:23.586510" elapsed="0.016465"/>
+</iter>
+<iter>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:23.614030" level="INFO">${value} = </msg>
+<var>${value}</var>
+<arg>${input_field}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:47:23.603974" elapsed="0.010056"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${value}' != ''</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:23.614981" elapsed="0.000000"/>
+</kw>
+<var name="${input_field}">&lt;selenium.webdriver.remote.webelement.WebElement (session="921e28c0db670151ef75cef0d3e1d325", element="f.8AF2431144E2DA93BDB5AB3B4BA9C84B.d.505F12E8A27FCE4AA0736653E4C04C94.e.27")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:23.603974" elapsed="0.012000"/>
+</iter>
+<var>${input_field}</var>
+<value>@{text_inputs}</value>
+<status status="PASS" start="2024-03-20T17:47:23.572507" elapsed="0.043467"/>
+</for>
+<for flavor="IN">
+<iter>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:23.630978" level="INFO">${value} = </msg>
+<var>${value}</var>
+<arg>${textarea}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:47:23.616974" elapsed="0.014004"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${value}' != ''</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:23.630978" elapsed="0.001000"/>
+</kw>
+<var name="${textarea}">&lt;selenium.webdriver.remote.webelement.WebElement (session="921e28c0db670151ef75cef0d3e1d325", element="f.8AF2431144E2DA93BDB5AB3B4BA9C84B.d.505F12E8A27FCE4AA0736653E4C04C94.e.25")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:23.616974" elapsed="0.015004"/>
+</iter>
+<iter>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:23.643971" level="INFO">${value} = </msg>
+<var>${value}</var>
+<arg>${textarea}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:47:23.632979" elapsed="0.010992"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${value}' != ''</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:23.644973" elapsed="0.000000"/>
+</kw>
+<var name="${textarea}">&lt;selenium.webdriver.remote.webelement.WebElement (session="921e28c0db670151ef75cef0d3e1d325", element="f.8AF2431144E2DA93BDB5AB3B4BA9C84B.d.505F12E8A27FCE4AA0736653E4C04C94.e.29")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:23.632979" elapsed="0.011994"/>
+</iter>
+<iter>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:23.655973" level="INFO">${value} = </msg>
+<var>${value}</var>
+<arg>${textarea}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:47:23.645978" elapsed="0.009995"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${value}' != ''</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:23.655973" elapsed="0.001003"/>
+</kw>
+<var name="${textarea}">&lt;selenium.webdriver.remote.webelement.WebElement (session="921e28c0db670151ef75cef0d3e1d325", element="f.8AF2431144E2DA93BDB5AB3B4BA9C84B.d.505F12E8A27FCE4AA0736653E4C04C94.e.30")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:23.645978" elapsed="0.010998"/>
+</iter>
+<var>${textarea}</var>
+<value>@{textareas}</value>
+<status status="PASS" start="2024-03-20T17:47:23.615974" elapsed="0.041002"/>
+</for>
+<for flavor="IN">
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-03-20T17:47:23.670974" level="INFO">${selected} = False</msg>
+<var>${selected}</var>
+<arg>${checkbox}</arg>
+<arg>is_selected</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-03-20T17:47:23.657977" elapsed="0.012997"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${selected}</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:23.671970" elapsed="0.000000"/>
+</kw>
+<var name="${checkbox}">&lt;selenium.webdriver.remote.webelement.WebElement (session="921e28c0db670151ef75cef0d3e1d325", element="f.8AF2431144E2DA93BDB5AB3B4BA9C84B.d.505F12E8A27FCE4AA0736653E4C04C94.e.17")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:23.657977" elapsed="0.013993"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-03-20T17:47:23.681099" level="INFO">${selected} = False</msg>
+<var>${selected}</var>
+<arg>${checkbox}</arg>
+<arg>is_selected</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-03-20T17:47:23.671970" elapsed="0.009129"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${selected}</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:23.681099" elapsed="0.001000"/>
+</kw>
+<var name="${checkbox}">&lt;selenium.webdriver.remote.webelement.WebElement (session="921e28c0db670151ef75cef0d3e1d325", element="f.8AF2431144E2DA93BDB5AB3B4BA9C84B.d.505F12E8A27FCE4AA0736653E4C04C94.e.11")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:23.671970" elapsed="0.010129"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-03-20T17:47:23.691095" level="INFO">${selected} = False</msg>
+<var>${selected}</var>
+<arg>${checkbox}</arg>
+<arg>is_selected</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-03-20T17:47:23.683097" elapsed="0.007998"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${selected}</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:23.691095" elapsed="0.001003"/>
+</kw>
+<var name="${checkbox}">&lt;selenium.webdriver.remote.webelement.WebElement (session="921e28c0db670151ef75cef0d3e1d325", element="f.8AF2431144E2DA93BDB5AB3B4BA9C84B.d.505F12E8A27FCE4AA0736653E4C04C94.e.12")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:23.683097" elapsed="0.009001"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-03-20T17:47:23.700103" level="INFO">${selected} = False</msg>
+<var>${selected}</var>
+<arg>${checkbox}</arg>
+<arg>is_selected</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-03-20T17:47:23.692098" elapsed="0.008005"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${selected}</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:23.700103" elapsed="0.000996"/>
+</kw>
+<var name="${checkbox}">&lt;selenium.webdriver.remote.webelement.WebElement (session="921e28c0db670151ef75cef0d3e1d325", element="f.8AF2431144E2DA93BDB5AB3B4BA9C84B.d.505F12E8A27FCE4AA0736653E4C04C94.e.13")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:23.692098" elapsed="0.009001"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-03-20T17:47:23.709099" level="INFO">${selected} = False</msg>
+<var>${selected}</var>
+<arg>${checkbox}</arg>
+<arg>is_selected</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-03-20T17:47:23.701099" elapsed="0.008000"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${selected}</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:23.710099" elapsed="0.000000"/>
+</kw>
+<var name="${checkbox}">&lt;selenium.webdriver.remote.webelement.WebElement (session="921e28c0db670151ef75cef0d3e1d325", element="f.8AF2431144E2DA93BDB5AB3B4BA9C84B.d.505F12E8A27FCE4AA0736653E4C04C94.e.14")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:23.701099" elapsed="0.009000"/>
+</iter>
+<var>${checkbox}</var>
+<value>@{checkboxes}</value>
+<status status="PASS" start="2024-03-20T17:47:23.657977" elapsed="0.052122"/>
+</for>
+<for flavor="IN">
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-03-20T17:47:23.720214" level="INFO">${selected} = False</msg>
+<var>${selected}</var>
+<arg>${radio}</arg>
+<arg>is_selected</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-03-20T17:47:23.711097" elapsed="0.009117"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${selected}</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:23.720214" elapsed="0.000996"/>
+</kw>
+<var name="${radio}">&lt;selenium.webdriver.remote.webelement.WebElement (session="921e28c0db670151ef75cef0d3e1d325", element="f.8AF2431144E2DA93BDB5AB3B4BA9C84B.d.505F12E8A27FCE4AA0736653E4C04C94.e.18")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:23.711097" elapsed="0.010113"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-03-20T17:47:23.729211" level="INFO">${selected} = False</msg>
+<var>${selected}</var>
+<arg>${radio}</arg>
+<arg>is_selected</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-03-20T17:47:23.721210" elapsed="0.008001"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${selected}</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:23.730213" elapsed="0.000000"/>
+</kw>
+<var name="${radio}">&lt;selenium.webdriver.remote.webelement.WebElement (session="921e28c0db670151ef75cef0d3e1d325", element="f.8AF2431144E2DA93BDB5AB3B4BA9C84B.d.505F12E8A27FCE4AA0736653E4C04C94.e.19")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:23.721210" elapsed="0.009003"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-03-20T17:47:23.739210" level="INFO">${selected} = False</msg>
+<var>${selected}</var>
+<arg>${radio}</arg>
+<arg>is_selected</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-03-20T17:47:23.730213" elapsed="0.008997"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${selected}</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:23.739210" elapsed="0.001002"/>
+</kw>
+<var name="${radio}">&lt;selenium.webdriver.remote.webelement.WebElement (session="921e28c0db670151ef75cef0d3e1d325", element="f.8AF2431144E2DA93BDB5AB3B4BA9C84B.d.505F12E8A27FCE4AA0736653E4C04C94.e.20")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:23.730213" elapsed="0.009999"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-03-20T17:47:23.747211" level="INFO">${selected} = False</msg>
+<var>${selected}</var>
+<arg>${radio}</arg>
+<arg>is_selected</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-03-20T17:47:23.740212" elapsed="0.006999"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${selected}</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:23.748211" elapsed="0.000000"/>
+</kw>
+<var name="${radio}">&lt;selenium.webdriver.remote.webelement.WebElement (session="921e28c0db670151ef75cef0d3e1d325", element="f.8AF2431144E2DA93BDB5AB3B4BA9C84B.d.505F12E8A27FCE4AA0736653E4C04C94.e.21")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:23.740212" elapsed="0.007999"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-03-20T17:47:23.759220" level="INFO">${selected} = False</msg>
+<var>${selected}</var>
+<arg>${radio}</arg>
+<arg>is_selected</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-03-20T17:47:23.749210" elapsed="0.010010"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${selected}</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:23.759220" elapsed="0.000996"/>
+</kw>
+<var name="${radio}">&lt;selenium.webdriver.remote.webelement.WebElement (session="921e28c0db670151ef75cef0d3e1d325", element="f.8AF2431144E2DA93BDB5AB3B4BA9C84B.d.505F12E8A27FCE4AA0736653E4C04C94.e.22")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:23.748211" elapsed="0.012005"/>
+</iter>
+<var>${radio}</var>
+<value>@{radios}</value>
+<status status="PASS" start="2024-03-20T17:47:23.710099" elapsed="0.050117"/>
+</for>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-03-20T17:47:23.771210" level="INFO">${selected} = False</msg>
+<var>${selected}</var>
+<arg>${dropdown[0]}</arg>
+<arg>is_selected</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-03-20T17:47:23.761214" elapsed="0.009996"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${selected}</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:23.772211" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${all_empty}</value>
+<status status="PASS" start="2024-03-20T17:47:23.773211" elapsed="0.000000"/>
+</return>
+<msg time="2024-03-20T17:47:23.773211" level="INFO">${all_empty} = True</msg>
+<var>${all_empty}</var>
+<status status="PASS" start="2024-03-20T17:47:23.489349" elapsed="0.283862"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${all_empty}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2024-03-20T17:47:23.775216" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-03-20T17:47:18.207938" elapsed="5.568276"/>
+</test>
+<test id="s1-t3" name="TC 3: Fill all (except name)" line="48">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:23.780497" level="INFO">Opening browser 'Chrome' to base url 'https://practice-automation.com/form-fields/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-03-20T17:47:23.779482" elapsed="4.087025"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-03-20T17:47:27.867510" elapsed="0.131874"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:28.008386" level="INFO">Current location is 'https://practice-automation.com/form-fields/'.</msg>
+<arg>${URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-03-20T17:47:28.000384" elapsed="0.008002"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:28.009385" level="INFO">Clicking element 'xpath=//input[@id='drink1']'.</msg>
+<arg>xpath=//input[@id='drink1']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:47:28.009385" elapsed="0.082461"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:28.093850" level="INFO">Clicking element 'xpath=//input[@id='color1']'.</msg>
+<arg>xpath=//input[@id='color1']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:47:28.092846" elapsed="0.080002"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:28.173850" level="INFO">Selecting options from selection list 'id:siblings' by value yes.</msg>
+<arg>id:siblings</arg>
+<arg>yes</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2024-03-20T17:47:28.173850" elapsed="0.104829"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:28.279679" level="INFO">Typing text 'admin@gmail.com' into text field 'id:email'.</msg>
+<arg>id:email</arg>
+<arg>admin@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:47:28.279679" elapsed="0.214619"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:28.496296" level="INFO">Typing text 'Lorem ipsum dolor sit amet' into text field 'id:message'.</msg>
+<arg>id:message</arg>
+<arg>Lorem ipsum dolor sit amet</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:47:28.495296" elapsed="0.266832"/>
+</kw>
+<kw name="Checkbox Should Be Selected" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:28.763128" level="INFO">Verifying checkbox 'xpath=//input[@id='drink1']' is selected.</msg>
+<arg>xpath=//input[@id='drink1']</arg>
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<status status="PASS" start="2024-03-20T17:47:28.763128" elapsed="0.041211"/>
+</kw>
+<kw name="Radio Button Should Be Set To" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:28.805336" level="INFO">Verifying radio button 'fav_color' has selection 'Red'.</msg>
+<arg>fav_color</arg>
+<arg>Red</arg>
+<doc>Verifies radio button group ``group_name`` is set to ``value``.</doc>
+<status status="PASS" start="2024-03-20T17:47:28.804339" elapsed="0.030998"/>
+</kw>
+<kw name="List Selection Should Be" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:28.837347" level="INFO">Verifying list 'id:siblings' has option [ yes ] selected.</msg>
+<msg time="2024-03-20T17:47:28.859337" level="INFO">Current page contains list 'id:siblings'.</msg>
+<arg>id:siblings</arg>
+<arg>yes</arg>
+<doc>Verifies selection list ``locator`` has ``expected`` options selected.</doc>
+<status status="PASS" start="2024-03-20T17:47:28.836339" elapsed="0.136387"/>
+</kw>
+<kw name="Textfield Value Should Be" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:29.003400" level="INFO">Content of text field 'id:email' is 'admin@gmail.com'.</msg>
+<arg>id:email</arg>
+<arg>admin@gmail.com</arg>
+<doc>Verifies text field ``locator`` has exactly text ``expected``.</doc>
+<status status="PASS" start="2024-03-20T17:47:28.973796" elapsed="0.029604"/>
+</kw>
+<kw name="Textarea Value Should Be" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:29.076046" level="INFO">Content of text area 'id:message' is 'Lorem ipsum dolor sit amet'.</msg>
+<arg>id:message</arg>
+<arg>Lorem ipsum dolor sit amet</arg>
+<doc>Verifies text area ``locator`` has exactly text ``expected``.</doc>
+<status status="PASS" start="2024-03-20T17:47:29.004380" elapsed="0.071666"/>
+</kw>
+<kw name="Textfield Value Should Be" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:29.143047" level="INFO">Content of text field 'id:name' is ''.</msg>
+<arg>id:name</arg>
+<arg>${EMPTY}</arg>
+<doc>Verifies text field ``locator`` has exactly text ``expected``.</doc>
+<status status="PASS" start="2024-03-20T17:47:29.104062" elapsed="0.040019"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:29.165994" level="INFO">Current page contains element 'xpath=//button[@id='submit-btn']'.</msg>
+<arg>xpath=//button[@id='submit-btn']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-03-20T17:47:29.145039" elapsed="0.020955"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>xpath=//button[@id='submit-btn']</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-03-20T17:47:29.168060" elapsed="0.301084"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:29.470144" level="INFO">Clicking element 'xpath=//button[@id='submit-btn']'.</msg>
+<arg>xpath=//button[@id='submit-btn']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:47:29.470144" elapsed="0.094275"/>
+</kw>
+<kw name="Alert Should Not Be Present" owner="SeleniumLibrary">
+<arg>Message received!</arg>
+<doc>Verifies that no alert is present.</doc>
+<status status="PASS" start="2024-03-20T17:47:29.566419" elapsed="5.111731"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-03-20T17:47:34.680283" elapsed="2.211881"/>
+</kw>
+<status status="PASS" start="2024-03-20T17:47:23.778216" elapsed="13.115628"/>
+</test>
+<test id="s1-t4" name="TC 4: Fill all (except checkbox drink)" line="78">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:36.899191" level="INFO">Opening browser 'Chrome' to base url 'https://practice-automation.com/form-fields/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-03-20T17:47:36.899191" elapsed="3.905804"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-03-20T17:47:40.807962" elapsed="0.119895"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:40.943844" level="INFO">Current location is 'https://practice-automation.com/form-fields/'.</msg>
+<arg>${URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-03-20T17:47:40.929844" elapsed="0.014000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:40.946618" level="INFO">Typing text 'John' into text field 'id:name'.</msg>
+<arg>id:name</arg>
+<arg>John</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:47:40.945593" elapsed="0.215648"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:41.163245" level="INFO">Clicking element 'xpath=//input[@id='color1']'.</msg>
+<arg>xpath=//input[@id='color1']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:47:41.162241" elapsed="0.047845"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:41.211092" level="INFO">Selecting options from selection list 'id:siblings' by value yes.</msg>
+<arg>id:siblings</arg>
+<arg>yes</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2024-03-20T17:47:41.210086" elapsed="0.094144"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:41.306230" level="INFO">Typing text 'admin@gmail.com' into text field 'id:email'.</msg>
+<arg>id:email</arg>
+<arg>admin@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:47:41.305230" elapsed="0.161097"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:41.467327" level="INFO">Typing text 'Lorem ipsum dolor sit amet' into text field 'id:message'.</msg>
+<arg>id:message</arg>
+<arg>Lorem ipsum dolor sit amet</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:47:41.466327" elapsed="0.191435"/>
+</kw>
+<kw name="Textfield Value Should Be" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:41.683850" level="INFO">Content of text field 'id:name' is 'John'.</msg>
+<arg>id:name</arg>
+<arg>John</arg>
+<doc>Verifies text field ``locator`` has exactly text ``expected``.</doc>
+<status status="PASS" start="2024-03-20T17:47:41.657762" elapsed="0.026088"/>
+</kw>
+<kw name="Radio Button Should Be Set To" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:41.684810" level="INFO">Verifying radio button 'fav_color' has selection 'Red'.</msg>
+<arg>fav_color</arg>
+<arg>Red</arg>
+<doc>Verifies radio button group ``group_name`` is set to ``value``.</doc>
+<status status="PASS" start="2024-03-20T17:47:41.684810" elapsed="0.029285"/>
+</kw>
+<kw name="List Selection Should Be" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:41.716100" level="INFO">Verifying list 'id:siblings' has option [ yes ] selected.</msg>
+<msg time="2024-03-20T17:47:41.739495" level="INFO">Current page contains list 'id:siblings'.</msg>
+<arg>id:siblings</arg>
+<arg>yes</arg>
+<doc>Verifies selection list ``locator`` has ``expected`` options selected.</doc>
+<status status="PASS" start="2024-03-20T17:47:41.716100" elapsed="0.150144"/>
+</kw>
+<kw name="Textfield Value Should Be" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:41.898214" level="INFO">Content of text field 'id:email' is 'admin@gmail.com'.</msg>
+<arg>id:email</arg>
+<arg>admin@gmail.com</arg>
+<doc>Verifies text field ``locator`` has exactly text ``expected``.</doc>
+<status status="PASS" start="2024-03-20T17:47:41.867247" elapsed="0.030967"/>
+</kw>
+<kw name="Textarea Value Should Be" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:41.921495" level="INFO">Content of text area 'id:message' is 'Lorem ipsum dolor sit amet'.</msg>
+<arg>id:message</arg>
+<arg>Lorem ipsum dolor sit amet</arg>
+<doc>Verifies text area ``locator`` has exactly text ``expected``.</doc>
+<status status="PASS" start="2024-03-20T17:47:41.898214" elapsed="0.023281"/>
+</kw>
+<kw name="Check All Unselected">
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:41.947799" level="INFO">${checkboxes} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="b283cb602682287756dad6e8fd04982e", element="f.2F97269D62052FD37CBBBC8DBB45D0F9.d.85F7EDAFAEFD1BED1666572B51FF0940.e.17")&gt;, &lt;selenium.webdriv...</msg>
+<var>${checkboxes}</var>
+<arg>${locator}</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:47:41.923498" elapsed="0.024301"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-03-20T17:47:41.948761" level="INFO">${all_unselected} = True</msg>
+<var>${all_unselected}</var>
+<arg>${TRUE}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-03-20T17:47:41.948761" elapsed="0.000000"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-03-20T17:47:41.960075" level="INFO">${selected} = False</msg>
+<var>${selected}</var>
+<arg>${checkbox}</arg>
+<arg>is_selected</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-03-20T17:47:41.949760" elapsed="0.010315"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${selected}</arg>
+<arg>Set Variable</arg>
+<arg>${all_unselected}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:41.961092" elapsed="0.000000"/>
+</kw>
+<var name="${checkbox}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b283cb602682287756dad6e8fd04982e", element="f.2F97269D62052FD37CBBBC8DBB45D0F9.d.85F7EDAFAEFD1BED1666572B51FF0940.e.17")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:41.949760" elapsed="0.011332"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-03-20T17:47:41.971087" level="INFO">${selected} = False</msg>
+<var>${selected}</var>
+<arg>${checkbox}</arg>
+<arg>is_selected</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-03-20T17:47:41.962117" elapsed="0.008970"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${selected}</arg>
+<arg>Set Variable</arg>
+<arg>${all_unselected}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:41.972092" elapsed="0.000996"/>
+</kw>
+<var name="${checkbox}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b283cb602682287756dad6e8fd04982e", element="f.2F97269D62052FD37CBBBC8DBB45D0F9.d.85F7EDAFAEFD1BED1666572B51FF0940.e.11")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:41.962117" elapsed="0.010971"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-03-20T17:47:41.985087" level="INFO">${selected} = False</msg>
+<var>${selected}</var>
+<arg>${checkbox}</arg>
+<arg>is_selected</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-03-20T17:47:41.974104" elapsed="0.010983"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${selected}</arg>
+<arg>Set Variable</arg>
+<arg>${all_unselected}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:41.985087" elapsed="0.000000"/>
+</kw>
+<var name="${checkbox}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b283cb602682287756dad6e8fd04982e", element="f.2F97269D62052FD37CBBBC8DBB45D0F9.d.85F7EDAFAEFD1BED1666572B51FF0940.e.12")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:41.974104" elapsed="0.010983"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-03-20T17:47:41.992086" level="INFO">${selected} = False</msg>
+<var>${selected}</var>
+<arg>${checkbox}</arg>
+<arg>is_selected</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-03-20T17:47:41.986084" elapsed="0.006002"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${selected}</arg>
+<arg>Set Variable</arg>
+<arg>${all_unselected}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:41.992086" elapsed="0.001005"/>
+</kw>
+<var name="${checkbox}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b283cb602682287756dad6e8fd04982e", element="f.2F97269D62052FD37CBBBC8DBB45D0F9.d.85F7EDAFAEFD1BED1666572B51FF0940.e.13")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:41.986084" elapsed="0.007007"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-03-20T17:47:42.001087" level="INFO">${selected} = False</msg>
+<var>${selected}</var>
+<arg>${checkbox}</arg>
+<arg>is_selected</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-03-20T17:47:41.995091" elapsed="0.005996"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${selected}</arg>
+<arg>Set Variable</arg>
+<arg>${all_unselected}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:42.001087" elapsed="0.000000"/>
+</kw>
+<var name="${checkbox}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b283cb602682287756dad6e8fd04982e", element="f.2F97269D62052FD37CBBBC8DBB45D0F9.d.85F7EDAFAEFD1BED1666572B51FF0940.e.14")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:41.994092" elapsed="0.006995"/>
+</iter>
+<var>${checkbox}</var>
+<value>@{checkboxes}</value>
+<status status="PASS" start="2024-03-20T17:47:41.949760" elapsed="0.052329"/>
+</for>
+<return>
+<value>${all_unselected}</value>
+<status status="PASS" start="2024-03-20T17:47:42.002089" elapsed="0.000000"/>
+</return>
+<msg time="2024-03-20T17:47:42.002089" level="INFO">${all_unselected} = True</msg>
+<var>${all_unselected}</var>
+<arg>xpath=//input[@type='checkbox']</arg>
+<status status="PASS" start="2024-03-20T17:47:41.922494" elapsed="0.079595"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${all_unselected}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2024-03-20T17:47:42.003087" elapsed="0.000998"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:42.021917" level="INFO">Current page contains element 'xpath=//button[@id='submit-btn']'.</msg>
+<arg>xpath=//button[@id='submit-btn']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-03-20T17:47:42.005084" elapsed="0.016833"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>xpath=//button[@id='submit-btn']</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-03-20T17:47:42.022909" elapsed="0.306912"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:42.331759" level="INFO">Clicking element 'xpath=//button[@id='submit-btn']'.</msg>
+<arg>xpath=//button[@id='submit-btn']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:47:42.331759" elapsed="0.034387"/>
+</kw>
+<kw name="Alert Should Be Present" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:42.367287" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<arg>Message received!</arg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<status status="PASS" start="2024-03-20T17:47:42.367287" elapsed="0.009685"/>
+</kw>
+<kw name="Check All Inputs Empty">
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:42.394189" level="INFO">${text_inputs} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="b283cb602682287756dad6e8fd04982e", element="f.2F97269D62052FD37CBBBC8DBB45D0F9.d.85F7EDAFAEFD1BED1666572B51FF0940.e.16")&gt;, &lt;selenium.webdriv...</msg>
+<var>${text_inputs}</var>
+<arg>${TEXT_INPUT_XPATH}</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:47:42.379981" elapsed="0.014208"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:42.404175" level="INFO">${textareas} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="b283cb602682287756dad6e8fd04982e", element="f.2F97269D62052FD37CBBBC8DBB45D0F9.d.85F7EDAFAEFD1BED1666572B51FF0940.e.25")&gt;, &lt;selenium.webdriv...</msg>
+<var>${textareas}</var>
+<arg>${TEXTAREA_XPATH}</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:47:42.395195" elapsed="0.008980"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:42.413228" level="INFO">${checkboxes} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="b283cb602682287756dad6e8fd04982e", element="f.2F97269D62052FD37CBBBC8DBB45D0F9.d.85F7EDAFAEFD1BED1666572B51FF0940.e.17")&gt;, &lt;selenium.webdriv...</msg>
+<var>${checkboxes}</var>
+<arg>xpath=//input[@type='checkbox']</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:47:42.405200" elapsed="0.008028"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:42.429238" level="INFO">${radios} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="b283cb602682287756dad6e8fd04982e", element="f.2F97269D62052FD37CBBBC8DBB45D0F9.d.85F7EDAFAEFD1BED1666572B51FF0940.e.18")&gt;, &lt;selenium.webdriv...</msg>
+<var>${radios}</var>
+<arg>xpath=//input[@type='radio']</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:47:42.413228" elapsed="0.017014"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:42.443196" level="INFO">${dropdown} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="b283cb602682287756dad6e8fd04982e", element="f.2F97269D62052FD37CBBBC8DBB45D0F9.d.85F7EDAFAEFD1BED1666572B51FF0940.e.23")&gt;]</msg>
+<var>${dropdown}</var>
+<arg>id=siblings</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:47:42.430242" elapsed="0.012954"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-03-20T17:47:42.444194" level="INFO">${all_empty} = True</msg>
+<var>${all_empty}</var>
+<arg>${TRUE}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-03-20T17:47:42.443196" elapsed="0.000998"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:42.458241" level="INFO">${value} = </msg>
+<var>${value}</var>
+<arg>${input_field}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:47:42.445191" elapsed="0.013050"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${value}' != ''</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:42.458241" elapsed="0.000994"/>
+</kw>
+<var name="${input_field}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b283cb602682287756dad6e8fd04982e", element="f.2F97269D62052FD37CBBBC8DBB45D0F9.d.85F7EDAFAEFD1BED1666572B51FF0940.e.16")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:42.445191" elapsed="0.014044"/>
+</iter>
+<iter>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:42.470191" level="INFO">${value} = </msg>
+<var>${value}</var>
+<arg>${input_field}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:47:42.460235" elapsed="0.009956"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${value}' != ''</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:42.471196" elapsed="0.000000"/>
+</kw>
+<var name="${input_field}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b283cb602682287756dad6e8fd04982e", element="f.2F97269D62052FD37CBBBC8DBB45D0F9.d.85F7EDAFAEFD1BED1666572B51FF0940.e.24")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:42.459235" elapsed="0.012956"/>
+</iter>
+<iter>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:42.495856" level="INFO">${value} = </msg>
+<var>${value}</var>
+<arg>${input_field}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:47:42.472191" elapsed="0.023665"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${value}' != ''</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:42.495856" elapsed="0.000995"/>
+</kw>
+<var name="${input_field}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b283cb602682287756dad6e8fd04982e", element="f.2F97269D62052FD37CBBBC8DBB45D0F9.d.85F7EDAFAEFD1BED1666572B51FF0940.e.27")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:42.472191" elapsed="0.024660"/>
+</iter>
+<var>${input_field}</var>
+<value>@{text_inputs}</value>
+<status status="PASS" start="2024-03-20T17:47:42.444194" elapsed="0.052657"/>
+</for>
+<for flavor="IN">
+<iter>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:42.513990" level="INFO">${value} = </msg>
+<var>${value}</var>
+<arg>${textarea}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:47:42.497849" elapsed="0.016141"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${value}' != ''</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:42.514988" elapsed="0.000000"/>
+</kw>
+<var name="${textarea}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b283cb602682287756dad6e8fd04982e", element="f.2F97269D62052FD37CBBBC8DBB45D0F9.d.85F7EDAFAEFD1BED1666572B51FF0940.e.25")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:42.497849" elapsed="0.017139"/>
+</iter>
+<iter>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:42.529169" level="INFO">${value} = </msg>
+<var>${value}</var>
+<arg>${textarea}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:47:42.515989" elapsed="0.013180"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${value}' != ''</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:42.529169" elapsed="0.001003"/>
+</kw>
+<var name="${textarea}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b283cb602682287756dad6e8fd04982e", element="f.2F97269D62052FD37CBBBC8DBB45D0F9.d.85F7EDAFAEFD1BED1666572B51FF0940.e.29")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:42.515989" elapsed="0.014183"/>
+</iter>
+<iter>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:42.543172" level="INFO">${value} = </msg>
+<var>${value}</var>
+<arg>${textarea}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:47:42.531171" elapsed="0.013000"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${value}' != ''</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:42.544171" elapsed="0.000998"/>
+</kw>
+<var name="${textarea}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b283cb602682287756dad6e8fd04982e", element="f.2F97269D62052FD37CBBBC8DBB45D0F9.d.85F7EDAFAEFD1BED1666572B51FF0940.e.30")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:42.531171" elapsed="0.013998"/>
+</iter>
+<var>${textarea}</var>
+<value>@{textareas}</value>
+<status status="PASS" start="2024-03-20T17:47:42.497849" elapsed="0.047320"/>
+</for>
+<for flavor="IN">
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-03-20T17:47:42.563362" level="INFO">${selected} = False</msg>
+<var>${selected}</var>
+<arg>${checkbox}</arg>
+<arg>is_selected</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-03-20T17:47:42.546169" elapsed="0.017193"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${selected}</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:42.564359" elapsed="0.000000"/>
+</kw>
+<var name="${checkbox}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b283cb602682287756dad6e8fd04982e", element="f.2F97269D62052FD37CBBBC8DBB45D0F9.d.85F7EDAFAEFD1BED1666572B51FF0940.e.17")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:42.546169" elapsed="0.018190"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-03-20T17:47:42.578458" level="INFO">${selected} = False</msg>
+<var>${selected}</var>
+<arg>${checkbox}</arg>
+<arg>is_selected</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-03-20T17:47:42.565348" elapsed="0.013110"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${selected}</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:42.579533" elapsed="0.000000"/>
+</kw>
+<var name="${checkbox}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b283cb602682287756dad6e8fd04982e", element="f.2F97269D62052FD37CBBBC8DBB45D0F9.d.85F7EDAFAEFD1BED1666572B51FF0940.e.11")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:42.565348" elapsed="0.015181"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-03-20T17:47:42.592731" level="INFO">${selected} = False</msg>
+<var>${selected}</var>
+<arg>${checkbox}</arg>
+<arg>is_selected</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-03-20T17:47:42.580529" elapsed="0.013224"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${selected}</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:42.593753" elapsed="0.000000"/>
+</kw>
+<var name="${checkbox}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b283cb602682287756dad6e8fd04982e", element="f.2F97269D62052FD37CBBBC8DBB45D0F9.d.85F7EDAFAEFD1BED1666572B51FF0940.e.12")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:42.580529" elapsed="0.014221"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-03-20T17:47:42.608202" level="INFO">${selected} = False</msg>
+<var>${selected}</var>
+<arg>${checkbox}</arg>
+<arg>is_selected</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-03-20T17:47:42.594750" elapsed="0.014454"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${selected}</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:42.609204" elapsed="0.000000"/>
+</kw>
+<var name="${checkbox}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b283cb602682287756dad6e8fd04982e", element="f.2F97269D62052FD37CBBBC8DBB45D0F9.d.85F7EDAFAEFD1BED1666572B51FF0940.e.13")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:42.594750" elapsed="0.015452"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-03-20T17:47:42.624119" level="INFO">${selected} = False</msg>
+<var>${selected}</var>
+<arg>${checkbox}</arg>
+<arg>is_selected</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-03-20T17:47:42.610202" elapsed="0.013917"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${selected}</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:42.625132" elapsed="0.000000"/>
+</kw>
+<var name="${checkbox}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b283cb602682287756dad6e8fd04982e", element="f.2F97269D62052FD37CBBBC8DBB45D0F9.d.85F7EDAFAEFD1BED1666572B51FF0940.e.14")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:42.610202" elapsed="0.015916"/>
+</iter>
+<var>${checkbox}</var>
+<value>@{checkboxes}</value>
+<status status="PASS" start="2024-03-20T17:47:42.545169" elapsed="0.080949"/>
+</for>
+<for flavor="IN">
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-03-20T17:47:42.639832" level="INFO">${selected} = False</msg>
+<var>${selected}</var>
+<arg>${radio}</arg>
+<arg>is_selected</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-03-20T17:47:42.627132" elapsed="0.013722"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${selected}</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:42.640854" elapsed="0.000000"/>
+</kw>
+<var name="${radio}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b283cb602682287756dad6e8fd04982e", element="f.2F97269D62052FD37CBBBC8DBB45D0F9.d.85F7EDAFAEFD1BED1666572B51FF0940.e.18")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:42.626118" elapsed="0.015733"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-03-20T17:47:42.654021" level="INFO">${selected} = False</msg>
+<var>${selected}</var>
+<arg>${radio}</arg>
+<arg>is_selected</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-03-20T17:47:42.641851" elapsed="0.012170"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${selected}</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:42.655041" elapsed="0.001116"/>
+</kw>
+<var name="${radio}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b283cb602682287756dad6e8fd04982e", element="f.2F97269D62052FD37CBBBC8DBB45D0F9.d.85F7EDAFAEFD1BED1666572B51FF0940.e.19")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:42.641851" elapsed="0.014306"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-03-20T17:47:42.666267" level="INFO">${selected} = False</msg>
+<var>${selected}</var>
+<arg>${radio}</arg>
+<arg>is_selected</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-03-20T17:47:42.656157" elapsed="0.011018"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${selected}</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:42.667175" elapsed="0.001083"/>
+</kw>
+<var name="${radio}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b283cb602682287756dad6e8fd04982e", element="f.2F97269D62052FD37CBBBC8DBB45D0F9.d.85F7EDAFAEFD1BED1666572B51FF0940.e.20")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:42.656157" elapsed="0.012101"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-03-20T17:47:42.679274" level="INFO">${selected} = False</msg>
+<var>${selected}</var>
+<arg>${radio}</arg>
+<arg>is_selected</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-03-20T17:47:42.668258" elapsed="0.011016"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${selected}</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:42.680334" elapsed="0.000000"/>
+</kw>
+<var name="${radio}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b283cb602682287756dad6e8fd04982e", element="f.2F97269D62052FD37CBBBC8DBB45D0F9.d.85F7EDAFAEFD1BED1666572B51FF0940.e.21")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:42.668258" elapsed="0.012076"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-03-20T17:47:42.693619" level="INFO">${selected} = False</msg>
+<var>${selected}</var>
+<arg>${radio}</arg>
+<arg>is_selected</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-03-20T17:47:42.681397" elapsed="0.012222"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${selected}</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:42.694617" elapsed="0.000000"/>
+</kw>
+<var name="${radio}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b283cb602682287756dad6e8fd04982e", element="f.2F97269D62052FD37CBBBC8DBB45D0F9.d.85F7EDAFAEFD1BED1666572B51FF0940.e.22")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:42.681397" elapsed="0.013220"/>
+</iter>
+<var>${radio}</var>
+<value>@{radios}</value>
+<status status="PASS" start="2024-03-20T17:47:42.626118" elapsed="0.069497"/>
+</for>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-03-20T17:47:42.711617" level="INFO">${selected} = False</msg>
+<var>${selected}</var>
+<arg>${dropdown[0]}</arg>
+<arg>is_selected</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-03-20T17:47:42.695615" elapsed="0.016002"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${selected}</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:42.712620" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${all_empty}</value>
+<status status="PASS" start="2024-03-20T17:47:42.713621" elapsed="0.000000"/>
+</return>
+<msg time="2024-03-20T17:47:42.713621" level="INFO">${all_empty} = True</msg>
+<var>${all_empty}</var>
+<status status="PASS" start="2024-03-20T17:47:42.378983" elapsed="0.334638"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${all_empty}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2024-03-20T17:47:42.715616" elapsed="0.000000"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-03-20T17:47:42.716623" elapsed="2.165194"/>
+</kw>
+<status status="PASS" start="2024-03-20T17:47:36.897863" elapsed="7.984963"/>
+</test>
+<test id="s1-t5" name="TC 5: Fill all (except radio color)" line="113">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:44.886818" level="INFO">Opening browser 'Chrome' to base url 'https://practice-automation.com/form-fields/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-03-20T17:47:44.886818" elapsed="3.880245"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-03-20T17:47:48.767963" elapsed="0.128206"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:48.914247" level="INFO">Current location is 'https://practice-automation.com/form-fields/'.</msg>
+<arg>${URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-03-20T17:47:48.898171" elapsed="0.016076"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:48.917145" level="INFO">Typing text 'John' into text field 'id:name'.</msg>
+<arg>id:name</arg>
+<arg>John</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:47:48.916150" elapsed="0.224187"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:49.141339" level="INFO">Clicking element 'xpath=//input[@id='drink1']'.</msg>
+<arg>xpath=//input[@id='drink1']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:47:49.141339" elapsed="0.046946"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:49.189310" level="INFO">Selecting options from selection list 'id:siblings' by value yes.</msg>
+<arg>id:siblings</arg>
+<arg>yes</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2024-03-20T17:47:49.189310" elapsed="0.153733"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:49.345056" level="INFO">Typing text 'admin@gmail.com' into text field 'id:email'.</msg>
+<arg>id:email</arg>
+<arg>admin@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:47:49.344054" elapsed="0.106065"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:49.450119" level="INFO">Typing text 'Lorem ipsum dolor sit amet' into text field 'id:message'.</msg>
+<arg>id:message</arg>
+<arg>Lorem ipsum dolor sit amet</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:47:49.450119" elapsed="0.193947"/>
+</kw>
+<kw name="Textfield Value Should Be" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:49.677074" level="INFO">Content of text field 'id:name' is 'John'.</msg>
+<arg>id:name</arg>
+<arg>John</arg>
+<doc>Verifies text field ``locator`` has exactly text ``expected``.</doc>
+<status status="PASS" start="2024-03-20T17:47:49.645067" elapsed="0.032007"/>
+</kw>
+<kw name="Checkbox Should Be Selected" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:49.680069" level="INFO">Verifying checkbox 'xpath=//input[@id='drink1']' is selected.</msg>
+<arg>xpath=//input[@id='drink1']</arg>
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<status status="PASS" start="2024-03-20T17:47:49.679066" elapsed="0.057841"/>
+</kw>
+<kw name="List Selection Should Be" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:49.737901" level="INFO">Verifying list 'id:siblings' has option [ yes ] selected.</msg>
+<msg time="2024-03-20T17:47:49.760504" level="INFO">Current page contains list 'id:siblings'.</msg>
+<arg>id:siblings</arg>
+<arg>yes</arg>
+<doc>Verifies selection list ``locator`` has ``expected`` options selected.</doc>
+<status status="PASS" start="2024-03-20T17:47:49.737901" elapsed="0.144722"/>
+</kw>
+<kw name="Textfield Value Should Be" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:49.921626" level="INFO">Content of text field 'id:email' is 'admin@gmail.com'.</msg>
+<arg>id:email</arg>
+<arg>admin@gmail.com</arg>
+<doc>Verifies text field ``locator`` has exactly text ``expected``.</doc>
+<status status="PASS" start="2024-03-20T17:47:49.883842" elapsed="0.037784"/>
+</kw>
+<kw name="Textarea Value Should Be" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:49.980132" level="INFO">Content of text area 'id:message' is 'Lorem ipsum dolor sit amet'.</msg>
+<arg>id:message</arg>
+<arg>Lorem ipsum dolor sit amet</arg>
+<doc>Verifies text area ``locator`` has exactly text ``expected``.</doc>
+<status status="PASS" start="2024-03-20T17:47:49.923805" elapsed="0.057326"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>xpath=//input[@type='radio']</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-03-20T17:47:49.985566" elapsed="0.312548"/>
+</kw>
+<kw name="Check All Unselected">
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:50.314126" level="INFO">${checkboxes} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="da846e801a6d508f369ccf3f62dacf3e", element="f.9586781FFC5FEEF503A0A60BEECA5FB3.d.36F47B497A82A7F3C81A2F4AF92585B1.e.18")&gt;, &lt;selenium.webdriv...</msg>
+<var>${checkboxes}</var>
+<arg>${locator}</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:47:50.301229" elapsed="0.012897"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-03-20T17:47:50.315139" level="INFO">${all_unselected} = True</msg>
+<var>${all_unselected}</var>
+<arg>${TRUE}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-03-20T17:47:50.315139" elapsed="0.000000"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-03-20T17:47:50.327621" level="INFO">${selected} = False</msg>
+<var>${selected}</var>
+<arg>${checkbox}</arg>
+<arg>is_selected</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-03-20T17:47:50.316510" elapsed="0.011111"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${selected}</arg>
+<arg>Set Variable</arg>
+<arg>${all_unselected}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:50.328857" elapsed="0.000000"/>
+</kw>
+<var name="${checkbox}">&lt;selenium.webdriver.remote.webelement.WebElement (session="da846e801a6d508f369ccf3f62dacf3e", element="f.9586781FFC5FEEF503A0A60BEECA5FB3.d.36F47B497A82A7F3C81A2F4AF92585B1.e.18")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:50.316510" elapsed="0.013377"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-03-20T17:47:50.341867" level="INFO">${selected} = False</msg>
+<var>${selected}</var>
+<arg>${checkbox}</arg>
+<arg>is_selected</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-03-20T17:47:50.330881" elapsed="0.010986"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${selected}</arg>
+<arg>Set Variable</arg>
+<arg>${all_unselected}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:50.341867" elapsed="0.001013"/>
+</kw>
+<var name="${checkbox}">&lt;selenium.webdriver.remote.webelement.WebElement (session="da846e801a6d508f369ccf3f62dacf3e", element="f.9586781FFC5FEEF503A0A60BEECA5FB3.d.36F47B497A82A7F3C81A2F4AF92585B1.e.19")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:50.330881" elapsed="0.011999"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-03-20T17:47:50.354137" level="INFO">${selected} = False</msg>
+<var>${selected}</var>
+<arg>${checkbox}</arg>
+<arg>is_selected</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-03-20T17:47:50.343883" elapsed="0.010254"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${selected}</arg>
+<arg>Set Variable</arg>
+<arg>${all_unselected}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:50.354137" elapsed="0.000992"/>
+</kw>
+<var name="${checkbox}">&lt;selenium.webdriver.remote.webelement.WebElement (session="da846e801a6d508f369ccf3f62dacf3e", element="f.9586781FFC5FEEF503A0A60BEECA5FB3.d.36F47B497A82A7F3C81A2F4AF92585B1.e.20")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:50.342880" elapsed="0.012249"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-03-20T17:47:50.365443" level="INFO">${selected} = False</msg>
+<var>${selected}</var>
+<arg>${checkbox}</arg>
+<arg>is_selected</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-03-20T17:47:50.355129" elapsed="0.010314"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${selected}</arg>
+<arg>Set Variable</arg>
+<arg>${all_unselected}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:50.366459" elapsed="0.000000"/>
+</kw>
+<var name="${checkbox}">&lt;selenium.webdriver.remote.webelement.WebElement (session="da846e801a6d508f369ccf3f62dacf3e", element="f.9586781FFC5FEEF503A0A60BEECA5FB3.d.36F47B497A82A7F3C81A2F4AF92585B1.e.21")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:50.355129" elapsed="0.011330"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-03-20T17:47:50.376849" level="INFO">${selected} = False</msg>
+<var>${selected}</var>
+<arg>${checkbox}</arg>
+<arg>is_selected</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-03-20T17:47:50.367458" elapsed="0.009391"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${selected}</arg>
+<arg>Set Variable</arg>
+<arg>${all_unselected}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:50.376849" elapsed="0.001001"/>
+</kw>
+<var name="${checkbox}">&lt;selenium.webdriver.remote.webelement.WebElement (session="da846e801a6d508f369ccf3f62dacf3e", element="f.9586781FFC5FEEF503A0A60BEECA5FB3.d.36F47B497A82A7F3C81A2F4AF92585B1.e.22")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:50.366459" elapsed="0.011391"/>
+</iter>
+<var>${checkbox}</var>
+<value>@{checkboxes}</value>
+<status status="PASS" start="2024-03-20T17:47:50.315139" elapsed="0.062711"/>
+</for>
+<return>
+<value>${all_unselected}</value>
+<status status="PASS" start="2024-03-20T17:47:50.377850" elapsed="0.000000"/>
+</return>
+<msg time="2024-03-20T17:47:50.377850" level="INFO">${all_unselected} = True</msg>
+<var>${all_unselected}</var>
+<arg>xpath=//input[@type='radio']</arg>
+<status status="PASS" start="2024-03-20T17:47:50.300131" elapsed="0.077719"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${all_unselected}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2024-03-20T17:47:50.378846" elapsed="0.001005"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:50.395637" level="INFO">Current page contains element 'xpath=//button[@id='submit-btn']'.</msg>
+<arg>xpath=//button[@id='submit-btn']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-03-20T17:47:50.379851" elapsed="0.015786"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>xpath=//button[@id='submit-btn']</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-03-20T17:47:50.396650" elapsed="0.294672"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:50.694408" level="INFO">Clicking element 'xpath=//button[@id='submit-btn']'.</msg>
+<arg>xpath=//button[@id='submit-btn']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:47:50.693364" elapsed="0.075938"/>
+</kw>
+<kw name="Alert Should Be Present" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:50.770301" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<arg>Message received!</arg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<status status="PASS" start="2024-03-20T17:47:50.770301" elapsed="0.007000"/>
+</kw>
+<kw name="Check All Inputs Empty">
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:50.795304" level="INFO">${text_inputs} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="da846e801a6d508f369ccf3f62dacf3e", element="f.9586781FFC5FEEF503A0A60BEECA5FB3.d.36F47B497A82A7F3C81A2F4AF92585B1.e.16")&gt;, &lt;selenium.webdriv...</msg>
+<var>${text_inputs}</var>
+<arg>${TEXT_INPUT_XPATH}</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:47:50.780303" elapsed="0.015001"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:50.806320" level="INFO">${textareas} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="da846e801a6d508f369ccf3f62dacf3e", element="f.9586781FFC5FEEF503A0A60BEECA5FB3.d.36F47B497A82A7F3C81A2F4AF92585B1.e.25")&gt;, &lt;selenium.webdriv...</msg>
+<var>${textareas}</var>
+<arg>${TEXTAREA_XPATH}</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:47:50.795304" elapsed="0.011016"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:50.817302" level="INFO">${checkboxes} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="da846e801a6d508f369ccf3f62dacf3e", element="f.9586781FFC5FEEF503A0A60BEECA5FB3.d.36F47B497A82A7F3C81A2F4AF92585B1.e.17")&gt;, &lt;selenium.webdriv...</msg>
+<var>${checkboxes}</var>
+<arg>xpath=//input[@type='checkbox']</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:47:50.806320" elapsed="0.011997"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:50.827301" level="INFO">${radios} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="da846e801a6d508f369ccf3f62dacf3e", element="f.9586781FFC5FEEF503A0A60BEECA5FB3.d.36F47B497A82A7F3C81A2F4AF92585B1.e.18")&gt;, &lt;selenium.webdriv...</msg>
+<var>${radios}</var>
+<arg>xpath=//input[@type='radio']</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:47:50.818317" elapsed="0.008984"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:50.840316" level="INFO">${dropdown} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="da846e801a6d508f369ccf3f62dacf3e", element="f.9586781FFC5FEEF503A0A60BEECA5FB3.d.36F47B497A82A7F3C81A2F4AF92585B1.e.23")&gt;]</msg>
+<var>${dropdown}</var>
+<arg>id=siblings</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:47:50.828316" elapsed="0.012000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-03-20T17:47:50.841316" level="INFO">${all_empty} = True</msg>
+<var>${all_empty}</var>
+<arg>${TRUE}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-03-20T17:47:50.840316" elapsed="0.001000"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:50.854323" level="INFO">${value} = </msg>
+<var>${value}</var>
+<arg>${input_field}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:47:50.842317" elapsed="0.012006"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${value}' != ''</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:50.855304" elapsed="0.000000"/>
+</kw>
+<var name="${input_field}">&lt;selenium.webdriver.remote.webelement.WebElement (session="da846e801a6d508f369ccf3f62dacf3e", element="f.9586781FFC5FEEF503A0A60BEECA5FB3.d.36F47B497A82A7F3C81A2F4AF92585B1.e.16")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:50.841316" elapsed="0.014992"/>
+</iter>
+<iter>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:50.868313" level="INFO">${value} = </msg>
+<var>${value}</var>
+<arg>${input_field}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:47:50.856308" elapsed="0.012005"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${value}' != ''</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:50.869312" elapsed="0.000998"/>
+</kw>
+<var name="${input_field}">&lt;selenium.webdriver.remote.webelement.WebElement (session="da846e801a6d508f369ccf3f62dacf3e", element="f.9586781FFC5FEEF503A0A60BEECA5FB3.d.36F47B497A82A7F3C81A2F4AF92585B1.e.24")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:50.856308" elapsed="0.014002"/>
+</iter>
+<iter>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:50.887304" level="INFO">${value} = </msg>
+<var>${value}</var>
+<arg>${input_field}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:47:50.871302" elapsed="0.016002"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${value}' != ''</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:50.888320" elapsed="0.000996"/>
+</kw>
+<var name="${input_field}">&lt;selenium.webdriver.remote.webelement.WebElement (session="da846e801a6d508f369ccf3f62dacf3e", element="f.9586781FFC5FEEF503A0A60BEECA5FB3.d.36F47B497A82A7F3C81A2F4AF92585B1.e.27")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:50.871302" elapsed="0.018014"/>
+</iter>
+<var>${input_field}</var>
+<value>@{text_inputs}</value>
+<status status="PASS" start="2024-03-20T17:47:50.841316" elapsed="0.048000"/>
+</for>
+<for flavor="IN">
+<iter>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:50.907307" level="INFO">${value} = </msg>
+<var>${value}</var>
+<arg>${textarea}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:47:50.891302" elapsed="0.016005"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${value}' != ''</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:50.908316" elapsed="0.000000"/>
+</kw>
+<var name="${textarea}">&lt;selenium.webdriver.remote.webelement.WebElement (session="da846e801a6d508f369ccf3f62dacf3e", element="f.9586781FFC5FEEF503A0A60BEECA5FB3.d.36F47B497A82A7F3C81A2F4AF92585B1.e.25")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:50.890316" elapsed="0.018000"/>
+</iter>
+<iter>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:50.919321" level="INFO">${value} = </msg>
+<var>${value}</var>
+<arg>${textarea}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:47:50.908316" elapsed="0.011005"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${value}' != ''</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:50.920317" elapsed="0.000000"/>
+</kw>
+<var name="${textarea}">&lt;selenium.webdriver.remote.webelement.WebElement (session="da846e801a6d508f369ccf3f62dacf3e", element="f.9586781FFC5FEEF503A0A60BEECA5FB3.d.36F47B497A82A7F3C81A2F4AF92585B1.e.29")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:50.908316" elapsed="0.012001"/>
+</iter>
+<iter>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:50.931320" level="INFO">${value} = </msg>
+<var>${value}</var>
+<arg>${textarea}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:47:50.921316" elapsed="0.010004"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${value}' != ''</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:50.931320" elapsed="0.000996"/>
+</kw>
+<var name="${textarea}">&lt;selenium.webdriver.remote.webelement.WebElement (session="da846e801a6d508f369ccf3f62dacf3e", element="f.9586781FFC5FEEF503A0A60BEECA5FB3.d.36F47B497A82A7F3C81A2F4AF92585B1.e.30")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:50.921316" elapsed="0.011000"/>
+</iter>
+<var>${textarea}</var>
+<value>@{textareas}</value>
+<status status="PASS" start="2024-03-20T17:47:50.890316" elapsed="0.042000"/>
+</for>
+<for flavor="IN">
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-03-20T17:47:50.943301" level="INFO">${selected} = False</msg>
+<var>${selected}</var>
+<arg>${checkbox}</arg>
+<arg>is_selected</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-03-20T17:47:50.933316" elapsed="0.010992"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${selected}</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:50.944308" elapsed="0.000000"/>
+</kw>
+<var name="${checkbox}">&lt;selenium.webdriver.remote.webelement.WebElement (session="da846e801a6d508f369ccf3f62dacf3e", element="f.9586781FFC5FEEF503A0A60BEECA5FB3.d.36F47B497A82A7F3C81A2F4AF92585B1.e.17")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:50.932316" elapsed="0.011992"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-03-20T17:47:50.958306" level="INFO">${selected} = False</msg>
+<var>${selected}</var>
+<arg>${checkbox}</arg>
+<arg>is_selected</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-03-20T17:47:50.945305" elapsed="0.013001"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${selected}</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:50.959307" elapsed="0.000000"/>
+</kw>
+<var name="${checkbox}">&lt;selenium.webdriver.remote.webelement.WebElement (session="da846e801a6d508f369ccf3f62dacf3e", element="f.9586781FFC5FEEF503A0A60BEECA5FB3.d.36F47B497A82A7F3C81A2F4AF92585B1.e.11")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:50.945305" elapsed="0.014002"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-03-20T17:47:50.973310" level="INFO">${selected} = False</msg>
+<var>${selected}</var>
+<arg>${checkbox}</arg>
+<arg>is_selected</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-03-20T17:47:50.960325" elapsed="0.012985"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${selected}</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:50.973310" elapsed="0.000000"/>
+</kw>
+<var name="${checkbox}">&lt;selenium.webdriver.remote.webelement.WebElement (session="da846e801a6d508f369ccf3f62dacf3e", element="f.9586781FFC5FEEF503A0A60BEECA5FB3.d.36F47B497A82A7F3C81A2F4AF92585B1.e.12")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:50.959307" elapsed="0.014003"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-03-20T17:47:50.987327" level="INFO">${selected} = False</msg>
+<var>${selected}</var>
+<arg>${checkbox}</arg>
+<arg>is_selected</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-03-20T17:47:50.974317" elapsed="0.013010"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${selected}</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:50.988306" elapsed="0.000000"/>
+</kw>
+<var name="${checkbox}">&lt;selenium.webdriver.remote.webelement.WebElement (session="da846e801a6d508f369ccf3f62dacf3e", element="f.9586781FFC5FEEF503A0A60BEECA5FB3.d.36F47B497A82A7F3C81A2F4AF92585B1.e.13")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:50.974317" elapsed="0.013989"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-03-20T17:47:50.995302" level="INFO">${selected} = False</msg>
+<var>${selected}</var>
+<arg>${checkbox}</arg>
+<arg>is_selected</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-03-20T17:47:50.989306" elapsed="0.005996"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${selected}</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:50.996324" elapsed="0.000000"/>
+</kw>
+<var name="${checkbox}">&lt;selenium.webdriver.remote.webelement.WebElement (session="da846e801a6d508f369ccf3f62dacf3e", element="f.9586781FFC5FEEF503A0A60BEECA5FB3.d.36F47B497A82A7F3C81A2F4AF92585B1.e.14")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:50.988306" elapsed="0.008018"/>
+</iter>
+<var>${checkbox}</var>
+<value>@{checkboxes}</value>
+<status status="PASS" start="2024-03-20T17:47:50.932316" elapsed="0.064008"/>
+</for>
+<for flavor="IN">
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-03-20T17:47:51.007302" level="INFO">${selected} = False</msg>
+<var>${selected}</var>
+<arg>${radio}</arg>
+<arg>is_selected</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-03-20T17:47:50.997318" elapsed="0.009984"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${selected}</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:51.007302" elapsed="0.000000"/>
+</kw>
+<var name="${radio}">&lt;selenium.webdriver.remote.webelement.WebElement (session="da846e801a6d508f369ccf3f62dacf3e", element="f.9586781FFC5FEEF503A0A60BEECA5FB3.d.36F47B497A82A7F3C81A2F4AF92585B1.e.18")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:50.997318" elapsed="0.011003"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-03-20T17:47:51.016301" level="INFO">${selected} = False</msg>
+<var>${selected}</var>
+<arg>${radio}</arg>
+<arg>is_selected</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-03-20T17:47:51.008321" elapsed="0.007980"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${selected}</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:51.017323" elapsed="0.000000"/>
+</kw>
+<var name="${radio}">&lt;selenium.webdriver.remote.webelement.WebElement (session="da846e801a6d508f369ccf3f62dacf3e", element="f.9586781FFC5FEEF503A0A60BEECA5FB3.d.36F47B497A82A7F3C81A2F4AF92585B1.e.19")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:51.008321" elapsed="0.009002"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-03-20T17:47:51.024322" level="INFO">${selected} = False</msg>
+<var>${selected}</var>
+<arg>${radio}</arg>
+<arg>is_selected</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-03-20T17:47:51.017323" elapsed="0.006999"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${selected}</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:51.024322" elapsed="0.000000"/>
+</kw>
+<var name="${radio}">&lt;selenium.webdriver.remote.webelement.WebElement (session="da846e801a6d508f369ccf3f62dacf3e", element="f.9586781FFC5FEEF503A0A60BEECA5FB3.d.36F47B497A82A7F3C81A2F4AF92585B1.e.20")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:51.017323" elapsed="0.007980"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-03-20T17:47:51.031302" level="INFO">${selected} = False</msg>
+<var>${selected}</var>
+<arg>${radio}</arg>
+<arg>is_selected</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-03-20T17:47:51.025303" elapsed="0.005999"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${selected}</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:51.031302" elapsed="0.000999"/>
+</kw>
+<var name="${radio}">&lt;selenium.webdriver.remote.webelement.WebElement (session="da846e801a6d508f369ccf3f62dacf3e", element="f.9586781FFC5FEEF503A0A60BEECA5FB3.d.36F47B497A82A7F3C81A2F4AF92585B1.e.21")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:51.025303" elapsed="0.006998"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-03-20T17:47:51.039301" level="INFO">${selected} = False</msg>
+<var>${selected}</var>
+<arg>${radio}</arg>
+<arg>is_selected</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-03-20T17:47:51.032301" elapsed="0.007000"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${selected}</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:51.039301" elapsed="0.001015"/>
+</kw>
+<var name="${radio}">&lt;selenium.webdriver.remote.webelement.WebElement (session="da846e801a6d508f369ccf3f62dacf3e", element="f.9586781FFC5FEEF503A0A60BEECA5FB3.d.36F47B497A82A7F3C81A2F4AF92585B1.e.22")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:51.032301" elapsed="0.008015"/>
+</iter>
+<var>${radio}</var>
+<value>@{radios}</value>
+<status status="PASS" start="2024-03-20T17:47:50.996324" elapsed="0.043992"/>
+</for>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-03-20T17:47:51.049301" level="INFO">${selected} = False</msg>
+<var>${selected}</var>
+<arg>${dropdown[0]}</arg>
+<arg>is_selected</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-03-20T17:47:51.040316" elapsed="0.008985"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${selected}</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:51.049301" elapsed="0.000999"/>
+</kw>
+<return>
+<value>${all_empty}</value>
+<status status="PASS" start="2024-03-20T17:47:51.050300" elapsed="0.000000"/>
+</return>
+<msg time="2024-03-20T17:47:51.050300" level="INFO">${all_empty} = True</msg>
+<var>${all_empty}</var>
+<status status="PASS" start="2024-03-20T17:47:50.779305" elapsed="0.270995"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${all_empty}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2024-03-20T17:47:51.051326" elapsed="0.000000"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-03-20T17:47:51.051326" elapsed="2.113310"/>
+</kw>
+<status status="PASS" start="2024-03-20T17:47:44.885813" elapsed="8.279938"/>
+</test>
+<test id="s1-t6" name="TC 6: Fill all (except dropdown siblings)" line="149">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:53.169749" level="INFO">Opening browser 'Chrome' to base url 'https://practice-automation.com/form-fields/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-03-20T17:47:53.168751" elapsed="4.126619"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-03-20T17:47:57.295370" elapsed="0.120036"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:57.427877" level="INFO">Current location is 'https://practice-automation.com/form-fields/'.</msg>
+<arg>${URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-03-20T17:47:57.417306" elapsed="0.011597"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:57.430950" level="INFO">Typing text 'John' into text field 'id:name'.</msg>
+<arg>id:name</arg>
+<arg>John</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:47:57.429956" elapsed="0.234250"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:57.664206" level="INFO">Clicking element 'xpath=//input[@id='drink1']'.</msg>
+<arg>xpath=//input[@id='drink1']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:47:57.664206" elapsed="0.057064"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:57.722266" level="INFO">Clicking element 'xpath=//input[@id='color1']'.</msg>
+<arg>xpath=//input[@id='color1']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:47:57.721270" elapsed="0.047518"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:57.770787" level="INFO">Typing text 'admin@gmail.com' into text field 'id:email'.</msg>
+<arg>id:email</arg>
+<arg>admin@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:47:57.769806" elapsed="0.235104"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:58.005939" level="INFO">Typing text 'Lorem ipsum dolor sit amet' into text field 'id:message'.</msg>
+<arg>id:message</arg>
+<arg>Lorem ipsum dolor sit amet</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:47:58.005939" elapsed="0.161627"/>
+</kw>
+<kw name="Textfield Value Should Be" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:58.202097" level="INFO">Content of text field 'id:name' is 'John'.</msg>
+<arg>id:name</arg>
+<arg>John</arg>
+<doc>Verifies text field ``locator`` has exactly text ``expected``.</doc>
+<status status="PASS" start="2024-03-20T17:47:58.169079" elapsed="0.033018"/>
+</kw>
+<kw name="Checkbox Should Be Selected" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:58.202635" level="INFO">Verifying checkbox 'xpath=//input[@id='drink1']' is selected.</msg>
+<arg>xpath=//input[@id='drink1']</arg>
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<status status="PASS" start="2024-03-20T17:47:58.202635" elapsed="0.035808"/>
+</kw>
+<kw name="Radio Button Should Be Set To" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:58.239392" level="INFO">Verifying radio button 'fav_color' has selection 'Red'.</msg>
+<arg>fav_color</arg>
+<arg>Red</arg>
+<doc>Verifies radio button group ``group_name`` is set to ``value``.</doc>
+<status status="PASS" start="2024-03-20T17:47:58.239392" elapsed="0.037032"/>
+</kw>
+<kw name="Textfield Value Should Be" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:58.329052" level="INFO">Content of text field 'id:email' is 'admin@gmail.com'.</msg>
+<arg>id:email</arg>
+<arg>admin@gmail.com</arg>
+<doc>Verifies text field ``locator`` has exactly text ``expected``.</doc>
+<status status="PASS" start="2024-03-20T17:47:58.277721" elapsed="0.052336"/>
+</kw>
+<kw name="Textarea Value Should Be" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:58.366524" level="INFO">Content of text area 'id:message' is 'Lorem ipsum dolor sit amet'.</msg>
+<arg>id:message</arg>
+<arg>Lorem ipsum dolor sit amet</arg>
+<doc>Verifies text area ``locator`` has exactly text ``expected``.</doc>
+<status status="PASS" start="2024-03-20T17:47:58.331053" elapsed="0.036505"/>
+</kw>
+<kw name="Get Selected List Value" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:58.452174" level="INFO">${selected_value} = default</msg>
+<var>${selected_value}</var>
+<arg>id=siblings</arg>
+<doc>Returns the value of selected option from selection list ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:47:58.369603" elapsed="0.082571"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${selected_value}</arg>
+<arg>default</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-03-20T17:47:58.453172" elapsed="0.000000"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:58.468161" level="INFO">Current page contains element 'xpath=//button[@id='submit-btn']'.</msg>
+<arg>xpath=//button[@id='submit-btn']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-03-20T17:47:58.454177" elapsed="0.013984"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>xpath=//button[@id='submit-btn']</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-03-20T17:47:58.469158" elapsed="0.275517"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:58.746609" level="INFO">Clicking element 'xpath=//button[@id='submit-btn']'.</msg>
+<arg>xpath=//button[@id='submit-btn']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:47:58.745609" elapsed="0.038082"/>
+</kw>
+<kw name="Alert Should Be Present" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:58.785722" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<arg>Message received!</arg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<status status="PASS" start="2024-03-20T17:47:58.785722" elapsed="0.007494"/>
+</kw>
+<kw name="Check All Inputs Empty">
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:58.812069" level="INFO">${text_inputs} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="d74d4066e43409dca6dc70a609c34d16", element="f.6005CB2645AA2A7334C8383CE3E537EC.d.C4E560E375F035B63D4F8F10DDDD8D9D.e.16")&gt;, &lt;selenium.webdriv...</msg>
+<var>${text_inputs}</var>
+<arg>${TEXT_INPUT_XPATH}</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:47:58.797002" elapsed="0.015067"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:58.823156" level="INFO">${textareas} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="d74d4066e43409dca6dc70a609c34d16", element="f.6005CB2645AA2A7334C8383CE3E537EC.d.C4E560E375F035B63D4F8F10DDDD8D9D.e.25")&gt;, &lt;selenium.webdriv...</msg>
+<var>${textareas}</var>
+<arg>${TEXTAREA_XPATH}</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:47:58.812069" elapsed="0.012051"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:58.837015" level="INFO">${checkboxes} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="d74d4066e43409dca6dc70a609c34d16", element="f.6005CB2645AA2A7334C8383CE3E537EC.d.C4E560E375F035B63D4F8F10DDDD8D9D.e.17")&gt;, &lt;selenium.webdriv...</msg>
+<var>${checkboxes}</var>
+<arg>xpath=//input[@type='checkbox']</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:47:58.824120" elapsed="0.012895"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:58.848019" level="INFO">${radios} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="d74d4066e43409dca6dc70a609c34d16", element="f.6005CB2645AA2A7334C8383CE3E537EC.d.C4E560E375F035B63D4F8F10DDDD8D9D.e.18")&gt;, &lt;selenium.webdriv...</msg>
+<var>${radios}</var>
+<arg>xpath=//input[@type='radio']</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:47:58.838065" elapsed="0.010999"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:58.857065" level="INFO">${dropdown} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="d74d4066e43409dca6dc70a609c34d16", element="f.6005CB2645AA2A7334C8383CE3E537EC.d.C4E560E375F035B63D4F8F10DDDD8D9D.e.23")&gt;]</msg>
+<var>${dropdown}</var>
+<arg>id=siblings</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:47:58.849064" elapsed="0.008001"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-03-20T17:47:58.858021" level="INFO">${all_empty} = True</msg>
+<var>${all_empty}</var>
+<arg>${TRUE}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-03-20T17:47:58.858021" elapsed="0.000000"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:58.865056" level="INFO">${value} = </msg>
+<var>${value}</var>
+<arg>${input_field}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:47:58.859017" elapsed="0.007048"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${value}' != ''</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:58.866065" elapsed="0.000951"/>
+</kw>
+<var name="${input_field}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d74d4066e43409dca6dc70a609c34d16", element="f.6005CB2645AA2A7334C8383CE3E537EC.d.C4E560E375F035B63D4F8F10DDDD8D9D.e.16")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:58.858021" elapsed="0.008995"/>
+</iter>
+<iter>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:58.873056" level="INFO">${value} = </msg>
+<var>${value}</var>
+<arg>${input_field}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:47:58.867016" elapsed="0.006040"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${value}' != ''</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:58.873056" elapsed="0.000998"/>
+</kw>
+<var name="${input_field}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d74d4066e43409dca6dc70a609c34d16", element="f.6005CB2645AA2A7334C8383CE3E537EC.d.C4E560E375F035B63D4F8F10DDDD8D9D.e.24")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:58.867016" elapsed="0.007038"/>
+</iter>
+<iter>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:58.881051" level="INFO">${value} = </msg>
+<var>${value}</var>
+<arg>${input_field}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:47:58.874054" elapsed="0.006997"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${value}' != ''</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:58.881051" elapsed="0.000000"/>
+</kw>
+<var name="${input_field}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d74d4066e43409dca6dc70a609c34d16", element="f.6005CB2645AA2A7334C8383CE3E537EC.d.C4E560E375F035B63D4F8F10DDDD8D9D.e.27")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:58.874054" elapsed="0.006997"/>
+</iter>
+<var>${input_field}</var>
+<value>@{text_inputs}</value>
+<status status="PASS" start="2024-03-20T17:47:58.858021" elapsed="0.023030"/>
+</for>
+<for flavor="IN">
+<iter>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:58.888057" level="INFO">${value} = </msg>
+<var>${value}</var>
+<arg>${textarea}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:47:58.882054" elapsed="0.006961"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${value}' != ''</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:58.889015" elapsed="0.000000"/>
+</kw>
+<var name="${textarea}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d74d4066e43409dca6dc70a609c34d16", element="f.6005CB2645AA2A7334C8383CE3E537EC.d.C4E560E375F035B63D4F8F10DDDD8D9D.e.25")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:58.882054" elapsed="0.006961"/>
+</iter>
+<iter>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:58.895013" level="INFO">${value} = </msg>
+<var>${value}</var>
+<arg>${textarea}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:47:58.890015" elapsed="0.004998"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${value}' != ''</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:58.896020" elapsed="0.000000"/>
+</kw>
+<var name="${textarea}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d74d4066e43409dca6dc70a609c34d16", element="f.6005CB2645AA2A7334C8383CE3E537EC.d.C4E560E375F035B63D4F8F10DDDD8D9D.e.29")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:58.889015" elapsed="0.007999"/>
+</iter>
+<iter>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:47:58.903020" level="INFO">${value} = </msg>
+<var>${value}</var>
+<arg>${textarea}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:47:58.897014" elapsed="0.006006"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${value}' != ''</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:58.903020" elapsed="0.000997"/>
+</kw>
+<var name="${textarea}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d74d4066e43409dca6dc70a609c34d16", element="f.6005CB2645AA2A7334C8383CE3E537EC.d.C4E560E375F035B63D4F8F10DDDD8D9D.e.30")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:58.897014" elapsed="0.007003"/>
+</iter>
+<var>${textarea}</var>
+<value>@{textareas}</value>
+<status status="PASS" start="2024-03-20T17:47:58.882054" elapsed="0.021963"/>
+</for>
+<for flavor="IN">
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-03-20T17:47:58.913057" level="INFO">${selected} = False</msg>
+<var>${selected}</var>
+<arg>${checkbox}</arg>
+<arg>is_selected</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-03-20T17:47:58.905017" elapsed="0.008040"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${selected}</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:58.913057" elapsed="0.000998"/>
+</kw>
+<var name="${checkbox}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d74d4066e43409dca6dc70a609c34d16", element="f.6005CB2645AA2A7334C8383CE3E537EC.d.C4E560E375F035B63D4F8F10DDDD8D9D.e.17")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:58.905017" elapsed="0.009038"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-03-20T17:47:58.921057" level="INFO">${selected} = False</msg>
+<var>${selected}</var>
+<arg>${checkbox}</arg>
+<arg>is_selected</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-03-20T17:47:58.914055" elapsed="0.007002"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${selected}</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:58.921057" elapsed="0.000000"/>
+</kw>
+<var name="${checkbox}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d74d4066e43409dca6dc70a609c34d16", element="f.6005CB2645AA2A7334C8383CE3E537EC.d.C4E560E375F035B63D4F8F10DDDD8D9D.e.11")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:58.914055" elapsed="0.008010"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-03-20T17:47:58.928015" level="INFO">${selected} = False</msg>
+<var>${selected}</var>
+<arg>${checkbox}</arg>
+<arg>is_selected</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-03-20T17:47:58.922065" elapsed="0.005950"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${selected}</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:58.928015" elapsed="0.000000"/>
+</kw>
+<var name="${checkbox}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d74d4066e43409dca6dc70a609c34d16", element="f.6005CB2645AA2A7334C8383CE3E537EC.d.C4E560E375F035B63D4F8F10DDDD8D9D.e.12")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:58.922065" elapsed="0.005950"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-03-20T17:47:58.935049" level="INFO">${selected} = False</msg>
+<var>${selected}</var>
+<arg>${checkbox}</arg>
+<arg>is_selected</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-03-20T17:47:58.929013" elapsed="0.006036"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${selected}</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:58.935049" elapsed="0.000000"/>
+</kw>
+<var name="${checkbox}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d74d4066e43409dca6dc70a609c34d16", element="f.6005CB2645AA2A7334C8383CE3E537EC.d.C4E560E375F035B63D4F8F10DDDD8D9D.e.13")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:58.929013" elapsed="0.007037"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-03-20T17:47:58.943056" level="INFO">${selected} = False</msg>
+<var>${selected}</var>
+<arg>${checkbox}</arg>
+<arg>is_selected</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-03-20T17:47:58.936050" elapsed="0.007006"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${selected}</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:58.943056" elapsed="0.001001"/>
+</kw>
+<var name="${checkbox}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d74d4066e43409dca6dc70a609c34d16", element="f.6005CB2645AA2A7334C8383CE3E537EC.d.C4E560E375F035B63D4F8F10DDDD8D9D.e.14")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:58.936050" elapsed="0.008007"/>
+</iter>
+<var>${checkbox}</var>
+<value>@{checkboxes}</value>
+<status status="PASS" start="2024-03-20T17:47:58.904017" elapsed="0.040040"/>
+</for>
+<for flavor="IN">
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-03-20T17:47:58.950052" level="INFO">${selected} = False</msg>
+<var>${selected}</var>
+<arg>${radio}</arg>
+<arg>is_selected</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-03-20T17:47:58.945053" elapsed="0.006000"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${selected}</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:58.951053" elapsed="0.000000"/>
+</kw>
+<var name="${radio}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d74d4066e43409dca6dc70a609c34d16", element="f.6005CB2645AA2A7334C8383CE3E537EC.d.C4E560E375F035B63D4F8F10DDDD8D9D.e.18")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:58.945053" elapsed="0.006000"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-03-20T17:47:58.959053" level="INFO">${selected} = False</msg>
+<var>${selected}</var>
+<arg>${radio}</arg>
+<arg>is_selected</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-03-20T17:47:58.952063" elapsed="0.006990"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${selected}</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:58.960055" elapsed="0.000000"/>
+</kw>
+<var name="${radio}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d74d4066e43409dca6dc70a609c34d16", element="f.6005CB2645AA2A7334C8383CE3E537EC.d.C4E560E375F035B63D4F8F10DDDD8D9D.e.19")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:58.951053" elapsed="0.009002"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-03-20T17:47:58.968053" level="INFO">${selected} = False</msg>
+<var>${selected}</var>
+<arg>${radio}</arg>
+<arg>is_selected</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-03-20T17:47:58.960055" elapsed="0.007998"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${selected}</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:58.968053" elapsed="0.001001"/>
+</kw>
+<var name="${radio}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d74d4066e43409dca6dc70a609c34d16", element="f.6005CB2645AA2A7334C8383CE3E537EC.d.C4E560E375F035B63D4F8F10DDDD8D9D.e.20")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:58.960055" elapsed="0.008999"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-03-20T17:47:58.978052" level="INFO">${selected} = False</msg>
+<var>${selected}</var>
+<arg>${radio}</arg>
+<arg>is_selected</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-03-20T17:47:58.969054" elapsed="0.008998"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${selected}</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:58.978052" elapsed="0.000000"/>
+</kw>
+<var name="${radio}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d74d4066e43409dca6dc70a609c34d16", element="f.6005CB2645AA2A7334C8383CE3E537EC.d.C4E560E375F035B63D4F8F10DDDD8D9D.e.21")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:58.969054" elapsed="0.008998"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-03-20T17:47:58.985052" level="INFO">${selected} = False</msg>
+<var>${selected}</var>
+<arg>${radio}</arg>
+<arg>is_selected</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-03-20T17:47:58.979053" elapsed="0.005999"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${selected}</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:58.986054" elapsed="0.000000"/>
+</kw>
+<var name="${radio}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d74d4066e43409dca6dc70a609c34d16", element="f.6005CB2645AA2A7334C8383CE3E537EC.d.C4E560E375F035B63D4F8F10DDDD8D9D.e.22")&gt;</var>
+<status status="PASS" start="2024-03-20T17:47:58.978052" elapsed="0.008002"/>
+</iter>
+<var>${radio}</var>
+<value>@{radios}</value>
+<status status="PASS" start="2024-03-20T17:47:58.944057" elapsed="0.041997"/>
+</for>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-03-20T17:47:58.994051" level="INFO">${selected} = False</msg>
+<var>${selected}</var>
+<arg>${dropdown[0]}</arg>
+<arg>is_selected</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-03-20T17:47:58.986054" elapsed="0.007997"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${selected}</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:47:58.994051" elapsed="0.000963"/>
+</kw>
+<return>
+<value>${all_empty}</value>
+<status status="PASS" start="2024-03-20T17:47:58.995014" elapsed="0.000000"/>
+</return>
+<msg time="2024-03-20T17:47:58.995014" level="INFO">${all_empty} = True</msg>
+<var>${all_empty}</var>
+<status status="PASS" start="2024-03-20T17:47:58.795593" elapsed="0.199421"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${all_empty}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2024-03-20T17:47:58.995014" elapsed="0.001038"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-03-20T17:47:58.996052" elapsed="2.080616"/>
+</kw>
+<status status="PASS" start="2024-03-20T17:47:53.167754" elapsed="7.911090"/>
+</test>
+<test id="s1-t7" name="TC 7: Fill all (except email)" line="184">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:48:01.083901" level="INFO">Opening browser 'Chrome' to base url 'https://practice-automation.com/form-fields/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-03-20T17:48:01.083901" elapsed="3.891418"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-03-20T17:48:04.976319" elapsed="0.123873"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:48:05.111205" level="INFO">Current location is 'https://practice-automation.com/form-fields/'.</msg>
+<arg>${URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-03-20T17:48:05.101192" elapsed="0.010013"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:48:05.113193" level="INFO">Typing text 'John' into text field 'id:name'.</msg>
+<arg>id:name</arg>
+<arg>John</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:48:05.112196" elapsed="0.095236"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:48:05.208433" level="INFO">Clicking element 'xpath=//input[@id='drink1']'.</msg>
+<arg>xpath=//input[@id='drink1']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:48:05.208433" elapsed="0.045701"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:48:05.255144" level="INFO">Clicking element 'xpath=//input[@id='color1']'.</msg>
+<arg>xpath=//input[@id='color1']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:48:05.255144" elapsed="0.067642"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:48:05.324791" level="INFO">Selecting options from selection list 'id:siblings' by value yes.</msg>
+<arg>id:siblings</arg>
+<arg>yes</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2024-03-20T17:48:05.323792" elapsed="0.077324"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:48:05.402082" level="INFO">Typing text 'Lorem ipsum dolor sit amet' into text field 'id:message'.</msg>
+<arg>id:message</arg>
+<arg>Lorem ipsum dolor sit amet</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:48:05.402082" elapsed="0.177150"/>
+</kw>
+<kw name="Textfield Value Should Be" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:48:05.606765" level="INFO">Content of text field 'id:name' is 'John'.</msg>
+<arg>id:name</arg>
+<arg>John</arg>
+<doc>Verifies text field ``locator`` has exactly text ``expected``.</doc>
+<status status="PASS" start="2024-03-20T17:48:05.579232" elapsed="0.028529"/>
+</kw>
+<kw name="Checkbox Should Be Selected" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:48:05.608760" level="INFO">Verifying checkbox 'xpath=//input[@id='drink1']' is selected.</msg>
+<arg>xpath=//input[@id='drink1']</arg>
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<status status="PASS" start="2024-03-20T17:48:05.607761" elapsed="0.039638"/>
+</kw>
+<kw name="Radio Button Should Be Set To" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:48:05.648813" level="INFO">Verifying radio button 'fav_color' has selection 'Red'.</msg>
+<arg>fav_color</arg>
+<arg>Red</arg>
+<doc>Verifies radio button group ``group_name`` is set to ``value``.</doc>
+<status status="PASS" start="2024-03-20T17:48:05.647399" elapsed="0.057254"/>
+</kw>
+<kw name="List Selection Should Be" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:48:05.706696" level="INFO">Verifying list 'id=siblings' has option [ yes ] selected.</msg>
+<msg time="2024-03-20T17:48:05.733708" level="INFO">Current page contains list 'id=siblings'.</msg>
+<arg>id=siblings</arg>
+<arg>yes</arg>
+<doc>Verifies selection list ``locator`` has ``expected`` options selected.</doc>
+<status status="PASS" start="2024-03-20T17:48:05.705693" elapsed="0.162322"/>
+</kw>
+<kw name="Textarea Value Should Be" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:48:05.924320" level="INFO">Content of text area 'id:message' is 'Lorem ipsum dolor sit amet'.</msg>
+<arg>id:message</arg>
+<arg>Lorem ipsum dolor sit amet</arg>
+<doc>Verifies text area ``locator`` has exactly text ``expected``.</doc>
+<status status="PASS" start="2024-03-20T17:48:05.869006" elapsed="0.055314"/>
+</kw>
+<kw name="Textfield Value Should Be" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:48:05.980563" level="INFO">Content of text field 'id:email' is ''.</msg>
+<arg>id:email</arg>
+<arg>${EMPTY}</arg>
+<doc>Verifies text field ``locator`` has exactly text ``expected``.</doc>
+<status status="PASS" start="2024-03-20T17:48:05.926317" elapsed="0.055239"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:48:05.999047" level="INFO">Current page contains element 'xpath=//button[@id='submit-btn']'.</msg>
+<arg>xpath=//button[@id='submit-btn']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-03-20T17:48:05.983032" elapsed="0.016015"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>xpath=//button[@id='submit-btn']</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-03-20T17:48:06.000054" elapsed="0.306119"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:48:06.307177" level="INFO">Clicking element 'xpath=//button[@id='submit-btn']'.</msg>
+<arg>xpath=//button[@id='submit-btn']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:48:06.307177" elapsed="0.088150"/>
+</kw>
+<kw name="Alert Should Be Present" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:48:06.397330" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<arg>Message received!</arg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<status status="PASS" start="2024-03-20T17:48:06.397330" elapsed="0.013789"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-03-20T17:48:06.413620" elapsed="2.149359"/>
+</kw>
+<status status="PASS" start="2024-03-20T17:48:01.081935" elapsed="7.482025"/>
+</test>
+<test id="s1-t8" name="TC 8: Fill all (except textarea message)" line="214">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:48:08.568067" level="INFO">Opening browser 'Chrome' to base url 'https://practice-automation.com/form-fields/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-03-20T17:48:08.567062" elapsed="4.033082"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-03-20T17:48:12.601143" elapsed="0.117753"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:48:12.731971" level="INFO">Current location is 'https://practice-automation.com/form-fields/'.</msg>
+<arg>${URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-03-20T17:48:12.720981" elapsed="0.010990"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:48:12.733979" level="INFO">Typing text 'John' into text field 'id:name'.</msg>
+<arg>id:name</arg>
+<arg>John</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:48:12.732984" elapsed="0.217518"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:48:12.951503" level="INFO">Clicking element 'xpath=//input[@id='drink1']'.</msg>
+<arg>xpath=//input[@id='drink1']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:48:12.951503" elapsed="0.052000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:48:13.004504" level="INFO">Clicking element 'xpath=//input[@id='color1']'.</msg>
+<arg>xpath=//input[@id='color1']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:48:13.004504" elapsed="0.043626"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:48:13.050143" level="INFO">Selecting options from selection list 'id:siblings' by value yes.</msg>
+<arg>id:siblings</arg>
+<arg>yes</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2024-03-20T17:48:13.049151" elapsed="0.162549"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:48:13.212690" level="INFO">Typing text 'admin@gmail.com' into text field 'id:email'.</msg>
+<arg>id:email</arg>
+<arg>admin@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:48:13.212690" elapsed="0.174382"/>
+</kw>
+<kw name="Textfield Value Should Be" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:48:13.421075" level="INFO">Content of text field 'id:name' is 'John'.</msg>
+<arg>id:name</arg>
+<arg>John</arg>
+<doc>Verifies text field ``locator`` has exactly text ``expected``.</doc>
+<status status="PASS" start="2024-03-20T17:48:13.387072" elapsed="0.034003"/>
+</kw>
+<kw name="Checkbox Should Be Selected" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:48:13.423075" level="INFO">Verifying checkbox 'xpath=//input[@id='drink1']' is selected.</msg>
+<arg>xpath=//input[@id='drink1']</arg>
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<status status="PASS" start="2024-03-20T17:48:13.423075" elapsed="0.053998"/>
+</kw>
+<kw name="Radio Button Should Be Set To" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:48:13.479082" level="INFO">Verifying radio button 'fav_color' has selection 'Red'.</msg>
+<arg>fav_color</arg>
+<arg>Red</arg>
+<doc>Verifies radio button group ``group_name`` is set to ``value``.</doc>
+<status status="PASS" start="2024-03-20T17:48:13.479082" elapsed="0.050993"/>
+</kw>
+<kw name="List Selection Should Be" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:48:13.532080" level="INFO">Verifying list 'id=siblings' has option [ yes ] selected.</msg>
+<msg time="2024-03-20T17:48:13.560072" level="INFO">Current page contains list 'id=siblings'.</msg>
+<arg>id=siblings</arg>
+<arg>yes</arg>
+<doc>Verifies selection list ``locator`` has ``expected`` options selected.</doc>
+<status status="PASS" start="2024-03-20T17:48:13.532080" elapsed="0.146908"/>
+</kw>
+<kw name="Textfield Value Should Be" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:48:13.719972" level="INFO">Content of text field 'id:email' is 'admin@gmail.com'.</msg>
+<arg>id:email</arg>
+<arg>admin@gmail.com</arg>
+<doc>Verifies text field ``locator`` has exactly text ``expected``.</doc>
+<status status="PASS" start="2024-03-20T17:48:13.679985" elapsed="0.039987"/>
+</kw>
+<kw name="Textarea Value Should Be" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:48:13.762020" level="INFO">Content of text area 'id:message' is ''.</msg>
+<arg>id:message</arg>
+<arg>${EMPTY}</arg>
+<doc>Verifies text area ``locator`` has exactly text ``expected``.</doc>
+<status status="PASS" start="2024-03-20T17:48:13.721989" elapsed="0.040031"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:48:13.792026" level="INFO">Current page contains element 'xpath=//button[@id='submit-btn']'.</msg>
+<arg>xpath=//button[@id='submit-btn']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-03-20T17:48:13.765001" elapsed="0.027025"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>xpath=//button[@id='submit-btn']</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-03-20T17:48:13.792839" elapsed="0.300986"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:48:14.095922" level="INFO">Clicking element 'xpath=//button[@id='submit-btn']'.</msg>
+<arg>xpath=//button[@id='submit-btn']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:48:14.094923" elapsed="0.067802"/>
+</kw>
+<kw name="Alert Should Be Present" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:48:14.163744" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<arg>Message received!</arg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<status status="PASS" start="2024-03-20T17:48:14.163744" elapsed="0.010521"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-03-20T17:48:14.176267" elapsed="2.110863"/>
+</kw>
+<status status="PASS" start="2024-03-20T17:48:08.565958" elapsed="7.723073"/>
+</test>
+<test id="s1-t9" name="TC 9: Fill all inputs" line="244">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:48:16.292963" level="INFO">Opening browser 'Chrome' to base url 'https://practice-automation.com/form-fields/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-03-20T17:48:16.292963" elapsed="4.331581"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-03-20T17:48:20.625538" elapsed="0.129339"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:48:20.769728" level="INFO">Current location is 'https://practice-automation.com/form-fields/'.</msg>
+<arg>${URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-03-20T17:48:20.755496" elapsed="0.015251"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>id:name</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-03-20T17:48:20.771563" elapsed="0.310171"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:48:21.083687" level="INFO">Typing text 'John' into text field 'id:name'.</msg>
+<arg>id:name</arg>
+<arg>John</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:48:21.083687" elapsed="0.168949"/>
+</kw>
+<kw name="Textfield Value Should Be" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:48:21.275987" level="INFO">Content of text field 'id:name' is 'John'.</msg>
+<arg>id:name</arg>
+<arg>John</arg>
+<doc>Verifies text field ``locator`` has exactly text ``expected``.</doc>
+<status status="PASS" start="2024-03-20T17:48:21.253655" elapsed="0.023350"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:48:21.277987" level="INFO">Clicking element 'xpath=//input[@id='drink1']'.</msg>
+<arg>xpath=//input[@id='drink1']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:48:21.277987" elapsed="0.046956"/>
+</kw>
+<kw name="Checkbox Should Be Selected" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:48:21.326448" level="INFO">Verifying checkbox 'xpath=//input[@id='drink1']' is selected.</msg>
+<arg>xpath=//input[@id='drink1']</arg>
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<status status="PASS" start="2024-03-20T17:48:21.324943" elapsed="0.026157"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:48:21.353098" level="INFO">Clicking element 'xpath=//input[@id='color1']'.</msg>
+<arg>xpath=//input[@id='color1']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:48:21.352098" elapsed="0.038963"/>
+</kw>
+<kw name="Radio Button Should Be Set To" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:48:21.393058" level="INFO">Verifying radio button 'fav_color' has selection 'Red'.</msg>
+<arg>fav_color</arg>
+<arg>Red</arg>
+<doc>Verifies radio button group ``group_name`` is set to ``value``.</doc>
+<status status="PASS" start="2024-03-20T17:48:21.392068" elapsed="0.022493"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:48:21.416584" level="INFO">Selecting options from selection list 'id:siblings' by value yes.</msg>
+<arg>id:siblings</arg>
+<arg>yes</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2024-03-20T17:48:21.415564" elapsed="0.080168"/>
+</kw>
+<kw name="List Selection Should Be" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:48:21.496472" level="INFO">Verifying list 'id:siblings' has option [ yes ] selected.</msg>
+<msg time="2024-03-20T17:48:21.507197" level="INFO">Current page contains list 'id:siblings'.</msg>
+<arg>id:siblings</arg>
+<arg>yes</arg>
+<doc>Verifies selection list ``locator`` has ``expected`` options selected.</doc>
+<status status="PASS" start="2024-03-20T17:48:21.496472" elapsed="0.112841"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:48:21.611216" level="INFO">Typing text 'admin@gmail.com' into text field 'id:email'.</msg>
+<arg>id:email</arg>
+<arg>admin@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:48:21.611216" elapsed="0.148743"/>
+</kw>
+<kw name="Textfield Value Should Be" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:48:21.786022" level="INFO">Content of text field 'id:email' is 'admin@gmail.com'.</msg>
+<arg>id:email</arg>
+<arg>admin@gmail.com</arg>
+<doc>Verifies text field ``locator`` has exactly text ``expected``.</doc>
+<status status="PASS" start="2024-03-20T17:48:21.759959" elapsed="0.026063"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:48:21.788020" level="INFO">Typing text 'Lorem ipsum dolor sit amet' into text field 'id:message'.</msg>
+<arg>id:message</arg>
+<arg>Lorem ipsum dolor sit amet</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:48:21.787019" elapsed="0.147959"/>
+</kw>
+<kw name="Textarea Value Should Be" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:48:21.954275" level="INFO">Content of text area 'id:message' is 'Lorem ipsum dolor sit amet'.</msg>
+<arg>id:message</arg>
+<arg>Lorem ipsum dolor sit amet</arg>
+<doc>Verifies text area ``locator`` has exactly text ``expected``.</doc>
+<status status="PASS" start="2024-03-20T17:48:21.935989" elapsed="0.018286"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:48:21.966935" level="INFO">Current page contains element 'xpath=//button[@id='submit-btn']'.</msg>
+<arg>xpath=//button[@id='submit-btn']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-03-20T17:48:21.955258" elapsed="0.012692"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>xpath=//button[@id='submit-btn']</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-03-20T17:48:21.968949" elapsed="0.272733"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:48:22.242773" level="INFO">Clicking element 'xpath=//button[@id='submit-btn']'.</msg>
+<arg>xpath=//button[@id='submit-btn']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:48:22.242773" elapsed="0.052520"/>
+</kw>
+<kw name="Alert Should Be Present" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:48:22.296802" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<arg>Message received!</arg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<status status="PASS" start="2024-03-20T17:48:22.296802" elapsed="0.007120"/>
+</kw>
+<kw name="Check All Inputs Empty">
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:48:22.320916" level="INFO">${text_inputs} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="00dd4cf7b8518d1d90cda105224f9dec", element="f.A81D884586966D3718F4E7556DABC690.d.45727064E88518B12250C331910F2281.e.16")&gt;, &lt;selenium.webdriv...</msg>
+<var>${text_inputs}</var>
+<arg>${TEXT_INPUT_XPATH}</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:48:22.308921" elapsed="0.011995"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:48:22.331719" level="INFO">${textareas} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="00dd4cf7b8518d1d90cda105224f9dec", element="f.A81D884586966D3718F4E7556DABC690.d.45727064E88518B12250C331910F2281.e.25")&gt;, &lt;selenium.webdriv...</msg>
+<var>${textareas}</var>
+<arg>${TEXTAREA_XPATH}</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:48:22.321947" elapsed="0.009772"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:48:22.345721" level="INFO">${checkboxes} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="00dd4cf7b8518d1d90cda105224f9dec", element="f.A81D884586966D3718F4E7556DABC690.d.45727064E88518B12250C331910F2281.e.17")&gt;, &lt;selenium.webdriv...</msg>
+<var>${checkboxes}</var>
+<arg>xpath=//input[@type='checkbox']</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:48:22.332704" elapsed="0.014014"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:48:22.373800" level="INFO">${radios} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="00dd4cf7b8518d1d90cda105224f9dec", element="f.A81D884586966D3718F4E7556DABC690.d.45727064E88518B12250C331910F2281.e.18")&gt;, &lt;selenium.webdriv...</msg>
+<var>${radios}</var>
+<arg>xpath=//input[@type='radio']</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:48:22.346718" elapsed="0.027082"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:48:22.391720" level="INFO">${dropdown} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="00dd4cf7b8518d1d90cda105224f9dec", element="f.A81D884586966D3718F4E7556DABC690.d.45727064E88518B12250C331910F2281.e.23")&gt;]</msg>
+<var>${dropdown}</var>
+<arg>id=siblings</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:48:22.373800" elapsed="0.017920"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-03-20T17:48:22.392706" level="INFO">${all_empty} = True</msg>
+<var>${all_empty}</var>
+<arg>${TRUE}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-03-20T17:48:22.392706" elapsed="0.000000"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:48:22.407574" level="INFO">${value} = </msg>
+<var>${value}</var>
+<arg>${input_field}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:48:22.394708" elapsed="0.012866"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${value}' != ''</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:48:22.408729" elapsed="0.000000"/>
+</kw>
+<var name="${input_field}">&lt;selenium.webdriver.remote.webelement.WebElement (session="00dd4cf7b8518d1d90cda105224f9dec", element="f.A81D884586966D3718F4E7556DABC690.d.45727064E88518B12250C331910F2281.e.16")&gt;</var>
+<status status="PASS" start="2024-03-20T17:48:22.393707" elapsed="0.016006"/>
+</iter>
+<iter>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:48:22.421631" level="INFO">${value} = </msg>
+<var>${value}</var>
+<arg>${input_field}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:48:22.409713" elapsed="0.011918"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${value}' != ''</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:48:22.421631" elapsed="0.001011"/>
+</kw>
+<var name="${input_field}">&lt;selenium.webdriver.remote.webelement.WebElement (session="00dd4cf7b8518d1d90cda105224f9dec", element="f.A81D884586966D3718F4E7556DABC690.d.45727064E88518B12250C331910F2281.e.24")&gt;</var>
+<status status="PASS" start="2024-03-20T17:48:22.409713" elapsed="0.012929"/>
+</iter>
+<iter>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:48:22.436595" level="INFO">${value} = </msg>
+<var>${value}</var>
+<arg>${input_field}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:48:22.423640" elapsed="0.012955"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${value}' != ''</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:48:22.437595" elapsed="0.000000"/>
+</kw>
+<var name="${input_field}">&lt;selenium.webdriver.remote.webelement.WebElement (session="00dd4cf7b8518d1d90cda105224f9dec", element="f.A81D884586966D3718F4E7556DABC690.d.45727064E88518B12250C331910F2281.e.27")&gt;</var>
+<status status="PASS" start="2024-03-20T17:48:22.423640" elapsed="0.013955"/>
+</iter>
+<var>${input_field}</var>
+<value>@{text_inputs}</value>
+<status status="PASS" start="2024-03-20T17:48:22.393707" elapsed="0.044885"/>
+</for>
+<for flavor="IN">
+<iter>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:48:22.450895" level="INFO">${value} = </msg>
+<var>${value}</var>
+<arg>${textarea}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:48:22.438592" elapsed="0.012303"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${value}' != ''</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:48:22.450895" elapsed="0.000995"/>
+</kw>
+<var name="${textarea}">&lt;selenium.webdriver.remote.webelement.WebElement (session="00dd4cf7b8518d1d90cda105224f9dec", element="f.A81D884586966D3718F4E7556DABC690.d.45727064E88518B12250C331910F2281.e.25")&gt;</var>
+<status status="PASS" start="2024-03-20T17:48:22.438592" elapsed="0.013298"/>
+</iter>
+<iter>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:48:22.463938" level="INFO">${value} = </msg>
+<var>${value}</var>
+<arg>${textarea}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:48:22.452888" elapsed="0.011050"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${value}' != ''</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:48:22.463938" elapsed="0.000996"/>
+</kw>
+<var name="${textarea}">&lt;selenium.webdriver.remote.webelement.WebElement (session="00dd4cf7b8518d1d90cda105224f9dec", element="f.A81D884586966D3718F4E7556DABC690.d.45727064E88518B12250C331910F2281.e.29")&gt;</var>
+<status status="PASS" start="2024-03-20T17:48:22.451890" elapsed="0.013044"/>
+</iter>
+<iter>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2024-03-20T17:48:22.476932" level="INFO">${value} = </msg>
+<var>${value}</var>
+<arg>${textarea}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T17:48:22.465938" elapsed="0.010994"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${value}' != ''</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:48:22.477927" elapsed="0.000000"/>
+</kw>
+<var name="${textarea}">&lt;selenium.webdriver.remote.webelement.WebElement (session="00dd4cf7b8518d1d90cda105224f9dec", element="f.A81D884586966D3718F4E7556DABC690.d.45727064E88518B12250C331910F2281.e.30")&gt;</var>
+<status status="PASS" start="2024-03-20T17:48:22.465938" elapsed="0.012990"/>
+</iter>
+<var>${textarea}</var>
+<value>@{textareas}</value>
+<status status="PASS" start="2024-03-20T17:48:22.438592" elapsed="0.040336"/>
+</for>
+<for flavor="IN">
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-03-20T17:48:22.493887" level="INFO">${selected} = False</msg>
+<var>${selected}</var>
+<arg>${checkbox}</arg>
+<arg>is_selected</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-03-20T17:48:22.479933" elapsed="0.013954"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${selected}</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:48:22.494886" elapsed="0.000000"/>
+</kw>
+<var name="${checkbox}">&lt;selenium.webdriver.remote.webelement.WebElement (session="00dd4cf7b8518d1d90cda105224f9dec", element="f.A81D884586966D3718F4E7556DABC690.d.45727064E88518B12250C331910F2281.e.17")&gt;</var>
+<status status="PASS" start="2024-03-20T17:48:22.479933" elapsed="0.014953"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-03-20T17:48:22.510432" level="INFO">${selected} = False</msg>
+<var>${selected}</var>
+<arg>${checkbox}</arg>
+<arg>is_selected</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-03-20T17:48:22.496362" elapsed="0.014070"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${selected}</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:48:22.510432" elapsed="0.000997"/>
+</kw>
+<var name="${checkbox}">&lt;selenium.webdriver.remote.webelement.WebElement (session="00dd4cf7b8518d1d90cda105224f9dec", element="f.A81D884586966D3718F4E7556DABC690.d.45727064E88518B12250C331910F2281.e.11")&gt;</var>
+<status status="PASS" start="2024-03-20T17:48:22.496362" elapsed="0.015067"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-03-20T17:48:22.522376" level="INFO">${selected} = False</msg>
+<var>${selected}</var>
+<arg>${checkbox}</arg>
+<arg>is_selected</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-03-20T17:48:22.512426" elapsed="0.009950"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${selected}</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:48:22.522376" elapsed="0.000000"/>
+</kw>
+<var name="${checkbox}">&lt;selenium.webdriver.remote.webelement.WebElement (session="00dd4cf7b8518d1d90cda105224f9dec", element="f.A81D884586966D3718F4E7556DABC690.d.45727064E88518B12250C331910F2281.e.12")&gt;</var>
+<status status="PASS" start="2024-03-20T17:48:22.511429" elapsed="0.011948"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-03-20T17:48:22.533410" level="INFO">${selected} = False</msg>
+<var>${selected}</var>
+<arg>${checkbox}</arg>
+<arg>is_selected</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-03-20T17:48:22.523377" elapsed="0.010033"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${selected}</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:48:22.533410" elapsed="0.000000"/>
+</kw>
+<var name="${checkbox}">&lt;selenium.webdriver.remote.webelement.WebElement (session="00dd4cf7b8518d1d90cda105224f9dec", element="f.A81D884586966D3718F4E7556DABC690.d.45727064E88518B12250C331910F2281.e.13")&gt;</var>
+<status status="PASS" start="2024-03-20T17:48:22.523377" elapsed="0.010033"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-03-20T17:48:22.542962" level="INFO">${selected} = False</msg>
+<var>${selected}</var>
+<arg>${checkbox}</arg>
+<arg>is_selected</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-03-20T17:48:22.534419" elapsed="0.008543"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${selected}</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:48:22.543944" elapsed="0.000000"/>
+</kw>
+<var name="${checkbox}">&lt;selenium.webdriver.remote.webelement.WebElement (session="00dd4cf7b8518d1d90cda105224f9dec", element="f.A81D884586966D3718F4E7556DABC690.d.45727064E88518B12250C331910F2281.e.14")&gt;</var>
+<status status="PASS" start="2024-03-20T17:48:22.534419" elapsed="0.010529"/>
+</iter>
+<var>${checkbox}</var>
+<value>@{checkboxes}</value>
+<status status="PASS" start="2024-03-20T17:48:22.478928" elapsed="0.066020"/>
+</for>
+<for flavor="IN">
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-03-20T17:48:22.560282" level="INFO">${selected} = False</msg>
+<var>${selected}</var>
+<arg>${radio}</arg>
+<arg>is_selected</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-03-20T17:48:22.544948" elapsed="0.015334"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${selected}</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:48:22.560282" elapsed="0.000996"/>
+</kw>
+<var name="${radio}">&lt;selenium.webdriver.remote.webelement.WebElement (session="00dd4cf7b8518d1d90cda105224f9dec", element="f.A81D884586966D3718F4E7556DABC690.d.45727064E88518B12250C331910F2281.e.18")&gt;</var>
+<status status="PASS" start="2024-03-20T17:48:22.544948" elapsed="0.016330"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-03-20T17:48:22.575602" level="INFO">${selected} = False</msg>
+<var>${selected}</var>
+<arg>${radio}</arg>
+<arg>is_selected</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-03-20T17:48:22.561278" elapsed="0.014324"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${selected}</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:48:22.576661" elapsed="0.000000"/>
+</kw>
+<var name="${radio}">&lt;selenium.webdriver.remote.webelement.WebElement (session="00dd4cf7b8518d1d90cda105224f9dec", element="f.A81D884586966D3718F4E7556DABC690.d.45727064E88518B12250C331910F2281.e.19")&gt;</var>
+<status status="PASS" start="2024-03-20T17:48:22.561278" elapsed="0.015383"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-03-20T17:48:22.590620" level="INFO">${selected} = False</msg>
+<var>${selected}</var>
+<arg>${radio}</arg>
+<arg>is_selected</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-03-20T17:48:22.577657" elapsed="0.012963"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${selected}</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:48:22.590620" elapsed="0.000998"/>
+</kw>
+<var name="${radio}">&lt;selenium.webdriver.remote.webelement.WebElement (session="00dd4cf7b8518d1d90cda105224f9dec", element="f.A81D884586966D3718F4E7556DABC690.d.45727064E88518B12250C331910F2281.e.20")&gt;</var>
+<status status="PASS" start="2024-03-20T17:48:22.577657" elapsed="0.013961"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-03-20T17:48:22.603621" level="INFO">${selected} = False</msg>
+<var>${selected}</var>
+<arg>${radio}</arg>
+<arg>is_selected</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-03-20T17:48:22.591618" elapsed="0.012003"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${selected}</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:48:22.604620" elapsed="0.001006"/>
+</kw>
+<var name="${radio}">&lt;selenium.webdriver.remote.webelement.WebElement (session="00dd4cf7b8518d1d90cda105224f9dec", element="f.A81D884586966D3718F4E7556DABC690.d.45727064E88518B12250C331910F2281.e.21")&gt;</var>
+<status status="PASS" start="2024-03-20T17:48:22.591618" elapsed="0.014008"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-03-20T17:48:22.621128" level="INFO">${selected} = False</msg>
+<var>${selected}</var>
+<arg>${radio}</arg>
+<arg>is_selected</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-03-20T17:48:22.605626" elapsed="0.015502"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${selected}</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:48:22.621128" elapsed="0.000996"/>
+</kw>
+<var name="${radio}">&lt;selenium.webdriver.remote.webelement.WebElement (session="00dd4cf7b8518d1d90cda105224f9dec", element="f.A81D884586966D3718F4E7556DABC690.d.45727064E88518B12250C331910F2281.e.22")&gt;</var>
+<status status="PASS" start="2024-03-20T17:48:22.605626" elapsed="0.016498"/>
+</iter>
+<var>${radio}</var>
+<value>@{radios}</value>
+<status status="PASS" start="2024-03-20T17:48:22.544948" elapsed="0.077176"/>
+</for>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-03-20T17:48:22.637598" level="INFO">${selected} = False</msg>
+<var>${selected}</var>
+<arg>${dropdown[0]}</arg>
+<arg>is_selected</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-03-20T17:48:22.622124" elapsed="0.015474"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${selected}</arg>
+<arg>Set Variable</arg>
+<arg>${all_empty}</arg>
+<arg>${FALSE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-20T17:48:22.638589" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${all_empty}</value>
+<status status="PASS" start="2024-03-20T17:48:22.638589" elapsed="0.001003"/>
+</return>
+<msg time="2024-03-20T17:48:22.639592" level="INFO">${all_empty} = True</msg>
+<var>${all_empty}</var>
+<status status="PASS" start="2024-03-20T17:48:22.307917" elapsed="0.331675"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${all_empty}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2024-03-20T17:48:22.640588" elapsed="0.000000"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-03-20T17:48:22.641497" elapsed="2.160112"/>
+</kw>
+<status status="PASS" start="2024-03-20T17:48:16.291963" elapsed="8.510647"/>
+</test>
+<doc>Lab 04 - Assignment 02</doc>
+<status status="PASS" start="2024-03-20T17:47:12.758689" elapsed="72.045907"/>
+</suite>
+<statistics>
+<total>
+<stat pass="9" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="9" fail="0" skip="0" id="s1" name="Ex2">Ex2</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

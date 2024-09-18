@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.10.9 on win32)" generated="2024-02-28T18:41:07.402237" rpa="false" schemaversion="5">
+<suite id="s1" name="Assignment3" source="D:\HK6\AutoTest\Assignment3.robot">
+<test id="s1-t1" name="TC1 - No Real Roots" line="5">
+<kw name="Solve Equationroots" owner="assignment3">
+<msg time="2024-02-28T18:41:07.419425" level="INFO">${result} = No real roots</msg>
+<var>${result}</var>
+<arg>1</arg>
+<arg>2</arg>
+<arg>3</arg>
+<status status="PASS" start="2024-02-28T18:41:07.419425" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-02-28T18:41:07.419425" level="INFO">Result: No real roots</msg>
+<arg>Result: ${result}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-02-28T18:41:07.419425" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${result}</arg>
+<arg>No real roots</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-02-28T18:41:07.420349" elapsed="0.000000"/>
+</kw>
+<doc>Test when there are no real roots</doc>
+<status status="PASS" start="2024-02-28T18:41:07.418330" elapsed="0.002019"/>
+</test>
+<test id="s1-t2" name="TC2 - One Real Root" line="11">
+<kw name="Solve Equationroots" owner="assignment3">
+<msg time="2024-02-28T18:41:07.422441" level="INFO">${result} = 1.0</msg>
+<var>${result}</var>
+<arg>1</arg>
+<arg>-2</arg>
+<arg>1</arg>
+<status status="PASS" start="2024-02-28T18:41:07.422441" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-02-28T18:41:07.422441" level="INFO">Result: 1.0</msg>
+<arg>Result: ${result}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-02-28T18:41:07.422441" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<msg time="2024-02-28T18:41:07.422441" level="INFO">Argument types are:
+&lt;class 'float'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${result}</arg>
+<arg>1</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-02-28T18:41:07.422441" elapsed="0.000000"/>
+</kw>
+<doc>Test when there is one real root</doc>
+<status status="PASS" start="2024-02-28T18:41:07.421423" elapsed="0.001922"/>
+</test>
+<test id="s1-t3" name="TC3 - Two Real Roots" line="17">
+<kw name="Solve Equationroots" owner="assignment3">
+<msg time="2024-02-28T18:41:07.423345" level="INFO">${result} = (2.0, 1.0)</msg>
+<var>${result}</var>
+<arg>1</arg>
+<arg>-3</arg>
+<arg>2</arg>
+<status status="PASS" start="2024-02-28T18:41:07.423345" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-02-28T18:41:07.424351" level="INFO">Result: (2.0, 1.0)</msg>
+<arg>Result: ${result}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-02-28T18:41:07.424351" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<msg time="2024-02-28T18:41:07.424351" level="INFO">Argument types are:
+&lt;class 'float'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${result[0]}</arg>
+<arg>2</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-02-28T18:41:07.424351" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<msg time="2024-02-28T18:41:07.425347" level="INFO">Argument types are:
+&lt;class 'float'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${result[1]}</arg>
+<arg>1</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-02-28T18:41:07.424351" elapsed="0.000996"/>
+</kw>
+<doc>Test when there are two real roots</doc>
+<status status="PASS" start="2024-02-28T18:41:07.423345" elapsed="0.002002"/>
+</test>
+<status status="PASS" start="2024-02-28T18:41:07.404237" elapsed="0.022109"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="Assignment3">Assignment3</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

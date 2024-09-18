@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.10.0 on win32)" generated="2024-04-03T09:40:11.534357" rpa="false" schemaversion="5">
+<suite id="s1" name="Ex1" source="D:\CURRENT_SEMESTER\Auto Testing\lab05\tests\Ex1.robot">
+<test id="s1-t1" name="TC: Open Browser" line="11">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-04-03T09:40:11.941340" level="INFO">Opening browser 'Chrome' to base url 'https://practice-automation.com/tables/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-04-03T09:40:11.940106" elapsed="18.132172"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-04-03T09:40:41.388790" level="INFO">Current location is 'https://practice-automation.com/tables/'.</msg>
+<arg>${URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-04-03T09:40:30.078759" elapsed="11.310031"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-04-03T09:40:41.390850" elapsed="0.131276"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2024-04-03T09:40:41.524132" elapsed="6.234561"/>
+</kw>
+<status status="PASS" start="2024-04-03T09:40:11.938830" elapsed="35.820876"/>
+</test>
+<doc>Lab 05 - Ex1</doc>
+<status status="PASS" start="2024-04-03T09:40:11.535771" elapsed="36.224934"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Ex1">Ex1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

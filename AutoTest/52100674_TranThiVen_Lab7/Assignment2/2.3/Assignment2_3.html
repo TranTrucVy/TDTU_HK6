@@ -1,0 +1,961 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.10.9 on win32)" generated="2024-04-17T23:48:20.941724" rpa="false" schemaversion="5">
+<suite id="s1" name="Assignment2 3" source="D:\HK6\AutoTest\52100674_TranThiVen_Lab7\Assignment2\2.3\Assignment2_3.robot">
+<test id="s1-t1" name="TC1: Verify calendar - Input date from picker" line="21">
+<kw name="Open The Browser">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:48:21.179244" level="INFO">Opening browser 'Chrome' to base url 'https://practice-automation.com/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-04-17T23:48:21.179244" elapsed="4.945420"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:48:26.129190" level="INFO">Current location is 'https://practice-automation.com/'.</msg>
+<arg>${URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-04-17T23:48:26.124664" elapsed="0.004526"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-04-17T23:48:26.129190" elapsed="0.130379"/>
+</kw>
+<status status="PASS" start="2024-04-17T23:48:21.179244" elapsed="5.080325"/>
+</kw>
+<kw name="Enter page">
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:48:26.283799" level="INFO">${btn} = &lt;selenium.webdriver.remote.webelement.WebElement (session="c1de8125478f258521d9f8360ed91c95", element="f.028863484E06DDFC6E343B668058F9F6.d.8A0245E5B8CC6198E054D66422FF2F97.e.49")&gt;</msg>
+<var>${btn}</var>
+<arg>xpath=${xpath}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:48:26.259569" elapsed="0.024230"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:48:26.283799" level="INFO">Current page contains element '&lt;selenium.webdriver.remote.webelement.WebElement (session="c1de8125478f258521d9f8360ed91c95", element="f.028863484E06DDFC6E343B668058F9F6.d.8A0245E5B8CC6198E054D66422FF2F97.e.49")&gt;'.</msg>
+<arg>${btn}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-04-17T23:48:26.283799" elapsed="0.000000"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${btn}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-04-17T23:48:26.283799" elapsed="0.303351"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:48:26.587150" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="c1de8125478f258521d9f8360ed91c95", element="f.028863484E06DDFC6E343B668058F9F6.d.8A0245E5B8CC6198E054D66422FF2F97.e.49")&gt;'.</msg>
+<arg>${btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:48:26.587150" elapsed="0.820681"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:48:27.412840" level="INFO">Current location is 'https://practice-automation.com/calendars/'.</msg>
+<arg>url=${url}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-04-17T23:48:27.407831" elapsed="0.005009"/>
+</kw>
+<arg>10s</arg>
+<arg>2s</arg>
+<arg>Location Should Be</arg>
+<arg>url=${url}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-04-17T23:48:27.407831" elapsed="0.005009"/>
+</kw>
+<arg>${CALENDAR_BTN}</arg>
+<arg>${CALENDAR_URL}</arg>
+<status status="PASS" start="2024-04-17T23:48:26.259569" elapsed="1.153271"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:48:27.412840" level="INFO">Clicking element 'xpath=//*[@id="g1065-selectorenteradate"]'.</msg>
+<arg>xpath=${DATE_INPUT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:48:27.412840" elapsed="0.138399"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${DATE_PICKER}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-17T23:48:27.557371" elapsed="0.027007"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:48:27.590887" level="INFO">Clicking element 'xpath=//*[@id="ui-datepicker-div"]//a[@data-date='20']'.</msg>
+<arg>xpath=//*[@id="ui-datepicker-div"]//a[@data-date='20']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:48:27.584378" elapsed="0.076254"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:48:27.660632" level="INFO">Clicking element 'xpath=//*[@id="top-wrap"]/section/div/h1'.</msg>
+<arg>xpath=${RANDOM_BLANK_AREA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:48:27.660632" elapsed="0.062095"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:48:27.724662" level="INFO">Clicking element 'xpath=//*[@id="contact-form-1065"]/form/p[1]/button'.</msg>
+<arg>xpath=${SUBMIT_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:48:27.724662" elapsed="2.730762"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${RES_TEXT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-17T23:48:30.456877" elapsed="0.084342"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:48:30.552440" level="INFO">Current page contains element '//*[@id="contact-form-success-header"]'.</msg>
+<arg>${RES_TEXT}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-04-17T23:48:30.541219" elapsed="0.011221"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:48:30.574845" level="INFO">Current page contains element '//*[@id="contact-form-1065"]/div/div[2]'.</msg>
+<arg>${RES_INPUT}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-04-17T23:48:30.559041" elapsed="0.015804"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:48:30.602348" level="INFO">${text} = Your message has been sent</msg>
+<var>${text}</var>
+<arg>${RES_TEXT}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:48:30.574845" elapsed="0.027503"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:48:30.626163" level="INFO">${input} = 2024-04-20</msg>
+<var>${input}</var>
+<arg>${RES_INPUT}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:48:30.602348" elapsed="0.023815"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${text}</arg>
+<arg>Your message has been sent</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-04-17T23:48:30.626163" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${input}</arg>
+<arg>2024-04-20</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-04-17T23:48:30.626163" elapsed="0.000000"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-04-17T23:48:30.626163" elapsed="2.115411"/>
+</kw>
+<status status="PASS" start="2024-04-17T23:48:21.175946" elapsed="11.566154"/>
+</test>
+<test id="s1-t2" name="TC2: Verify calendar - Check next btn of date picker" line="42">
+<kw name="Open The Browser">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:48:32.743605" level="INFO">Opening browser 'Chrome' to base url 'https://practice-automation.com/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-04-17T23:48:32.743605" elapsed="4.958150"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:48:37.718321" level="INFO">Current location is 'https://practice-automation.com/'.</msg>
+<arg>${URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-04-17T23:48:37.701755" elapsed="0.016566"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-04-17T23:48:37.718321" elapsed="0.144149"/>
+</kw>
+<status status="PASS" start="2024-04-17T23:48:32.743605" elapsed="5.118865"/>
+</kw>
+<kw name="Enter page">
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:48:37.882545" level="INFO">${btn} = &lt;selenium.webdriver.remote.webelement.WebElement (session="5a04d45e45542381d85702e6245b209f", element="f.98C0CA25C3306524078D7C04A8E745E1.d.CBECCEFC1341DBBA9D11F115232EF59C.e.49")&gt;</msg>
+<var>${btn}</var>
+<arg>xpath=${xpath}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:48:37.862470" elapsed="0.020075"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:48:37.882545" level="INFO">Current page contains element '&lt;selenium.webdriver.remote.webelement.WebElement (session="5a04d45e45542381d85702e6245b209f", element="f.98C0CA25C3306524078D7C04A8E745E1.d.CBECCEFC1341DBBA9D11F115232EF59C.e.49")&gt;'.</msg>
+<arg>${btn}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-04-17T23:48:37.882545" elapsed="0.000000"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${btn}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-04-17T23:48:37.882545" elapsed="0.294869"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:48:38.177414" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="5a04d45e45542381d85702e6245b209f", element="f.98C0CA25C3306524078D7C04A8E745E1.d.CBECCEFC1341DBBA9D11F115232EF59C.e.49")&gt;'.</msg>
+<arg>${btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:48:38.177414" elapsed="0.946143"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:48:39.131862" level="INFO">Current location is 'https://practice-automation.com/calendars/'.</msg>
+<arg>url=${url}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-04-17T23:48:39.123557" elapsed="0.008305"/>
+</kw>
+<arg>10s</arg>
+<arg>2s</arg>
+<arg>Location Should Be</arg>
+<arg>url=${url}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-04-17T23:48:39.123557" elapsed="0.008305"/>
+</kw>
+<arg>${CALENDAR_BTN}</arg>
+<arg>${CALENDAR_URL}</arg>
+<status status="PASS" start="2024-04-17T23:48:37.862470" elapsed="1.269392"/>
+</kw>
+<kw name="Get the current date">
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2024-04-17T23:48:39.131862" level="INFO">${date} = 2024-04-17 23:48:39.132</msg>
+<var>${date}</var>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2024-04-17T23:48:39.131862" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${date}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-04-17T23:48:39.131862" elapsed="0.008004"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-04-17T23:48:39.139866" level="INFO">${parsed_date} = 2024-04-17 23:48:39.132000</msg>
+<var>${parsed_date}</var>
+<arg>datetime.datetime.strptime($date, '%Y-%m-%d %H:%M:%S.%f')</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-04-17T23:48:39.139866" elapsed="0.000000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-04-17T23:48:39.139866" level="INFO">${year} = 2024</msg>
+<var>${year}</var>
+<arg>$parsed_date.year</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-04-17T23:48:39.139866" elapsed="0.000000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-04-17T23:48:39.139866" level="INFO">${month} = 04</msg>
+<var>${month}</var>
+<arg>str($parsed_date.month).zfill(2)</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-04-17T23:48:39.139866" elapsed="0.000000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-04-17T23:48:39.139866" level="INFO">${day} = 17</msg>
+<var>${day}</var>
+<arg>str($parsed_date.day).zfill(2)</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-04-17T23:48:39.139866" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Year: ${year}, Month: ${month}, Day: ${day}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-04-17T23:48:39.139866" elapsed="0.000000"/>
+</kw>
+<kw name="Create List" owner="BuiltIn">
+<msg time="2024-04-17T23:48:39.147955" level="INFO">${res} = [2024, '04', '17']</msg>
+<var>${res}</var>
+<arg>${year}</arg>
+<arg>${month}</arg>
+<arg>${day}</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2024-04-17T23:48:39.139866" elapsed="0.008089"/>
+</kw>
+<return>
+<value>${res}</value>
+<status status="PASS" start="2024-04-17T23:48:39.147955" elapsed="0.000000"/>
+</return>
+<msg time="2024-04-17T23:48:39.147955" level="INFO">${result} = [2024, '04', '17']</msg>
+<var>${result}</var>
+<status status="PASS" start="2024-04-17T23:48:39.131862" elapsed="0.016093"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-04-17T23:48:39.147955" level="INFO">${current_month} = 04</msg>
+<var>${current_month}</var>
+<arg>${result}[1]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-04-17T23:48:39.147955" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-04-17T23:48:39.147955" level="INFO">${current_year} = 2024</msg>
+<var>${current_year}</var>
+<arg>${result}[0]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-04-17T23:48:39.147955" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:48:39.147955" level="INFO">Clicking element 'xpath=//*[@id="g1065-selectorenteradate"]'.</msg>
+<arg>xpath=${DATE_INPUT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:48:39.147955" elapsed="0.120865"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${DATE_PICKER}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-17T23:48:39.268820" elapsed="0.032274"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:48:39.301094" level="INFO">Clicking element 'xpath=//*[@id="ui-datepicker-div"]//a[@data-date='20']'.</msg>
+<arg>xpath=//*[@id="ui-datepicker-div"]//a[@data-date='20']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:48:39.301094" elapsed="0.056277"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:48:39.357371" level="INFO">Clicking element 'xpath=//*[@id="top-wrap"]/section/div/h1'.</msg>
+<arg>xpath=${RANDOM_BLANK_AREA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:48:39.357371" elapsed="0.052066"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:48:39.409437" level="INFO">Clicking element '//*[@id="ui-datepicker-div"]/div/a[2]'.</msg>
+<arg>//*[@id="ui-datepicker-div"]/div/a[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:48:39.409437" elapsed="0.045387"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:48:39.455183" level="INFO">Clicking element 'xpath=//*[@id="ui-datepicker-div"]//a[@data-date='20']'.</msg>
+<arg>xpath=//*[@id="ui-datepicker-div"]//a[@data-date='20']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:48:39.455183" elapsed="0.048590"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:48:39.503773" level="INFO">Clicking element 'xpath=//*[@id="top-wrap"]/section/div/h1'.</msg>
+<arg>xpath=${RANDOM_BLANK_AREA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:48:39.503773" elapsed="0.053542"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:48:39.557315" level="INFO">Clicking element 'xpath=//*[@id="contact-form-1065"]/form/p[1]/button'.</msg>
+<arg>xpath=${SUBMIT_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:48:39.557315" elapsed="2.569041"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${RES_TEXT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-17T23:48:42.128803" elapsed="0.062081"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:48:42.200734" level="INFO">Current page contains element '//*[@id="contact-form-success-header"]'.</msg>
+<arg>${RES_TEXT}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-04-17T23:48:42.190884" elapsed="0.009850"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:48:42.216956" level="INFO">Current page contains element '//*[@id="contact-form-1065"]/div/div[2]'.</msg>
+<arg>${RES_INPUT}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-04-17T23:48:42.200734" elapsed="0.016222"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:48:42.249977" level="INFO">${text} = Your message has been sent</msg>
+<var>${text}</var>
+<arg>${RES_TEXT}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:48:42.216956" elapsed="0.033021"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:48:42.282892" level="INFO">${input} = 2024-05-20</msg>
+<var>${input}</var>
+<arg>${RES_INPUT}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:48:42.258108" elapsed="0.024784"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${text}</arg>
+<arg>Your message has been sent</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-04-17T23:48:42.282892" elapsed="0.000000"/>
+</kw>
+<kw name="Convert To Integer" owner="BuiltIn">
+<msg time="2024-04-17T23:48:42.282892" level="INFO">${month} = 4</msg>
+<var>${month}</var>
+<arg>${current_month}</arg>
+<doc>Converts the given item to an integer number.</doc>
+<status status="PASS" start="2024-04-17T23:48:42.282892" elapsed="0.000000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-04-17T23:48:42.290892" level="INFO">${month} = 5</msg>
+<var>${month}</var>
+<arg>${month} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-04-17T23:48:42.282892" elapsed="0.008000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-04-17T23:48:42.291780" level="INFO">${month} = 05</msg>
+<var>${month}</var>
+<arg>str($month).zfill(2)</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-04-17T23:48:42.291780" elapsed="0.000000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-04-17T23:48:42.291780" level="INFO">${date} = 2024-05-20</msg>
+<var>${date}</var>
+<arg>'${current_year}-${month}-20'</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-04-17T23:48:42.291780" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>date: ${date}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-04-17T23:48:42.291780" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${input}</arg>
+<arg>${date}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-04-17T23:48:42.291780" elapsed="0.000000"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-04-17T23:48:42.291780" elapsed="2.099065"/>
+</kw>
+<status status="PASS" start="2024-04-17T23:48:32.742100" elapsed="11.648745"/>
+</test>
+<test id="s1-t3" name="TC3: Verify calendar - Check previous btn of date picker" line="78">
+<kw name="Open The Browser">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:48:44.392851" level="INFO">Opening browser 'Chrome' to base url 'https://practice-automation.com/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-04-17T23:48:44.392851" elapsed="2.968081"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:48:48.663175" level="INFO">Current location is 'https://practice-automation.com/'.</msg>
+<arg>${URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-04-17T23:48:47.360932" elapsed="1.302243"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-04-17T23:48:48.663175" elapsed="0.131814"/>
+</kw>
+<status status="PASS" start="2024-04-17T23:48:44.392851" elapsed="4.402138"/>
+</kw>
+<kw name="Enter page">
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:48:48.818523" level="INFO">${btn} = &lt;selenium.webdriver.remote.webelement.WebElement (session="41df26666d0a5f5106ff462eb65c5225", element="f.FB704B83AF959A98BD8E91512508B450.d.B49E3FCA435DCB6CA68F90F152B6D2D1.e.49")&gt;</msg>
+<var>${btn}</var>
+<arg>xpath=${xpath}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:48:48.794989" elapsed="0.023534"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:48:48.818523" level="INFO">Current page contains element '&lt;selenium.webdriver.remote.webelement.WebElement (session="41df26666d0a5f5106ff462eb65c5225", element="f.FB704B83AF959A98BD8E91512508B450.d.B49E3FCA435DCB6CA68F90F152B6D2D1.e.49")&gt;'.</msg>
+<arg>${btn}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-04-17T23:48:48.818523" elapsed="0.000000"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${btn}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-04-17T23:48:48.818523" elapsed="0.321893"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:48:49.140416" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="41df26666d0a5f5106ff462eb65c5225", element="f.FB704B83AF959A98BD8E91512508B450.d.B49E3FCA435DCB6CA68F90F152B6D2D1.e.49")&gt;'.</msg>
+<arg>${btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:48:49.140416" elapsed="0.794970"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:48:49.943385" level="INFO">Current location is 'https://practice-automation.com/calendars/'.</msg>
+<arg>url=${url}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-04-17T23:48:49.935386" elapsed="0.007999"/>
+</kw>
+<arg>10s</arg>
+<arg>2s</arg>
+<arg>Location Should Be</arg>
+<arg>url=${url}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-04-17T23:48:49.935386" elapsed="0.007999"/>
+</kw>
+<arg>${CALENDAR_BTN}</arg>
+<arg>${CALENDAR_URL}</arg>
+<status status="PASS" start="2024-04-17T23:48:48.794989" elapsed="1.148396"/>
+</kw>
+<kw name="Get the current date">
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2024-04-17T23:48:49.943385" level="INFO">${date} = 2024-04-17 23:48:49.943</msg>
+<var>${date}</var>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2024-04-17T23:48:49.943385" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${date}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-04-17T23:48:49.943385" elapsed="0.000000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-04-17T23:48:49.943385" level="INFO">${parsed_date} = 2024-04-17 23:48:49.943000</msg>
+<var>${parsed_date}</var>
+<arg>datetime.datetime.strptime($date, '%Y-%m-%d %H:%M:%S.%f')</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-04-17T23:48:49.943385" elapsed="0.000000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-04-17T23:48:49.943385" level="INFO">${year} = 2024</msg>
+<var>${year}</var>
+<arg>$parsed_date.year</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-04-17T23:48:49.943385" elapsed="0.000000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-04-17T23:48:49.943385" level="INFO">${month} = 04</msg>
+<var>${month}</var>
+<arg>str($parsed_date.month).zfill(2)</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-04-17T23:48:49.943385" elapsed="0.000000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-04-17T23:48:49.943385" level="INFO">${day} = 17</msg>
+<var>${day}</var>
+<arg>str($parsed_date.day).zfill(2)</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-04-17T23:48:49.943385" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Year: ${year}, Month: ${month}, Day: ${day}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-04-17T23:48:49.943385" elapsed="0.000000"/>
+</kw>
+<kw name="Create List" owner="BuiltIn">
+<msg time="2024-04-17T23:48:49.943385" level="INFO">${res} = [2024, '04', '17']</msg>
+<var>${res}</var>
+<arg>${year}</arg>
+<arg>${month}</arg>
+<arg>${day}</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2024-04-17T23:48:49.943385" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${res}</value>
+<status status="PASS" start="2024-04-17T23:48:49.951386" elapsed="0.000000"/>
+</return>
+<msg time="2024-04-17T23:48:49.951386" level="INFO">${result} = [2024, '04', '17']</msg>
+<var>${result}</var>
+<status status="PASS" start="2024-04-17T23:48:49.943385" elapsed="0.008001"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-04-17T23:48:49.951386" level="INFO">${current_month} = 04</msg>
+<var>${current_month}</var>
+<arg>${result}[1]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-04-17T23:48:49.951386" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-04-17T23:48:49.951386" level="INFO">${current_year} = 2024</msg>
+<var>${current_year}</var>
+<arg>${result}[0]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-04-17T23:48:49.951386" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:48:49.951386" level="INFO">Clicking element 'xpath=//*[@id="g1065-selectorenteradate"]'.</msg>
+<arg>xpath=${DATE_INPUT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:48:49.951386" elapsed="0.119345"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${DATE_PICKER}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-17T23:48:50.070731" elapsed="0.037156"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:48:50.107887" level="INFO">Clicking element 'xpath=//*[@id="ui-datepicker-div"]//a[@data-date='20']'.</msg>
+<arg>xpath=//*[@id="ui-datepicker-div"]//a[@data-date='20']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:48:50.107887" elapsed="0.047688"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:48:50.155575" level="INFO">Clicking element 'xpath=//*[@id="top-wrap"]/section/div/h1'.</msg>
+<arg>xpath=${RANDOM_BLANK_AREA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:48:50.155575" elapsed="0.043231"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:48:50.204322" level="INFO">Clicking element '//*[@id="ui-datepicker-div"]/div/a[1]'.</msg>
+<arg>//*[@id="ui-datepicker-div"]/div/a[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:48:50.198806" elapsed="0.046367"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:48:50.245173" level="INFO">Clicking element 'xpath=//*[@id="ui-datepicker-div"]//a[@data-date='20']'.</msg>
+<arg>xpath=//*[@id="ui-datepicker-div"]//a[@data-date='20']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:48:50.245173" elapsed="0.037541"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:48:50.285722" level="INFO">Clicking element 'xpath=//*[@id="top-wrap"]/section/div/h1'.</msg>
+<arg>xpath=${RANDOM_BLANK_AREA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:48:50.285722" elapsed="0.024091"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:48:50.317825" level="INFO">Clicking element 'xpath=//*[@id="contact-form-1065"]/form/p[1]/button'.</msg>
+<arg>xpath=${SUBMIT_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:48:50.317825" elapsed="2.559507"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${RES_TEXT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-17T23:48:52.877332" elapsed="0.049553"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:48:52.960524" level="INFO">Current page contains element '//*[@id="contact-form-success-header"]'.</msg>
+<arg>${RES_TEXT}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-04-17T23:48:52.927468" elapsed="0.033056"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:48:52.976706" level="INFO">Current page contains element '//*[@id="contact-form-1065"]/div/div[2]'.</msg>
+<arg>${RES_INPUT}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-04-17T23:48:52.960524" elapsed="0.016182"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:48:53.008877" level="INFO">${text} = Your message has been sent</msg>
+<var>${text}</var>
+<arg>${RES_TEXT}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:48:52.976706" elapsed="0.032171"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:48:53.041516" level="INFO">${input} = 2024-03-20</msg>
+<var>${input}</var>
+<arg>${RES_INPUT}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:48:53.008877" elapsed="0.032639"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${text}</arg>
+<arg>Your message has been sent</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-04-17T23:48:53.041516" elapsed="0.000000"/>
+</kw>
+<kw name="Convert To Integer" owner="BuiltIn">
+<msg time="2024-04-17T23:48:53.041516" level="INFO">${month} = 4</msg>
+<var>${month}</var>
+<arg>${current_month}</arg>
+<doc>Converts the given item to an integer number.</doc>
+<status status="PASS" start="2024-04-17T23:48:53.041516" elapsed="0.000000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-04-17T23:48:53.041516" level="INFO">${month} = 3</msg>
+<var>${month}</var>
+<arg>${month} - 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-04-17T23:48:53.041516" elapsed="0.000000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-04-17T23:48:53.041516" level="INFO">${month} = 03</msg>
+<var>${month}</var>
+<arg>str($month).zfill(2)</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-04-17T23:48:53.041516" elapsed="0.000000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-04-17T23:48:53.050229" level="INFO">${date} = 2024-03-20</msg>
+<var>${date}</var>
+<arg>'${current_year}-${month}-20'</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-04-17T23:48:53.049533" elapsed="0.000696"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>date: ${date}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-04-17T23:48:53.050229" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${input}</arg>
+<arg>${date}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-04-17T23:48:53.050229" elapsed="0.000000"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-04-17T23:48:53.050229" elapsed="2.144025"/>
+</kw>
+<status status="PASS" start="2024-04-17T23:48:44.392851" elapsed="10.803178"/>
+</test>
+<test id="s1-t4" name="TC4: Verify calendar - No input date" line="114">
+<kw name="Open The Browser">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:48:55.196954" level="INFO">Opening browser 'Chrome' to base url 'https://practice-automation.com/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-04-17T23:48:55.196954" elapsed="5.415326"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:49:00.628419" level="INFO">Current location is 'https://practice-automation.com/'.</msg>
+<arg>${URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-04-17T23:49:00.612280" elapsed="0.016139"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-04-17T23:49:00.628419" elapsed="0.130998"/>
+</kw>
+<status status="PASS" start="2024-04-17T23:48:55.196954" elapsed="5.562463"/>
+</kw>
+<kw name="Enter page">
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:49:00.785244" level="INFO">${btn} = &lt;selenium.webdriver.remote.webelement.WebElement (session="c7dd116f6e9d65e31e60792d8f38385d", element="f.7148AD06AB31974A1D43D8C9F5E7DF72.d.1067B9639CC722932DACC8246BE94F6F.e.49")&gt;</msg>
+<var>${btn}</var>
+<arg>xpath=${xpath}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:49:00.759417" elapsed="0.025827"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:49:00.785244" level="INFO">Current page contains element '&lt;selenium.webdriver.remote.webelement.WebElement (session="c7dd116f6e9d65e31e60792d8f38385d", element="f.7148AD06AB31974A1D43D8C9F5E7DF72.d.1067B9639CC722932DACC8246BE94F6F.e.49")&gt;'.</msg>
+<arg>${btn}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-04-17T23:49:00.785244" elapsed="0.000000"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${btn}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-04-17T23:49:00.785244" elapsed="0.291408"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:49:01.076652" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="c7dd116f6e9d65e31e60792d8f38385d", element="f.7148AD06AB31974A1D43D8C9F5E7DF72.d.1067B9639CC722932DACC8246BE94F6F.e.49")&gt;'.</msg>
+<arg>${btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:49:01.076652" elapsed="0.816171"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:49:01.900822" level="INFO">Current location is 'https://practice-automation.com/calendars/'.</msg>
+<arg>url=${url}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-04-17T23:49:01.892823" elapsed="0.007999"/>
+</kw>
+<arg>10s</arg>
+<arg>2s</arg>
+<arg>Location Should Be</arg>
+<arg>url=${url}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-04-17T23:49:01.892823" elapsed="0.007999"/>
+</kw>
+<arg>${CALENDAR_BTN}</arg>
+<arg>${CALENDAR_URL}</arg>
+<status status="PASS" start="2024-04-17T23:49:00.759417" elapsed="1.141405"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:49:01.900822" level="INFO">Clicking element 'xpath=//*[@id="contact-form-1065"]/form/p[1]/button'.</msg>
+<arg>xpath=${SUBMIT_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:49:01.900822" elapsed="2.395977"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${RES_TEXT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-17T23:49:04.296799" elapsed="0.033071"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:49:04.346101" level="INFO">Current page contains element '//*[@id="contact-form-success-header"]'.</msg>
+<arg>${RES_TEXT}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-04-17T23:49:04.329870" elapsed="0.016231"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:49:04.380955" level="INFO">Current page contains element '//*[@id="contact-form-1065"]/div/div[2]'.</msg>
+<arg>${RES_INPUT}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-04-17T23:49:04.346101" elapsed="0.034854"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:49:04.406624" level="INFO">${text} = Your message has been sent</msg>
+<var>${text}</var>
+<arg>${RES_TEXT}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:49:04.380955" elapsed="0.025669"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:49:04.428841" level="INFO">${input} = </msg>
+<var>${input}</var>
+<arg>${RES_INPUT}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:49:04.411701" elapsed="0.017140"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${text}</arg>
+<arg>Your message has been sent</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-04-17T23:49:04.428841" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${input}</arg>
+<arg>${EMPTY}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-04-17T23:49:04.428841" elapsed="0.000000"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-04-17T23:49:04.428841" elapsed="2.112138"/>
+</kw>
+<status status="PASS" start="2024-04-17T23:48:55.196954" elapsed="11.344911"/>
+</test>
+<test id="s1-t5" name="TC5: Verify calendar - Input date from input field" line="129">
+<kw name="Open The Browser">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:49:06.541865" level="INFO">Opening browser 'Chrome' to base url 'https://practice-automation.com/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-04-17T23:49:06.541865" elapsed="3.331550"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:49:11.558977" level="INFO">Current location is 'https://practice-automation.com/'.</msg>
+<arg>${URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-04-17T23:49:09.873415" elapsed="1.685562"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-04-17T23:49:11.558977" elapsed="0.122444"/>
+</kw>
+<status status="PASS" start="2024-04-17T23:49:06.541865" elapsed="5.139556"/>
+</kw>
+<kw name="Enter page">
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:49:11.713409" level="INFO">${btn} = &lt;selenium.webdriver.remote.webelement.WebElement (session="093af032603d512769720f4f54395818", element="f.3BC5B20780F7AD8403839D1818D47475.d.4CD5812557B95A0F9257A435AACD67A4.e.49")&gt;</msg>
+<var>${btn}</var>
+<arg>xpath=${xpath}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:49:11.689611" elapsed="0.023798"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:49:11.713409" level="INFO">Current page contains element '&lt;selenium.webdriver.remote.webelement.WebElement (session="093af032603d512769720f4f54395818", element="f.3BC5B20780F7AD8403839D1818D47475.d.4CD5812557B95A0F9257A435AACD67A4.e.49")&gt;'.</msg>
+<arg>${btn}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-04-17T23:49:11.713409" elapsed="0.000000"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${btn}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-04-17T23:49:11.713409" elapsed="0.311444"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:49:12.024853" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="093af032603d512769720f4f54395818", element="f.3BC5B20780F7AD8403839D1818D47475.d.4CD5812557B95A0F9257A435AACD67A4.e.49")&gt;'.</msg>
+<arg>${btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:49:12.024853" elapsed="0.912980"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:49:12.955432" level="INFO">Current location is 'https://practice-automation.com/calendars/'.</msg>
+<arg>url=${url}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-04-17T23:49:12.937833" elapsed="0.017599"/>
+</kw>
+<arg>10s</arg>
+<arg>2s</arg>
+<arg>Location Should Be</arg>
+<arg>url=${url}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-04-17T23:49:12.937833" elapsed="0.017599"/>
+</kw>
+<arg>${CALENDAR_BTN}</arg>
+<arg>${CALENDAR_URL}</arg>
+<status status="PASS" start="2024-04-17T23:49:11.688977" elapsed="1.266455"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:49:12.957535" level="INFO">Clicking element 'xpath=//*[@id="g1065-selectorenteradate"]'.</msg>
+<arg>xpath=${DATE_INPUT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:49:12.955432" elapsed="0.168973"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${DATE_PICKER}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-17T23:49:13.124405" elapsed="0.033170"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:49:13.157575" level="INFO">Typing text '2024-04-20' into text field 'xpath=//*[@id="g1065-selectorenteradate"]'.</msg>
+<arg>xpath=${DATE_INPUT}</arg>
+<arg>2024-04-20</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:49:13.157575" elapsed="0.125752"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:49:13.283327" level="INFO">Clicking element 'xpath=//*[@id="top-wrap"]/section/div/h1'.</msg>
+<arg>xpath=${RANDOM_BLANK_AREA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:49:13.283327" elapsed="0.038843"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:49:13.322170" level="INFO">Clicking element 'xpath=//*[@id="contact-form-1065"]/form/p[1]/button'.</msg>
+<arg>xpath=${SUBMIT_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:49:13.322170" elapsed="2.704445"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${RES_TEXT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-17T23:49:16.034651" elapsed="0.041089"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:49:16.124970" level="INFO">Current page contains element '//*[@id="contact-form-success-header"]'.</msg>
+<arg>${RES_TEXT}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-04-17T23:49:16.075740" elapsed="0.049230"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:49:16.141472" level="INFO">Current page contains element '//*[@id="contact-form-1065"]/div/div[2]'.</msg>
+<arg>${RES_INPUT}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-04-17T23:49:16.124970" elapsed="0.016502"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:49:16.177346" level="INFO">${text} = Your message has been sent</msg>
+<var>${text}</var>
+<arg>${RES_TEXT}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:49:16.141472" elapsed="0.035874"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-04-17T23:49:16.199246" level="INFO">${input} = 2024-04-20</msg>
+<var>${input}</var>
+<arg>${RES_INPUT}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-17T23:49:16.177346" elapsed="0.021900"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${text}</arg>
+<arg>Your message has been sent</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-04-17T23:49:16.207552" elapsed="0.000259"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${input}</arg>
+<arg>2024-04-20</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-04-17T23:49:16.208326" elapsed="0.000000"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-04-17T23:49:16.208326" elapsed="2.115507"/>
+</kw>
+<status status="PASS" start="2024-04-17T23:49:06.541865" elapsed="11.782487"/>
+</test>
+<doc>Lab 07 - Assignment2_3</doc>
+<status status="PASS" start="2024-04-17T23:48:20.945532" elapsed="57.380056"/>
+</suite>
+<statistics>
+<total>
+<stat pass="5" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="5" fail="0" skip="0" id="s1" name="Assignment2 3">Assignment2 3</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
